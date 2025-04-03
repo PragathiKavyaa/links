@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Layout</title>
+    <style>
+        .container{
+            margin: 0;
+            padding: 5%;
+            box-sizing: border-box;
+            background-color: blueviolet;
+            width: 70%;
+            height: 500px;
+        }
+        .images{
+            margin: auto;
+            display:flex;
+            width: fit-content;
+            height: fit-content;
+            align-items: center;
+            gap: 20px;
+        }
+        .img1, .img2, .img3{
+            
+            flex-grow: 3;
+            flex-wrap: nowrap;
+            flex-direction: column; 
+        }
+        button{
+            border: 2px solid violet;
+            border-radius: 15px;
+        }
+        .btn{
+            text-align: center;
+        }  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center">Card layout</h1>
+    <div class="images">
+        <div class="img1"><img src="./assests/rose1.jpg" alt="rose1"></div>
+        <div class="img2"><img src="./assests/rose2.jpg" alt="rose2"></div>
+        <div class="img3"><img src="./assests/rose3.jpg" alt="rose3"></div>
+    </div>
+        <div class="btn"><button>Know More</button></div>
+    </div>
+</body>
+</html>

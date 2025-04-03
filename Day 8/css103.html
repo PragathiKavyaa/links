@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS103</title>
+    <style>
+        .container { 
+            display: flex;
+         }
+        .red {
+            background: orangered;
+            display: flex;
+            flex-direction: column;
+        }
+        .green {
+            background: yellowgreen;
+        }
+        .blue {
+            background: steelblue;
+        }
+        .container div {
+            font-size: 2rem;
+            padding: 10%;
+            color: white;
+        }        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="red">Flex1
+          <div class="green">Nested Flex 1</div>
+          <div class="blue">Nested Flex 2</div>
+        </div>
+        <div class="green">Flex2</div>
+        <div class="blue">Flex3</div>
+      </div>
+</body>
+</html>

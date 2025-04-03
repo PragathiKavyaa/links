@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 3</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0%;
+            box-sizing: border-box;
+           
+        }
+        .container{
+            width: 90%;
+            margin: auto;
+            border: 1px solid black;
+        }
+        .row1{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        .row1-col1{
+            width: 50%;
+            border: 2px solid red;
+        }
+        .row1-col2{
+            width: 50%;
+            border: 2px solid red;
+        }
+        .row2{
+            display: flex;
+            flex-direction: row;
+            border: 2px solid red;
+            justify-content: space-around;
+        }
+        .row3{
+            display: flex;
+            flex-direction: row;
+        }
+        .row3-col1{
+            width: 50%;
+            flex-direction: row;
+            border: 2px solid red;
+        }
+        .row3-col2,.row3-col3{
+            width: 25%;
+            flex-direction: column;
+            border: 2px solid red;
+        }
+        .img{
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row1">
+            <div class="row1-col1">
+                <div class="box1"><img src="./Assests/bulletmixer.jpg" alt="bulletmixer" width="100%" height="200%"></div>
+            </div>
+            <div class="row1-col2">
+                <div class="box2"><img src="./Assests/cutter.jpg" alt="cutter" width="100%" height="100%"></div>
+                <div class="box3"><img src="./Assests/grinder.jpg" alt="grinder" width="100%" height="100%"></div>
+            </div>
+        </div>
+        <div class="row2">
+            <div class="box4"><img src="./Assests/chimney.jpg" alt="chimney" width="100%" height="100%"></div>
+        </div>
+        <div class="row3">
+            <div class="row3-col1">
+                <div class="box5"><img src="./Assests/oven.jpg" alt="oven" width="100%" height="100%"></div>
+                <div class="box8"><img src="./Assests/kettle.jpg" alt="kettle" width="100%" height="100%"></div>
+            </div>
+            <div class="row3-col2">
+                <div class="box6"><img src="./Assests/beater.jpg" alt="beater" width="100%" height="100%"></div>
+            </div>
+            <div class="row3-col3">
+                <div class="box7"><img src="./Assests/mixer.jpg" alt="mixer" width="100%" height="100%"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

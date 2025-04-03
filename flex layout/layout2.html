@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            border: 1px solid black;
+            display: flex;
+        }
+        .column {
+            border: 2px solid red;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .col1 {
+            width: 30%;
+        }
+        .col2 {
+            width: 40%;
+        }
+        .col3 {
+            width: 30%;
+        }
+        .col1 img, .col3 img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .row {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="column col1">
+            <div class="row"><img src="./Assests/rose1.jpg" alt="rose1"></div>
+            <div class="row"><img src="./Assests/rose2.jpg" alt="rose2"></div>
+        </div>
+        <div class="column col2">
+            <img src="./Assests/rose3.jpg" alt="rose3">
+        </div>
+        <div class="column col3">
+            <div class="row"><img src="./Assests/rose4.jpg" alt="rose4"></div>
+            <div class="row"><img src="./Assests/rose5.jpg" alt="rose5"></div>
+        </div>
+    </div>
+</body>
+</html>

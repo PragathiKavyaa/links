@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS92</title>
+    <style>
+        .container{
+            margin: 0;
+            padding: 0;
+        }
+        .grow{
+            display: flex;
+        }
+        .shrink{
+            display: flex;
+        }
+        .basis{
+            display: flex;
+        }
+        .order{
+            display: flex;
+        }
+        .alignself{
+            display: flex;
+            align-self: center;
+            width: 100%;
+            height: 500%;
+            border: 2px solid black;
+        }
+        .box1{
+            flex-grow: 3;
+            border: 2px solid yellowgreen;
+        }
+        .box2{
+            flex-grow: 2;
+            border: 2px solid yellowgreen;
+        }
+        .box3{
+            flex-shrink: 10;
+            width: 100%;
+            border: 2px solid orangered;
+        }
+        .box4{
+            flex-shrink: 2;
+            width: 100%;
+            border: 2px solid orangered;
+        }
+        .box5{
+            flex-basis: 150px;
+            border: 2px solid blueviolet;
+        }
+        .box6{
+            flex-basis: 100px;
+            border: 2px solid blueviolet;
+        }
+        .box7{
+            order: 2;
+            border: 2px solid goldenrod;
+        }
+        .box8{
+            order: 1;
+            border: 2px solid goldenrod;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="grow">
+            <h1>Flex Grow</h1>
+            <div class="box1">grow3</div>
+            <div class="box2">grow2</div>
+        </div>
+        <div class="shrink">
+            <h1>Flex Shrink</h1>
+            <div class="box3">shrink10</div>
+            <div class="box4">shrink2</div>
+        </div>
+        <div class="basis">
+            <h1>Flex Basis</h1>
+            <div class="box5">basis150px</div>
+            <div class="box6">basis100px</div>
+        </div>
+        <div class="order">
+            <h1>Order</h1>
+            <div class="box7">child1</div>
+            <div class="box8">child2</div>
+        </div>
+        <div class="alignself">
+            <h1>Align Self</h1>
+        </div>
+    </div>
+</body>
+</html>

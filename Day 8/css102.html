@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS102</title>
+    <style>
+    .grid{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        box-sizing: border-box;
+        width: 100%;
+        height: 500%;
+        border: 2px solid orange;
+    }
+    .grid1{
+        flex-grow: 5;
+        border: 2px solid springgreen;
+    }
+    .grid2{
+       flex-shrink: 2;
+       border: 2px solid springgreen;
+    }
+    .grid3{
+        flex-basis: 500px;
+        border: 2px solid springgreen;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <h1>CSS102</h1>
+        <p>  Combine flex-grow, flex-shrink, and flex-basis in a single flex shorthand property. </p>
+    </header>
+        <div class="grid">
+            <div class="grid1">grid1</div>
+            <div class="grid2">grid2</div>
+            <div class="grid3">grid3</div>
+        </div>
+</body>
+</html>

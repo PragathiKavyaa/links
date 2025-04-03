@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS97</title>
+    <style>
+        .container{
+        margin:10px;
+        padding: 10%;
+        box-sizing: border-box;
+    }
+    .box1{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        border: 2px solid violet;
+        background-color: orangered;
+    }
+    .box2{
+        width: 70px;
+        height: 150px;
+        display: flex;
+        flex-direction: row;
+        border: 2px solid rgb(43, 3, 43);
+        background-color: greenyellow;
+    }
+    .container div{
+        font-size: 2rem;
+            padding: 10%;
+            color: white;
+    }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="box1">horizontal box
+        <div class="box2">vertical box</div>
+    </div>
+    </div>
+</body>
+</html>

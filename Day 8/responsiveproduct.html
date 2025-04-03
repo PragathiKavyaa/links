@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Product</title>
+    <style>
+        .container{
+            background: rgb(243, 234, 234);
+            width: 70%;
+            height: 500px;
+            box-sizing: border-box;
+            padding: 5%;
+        }
+        .images{
+            margin: auto;
+            width: 200%;
+            height: 200%;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        .img1, .img2, .img3{
+            display: inline-block;
+            flex-direction: column;
+            background: white;
+            border: 2px solid black;
+            border-radius: 2px;
+        }
+        p{
+            color: black;
+            text-align: center;
+        }
+        .container h1{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Our Products</h1>
+        <div clas="images">
+            <div class="img1"><img src="" alt="             Featured Product">
+            <p><strong>Featured HeadPhones</strong><br></p>
+            <p>High quality sound with noise cancellation</p>
+            <p style="color: red;"">₹199</p>
+            </div>
+            
+            <div class="img2"><img src="" alt="             Product1">
+                <p><strong>Wireless Earbuds</strong><br></p>
+                <p>Compact and Powerful Sound</p>
+                <p style="color: red;">₹799</p>
+            </div>
+            
+                <div class="img3"><img src="" alt="         Product2">
+                <p><strong>Smart Watch</strong><br></p>
+                <p>Track Fitness and Notifications</p>
+                <p style="color: red;">₹1999</p>
+                </div>
+        </div>
+    </div>
+</body>
+</html>

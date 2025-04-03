@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS98</title>
+    <style>
+        .header{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .a{
+            display: flex;
+        }
+        .one, .two, .three{
+            flex-direction: column;
+            flex-grow: 2;
+            border: 2px solid rgb(48, 17, 17);
+        }
+        .four{
+            flex-direction: column;
+            flex-grow: 5;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+            <nav>
+                <a href="" class="one">Home</a>
+                <a href="" class="two">About</a>
+                <a href="" class="three">Contact Us</a>
+                <a href="" class="four">Delivery</a>
+            </nav>
+    </header>
+</body>
+</html>
