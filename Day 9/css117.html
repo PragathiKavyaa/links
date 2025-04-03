@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS117</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: 5fr 3fr 1fr;
+        }
+        .grid1, .grid2, .grid3{
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            gap: 20px;
+            background-color: rgb(184, 131, 233);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="grid1">Column1</div>
+        <div class="grid2">Column2</div>
+        <div class="grid3">Column3</div>
+    </div>
+</body>
+</html>

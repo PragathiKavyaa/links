@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS109</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            border: 2px solid black;
+        }
+        .grid1{
+            background-color: blue;
+        }
+        .grid2, .grid3{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="grid1">grid1</div>
+        <div class="grid2">grid2</div>
+        <div class="grid3">grid3</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS114</title>
+    <style>
+        header{
+            display: grid;
+            grid-template-columns: 500px;
+            grid-template-rows: 100px;
+        }
+        header h1{
+            background-color: violet;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 100px 100px 100px 100px;
+            grid-template-rows: 50px 50px 50px 50px;
+        }
+        .one, .two, .three, .four{
+            border: 2px solid rebeccapurple;
+            background-color: rgb(140, 115, 163);
+        }
+        footer{
+            display: grid;
+            grid-template-columns: 200px;
+            grid-template-rows: 70px;
+        }
+        p{
+            border: 2px solid rebeccapurple;
+            background-color: rgb(21, 1, 39);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header><h1>Welcome to the website</h1></header>
+    <section class="container">
+        <div class="one">HTML</div>
+        <div class="two">CSS</div>
+        <div class="three">JAVA</div>
+        <div class="four">SQL</div>
+    </section>
+    <footer> <p>@2025 all rights reserved.</p></footer>
+</body>
+</html>

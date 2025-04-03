@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS115</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            align-content: center;
+        }
+        .container{
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: repeat(3, 2fr);
+            grid-template-rows: 150px 150px 150px;
+            padding: 20px;
+        }
+        h1{
+            background-color: rgba(100, 102, 104, 0.5);
+            width: 250px;
+            text-align: center;
+        }
+        .images { 
+            width: 100%; 
+            opacity: 0.7; 
+            transition: opacity 0.3s ease; 
+        }
+        .images:hover{
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Photo Gallery</h1>
+    <div class="container">
+        
+        <div class="images">
+            <img src="./assests/rose1.jpg" alt="rose1">
+            <img src="./assests/rose2.jpg" alt="rose2">
+            <img src="./assests/rose3.jpg" alt="rose3">
+            <img src="./assests/rose4.jpg" alt="rose4">
+            <img src="./assests/rose5.jpg" alt="rose5">
+        </div>
+    </div>
+</body>
+</html>
