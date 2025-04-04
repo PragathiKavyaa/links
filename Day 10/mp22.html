@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+         * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+        header{
+            background-color: rgb(48, 45, 45);
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        .main{
+            display: grid;
+            grid-template-columns: 1fr 5fr;
+            height: 100vh;
+        }
+        .sidebar{
+            background: black;
+            padding: 10%;
+        }
+        .main a{
+            background-color: dimgray;
+            color: white;
+            border-radius: 5px;
+        }
+        .content{
+            background-color: white;
+            color: black;
+            margin: 5%;
+        }
+        .card{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            gap: 20px;
+            padding: 20px;
+        }
+        .card1, .card2, .card3{
+            display: block;
+            margin: 0;
+            border-radius: 5px;
+            background-color: lightgray;
+            color: black;
+            gap: 20%;
+            text-align: center;
+            padding: 10%;
+        }
+        footer{
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>Dashboard</header>
+    <div class="main">
+        <div class="sidebar">
+            <nav>
+                <a href="">Home</a><br>
+                <a href="">Reports</a><br>
+                <a href="">Settings</a>
+            </nav>
+        </div>
+        <div class="content">
+            <h2>Main Content</h2>
+            <div class="card">
+                <div class="card1">card1</div>
+                <div class="card2">card2</div>
+                <div class="card3">card3</div>
+            </div>
+        </div>
+    </div>
+    <footer>@ 2025 Dashboard Inc.</footer>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS121</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        header{
+            background-color: coral;
+            color: white;
+            text-align: center;
+            font-size: xx-large;
+        }
+        aside{
+            background-color: rgb(153, 55, 19);
+            color: white;
+            text-align: center;
+            font-size: xx-large;
+        }
+        section{
+            background-color: rgb(41, 13, 3);
+            color: white;
+            text-align: center;
+            font-size: xx-large;
+        }
+        footer{
+            background-color: rgb(73, 56, 50);
+            color: white;
+            text-align: center;
+            font-size: xx-large;
+        }
+        body{
+            display: grid;
+            height: 100vh;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto fr auto;
+            grid-template-areas: "head head head"
+                        "aside main main"
+                        "foot foot foot" ;
+        }
+        header{
+            grid-area: head;
+        }
+        aside{
+            grid-area: aside;
+        }
+        section{
+            grid-area: main;
+        }
+        footer{
+            grid-area: foot;
+        }
+    </style>
+</head>
+<body>
+   <header><h1>Header</h1></header>
+   <aside><p>Aside</p></aside>
+   <section><h2>Main</h2></section>
+   <footer>Footer</footer>
+</body>
+</html>

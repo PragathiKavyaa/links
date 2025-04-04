@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS124</title>
+    <style>
+        .container{
+            display: grid;
+            border: 2px solid darkblue;
+        }
+        .grid{
+            background-color: aqua;
+            color: black;
+            height: 500px;
+            font-size: 2rem;
+        }
+        .nestedgrid{
+            background-color: blueviolet;
+            color: white;
+            height: 200px;
+            width: 200px;
+            font-size: 2rem;
+            align-content: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="grid">Grid
+            <div class="nestedgrid">
+                NestedGrid
+            </div>
+        </div>
+    </div>
+</body>
+</html>

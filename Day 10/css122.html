@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS122</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 2fr 5fr;
+            grid-template-rows: 200px 200px;
+            border: 2px solid black;
+        }
+        .sidebar{
+            background-color: brown;
+            color: white;
+            text-align: center;
+            grid-row: 1/3;
+        }
+        .maincontent{
+            background-color: rgb(221, 184, 184);
+            color: black;
+            text-align: center;
+            grid-column: 2/3;
+        }
+        .footer{
+            background-color: rgb(39, 23, 23);
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">sidebar</div>
+        <div class="maincontent">main content</div>
+        <div class="footer">footer</div>
+</div>
+</body>
+</html>
