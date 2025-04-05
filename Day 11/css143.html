@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS143</title>
+    <style>
+        .container{
+            position: relative; 
+            width: 200px; 
+            height: 100px; 
+            background-color: lightblue; 
+            padding: 10px; 
+            border: 2px solid #333;
+            z-index: 5;
+        }
+        .absolute{
+            position: absolute; 
+            top: 10px;  
+            left: 20px; 
+            background-color: orange; 
+            padding: 10px; 
+            border-radius: 5px; 
+            
+        }
+    </style>
+</head>
+<body>
+    <header><h1>header</h1></header>
+    <div class="container">
+        <div class="absolute">💥💥💥</div>
+        Emergency
+    </div>
+</body>
+</html>

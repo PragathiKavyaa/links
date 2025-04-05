@@ -1,0 +1,41 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>CSS140</title>  
+<style>  
+nav ul {  
+list-style: none;  
+position: relative;  
+}  
+.dropdown-content {  
+display: none;  
+position: absolute;  
+z-index: 10;  
+background: white;  
+border: 1px solid #ddd;  
+padding: 10px; 
+}  
+.dropdown:hover {  
+display:block;  
+}  
+.dropdown-content{  
+display: block;  
+}  
+</style>  
+</head>  
+<body>  
+<nav>  
+<ul>  
+<li class="dropdown">  
+Menu  
+<ul class="dropdown-content">  
+<li>Option 1</li>  
+<li>Option 2</li>  
+</ul>  
+</li>  
+</ul>  
+</nav>  
+</body>  
+</html>
