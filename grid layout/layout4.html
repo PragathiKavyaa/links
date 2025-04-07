@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Layout 4</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .grid-container {
+        width: 80%;
+        border: 2px solid rgb(6, 7, 6); 
+        display: grid; 
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: auto;
+
+    }
+
+
+    .n1 { width: 100%; height: 200px; object-fit: cover; }
+    .n2 { width: 100%; height: 200px; object-fit: cover; }
+    .n3 { width: 100%; height: 200px; object-fit: cover; }
+
+    .n4 { width: 100%; height: 300px; object-fit: cover;}
+    .n5 { width: 100%; height: 300px; object-fit: cover; }
+
+    .n6 { width: 100%; height: 200px; object-fit: cover; }
+    .n7 { width: 100%; height: 200px; object-fit: cover; }
+    .n8 { width: 100%; height: 200px; object-fit: cover; }
+
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="col1">
+    <img src="./Assests/n1.jpg" alt="n1" class="n1" />
+    <img src="./Assests/n2.jpg" alt="n2" class="n2"/>
+    <img src="./Assests/n3.jpg" alt="n3" class="n3" />
+  </div>
+  <div class="col2">
+    <img src="./Assests/n4.jpg" alt="n4" class="n4"/>
+    <img src="./Assests/n5.jpg" alt="n5" class="n5"/>
+</div> 
+<div class="col3">
+    <img src="./Assests/n6.jpg" alt="n6" class="n6"/>
+    <img src="./Assests/n7.jpg" alt="n7" class="n7"/>
+    <img src="./Assests/n8.jpg" alt="n8" class="n8"/>
+  </div>
+</body>
+</html>

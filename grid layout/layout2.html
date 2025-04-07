@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 250px 250px 250px;
+            grid-template-rows: 250px 250px;
+        }
+        .img2{
+            grid-row: span 2;
+        }
+        .img1, .img2, .img3, .img4, .img5{
+            width: 100%;
+            height: 100%;
+            border: 2px solid black;
+            align-content: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="img1"><img src=  "./Assests/rose5.jpg" alt=""></div>
+        <div class="img2"><img src="./Assests/rose2.jpg" alt=""></div>
+        <div class="img3"><img src="./Assests/rose3.jpg" alt=""></div>
+        <div class="img4"><img src="./Assests/rose4.jpg" alt=""></div>
+        <div class="img5"><img src="./Assests/rose1.jpg" alt=""></div>
+    </div>
+</body>
+</html>
