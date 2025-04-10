@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Urbanist", sans-serif;
+        }
+        header{
+            display: flex; 
+            flex-direction: row;
+            width: 100%;
+            height: 100%;
+        }
+        nav{
+            position: absolute; 
+            width: 100%; 
+            padding: 10px; 
+            text-align:right; 
+            font-size: x-large;
+        }
+        nav a{
+            color: black;
+            gap: 50px;
+        }
+        header a:hover{
+            color: dimgray;
+        }
+        .one{
+            padding: 50px;
+            margin: 0;
+            row-gap: 50%;
+        }
+        .two{
+            padding: 10px;
+            width: 1000%;
+            display: flex;
+            flex-direction: row;
+        }
+        .two p{
+            position: absolute; 
+            width: 100%;
+            padding: 20px; 
+            text-align:right; 
+            font-size: 1rem;
+            justify-content: space-evenly;
+        }
+        .two-btn{
+            font-size: large;
+            background-color: rgb(2, 2, 2);
+            color: white;
+            border-radius: 50px;
+            width: 200px;
+            height: 50px;
+        }
+        .two-btn:hover{
+            background-color: white;
+            color: black;
+        }
+        .three{
+            padding: 50px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            gap: 70%;
+        }
+        .three button{
+            font-size: large;
+            color: rgb(17, 16, 16);
+            border-radius: 50px;
+            width: 200px;
+            height: 50px;
+            position: relative; 
+            justify-content: flex-end;
+        }
+        .three button:hover{
+            color: rgb(90, 83, 83);
+        }
+        .four{
+            padding: 50px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        .four h1{
+            padding: 10px;
+            font-size: 5rem;
+        }
+        .four p{
+            padding: 10px;
+            font-size: x-large;
+        }
+        .four button{
+            font-size: large;
+            background-color: rgb(248, 246, 246);
+            color: black;
+            border-radius: 50px;
+            width: 200px;
+            height: 50px;
+        }
+        .four button:hover{
+            background-color: rgb(12, 12, 12);
+            color: white;
+        }
+        .five{
+            padding: 50px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            gap: 20%;
+        }
+        .six{
+            padding: 50px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            gap: 20%;
+            text-align: center;
+        }
+        .six img{
+            width: 50%;
+            height: 50%;
+            border-radius: 70px;
+        }
+        .seven{
+            padding: 50px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .seven h2{
+            font-size: 5rem;
+            position: sticky;
+            top: 0;
+        }
+        .seven1, .seven2, .seven3, .seven4{
+            position: relative;
+            text-align: right;
+        }
+        .seven1:hover{
+            background-color: black;
+            color: white;
+        }
+        .seven2:hover{
+            background-color: black;
+            color: white;
+        }
+        .seven3:hover{
+            background-color: black;
+            color: white;
+        }
+        .seven4:hover{
+            background-color: black;
+            color: white;
+        }
+        .eight{
+            padding: 50px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            gap: 70%;
+            
+        }
+        .btn1{
+            font-size: large;
+            color: rgb(17, 16, 16);
+            border-radius: 50px;
+            width: 200px;
+            height: 50px;
+            position: relative; 
+            justify-content: flex-end;
+            
+        }
+        .btn1:hover{
+            color: rgb(189, 184, 184);
+        }
+        .nine{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        .nine1 img, .nine2 img, .nine3 img{
+            width: 250px;
+            height: 250px;
+            border-radius: 15px;
+            align-items: center;
+        }
+        .btn2, .btn3, .btn4, .btn5, .btn6, .btn7, .btn8, .btn9, .btn10{
+            background-color: rgb(207, 209, 212);
+            width: 100px;
+            height: 25px;
+            color: white;
+            border: 1px solid gray;
+            border-radius: 15px;
+        }
+        .btn2:hover{
+            color: grey;
+        }
+        .btn3:hover{
+            color: grey;
+        }
+        .btn4:hover{
+            color: grey;
+        }
+        .btn5:hover{
+            color: grey;
+        }
+        .btn6:hover{
+            color: grey;
+        }
+        .btn7:hover{
+            color: grey;
+        }
+        .btn8:hover{
+            color: grey;
+        }
+        .btn9:hover{
+            color: grey;
+        }
+        .btn10:hover{
+            color: grey;
+        }
+        .ten{
+            padding: 50px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20%;
+            text-align: center;
+        }
+        .ten h2{
+            text-align: left;
+        }
+        .ten button{
+            position: relative;
+            justify-content: right;
+            width: 200px;
+            height: 100px;
+            border-radius: 30px;
+            background-color: white;
+            color: black;
+            font-size: 2rem;
+        }
+        .ten button:hover{
+            background-color: black;
+            color: white;
+        }
+        .ten a{
+            display: flex;
+            flex-direction: column;
+        }
+        .ten a:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Brilio.</h2>
+        <nav>
+            <a href="" >Home</a>
+            <a href="" >Works</a>
+            <a href="" >About</a>
+            <a href="" >Contact</a>
+        </nav><br>
+    </header>
+    <section class="one">
+        <h4 style="color: gray;">Hello! I'm Brilio.</h4>
+        <h1 style="font-size: 5rem;">Creating impactful experiences on visual design</h1>
+    </section>
+    <section class="two">
+        <button class="two-btn">Let's Talk! </button>
+        <p>I transform ideas into impactful digital experiences, delivering innovative solutions that elevate brands and captivate audiences around the world.</p>
+    </section>
+    <section class="three">
+        <h2 style="font-size: 32px;">Selected Works</h2>
+        <button>View All</button>
+    </section>
+    <section class="four">
+        <h1>Helping brands achieve digital mastery of creative innovation and strategic planning.</h1>
+        <p>Transforming ideas into digital realities by blending strategic insights with innovative design, helping brands thrive in a rapidly evolving digital landscape.</p>
+        <button>About Me</button>
+    </section>
+    <section class="five">
+        <div class="five1">
+            <h3>Branding</h3>
+            <p>I craft distinctive brand identities that resonate and endure. Through strategic insight and meticulous design, I build a unified visual language that captures your essence and speaks to your audience.</p>
+        </div>
+        <div class="five2">
+            <h3>UI/UX</h3>
+            <p>Designing intuitive and engaging user experiences that seamlessly blend form and function. I focus on creating interfaces that are not only visually appealing but also deeply functional and user-centric.</p>
+        </div>
+        <div class="five3">
+            <h3>App Design</h3>
+            <p>Transforming ideas into captivating app experiences. I design with precision and creativity, ensuring every interaction is smooth and every visual element enhances user delight and engagement.</p>
+        </div>
+    </section>
+    <section class="six">
+        <div class="six1">
+            <img src="./assests/client-1.jpg" alt="client-1">
+            <h3>Jane Dae</h3>
+            <h4>Head of design creative co.</h4>
+            <p>We were blown away by Themeland's creativity</p>
+        </div>
+        <div class="six2">
+            <img src="./assests/client-2.jpg" alt="client-2">
+            <h3>Michael Lee</h3>
+            <h4>Chief Marketing Officer. XYZ Corporation</h4>
+            <p>Working with Themeland was an absolute drream.</p>
+        </div>
+        <div class="six3">
+            <img src="./assests/client-1.jpg" alt="client-3">
+            <h3>sarah Johnson</h3>
+            <h4>Head of design creative co.</h4>
+            <p>It was privilaged to work with themeland on our project.</p>
+        </div>
+    </section>
+    <section class="seven">
+        <h2>Awards & Recognition</h2>
+        <div class="seven1">
+            <h3>Best User Experience</h3>
+            <h4>2021-Webby Awards</h4><hr>
+        </div>
+        <div class="seven2">
+            <h3>Honoroble Mention</h3>
+            <h4>2022-Awwwards</h4><hr>
+        </div>
+        <div class="seven3">
+            <h3>Best UI Design</h3>
+            <h4>2023-CSS Design Awards</h4><hr>
+        </div>
+        <div class="seven4">
+            <h3>Awards of the year</h3>
+            <h4>2024-Honor of Awards</h4><hr>
+        </div>
+    </section>
+    <section class="eight">
+        <h2>Insights</h2>
+        <button class="btn1">View All</button>
+    </section>
+    <section class="nine">
+        <div class="nine1">
+            <img src="./assests/blog-1.jpg" alt="blog1"><br>
+            <a href="">The Future of Digital Design - Trends To Watch </a><br>
+            <button class="btn2">Branding</button>
+            <button class="btn3">Design</button>
+            <button class="btn4">Trends</button>
+        </div>
+        <div class="nine2">
+            <img src="./assests/blog-2.jpg" alt="blog2"><br>
+            <a href="">Building User Trust Through Thoughtful UI/UX Design </a><br>
+            <button class="btn5">UI/UX</button>
+            <button class="btn6">Software</button>
+            <button class="btn7">Trends</button>
+        </div>
+        <div class="nine3">
+            <img src="./assests/blog-3.jpg" alt="blog3"><br>
+            <a href="">The role of color psychology in effective branding </a><br>
+            <button class="btn8">Design</button>
+            <button class="btn9">Branding</button>
+            <button class="btn10">Technology</button>
+        </div>
+    </section>
+    <section class="ten">
+        <h1 style="font-size: 5rem; text-align: center;">Let's create Something</h1>
+        <h2>Together</h2>
+        <button>Get In Touch</button>
+        <a href="" class="link1">Instagram</a>
+        <a href="">Twitter</a>
+        <a href="">Linkedin</a>
+    </section>
+    <footer>©2024 Brilio, All Rights Reserved By Themeland</footer>
+</body>
+</html>

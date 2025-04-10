@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS144</title>
+    <style>
+        .one{
+            width: 500px;
+            height: 100px;
+            border: 2px solid black;
+        }
+        .one p{
+            opacity: 0.5;
+            text-align: center;
+        }
+        .two{
+            width: 500px;
+            height: 100px;
+            border: 2px solid black;
+            text-align: center;
+        }
+        .two button{
+            width: 70px;
+            height: 50px;
+            font-size: large;
+            border: 2px solid red;
+            align-items: center; 
+        }
+        .two button:hover{
+            transform: scale(2);
+        }
+        .three{
+            width: 500px;
+            height: 100px;
+            border: 2px solid black;
+            text-align: center;
+            font-size: large;
+        }
+        .three .link1:hover{
+            filter: blur(20px);
+        }
+        .four{
+            width: 500px;
+            height: 250px;
+            border: 2px solid black;
+            text-align: center;
+            font-size: large;
+        }
+        .img{
+            width: 100px;
+            height: 100px;
+        }
+        .four img:hover{
+            filter: grayscale(50%);
+        }
+        .five{
+            width: 500px;
+            height: 100px;
+            border: 2px solid black;
+            text-align: center;
+            font-size: large;
+        }
+        .five p:hover{
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">
+        <p>Create a fading text effect with opacity.</p>
+    </div>
+    <div class="two">
+        <p>Animate a button to grow in size using transform: scale().</p>
+        <button>click here</button>
+    </div>
+    <div class="three">
+        <p> Create a navigation bar with a hover blur effect.</p>
+        <nav>
+            <a href="" class="link1">home</a>
+        </nav>
+    </div>
+    <div class="four">
+        <p>  Apply a grayscale filter to an image on hover. </p>
+        <img src="./assests/rose1.jpg" alt="rose1">
+    </div>
+    <div class="five">
+        <p>  Fade out an element when clicked using opacity.  </p>
+    </div>
+</body>
+</html>

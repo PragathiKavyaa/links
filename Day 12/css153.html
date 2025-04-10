@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS153</title>
+    <style>
+        .container{
+            width: 500px;
+            height: 500px;
+            position: relative;
+        }
+        .img1{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            color: white;
+            position: absolute;
+            top: -20px;
+            transition: 0.5s;
+            padding: 20px;
+            animation: slide-down 0.5s ease-out; 
+        }
+        @keyframes slide-down { 
+    from { transform: translateY(-100px); opacity: 0; } 
+    to { transform: translateY(0); opacity: 1; } 
+} 
+        .container:hover .img1{
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Create a hover effect where text slides in with opacity.</h1>
+    <div class="container">
+        <img src="./assests/rose5.jpg" alt="rose5">
+        <div class="img1">rose</div>
+    </div>
+</body>
+</html>
