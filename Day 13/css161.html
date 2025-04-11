@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS161</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 90%;
+        }
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        @media(max-width:600px){
+            .col{
+                width: 100%;
+            }
+        }
+
+        @media(min-width: 601px) and (max-width: 1024px){
+            .col{
+                width: 48%;
+            }
+        }
+
+        @media(min-width: 1025px){
+            .col{
+                width: 32%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="./assest/cat2.jpg" alt="cat2">
+            </div>
+            <div class="col">
+                <img src="./assest/cat2.jpg" alt="cat2">
+            </div>
+            <div class="col">
+                <img src="./assest/cat2.jpg" alt="cat2">
+            </div>
+            <div class="col">
+                <img src="./assest/cat2.jpg" alt="cat2">
+            </div>
+            <div class="col">
+                <img src="./assest/cat2.jpg" alt="cat2">
+            </div>
+            <div class="col">
+                <img src="./assest/cat2.jpg" alt="cat2">
+            </div>
+            <div class="col">
+                <img src="./assest/cat2.jpg" alt="cat2">
+            </div>
+            <div class="col">
+                <img src="./assest/cat2.jpg" alt="cat2">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

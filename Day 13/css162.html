@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS162</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .button{
+            display: flex;
+            flex-direction: row;
+            gap: 10%;
+            color: rgb(10, 10, 10); 
+            border: none; 
+            border-radius: 5px; 
+        }
+        .btn1, .btn2, .btn3, .btn4{
+           
+            border: 2px solid rgb(14, 13, 13);
+            border-radius: 5px;
+        }
+        @media(max-width:600px){
+            .btn1, .btn2, .btn3, .btn4{
+                width: 100px;
+                height: 50px;
+                padding: 5px;
+                font-size:small;
+                text-align: center;
+            }
+        }
+
+        @media(min-width: 601px) and (max-width: 1024px){
+            .btn1, .btn2, .btn3, .btn4{
+                width: 200px;
+                height: 100px;
+                padding: 25px;
+                font-size: xx-large;
+                text-align: center;
+            }
+        }
+
+        @media(min-width: 1025px){
+            .btn1, .btn2, .btn3, .btn4{
+                width: 200px;
+                height: 100px;
+                padding: 70px;
+                font-size: 2rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Responsive Buttons</h1>
+    <div class="container">
+        <div class="button">
+            <div class="btn1">Primary Button</div>
+            <div class="btn2">Secondary Button</div>
+            <div class="btn3">Danger Button</div>
+            <div class="btn4">Warning Button</div>
+        </div>
+    </div>
+</body>
+</html>

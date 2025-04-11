@@ -1,0 +1,93 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>CSS163</title> 
+    <style> 
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        } 
+ 
+        body { 
+            display: grid; 
+            grid-template-rows: auto 1fr auto; 
+            height: 100vh; 
+            font-family: Arial, sans-serif; 
+        } 
+ 
+        header { 
+            background-color: #333; 
+            color: white; 
+            text-align: center; 
+            padding: 10px; 
+        } 
+ 
+        .dashboard { 
+            display: grid; 
+            grid-template-columns: 1fr 2fr 1fr; 
+            gap: 20px; 
+            padding: 20px; 
+        } 
+ 
+        .sidebar {
+            background-color: #f0f0f0; 
+            padding: 10px; 
+            border-radius: 5px; 
+        } 
+ 
+        .main-content { 
+            background-color: white; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+            padding: 20px; 
+            border-radius: 5px; 
+        } 
+ 
+        .right-sidebar { 
+            background-color: #f0f0f0; 
+            padding: 10px; 
+            border-radius: 5px; 
+        } 
+ 
+        footer { 
+            background-color: #333; 
+            color: white; 
+            text-align: center; 
+            padding: 10px; 
+        } 
+
+        @media(max-width:600px){
+            .sidebar { 
+           opacity: 0;
+        } 
+        .right-sidebar{
+            opacity: 0;
+        }
+        }
+    </style> 
+</head> 
+<body> 
+    <header> 
+        <h1>Dashboard</h1> 
+    </header> 
+    <div class="dashboard"> 
+        <div class="sidebar"> 
+            <h3>Sidebar</h3> 
+            <p>Links and navigation</p> 
+        </div> 
+        <div class="main-content"> 
+            <h2>Main Content</h2> 
+            <p>This is the main area for the dashboard.</p> 
+        </div> 
+        <div class="right-sidebar"> 
+            <h3>Right Sidebar</h3> 
+            <p>Additional info or ads</p> 
+        </div> 
+    </div> 
+    <footer> 
+        <p>&copy; 2025 Dashboard Example</p> 
+    </footer> 
+</body> 
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS161</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 90%;
+            background-color: rgb(189, 182, 182);
+            text-align: center;
+            
+        }
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            padding: 10px;
+            justify-content: space-evenly;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+        }
+        @media(max-width:600px){
+            .col{
+                width: 90%;
+                background-color: white;
+                border: 2px solid white;
+                border-radius: 15px;
+                justify-content: space-evenly;
+            }
+        }
+
+        @media(min-width: 601px) and (max-width: 1024px){
+            .col{
+                width: 48%;
+                background-color: white;
+                border: 2px solid white;
+                border-radius: 15px;
+                justify-content: space-evenly;
+            }
+        }
+
+        @media(min-width: 1025px){
+            .col{
+                width: 32%;
+                background-color: white;
+                border: 2px solid white;
+                border-radius: 15px;
+                justify-content: space-evenly;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Product Gallery</h1>
+        <div class="row">
+            <div class="col">
+                <img src="./assest/cat2.jpg" alt="cat2">
+                <h3>Product 1</h3>
+                <p>Price Rs. 10.00</p>
+            </div>
+            <div class="col">
+                <img src="./assest/cat2.jpg" alt="cat2">
+                <h3>Product 2</h3>
+                <p>Price Rs. 15.00</p>
+            </div>
+            <div class="col">
+                <img src="./assest/cat2.jpg" alt="cat2">
+                <h3>Product 3</h3>
+                <p>Price Rs. 20.00</p>
+            </div>
+            <div class="col">
+                <img src="./assest/cat2.jpg" alt="cat2">
+                <h3>Product 4</h3>
+                <p>Price Rs. 25.00</p>
+            </div>
+            <div class="col">
+                <img src="./assest/cat2.jpg" alt="cat2">
+                <h3>Product 5</h3>
+                <p>Price Rs. 30.00</p>
+            </div>
+            <div class="col">
+                <img src="./assest/cat2.jpg" alt="cat2">
+                <h3>Product 6</h3>
+                <p>Price Rs. 35.00</p>
+            </div>
+            <div class="col">
+                <img src="./assest/cat2.jpg" alt="cat2">
+                <h3>Product 7</h3>
+                <p>Price Rs. 40.00</p>
+            </div>
+            <div class="col">
+                <img src="./assest/cat2.jpg" alt="cat2">
+                <h3>Product 8</h3>
+                <p>Price Rs. 45.00</p>
+            </div>
+            <div class="col">
+                <img src="./assest/cat2.jpg" alt="cat2">
+                <h3>Product 9</h3>
+                <p>Price Rs. 50.00</p>
+            </div>
+            <div class="col">
+                <img src="./assest/cat2.jpg" alt="cat2">
+                <h3>Product 10</h3>
+                <p>Price Rs. 55.00</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
