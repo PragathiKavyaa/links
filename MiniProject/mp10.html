@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Travel Agency</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .hero {
+      background-image: url(./assest/seaimage.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+    }
+
+    .destinations {
+      padding: 40px 20px;
+      background: #f9f9f9;
+    }
+
+    .destinations h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .destination {
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .destination img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .destination:hover img {
+      transform: scale(1.1);
+    }
+
+    .testimonials {
+      padding: 40px 20px;
+      background: #fff;
+    }
+
+    .testimonials h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background-color: #fefefe;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .card p {
+      font-style: italic;
+    }
+
+    .card h4 {
+      margin-top: 10px;
+      text-align: right;
+      color: #555;
+    }
+
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div>
+      <h1>Explore the World</h1>
+      <p>Your adventure begins here. Discover top destinations now!</p>
+    </div>
+  </section>
+
+  <section class="destinations">
+    <h2>Popular Destinations</h2>
+    <div class="grid">
+      <div class="destination"><img src="./assest/paris.jpg" alt="Paris"></div>
+      <div class="destination"><img src="./assest/maldives.jpg" alt="Maldives"></div>
+      <div class="destination"><img src="./assest/newyork.jpg" alt="New York"></div>
+      <div class="destination"><img src="./assest/tokyo.jpg" alt="Tokyo"></div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>What Our Travelers Say</h2>
+    <div class="cards">
+      <div class="card">
+        <p>"The trip was absolutely amazing and the service was top-notch!"</p>
+        <h4>- Sarah J.</h4>
+      </div>
+      <div class="card">
+        <p>"I've never felt more relaxed and well taken care of. Highly recommended!"</p>
+        <h4>- Mark D.</h4>
+      </div>
+      <div class="card">
+        <p>"Wonderful experience from start to finish. Beautiful destinations!"</p>
+        <h4>- Priya K.</h4>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

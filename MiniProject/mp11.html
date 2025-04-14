@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu Page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 500vh;
+            background-image: url(./assest/logo.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-clip: border-box;
+        }
+        header{
+            width: 100%;
+            height: 50px;
+            border: 2px solid gray;
+            position: sticky;
+            top: 0;
+        }
+        h1{
+            padding: 14px;
+            position: absolute;
+        }
+        nav{
+            float: right;
+            padding: 16px 14px;
+            display: inline;
+        }
+        nav a{
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+            padding: 14px;
+        }
+        section{
+            width: 100%;
+            position: absolute;
+            top:40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            padding: 50px;
+        }
+        section h1{
+            padding: 10px;
+            color: white;
+            font-size: xx-large;
+            animation: moveToLeft 2s;
+        }
+        section p{
+            padding: 50px;
+            color: white;
+            font-size: large;
+            font-weight: 500;
+            margin: 50px;
+            animation: moveToLeft 2s;
+        }
+        section button{
+            padding: 10px;
+            width: 200px;
+            height: 50px;
+            font-size: x-large;
+            border: 2px solid rgb(228, 222, 222);
+            background-color: transparent;
+            border-radius: 15px;
+            font-weight: 700;
+            color: rgb(241, 237, 237);
+            animation: moveToLeft 2s;
+        }
+        @keyframes moveToLeft{
+            0%{transform: translateX(100px); opacity: 0;}
+            100%{transform: translateX(0); opacity: 1;}
+        }
+        nav a:hover{
+            text-decoration: underline chocolate;
+            color: rgb(243, 239, 236);
+            box-sizing: border-box;
+            background-color: chocolate;
+        }
+        button:hover{
+            background-color: orangered;
+            background: orangered;
+            
+        }
+    </style>
+</head>
+<body>
+    <header><h1>LULU CAFE</h1>
+    
+        <nav>
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Gallery</a>
+            <a href="">Menu</a>
+            <a href="">Updates</a>
+            <a href="">Contact</a>
+        </nav>
+    
+</header>
+
+<section>
+    <h1>Serving Since 1980</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit culpa minus nisi architecto velit enim dolorem doloribus amet laboriosam neque, et voluptates incidunt hic ab cupiditate ea, eligendi consequatur dignissimos.</p>
+    <button><a href="./Pages/menu.html">View Menu</a></button>
+</section>
+    
+</body>
+</html>

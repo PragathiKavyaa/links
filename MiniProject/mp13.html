@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Online Learning Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    .courses {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 280px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.95em;
+      color: #666;
+    }
+
+    .faq {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .faq h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    details {
+      background: white;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      margin-bottom: 10px;
+      padding: 15px 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    summary {
+      font-weight: bold;
+      font-size: 1em;
+      outline: none;
+    }
+
+    @media (max-width: 768px) {
+      .courses {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <h1>Learn Anytime, Anywhere</h1>
+    <p>Join thousands of learners and upskill with our expert-led online courses.</p>
+  </section>
+
+  <section class="courses">
+    <div class="card">
+      <h3>Web Development</h3>
+      <p>Build responsive websites and web apps using HTML, CSS, and JavaScript.</p>
+    </div>
+    <div class="card">
+      <h3>Graphic Design</h3>
+      <p>Learn the fundamentals of design and create stunning visuals with Adobe tools.</p>
+    </div>
+    <div class="card">
+      <h3>Digital Marketing</h3>
+      <p>Master SEO, social media, and paid advertising to grow any business online.</p>
+    </div>
+  </section>
+
+  <section class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <details>
+      <summary>What is the duration of each course?</summary>
+      <p>Courses typically range from 4 to 12 weeks depending on the topic.</p>
+    </details>
+    <details>
+      <summary>Do I get a certificate?</summary>
+      <p>Yes, all learners receive a certificate of completion at the end of the course.</p>
+    </details>
+    <details>
+      <summary>Can I learn at my own pace?</summary>
+      <p>Absolutely! All courses are self-paced and you can access them anytime.</p>
+    </details>
+  </section>
+
+</body>
+</html>

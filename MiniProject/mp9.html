@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Pricing Table</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      background: #f5f5f5;
+      padding: 40px 20px;
+    }
+
+    .pricing-section {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .pricing-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .pricing-card.best {
+      border: 3px solid #3498db;
+      transform: scale(1.05);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.4); }
+      50% { box-shadow: 0 0 0 10px rgba(52, 152, 219, 0); }
+    }
+
+    .card-header {
+      background: #3498db;
+      color: white;
+      padding: 20px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      font-size: 1.2em;
+    }
+
+    .price {
+      font-size: 2.5em;
+      margin: 20px 0;
+      color: #333;
+    }
+
+    .features {
+      list-style: none;
+      padding: 0 20px;
+    }
+
+    .features li {
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+      transition: background 0.3s;
+    }
+
+    .features li:hover {
+      background: #f0f8ff;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 20px auto;
+      padding: 10px 25px;
+      background: #3498db;
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #217dbb;
+    }
+
+    @media (max-width: 768px) {
+      .pricing-section {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="pricing-section">
+  <div class="pricing-card">
+    <div class="card-header">Basic Plan</div>
+    <div class="price">$9/month</div>
+    <ul class="features">
+      <li>1 Website</li>
+      <li>10GB Storage</li>
+      <li>Email Support</li>
+    </ul>
+    <a href="" class="btn">Choose Plan</a>
+  </div>
+
+  <div class="pricing-card best">
+    <div class="card-header">Best Plan</div>
+    <div class="price">$29/month</div>
+    <ul class="features">
+      <li>Unlimited Websites</li>
+      <li>100GB Storage</li>
+      <li>24/7 Support</li>
+    </ul>
+    <a href="" class="btn">Choose Plan</a>
+  </div>
+
+  <div class="pricing-card">
+    <div class="card-header">Pro Plan</div>
+    <div class="price">$19/month</div>
+    <ul class="features">
+      <li>5 Websites</li>
+      <li>50GB Storage</li>
+      <li>Priority Support</li>
+    </ul>
+    <a href="" class="btn">Choose Plan</a>
+  </div>
+</div>
+
+</body>
+</html>

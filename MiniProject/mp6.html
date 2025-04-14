@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Personal Blog</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+      gap: 30px;
+    }
+
+    .sidebar {
+      width: 250px;
+      position: sticky;
+      top: 40px;
+      height: fit-content;
+      background: #fff;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+
+    .sidebar h3 {
+      margin-bottom: 15px;
+      font-size: 1.2em;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 10px;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: #444;
+    }
+
+    .main {
+      flex: 1;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    }
+
+    .main h1 {
+      font-family: 'Georgia', serif;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .main p {
+      margin: 20px 0;
+      font-size: 1.1em;
+    }
+
+    .comments {
+      margin-top: 40px;
+    }
+
+    .comments h2 {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+
+    .comment-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .comment-form input,
+    .comment-form textarea {
+      padding: 10px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    .comment-form button {
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .comment-form button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <aside class="sidebar">
+      <h3>Categories</h3>
+      <ul>
+        <li><a href="">Travel</a></li>
+        <li><a href="">Life</a></li>
+        <li><a href="">Photography</a></li>
+        <li><a href="">Books</a></li>
+      </ul>
+    </aside>
+
+    <main class="main">
+      <h1>The Beauty of Simplicity</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id nulla in magna tincidunt volutpat. Aenean nec elit nec purus pulvinar accumsan non sed purus.</p>
+      <p>Curabitur non felis ut justo pharetra fringilla. Sed eget dui id risus tincidunt iaculis ac sit amet nunc. Pellentesque laoreet justo id semper viverra.</p>
+
+      <div class="comments">
+        <h2>Leave a Comment</h2>
+        <form class="comment-form">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea rows="4" placeholder="Your Comment" required></textarea>
+          <button type="submit">Post Comment</button>
+        </form>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>

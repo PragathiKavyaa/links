@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Grid Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+
+    .portfolio {
+      display: grid;
+      grid-template-areas:
+        "one one two"
+        "three four two"
+        "five six six";
+      gap: 15px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .item {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      height: 200px;
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .item:hover {
+      transform: scale(1.03);
+    }
+
+    .item:hover::after {
+      opacity: 1;
+    }
+
+    .one   { grid-area: one; background-image: url(./assest/cappucino.jpg); }
+    .two   { grid-area: two; background-image: url(./assest/caramel.jpg); }
+    .three { grid-area: three; background-image: url(./assest/cold\ coffee.jpg); }
+    .four  { grid-area: four; background-image: url(./assest/paneer.jpg); }
+    .five  { grid-area: five; background-image: url(./assest/bacground\ 2.jpg); }
+    .six   { grid-area: six; background-image: url(./assest/logo.jpg); }
+
+    @media (max-width: 768px) {
+      .portfolio {
+        grid-template-areas:
+          "one"
+          "two"
+          "three"
+          "four"
+          "five"
+          "six";
+        grid-template-columns: 1fr;
+      }
+      .item {
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h2 style="text-align:center;">My Portfolio</h2>
+
+<div class="portfolio">
+  <div class="item one" ></div>
+  <div class="item two" ></div>
+  <div class="item three" ></div>
+  <div class="item four" ></div>
+  <div class="item five" ></div>
+  <div class="item six" ></div>
+</div>
+
+</body>
+</html>

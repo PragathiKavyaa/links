@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Recipes</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header{
+            width: 100%;
+            height: 100px;
+            text-align: center;
+            color: rgb(7, 7, 7);
+            font-family: sans-serif;
+            border: 2px solid gray;
+            border-radius: 5px;
+            font-size: large;
+            padding: 10px;
+            background: linear-gradient(to right, red, orange);
+        }
+        h2{
+            text-align: center;
+            color: rgb(8, 8, 8);
+            font-family: sans-serif;
+            font-size: 1rem;
+            padding: 10px;
+        }
+        .ingredients h3{
+            text-align: center;
+            color: rgb(12, 12, 12);
+            font-family: sans-serif;
+            font-size: x-large;
+            padding: 10px;
+        }
+        .ingredients{
+            width: 100%;
+            height: 100%;
+            color: rgb(8, 8, 8);
+            font-family: sans-serif;
+            font-size: large;
+            padding: 10px;
+            list-style: none;
+            border: 2px solid gray;
+            background: linear-gradient(to right, red, orange);
+        }
+        section{
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: auto;
+        }
+        .instructions{
+            list-style: decimal;
+            width: 100%;
+            height: 100%;
+            color: rgb(236, 227, 227);
+            font-family: sans-serif;
+            font-size: large;
+            padding: 10px;
+            border: 2px solid gray;
+            text-align: left;
+            left: 10px;
+            background-image: url(./assest/paneer.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .instructions h3{
+            color: rgb(221, 212, 212);
+            text-align: center;
+        }
+        .instructions li{
+            margin: 20px;
+            padding: 5px;
+        }
+        footer button{
+            width: 100px;
+            height: 50px;
+            background: linear-gradient(to right, red, orange);
+            color: black;
+            border: 2px solid gray;
+            border-radius: 15px;
+            text-align: center;
+            font-size: larger;
+            cursor: pointer;
+            scroll-behavior: smooth;
+            align-items: right;
+            margin: 10px;
+            transition: 0.3s ease;
+        }
+        button:hover{
+            transform: scale(1.5);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FooD RecipeS</h1>
+        <h2>Paneer Butter Masala</h2>
+    </header>
+    <section>
+        <div class="ingredients">
+            <h3>Ingredients</h3>
+            <ul>
+                <li>1 Teaspoon - Turmeric Powder</li>
+                <li>1 Teaspoon - Jeera Powder</li>
+                <li>1 Teaspoon - Coriander Powder</li>
+                <li>2 Teaspoon - Ginger Garlic Paste</li>
+                <li>1 ½ Teaspoon - Red Chilli Powder</li>
+                <li>½ Teaspoon - Garam Masala Powder</li>
+                <li>½ Teaspoon - Kasoori Methi</li>
+                <li>Salt to taste</li>
+                <li>1 Tablespoon - Oil</li>
+                <li>1 Teaspoon - Jeera</li>
+                <li>1 Pc Cinnamon</li>
+                <li>1 or 2 Elaichi</li>
+                <li>1 - Fine Chopped Onion</li>
+                <li>4 - 5 Tomatoes</li>
+                <li>3 Tablespoon - Butter</li>
+                <li>250 gms - Paneer Cubes</li>
+                <li>Fine chopped coriander</li>
+            </ul>
+        </div>
+        <div class="instructions">
+            <h3>Instructions</h3>
+            <ol>
+                <li>Heat a little oil and add Jeera, a piece cinnamon, 1 or 2 Elaichi & ginger garlic paste</li>
+                <li>Add finely chopped onions and fry it till the onions turn to golden brown</li>
+                <li>Add turmeric powder, jeera powder, Coriander powder, red chilli powder and garam masala powder</li>
+                <li>Add chopped tomatoes, and salt. Cook till the raw smell disappears</li>
+                <li>Then add little water and allow it to boil well</li>
+                <li>Then add the paneer cubes and mix well.</li>
+                <li>Add Kasoori methi, butter and garnish with chopped coriander</li>
+            </ol>
+        </div>
+        <footer>
+            <button>Back To Top</button>
+        </footer>
+    </section>
+</body>
+</html>

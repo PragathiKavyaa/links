@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Event Registration</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body{
+      font-family: Arial, sans-serif;
+      height: 100%;
+      background-color: #f8f8f8;
+    }
+
+    .hero {
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.5em;
+    }
+
+    .countdown {
+      font-size: 1.5em;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    .registration-form {
+      padding: 50px 20px;
+      display: flex;
+      justify-content: center;
+      background-color: #fff;
+    }
+
+    .form-container {
+      width: 100%;
+      max-width: 600px;
+      background: #fff;
+      padding: 30px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-container input,
+    .form-container select,
+    .form-container textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    .form-container input[type="submit"]{
+      background-color: #3498db;
+      color: white;
+      cursor: pointer;
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-container :hover input[type="submit"]{
+      background-color: #2980b9;
+    }
+
+    .speakers {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+      background-color: #ecf0f1;
+      flex-wrap: wrap;
+    }
+
+    .speaker-card {
+      background: white;
+      width: 250px;
+      text-align: center;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .speaker-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .speaker-card h3 {
+      font-size: 1.2em;
+      margin-bottom: 5px;
+    }
+
+    .speaker-card p {
+      color: #777;
+    }
+
+    @media (max-width: 768px) {
+      .speakers {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+  <section class="hero">
+    <h1>Webinar on Web Development</h1>
+    <p>Join us to learn the latest trends in web development.</p>
+    <div class="countdown">
+      <p>Event Starts In: 1d 5h 30m 15s</p>
+    </div>
+  </section>
+
+  
+  <section class="registration-form">
+    <div class="form-container">
+      <h2>Register Now</h2>
+      <form action="#">
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <input type="tel" placeholder="Phone Number" required />
+        <textarea placeholder="Why do you want to attend?" rows="4" required></textarea>
+        <input type="submit" value="Register Now" />
+      </form>
+    </div>
+  </section>
+
+  <section class="speakers">
+    <div class="speaker-card">
+      <img src="" alt="Speaker 1" />
+      <h3>John Doe</h3>
+      <p>Lead Developer at TechCo</p>
+    </div>
+    <div class="speaker-card">
+      <img src="" alt="Speaker 2" />
+      <h3>Jane Smith</h3>
+      <p>Senior UX Designer at WebWorks</p>
+    </div>
+    <div class="speaker-card">
+      <img src="" alt="Speaker 3" />
+      <h3>Emily Clark</h3>
+      <p>Frontend Engineer at CodeInc</p>
+    </div>
+  </section>
+
+</body>
+</html>

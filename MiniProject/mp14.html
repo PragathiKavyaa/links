@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fitness Landing Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      height: 100%;
+      background: #f0f0f0;
+    }
+
+    .hero {
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+    }
+
+    .plans {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 40px 20px;
+      background: #fff;
+    }
+
+    .plan-card {
+      background: #fefefe;
+      border-radius: 10px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      padding: 25px;
+      width: 280px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .plan-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .plan-card h3 {
+      margin-bottom: 15px;
+      color: #2c3e50;
+    }
+
+    .plan-card p {
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .price {
+      font-size: 1.5em;
+      color: #e67e22;
+      margin-bottom: 10px;
+    }
+
+    .signup-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #e74c3c;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1em;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: background 0.3s;
+      z-index: 999;
+    }
+
+    .signup-btn:hover {
+      background: #c0392b;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2em;
+      }
+
+      .plans {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <h1>Train With Us</h1>
+    <p>Fitness. Strength. Confidence. Begin your journey today!</p>
+  </section>
+
+  <section class="plans">
+    <div class="plan-card">
+      <h3>Basic Plan</h3>
+      <p class="price">$19/month</p>
+      <p>Access to gym equipment and locker room.</p>
+    </div>
+    <div class="plan-card">
+      <h3>Yoga Plan</h3>
+      <p class="price">$29/month</p>
+      <p>Includes all yoga classes & weekend sessions.</p>
+    </div>
+    <div class="plan-card">
+      <h3>Premium Plan</h3>
+      <p class="price">$49/month</p>
+      <p>All classes, personal coach & 24/7 access.</p>
+    </div>
+  </section>
+
+  <a href="#" class="signup-btn">Sign Up Now</a>
+
+</body>
+</html>

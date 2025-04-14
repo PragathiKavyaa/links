@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+        }
+        header{
+            width: 100%;
+            height: 50px;
+            background-color: rgb(85, 81, 81);
+            color: black;
+            font-size: 1rem;
+            border: 2px solid black;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        h1{
+            animation: bounce 1s infinite alternate; 
+        }
+        .main{
+            display: grid;
+            grid-template-columns: 0.5fr 3fr;
+            grid-template-rows: auto;
+        }
+        .sidebar{
+            background-color: gray;
+        }
+        .sidebar nav{
+            display: flex;
+            flex-direction: column;
+        }
+        .sidebar nav>a{
+            text-align: center;
+            box-sizing: border-box;
+            width: 200px;
+            height: 100px;
+            font-size: large;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: black;
+        }
+        .about, .education, .career, .presidency, .awards, .personallife, .death{
+            box-sizing: border-box;
+            border: 2px solid gray;
+            box-shadow: 2px 2px 2px gray;
+        }
+        .about, .education, .career, .presidency, .awards, .personallife, .death h2{
+            text-align: center;
+        }
+        .content{
+            background-image: url(./assest/adbulkalam.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+        footer{
+            width: 100%;
+            height: 100px;
+            background-color: rgb(85, 81, 81);
+            border: 2px solid black;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .sidebar nav{
+            scroll-behavior: smooth;
+        }
+        .about:hover{
+            background-color: white;
+        }
+        .education:hover{
+            background-color: white;
+        }
+        .career:hover{
+            background-color: white;
+        }
+        .presidency:hover{
+            background-color: white;
+        }
+        .awards:hover{
+            background-color: white;
+        }
+        .personallife:hover{
+            background-color: white;
+        }
+        .death:hover{
+            background-color: white;
+        }
+        .sidebar nav>a:hover{
+            background-color: white;
+        }
+        @keyframes bounce { 
+        from { transform: translateY(0); } 
+        to { transform: translateY(-30px); } 
+        } 
+    </style>
+</head>
+<body>
+    <header>
+        <h1>APJ Abdul Kalam</h1>
+    </header>
+    <section class="main">
+        <div class="sidebar">
+            <nav>
+                <a href="">About</a>
+                <a href="">Education</a>
+                <a href="">Career</a>
+                <a href="">Presidency</a>
+                <a href="">Awards</a>
+                <a href="">Personal Life</a>
+                <a href="">Death</a>
+            </nav>
+        </div>
+        <div class="content">
+            <div class="about">
+                <h2>About</h2>
+                <p>A portfolio highlighting A.P.J. Abdul Kalam's contributions would showcase his journey from a humble beginning to becoming a renowned aerospace scientist, the 11th President of India, and a source of inspiration. It would include details on his education, his work on India's space and missile programs, his time as President, and his legacy of inspiring youth. </p>
+            </div>
+            <div class="education">
+                <h2>Education</h2>
+                <p>Born in Rameswaram, Tamil Nadu, on October 15, 1931. 
+                    Early life involved selling newspapers to support his family. 
+                    Studied physics and aerospace engineering. </p>
+            </div>
+            <div class="career">
+                <h2>Education</h2>
+                <p>Joined DRDO (Defence Research and Development Organisation) in 1958. 
+                    Played a key role in developing India's space and missile programs, earning him the title "Missile Man of India". 
+                    Led the Integrated Guided Missile Development Program, developing missiles like Agni and Prithvi. 
+                    Also involved in the development of launch vehicles and satellite technology.  </p>
+            </div>
+            <div class="presidency">
+                <h2>Presidency</h2>
+                <p>Elected as the 11th President of India. 
+                    Known as the "People's President" for his down-to-earth demeanor and ability to connect with ordinary people. 
+                    Served as a moral and intellectual authority, inspiring the nation with his vision and leadership.  </p>
+            </div>
+            <div class="awards">
+                <h2>Awards</h2>
+                <p>Bharat Ratna (1997), India's highest civilian award. 
+                    Padma Vibhushan (1990) and Padma Bhushan (1981). 
+                    Numerous honorary doctorates and awards from various universities and institutions.  </p>
+            </div>
+            <div class="personallife">
+                <h2>Personal Life</h2>
+                <p>Remained a bachelor throughout his life. 
+                    Passionate about India and its development. 
+                    Dedicated his life to science, technology, and service to the nation. </p>
+            </div>
+            <div class="death">
+                <h2>Death</h2>
+                <p>Died on July 27, 2015, while delivering a lecture at the Indian Institute of Management in Shillong. 
+                    His death was a great loss to the nation, as he was a source of inspiration and a symbol of national pride. </p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <h3>To Know More</h3>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name">
+            <label for="email">Email Id</label>
+            <input type="email" id="email" name="email">
+            <button>Submit</button>
+        </form>
+    </footer>
+</body>
+</html>
