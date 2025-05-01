@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilgirmage Tour Packages</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        body{
+            background-color: #FAF3E0;
+        }
+        .one{
+            background-color: #FFD700;
+            height: 200px;
+            text-align: center;
+            padding: 30px;
+        }
+        .one h1{
+            font-size:3rem;
+            font-weight:bolder;
+        }
+        .one h3{
+            padding: 20px;
+            font-size: 25px;
+            font-weight: bolder;
+        }
+        .main{
+            row-gap: 100px;
+        }
+        .haridwar{
+            background-color: white;
+            color: black;
+            height: 500px;
+            width: 1300px;
+            border-radius: 15px;
+            margin: 30px;
+            overflow: hidden;
+        }
+        .haridwar .h1 > img{
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            object-fit: cover;
+        }
+        .h2 h3{
+            padding: 10px 20px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .h2 .location >img{
+            width: 25px;
+            height: 25px;
+        }
+        .h2 .location{
+            font-size: 25px;
+            font-weight: bold;
+            padding: 10px 20px;
+        }
+        .haridwar > .h2{
+            position: relative;
+            left: 500px;
+            overflow: hidden;
+        }
+        .inclusions span > img{
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+            margin: 10px;
+        }
+        .inclusions span{
+            background-color: #FFD700;
+            border-radius: 30px;
+            width: 50px;
+            height: 50px;
+            display: block;
+            margin: 10px; 
+        }
+        .inclusions{
+            font-size: 25px;
+            font-weight: bold;    
+            padding: 10px 20px;        
+        }
+        .inclusions .inclusions-icons{
+            display: flex;
+            gap: 10px;
+        }
+        
+        .h2 .duration > img{
+            width: 30px;
+            height: 30px;
+        }
+        .h2 .duration{
+            font-size: 25px;
+            font-weight: bold;
+            background-color: #4169E1;
+            color: white;
+            width: 350px;
+            height: 30px;
+            border-radius: 15px;
+            padding: 40px;
+            margin: 10px;
+        }
+        .bottom{
+            margin: 20px;
+        }
+        .bottom .details-btn{
+            width: 200px;
+            height: 50px;
+            background-color: #FFD700;
+            color: black;
+            border-radius: 15px;
+            font-size: 25px;
+            font-weight: bold;
+            border: none;
+            position: absolute;
+        }
+        .bottom .price{
+            font-size: 25px;
+            font-weight: bolder;
+            position: relative;
+            left: 600px;
+        }
+        .bottom .details-btn:hover{
+            background-color: #4169E1;
+        }
+        .jyothirlinga{
+            background-color: white;
+            color: black;
+            height: 500px;
+            width: 1300px;
+            overflow: hidden;
+            border-radius: 15px;
+            margin: 30px;
+        }
+        .jyothirlinga .h1 > img{
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+        .jyothirlinga > .h2{
+            position: relative;
+            left: 500px;
+            overflow: hidden;
+        }
+        .shirdi{
+            background-color: white;
+            color: black;
+            height: 500px;
+            width: 1300px;
+            overflow: hidden;
+            border-radius: 15px;
+            margin: 30px;
+        }
+        .shirdi .h1 > img{
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+        .shirdi > .h2{
+            position: relative;
+            left: 500px;
+            overflow: hidden;
+        }
+        .south{
+            background-color: white;
+            color: black;
+            height: 500px;
+            width: 1300px;
+            overflow: hidden;
+            border-radius: 15px;
+            margin: 30px;
+        }
+        .south .h1 > img{
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+        .south > .h2{
+            position: relative;
+            left: 500px;
+            overflow: hidden;
+        }
+        .vaishnodevi{
+            background-color: white;
+            color: black;
+            height: 500px;
+            width: 1300px;
+            overflow: hidden;
+            border-radius: 15px;
+            margin: 30px;
+        }
+        .vaishnodevi .h1 > img{
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+        .vaishnodevi > .h2{
+            position: relative;
+            left: 500px;
+            overflow: hidden;
+        }
+       
+@media (min-width: 768px) and (max-width: 1023px) {
+    
+    .haridwar, .jyothirlinga, .shirdi, .south, .vaishnodevi {
+        width: 90%;
+        height: 300px;
+        flex-direction: row;
+    }
+    .haridwar .h1 > img, .jyothirlinga .h1 > img, .shirdi .h1 > img, .south .h1 > img, .vaishnodevi .h1 > img{
+        width: 300px;
+        height: 300px;
+        border-radius: 15px 0 0 15px;
+        object-fit: cover;
+        }
+        .haridwar > .h2, .jyothirlinga > .h2, .shirdi > .h2, .south > .h2, .vaishnodevi > .h2{
+            left: 300px;
+            overflow: hidden;
+        }
+        .h2 h3{
+            padding: 5px 3px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .h2 .location >img{
+            width: 25px;
+            height: 25px;
+        }
+        .h2 .location{
+            font-size: 20px;
+            font-weight: bold;
+            padding: 5px 3px;
+        }
+        .inclusions span > img{
+            width: 15px;
+            height: 15px;
+            margin: 10px;
+        }
+        .inclusions span{
+            border-radius: 5px;
+            width: 25px;
+            height: 25px;
+            margin: 5px; 
+        }
+        .inclusions{
+            font-size: 20px;
+            font-weight: bold;    
+            padding: 5px 3px;        
+        }
+        
+        .h2 .duration{
+            font-size: 15px;
+            font-weight: bold;
+            width: 100px;
+            height: 50px;
+            text-align: left;
+            padding: 3px;
+            margin-left: 5px;
+        }
+        .bottom{
+            margin: 10px;
+        }
+        .bottom .details-btn{
+            width: 90px;
+            height: 40px;
+            border-radius: 15px;
+            font-size: 15px;
+        }
+        .bottom .price{
+            font-size: 15px;
+            font-weight: bolder;
+            left: 250px;
+        }
+}
+
+
+@media (max-width: 600px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main > div {
+        flex-direction: column;
+        width: 300px;
+        height: 650px;
+    }
+    .one{
+            height: 100px;
+            text-align: center;
+            padding: 10px;
+        }
+        .one h1{
+            font-size:1rem;
+            font-weight:bolder;
+        }
+        .one h3{
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+        .haridwar, .jyothirlinga, .shirdi, .south, .vaishnodevi {
+            
+            flex-direction: row;
+    }
+    .haridwar .h1 > img, .jyothirlinga .h1 > img, .shirdi .h1 > img, .south .h1 > img, .vaishnodevi .h1 > img{
+        width: 300px;
+        height: 300px;
+        border-radius: 15px;
+        object-fit: cover;
+        }
+    .haridwar > .h2, .jyothirlinga > .h2, .shirdi > .h2, .south > .h2, .vaishnodevi > .h2 {
+        position: relative;
+        left: 0;
+        top: 300px; 
+    }
+    .h2 h3{
+            padding: 5px 3px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .h2 .location >img{
+            width: 25px;
+            height: 25px;
+        }
+        .h2 .location{
+            font-size: 20px;
+            font-weight: bold;
+            padding: 5px 3px;
+        }
+        .inclusions span > img{
+            width: 15px;
+            height: 15px;
+            margin: 10px;
+        }
+        .inclusions span{
+            border-radius: 5px;
+            width: 25px;
+            height: 25px;
+            margin: 5px; 
+        }
+        .inclusions{
+            font-size: 20px;
+            font-weight: bold;    
+            padding: 5px 3px;        
+        }
+        
+        .h2 .duration{
+            font-size: 15px;
+            font-weight: bold;
+            width: 100px;
+            height: 50px;
+            text-align: left;
+            padding: 3px;
+            margin-left: 5px;
+        }
+        .bottom{
+            left: 0;
+            margin-top: 10px;
+        }
+        .bottom .details-btn{
+            position: relative;
+            margin-top: 10px;
+            width: 90px;
+            height: 40px;
+            border-radius: 15px;
+            font-size: 15px;
+        }
+        .bottom .price{
+            font-size: 15px;
+            font-weight: bolder;
+            left: 200px;
+        }
+    
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .haridwar, .jyothirlinga, .shirdi, .south, .vaishnodevi {
+            width: 90%;
+            height: 400px;
+            flex-direction: row;
+    }
+    .haridwar .h1 > img, .jyothirlinga .h1 > img, .shirdi .h1 > img, .south .h1 > img, .vaishnodevi .h1 > img{
+        width: 300px;
+        height: 400px;
+        border-radius: 15px 0 0 15px;
+        object-fit: cover;
+        }
+    .haridwar > .h2, .jyothirlinga > .h2, .shirdi > .h2, .south > .h2, .vaishnodevi > .h2 {
+        left: 300px;
+    }
+    .bottom .price{
+            font-size: 25px;
+            font-weight: bolder;
+            left: 300px;
+        }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./prototype details/Borcelle-removebg-preview.png" alt="logo">
+        <div class="navbar">
+            <a href="./journey.html">Journey</a>
+            <div class="dropdown">
+              <button class="dropbtn">Packages</button>
+              <div class="dropdown-content">
+                <a href="./international.html">International</a>
+                <a href="./domestic.html">Domestic</a>
+                <a href="./pilgrimage.html">Pilgrimage</a>
+              </div>
+            </div>
+            <a href="./honeymoon.html">Honeymoon</a>
+            <a href="./wedding.html">Wedding</a>
+            <a href="./team.html">Our Team</a>
+            <a href="./getintouch.html">Get In Touch</a>
+          </div>
+
+        <div class="icons">
+            <img src="./prototype details/whatsapp.png" alt="whatsapp">
+            <img src="./prototype details/instagram.png" alt="instagram">
+            <img src="./prototype details/facebook.png" alt="facebook">
+            <img src="./prototype details/youtube.png" alt="youtube">
+            <div class="btn"><button><a href="./login.html">Login/Register</a></button></div>
+        </div>
+    </header>
+
+    <section class="one">
+        <h1>PILGRIMAGE TOUR PACKAGES</h1>
+        <h3>EXPLORE NOW</h3>
+    </section>
+
+    <section class="main">
+        <div class="haridwar">
+            <div class="h1">
+                <img src="./prototype details/haridwar.jpg" alt="haridwar">
+            </div>
+            <div class="h2">
+                <h3>Haridwar - Rishikesh Tour Package</h3>
+                <div class="location">
+                    <img src="./prototype details/location 2.png" alt="location">India <hr>
+                </div>
+
+                <div class="inclusions">Inclusions 
+                    <div class="inclusions-icons">
+                    <span><img src="./prototype details/ticket.png" alt="ticket"></span>
+                    <span><img src="./prototype details/transport.png" alt="transport"></span>
+                    <span><img src="./prototype details/hotel.jpg" alt="hotel"></span>
+                    </div>
+                </div>
+                
+                <div class="duration">
+                    <img src="./prototype details/clock.png" alt="clock"> 
+                    4 Days
+                </div>
+                
+                <div class="bottom">
+                    <button class="details-btn">Details</button>
+                    <div class="price"><p>From</p> <p>₹25999</p></div>
+                  </div>
+                
+            </div>
+            
+        </div>
+
+        <div class="jyothirlinga">
+            <div class="h1">
+                <img src="./prototype details/jyothirlinga.webp" alt="jyothirlinga">
+            </div>
+            <div class="h2">
+                <h3>12 Jyothirlinga Temple Darshan Pilgrim Package</h3>
+                <div class="location">
+                    <img src="./prototype details/location 2.png" alt="location">India <hr>
+                </div>
+
+                <div class="inclusions">Inclusions 
+                    <div class="inclusions-icons">
+                    <span><img src="./prototype details/ticket.png" alt="ticket"></span>
+                    <span><img src="./prototype details/transport.png" alt="transport"></span>
+                    <span><img src="./prototype details/hotel.jpg" alt="hotel"></span>
+                    </div>
+                </div>
+                
+                <div class="duration">
+                    <img src="./prototype details/clock.png" alt="clock"> 
+                    19 Days
+                </div>
+                
+                <div class="bottom">
+                    <button class="details-btn">Details</button>
+                    <div class="price"><p>From</p> <p>₹199999</p></div>
+                  </div>
+                
+            </div>
+            
+        </div>
+
+        <div class="shirdi">
+            <div class="h1">
+                <img src="./prototype details/shirdi.jpg" alt="shirdi">
+            </div>
+            <div class="h2">
+                <h3>Shirdi Pilgrimage Tour Package</h3>
+                <div class="location">
+                    <img src="./prototype details/location 2.png" alt="location">India <hr>
+                </div>
+
+                <div class="inclusions">Inclusions 
+                    <div class="inclusions-icons">
+                    <span><img src="./prototype details/ticket.png" alt="ticket"></span>
+                    <span><img src="./prototype details/transport.png" alt="transport"></span>
+                    <span><img src="./prototype details/hotel.jpg" alt="hotel"></span>
+                    </div>
+                </div>
+                
+                <div class="duration">
+                    <img src="./prototype details/clock.png" alt="clock"> 
+                    4 Days
+                </div>
+                
+                <div class="bottom">
+                    <button class="details-btn">Details</button>
+                    <div class="price"><p>From</p> <p>₹6999</p></div>
+                  </div>
+                
+            </div>
+            
+        </div>
+
+        <div class="south">
+            <div class="h1">
+                <img src="./prototype details/southtamilnadu.jpg" alt="southtamilnadu">
+            </div>
+            <div class="h2">
+                <h3>South Tamilnadu Pilgrimage Tour Package</h3>
+                <div class="location">
+                    <img src="./prototype details/location 2.png" alt="location">India <hr>
+                </div>
+
+                <div class="inclusions">Inclusions 
+                    <div class="inclusions-icons">
+                    <span><img src="./prototype details/ticket.png" alt="ticket"></span>
+                    <span><img src="./prototype details/transport.png" alt="transport"></span>
+                    <span><img src="./prototype details/hotel.jpg" alt="hotel"></span>
+                    </div>
+                </div>
+                
+                <div class="duration">
+                    <img src="./prototype details/clock.png" alt="clock"> 
+                    3 Days
+                </div>
+                
+                <div class="bottom">
+                    <button class="details-btn">Details</button>
+                    <div class="price"><p>From</p> <p>₹15999</p></div>
+                  </div>
+                
+            </div>
+            
+        </div>
+
+        <div class="vaishnodevi">
+            <div class="h1">
+                <img src="./prototype details/Vaishnodevi.jpg" alt="vaishnodevi">
+            </div>
+            <div class="h2">
+                <h3>Vaishnodevi & Amarnath Yatra Pilgrimage Tour Package</h3>
+                <div class="location">
+                    <img src="./prototype details/location 2.png" alt="location">India <hr>
+                </div>
+
+                <div class="inclusions">Inclusions 
+                    <div class="inclusions-icons">
+                    <span><img src="./prototype details/ticket.png" alt="ticket"></span>
+                    <span><img src="./prototype details/transport.png" alt="transport"></span>
+                    <span><img src="./prototype details/hotel.jpg" alt="hotel"></span>
+                    </div>
+                </div>
+                
+                <div class="duration">
+                    <img src="./prototype details/clock.png" alt="clock"> 
+                    5 Days
+                </div>
+                
+                <div class="bottom">
+                    <button class="details-btn">Details</button>
+                    <div class="price"><p>From</p> <p>₹29999</p></div>
+                  </div>
+                
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <h1>Travel beyond your imagination, with our Travel Agency!</h1>
+        <div class="logo"><img src="./prototype details/Borcelle-removebg-preview.png" alt="logo" width="200px" height="200px"></div>
+        
+        <div class="links">Quick Links
+          <ul>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Services</li>
+            <li>Packages</li>
+            <li>Privacy Policy</li>
+            <li>Refund Policy</li>
+            <li>Cancellation Policy</li>
+            <li>Terms & Conditions</li>
+          </ul>
+        </div>
+  
+        <div class="packages">Trending Packages
+          <ul>
+            <li>Japan Tour Packages</li>
+            <li>Bali Tour Packages</li>
+            <li>Munnar Tour Packages</li>
+            <li>Thailand Tour Packages</li>
+            <li>America Tour Packages</li>
+          </ul>
+        </div>
+  
+        <div class="address">
+          <p>
+            <img src="./prototype details/location.png" alt="location" >
+            No.21 Heaven Holiday, XYZ Street, ABC Nagar, Chennai-6000XX
+          </p>
+          <p>
+            <img src="./prototype details/phone.png" alt="phone" >
+            +91 9123456789
+          </p>
+          <p>
+            <img src="./prototype details/mail.png" alt="mail" >
+            infoholidays@gmail.com
+          </p>
+        </div>
+      </footer>
+</body>
+</html>

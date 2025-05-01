@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        .forms{
+            width: 800px;
+            height: 500px;
+            background-color: #4169E1;
+            border-radius: 30px;
+        }
+        .forms input{
+            width: 500px;
+            height: 50px;
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            border-radius: 15px;
+            border: 2px solid #4169E1;
+        }
+        .forms form button {
+            width: 200px;
+            height: 50px;
+            background-color: #FFD700;
+            color: black;
+            border-radius: 15px;
+            font-size: 25px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover{
+            background-color: #4169E1;
+        }
+        .forms{
+            text-align: center;
+        }
+        .forms form{
+            padding: 15px; 
+        }
+        .forms h1{
+            color: white;
+            text-decoration: underline;
+        }
+        @media (max-width: 600px){
+            .forms{
+            width: 300px;
+            height: 400px;
+        }
+        .forms input{
+            width: 200px;
+            height: 30px;
+            font-size: 20px;
+            border-radius: 10px;
+           
+        }
+        .forms form button {
+            width: 130px;
+            height: 40px;
+            font-size: 15px;
+        }
+        .forms form{
+            padding: 5px;
+        }
+        .forms h1{
+            font-size: 15px;
+            padding: 5px;
+        }
+        }
+        @media (min-width: 601px) and (max-width: 768px){
+            .forms{
+            width: 400px;
+            height: 400px;
+        }
+        .forms input{
+            width: 300px;
+            height: 30px;
+            font-size: 20px;
+            border-radius: 10px;
+           
+        }
+        .forms form button {
+            width: 150px;
+            height: 40px;
+            font-size: 15px;
+        }
+        .forms form{
+            padding: 5px; 
+        }
+        .forms h1{
+            font-size: 20px;
+            padding: 5px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="forms">
+        <h1>WLCOME TO HEAVEN HOLIDAYS TOURS & TRAVELS</h1>
+        <form>
+            <input type="text" id="name" name="name" required placeholder="Name" ><br><br>
+            <input type="number" id="number" name="number" required placeholder="Mobile" ><br><br>
+            <input type="email" id="email" name="email" required placeholder="Email" ><br><br>
+            <input type="password" id="password" name="password" required placeholder="password" ><br><br>
+            <button>LOGIN/SIGNUP</button>
+        </form>
+        </div>
+</body>
+</html>

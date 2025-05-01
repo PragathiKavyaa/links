@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get In Touch</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <style>
+    *{margin: 0;padding: 0;box-sizing: border-box;}
+    body{
+        background-color: #FAF3E0;
+    }
+
+        .getfirstimg{
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+        .col2{
+            display: grid;
+            grid-template-columns: 
+            repeat(3,1fr); 
+            margin: 5%; 
+            gap: 20px;
+        }
+        h4{
+            text-align: center;
+        }
+        .icon-title{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .col2 span > img{
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+            margin: 13px;
+        }
+        .col2 span{
+            background-color: #FFD700;
+            border-radius: 30px;
+            width: 50px;
+            height: 50px;
+            display: block;
+            margin: 20px;
+        }
+        .col2 p{
+            margin-left: 50px;
+        }
+        .col3{
+            border-radius: 20px;
+            margin-left: 30%; 
+            background-color: white; 
+            padding: 5%;
+            text-align: center;
+            width: 50%;
+            border: 2px solid black;
+        }
+       .col3 p{
+        background-color: white;
+    }
+    .col31 form button {
+            width: 200px;
+            height: 50px;
+            background-color: #FFD700;
+            color: black;
+            border-radius: 5px;
+            font-size: 25px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover{
+            background-color: #4169E1;
+        }
+        .forms{
+            text-align: center;
+        }
+        
+        .col31 form input{
+            width: 500px;
+            height: 50px;
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            border-radius: 15px;
+            border: 2px solid #4169E1;
+            
+        }
+        .col4{
+            padding: 50px;
+        }
+        .col4 .para{
+            text-align: center;
+        }
+        .col5 h3{
+            text-align: center;
+            padding: 20px;
+        }
+        .col6{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            margin: 5%; 
+            gap: 10px;
+            border-radius: 8px;
+        }
+        .getimg{
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 600px){
+           
+           .getcontainer{font-size: 14px;}
+           .col2{gap: 3px;grid-template-columns: repeat(1,1fr);}
+           .card21,.card22,.card23{text-align: center;}
+           .col31{margin-left: 10px;width: 80%;}
+           .col3 {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  .col31 form input {
+    width: 90%;
+  }
+  .col31 form button {
+    width: 90%;
+  }
+           .name{width: 100%;}
+           .name1{width: 100%;}
+           button{width: 70%;}
+           .col6{display: grid;grid-template-columns: repeat(1,1fr);gap: 3px;border-radius: 5px;}
+        .getimg{width: 100%;height: 80px;object-fit: cover;}
+
+        }
+        @media (min-width: 768px) and (max-width: 1023px){
+            .getcontainer{font-size: 18px;}
+           .col2{gap: 3px;grid-template-columns: repeat(2,1fr);}
+           .card21,.card22,.card23{text-align: center;}
+           .col31{margin-left: 10px;width: 80%;}
+           .col3 {
+    width: 80%;
+    margin: 20px auto;
+    padding: 30px;
+  }
+  .col31 form input {
+    width: 90%;
+  }
+  .col31 form button {
+    width: 50%;
+  }
+           .name{width: 100%;}
+           .name1{width: 100%;}
+           button{width: 70%;}
+           .col6{display: grid;grid-template-columns: repeat(2,1fr);gap: 5px;border-radius: 8px;}
+        .getimg{width: 100%;height: 150px;object-fit: cover;}
+           
+        }
+        @media (min-width:1024px){
+            .getcontainer{font-size: 24px;}
+           .col2{gap: 3px;grid-template-columns: repeat(3,1fr);}
+           .card21,.card22,.card23{text-align: center;}
+           .col31{margin-left: 10px;}
+           .col3 {
+    width: 50%;
+    margin-left: 25%;
+    padding: 40px;
+  }
+  .col31 form input {
+    width: 400px;
+  }
+  .col31 form button {
+    width: 200px;
+  }
+           .name{width: 90%;}
+           
+           button{width: 70%;}
+           .col6{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 10px;
+            border-radius: 8px;}
+          .getimg{
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+        }            
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./prototype details/Borcelle-removebg-preview.png" alt="logo">
+        <div class="navbar">
+            <a href="./journey.html">Journey</a>
+            <div class="dropdown">
+              <button class="dropbtn">Packages</button>
+              <div class="dropdown-content">
+                <a href="./international.html">International</a>
+                <a href="./domestic.html">Domestic</a>
+                <a href="./pilgrimage.html">Pilgrimage</a>
+              </div>
+            </div>
+            <a href="./honeymoon.html">Honeymoon</a>
+            <a href="./wedding.html">Wedding</a>
+            <a href="./team.html">Our Team</a>
+            <a href="./getintouch.html">Get In Touch</a>
+          </div>
+
+        <div class="icons">
+            <img src="./prototype details/whatsapp.png" alt="whatsapp">
+            <img src="./prototype details/instagram.png" alt="instagram">
+            <img src="./prototype details/facebook.png" alt="facebook">
+            <img src="./prototype details/youtube.png" alt="youtube">
+            <div class="btn"><button><a href="./login.html">Login/Register</a></button></div>
+        </div>
+    </header>
+
+    <div class="getcontainer">
+        <div class="getrow">
+            <div class="col1">
+                <div class="card1">
+                    <img src="./prototype details/getintouchbg.jpg" class="getfirstimg" alt="bg">
+                </div>
+            </div>
+            <div class="col2">
+                <div class="card21">
+                    <div class="icon-title">
+                    <span><img src="./prototype details/location (2).png" alt="reachus"></span>
+                    <h4>REACH US</h4><br>
+                </div>
+                    <p>No.21,Heaven Holidays,<br>XYZ Street,ABC Nagar,<br>Chennai-6000xx</p>
+                </div>
+                <div class="card22">
+                    <div class="icon-title">
+                    <span><img src="./prototype details/callus.png" alt="callus"></span>
+                    <h4>CALL US</h4><br>
+                </div>
+                    <p>+91 9123456789<br>+91 9123456789<br></p>
+                </div>
+                <div class="card23">
+                    <div class="icon-title">
+                    <span><img src="./prototype details/mailus.png" alt="mailus"></span>
+                    <h4>MAIL US</h4><br>
+                </div>
+                    <p>infoholidays@gmail.com</p>
+                </div>
+            </div>
+            <div class="col3">
+                <p>Write to us for personalized travel advice or for information on group travel and last minute travel.aa travel is insured and safe.</p>
+               <br> <div class="col31">
+                <form>
+                    <input type="text" id="name" name="name" required placeholder="Name" ><br><br>
+                    <input type="number" id="number" name="number" required placeholder="Mobile" ><br><br>
+                    <input type="email" id="email" name="email" required placeholder="Email" ><br><br>
+                    <input type="textarea" id="textarea" name="textarea" required placeholder="Your Message" ><br><br>
+                    <button>SUBMIT</button>
+                </form>
+            </div>
+
+            </div>
+            <div class="col4">
+                <p class="para">
+                    We share our experiences, tips and travels stories to inspire and guide our readers in their own 
+                    wanderlust adventures. From hidden gems to popular destinations, we showcase the beauty and diversity
+                    of the world, and promote responsible and sustainable travel.
+                </p></div><br>
+            <div class="col5">
+                <h3>Gallery</h3>
+                <div class="col6">
+                    <div class="card61"><img src="./prototype details/Que voir en Autriche _ Roadtrip nature & randonnée.jpg" alt="g1" class="getimg"></div>
+                    <div class="card61"><img src="./prototype details/11 Best Things To Do In Beijing, China - Hand Luggage Only - Travel, Food And Photography Blog.jpg" alt="g2" class="getimg"></div>
+                    <div class="card61"><img src="./prototype details/Goddess Vibes in Athens, Santorini & Mykonos.jpg" alt="g3" class="getimg"></div>
+
+                    <div class="card61"><img src="./prototype details/Japan cherry blossoms picture.jpg" alt="g4" class="getimg"></div>
+                    <div class="card61"><img src="./prototype details/Special Offers, Last Minute Deals, Extra Discounts __ France.jpg" alt="" class="getimg"></div>
+                    <div class="card61"><img src="./prototype details/📸 New Zealand Photography Guide_ Amazing Places & Hidden Gems.jpg" alt="g6" class="getimg"></div>
+
+                    <div class="card61"><img src="./prototype details/50 Most Instagrammable Places in Singapore.jpg" alt="g7" class="getimg"></div>
+                    <div class="card61"><img src="./prototype details/Comfort Spring Station_ Photo.jpg" alt="g8" class="getimg"></div>
+                    <div class="card61"><img src="./prototype details/10 Best Hikes In Montana To Experience - Hand Luggage Only - Travel, Food And Photography Blog.jpg" alt="g9" class="getimg"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <h1>Travel beyond your imagination, with our Travel Agency!</h1>
+        <div class="logo"><img src="./prototype details/Borcelle-removebg-preview.png" alt="logo" ></div>
+        
+        <div class="links">Quick Links
+          <ul>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Services</li>
+            <li>Packages</li>
+            <li>Privacy Policy</li>
+            <li>Refund Policy</li>
+            <li>Cancellation Policy</li>
+            <li>Terms & Conditions</li>
+          </ul>
+        </div>
+  
+        <div class="packages">Trending Packages
+          <ul>
+            <li>Japan Tour Packages</li>
+            <li>Bali Tour Packages</li>
+            <li>Munnar Tour Packages</li>
+            <li>Thailand Tour Packages</li>
+            <li>America Tour Packages</li>
+          </ul>
+        </div>
+  
+        <div class="address">
+          <p>
+            <img src="./prototype details/location.png" alt="location" >
+            No.21 Heaven Holiday, XYZ Street, ABC Nagar, Chennai-6000XX
+          </p>
+          <p>
+            <img src="./prototype details/phone.png" alt="phone" >
+            +91 9123456789
+          </p>
+          <p>
+            <img src="./prototype details/mail.png" alt="mail" >
+            infoholidays@gmail.com
+          </p>
+        </div>
+      </footer>
+</body>
+</html>

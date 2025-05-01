@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journey</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        body{
+            background-color: #FAF3E0;
+        }
+        .one img{
+            width: 100%;
+            height: 500px;
+        }
+        .two{
+            width: 700px;
+            padding: 10px;
+        }
+        .block{
+            display: flex;
+            justify-content: space-between;
+            padding: 50px;
+        }
+        .two h2{
+            width: 100%;
+            padding: 20px;
+            margin-left: 10px;
+            font-size: 40px;
+        }
+        .block .floatleft{
+            
+            width: 700px;
+            height: 500px;
+            margin-right: 400px;
+        }
+        .block .content {
+            height: 500px;
+            width: 700px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+        }
+        .block .content > p{
+            width: 500px;
+            height: 300px;
+            font-size: 20px;
+            color: #333;
+        }
+        .two .content button {
+            width: 150px;
+            height: 50px;
+            background-color: #FFD700;
+            color: black;
+            border-radius: 5px;
+            font-size: 25px;
+            font-weight: bold;
+            border: none;
+        }
+        .two .content button:hover{
+            background-color: #4169E1;
+        }
+.img1{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    border-radius: 15px;
+    margin-left: 100px;
+}
+.img3{
+    width: 150px;
+    height: 150px;
+    position: relative;
+    left: 400px;
+    top: -250px;
+    border-radius:30px;
+}
+.img2{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: -70px;
+    left: -30px;
+    border-radius: 30px;
+}
+.img4{
+    width: 300px;
+    height: 250px;
+    position: relative;
+    left: -50px;
+    top: -10px;
+    border-radius: 30px;
+}
+.img5{
+    width: 150px;
+    height: 150px;
+    position: relative;
+    left: 400px;
+    top: -300px;
+    border-radius: 30px;
+}
+.three .container{
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    gap: 50px;
+    transition: transform 1s ease-in-out;
+}
+.i1:hover, .i2:hover, .i3:hover, .i4:hover, .i5:hover, .i6:hover{
+    transform: scale(1.1);
+    object-fit: cover;
+    overflow: hidden;
+}
+.i1, .i2, .i3, .i4, .i5, .i6{
+    width: 600px;
+    height: 300px;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+}
+.int, .dom, .hon, .pil, .vi, .tra{
+    width: 600px;
+    height: 50px;
+    background-color: #4169E1;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    color: white;
+    display: flex;
+    font-weight: bold;
+}
+.container .int > img{
+    width: 50px;
+    height: 50px;
+    margin-left: 200px;
+}
+.container .int > p{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 30px;
+}
+.container .dom > img{
+    width: 50px;
+    height: 50px;
+    margin-left: 200px;
+}
+.container .dom > p{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 30px;
+}
+.container .hon > img{
+    width: 50px;
+    height: 50px;
+    margin-left: 200px;
+}
+.container .hon > p{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 30px;
+}
+.container .pil > img{
+    width: 50px;
+    height: 50px;
+    margin-left: 200px;
+}
+.container .pil > p{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 30px;
+}
+.container .vi > img{
+    width: 50px;
+    height: 50px;
+    margin-left: 200px;
+}
+.container .vi > p{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 30px;
+}
+.container .tra > img{
+    width: 50px;
+    height: 50px;
+    margin-left: 200px;
+}
+.container .tra > p{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 30px;
+}       
+.four .four-container{
+    display: flex;
+    gap: 100px;
+    margin-left: 20px;
+    padding: 15px;
+}
+.four-container > .trips{
+    width:1000px;
+    height: 300px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 0px rgb(148, 146, 146);
+    text-align: center;
+    background-color: white;
+}
+.four-container > .experiences{
+    width: 1000px;
+    height: 300px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 0px rgb(148, 146, 146);
+    text-align: center;
+    background-color: white;
+}
+.four-container > .travellers{
+    width: 1000px;
+    height: 300px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 0px rgb(148, 146, 146);
+    text-align: center;
+    background-color: white;
+}
+
+.four-container .trips > img{
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+}
+.four-container .experiences > img{
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+}
+.four-container .travellers > img{
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+}
+.four-container h4{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px 0;  
+}
+.four-container p{
+    font-size: 20px;
+    text-align: center;
+    line-height: 1;
+}
+.five{
+    padding: 15px;
+}
+.five-container{
+    width: 1300px;
+    height: 300px;
+    background-color: white;
+    border: 2px solid #4169E1;
+    border-radius: 15px;
+}
+.six{
+    padding: 100px;
+}
+.six .para{
+            padding: 120px;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            font-size: 20px;
+        }
+        .float-left {
+            width: 500px;
+            height: 500px;
+            float: left;
+            margin-right: 50px;
+            margin-bottom: 10px;
+            border-top-right-radius: 200px;
+            border-bottom-right-radius: 200px;
+        }
+        .six .para button{
+            float: right;
+            width: 400px;
+            height: 40px;
+            border: none;
+            text-align: center;
+            border-radius: 15px;
+            background-color: #4169E1;
+            margin: 5px 10px;
+        }
+        .six-container button > .b2{
+            height: 40px;
+            width: 380px;
+            border-radius: 15px;
+            background-color: #4169E1;
+            color: white;
+        }
+        .six button > .b3{
+            height: 40px;
+            width: 350px;
+            border-radius: 15px;
+            background-color: #4169E1;
+            color: white;
+        }
+
+@media (max-width: 600px) {
+body{
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.one{
+  width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.two{
+  width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+  .block {
+    flex-direction: column;
+    padding: 20px;
+    
+  }
+
+   .content {
+    width: 250px;
+    height: auto;
+    margin: 0;
+    
+  }
+  .block{
+    height: 1500px;
+    width: 250px;   
+  }
+  .floatleft{
+    height: 700px;
+    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    position: relative;
+    float: none;
+  }
+
+  .block .content > p {
+    width: 250px;
+    height: 300px;
+    font-size: 16px;
+    text-wrap: wrap;
+    text-align: center;
+  }
+
+  .two h2 {
+    text-wrap: wrap;
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .two .content button {
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
+    justify-content: center;justify-content: center;
+  }
+  .img1, .img2, .img3, .img4, .img5{
+    width: 150px;height: 150px;border-radius: 15px;
+    position: static;
+    margin: 5px;
+    
+  }
+  .three{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .three .container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .i1, .i2, .i3, .i4, .i5, .i6{
+    width: 200px;
+    height: 100px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+.int, .dom, .hon, .pil, .vi, .tra{
+    width: 200px;
+    height: 50px;   
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.container .int > img, .container .dom > img, .container .hon > img, .container .pil > img, .container .vi > img, .container .tra > img{
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+}
+.container .int > p, .container .dom > p, .container .hon > p, .container .pil > p, .container .vi > p, .container .tra > p{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 20px;
+}
+.four{
+  width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+  .four .four-container {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .four-container > .trips, .four-container > .experiences, .four-container > .travellers{
+    width: 200px;
+    height: 200px;
+}
+
+.four-container .trips > img, .four-container .experiences > img, .four-container .travellers > img{
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+}
+.four-container h4{
+    font-size: 15px;
+   }
+.four-container p{
+    font-size: 10px;
+    text-wrap: wrap;
+}
+.five{
+  width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.five-container {
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .six {
+    height: 1000px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+   
+  }
+  .six-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .six-container .float-left{
+  width: 200px;
+  height: 300px;
+  border-radius: 15px;
+ }
+  .six .para p{
+    text-align: center;
+    text-wrap: wrap;
+    font-size: 15px;
+    width: 200px;
+   
+  }
+  .six .para button{
+   
+            width: 200px;
+            height: 40px;
+            border-radius: 5px;
+            padding: 5px;
+        }
+  footer {
+    text-align: center;
+  }
+}
+
+
+@media (min-width: 601px) and (max-width: 768px) {
+  .block {
+    flex-direction: column;
+    padding: 100px;
+  }
+
+  .floatleft, .block .content {
+    width: 50%;
+    height: auto;
+    margin: 0;
+  }
+
+  .block .content > p {
+    text-align: center;
+    font-size: 20px;
+    height: auto;
+  }
+
+  .two h2 {
+    text-align: center;
+    font-size: 32px;
+  }
+
+  .two .content button {
+    width: 100px;
+    height: 45px;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .img1{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    border-radius: 15px;
+    margin-left: 100px;
+}
+.img3{
+    width: 150px;
+    height: 150px;
+    left: 100px;
+    top: -150px;
+}
+.img2{
+    width: 200px;
+    height: 200px;
+    top: -100px;
+    left: -30px;
+}
+.img4{
+    left: -400px;
+    top: 250px;
+}
+.img5{
+    left: 350px;
+    top: -50px;
+}
+  .three .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .i1, .i2, .i3, .i4, .i5, .i6{
+    width: 300px;
+    height: 100px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+.int, .dom, .hon, .pil, .vi, .tra{
+    width: 300px;
+    height: 50px;   
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.container .int > img, .container .dom > img, .container .hon > img, .container .pil > img, .container .vi > img, .container .tra > img{
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+}
+.container .int > p, .container .dom > p, .container .hon > p, .container .pil > p, .container .vi > p, .container .tra > p{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+.four-container > .trips, .four-container > .experiences, .four-container > .travellers{
+    width: 500px;
+    height: 300px;
+}
+
+.four-container .trips > img, .four-container .experiences > img, .four-container .travellers > img{
+    width: 80px;
+    height: 80px;
+    margin-top: 30px;
+}
+  .four .four-container {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+  }
+
+ 
+  .five-container{
+    width: 700px;
+    height: 300px;
+   
+  }
+
+  .six {
+    padding: 40px;
+    height: 1000px;
+  }
+  .six-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .six .float-left > img{
+  width: 200px;
+  height: 300px;
+  border-radius: 15px;
+ }
+
+  .six .para {
+    padding: 30px;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .block {
+    flex-direction: column;
+    padding: 150px;
+    text-align: center;
+  }
+
+  .floatleft {
+    width: 400px;
+    margin-right: 50px;
+  }
+
+  .block .content {
+    width: 400px;
+    gap: 20px;
+  }
+
+  .block .content > p {
+    height: 100px;
+  }
+  .two{
+    flex-direction: row;
+    align-items: center;
+    
+  }
+  .two h2{
+    text-align: center;
+    justify-content: center;
+    left: 50px;
+  }
+  .two .content button {
+    width: 150px;
+  }
+  .img1{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    border-radius: 15px;
+    margin-left: 100px;
+}
+.img3{
+    left: 200px;
+    top: -200px;
+}
+.img2{
+    top: -150px;
+    left: -30px;
+}
+.img4{
+    left: -400px;
+    top: 250px;
+}
+.img5{
+    left: 200px;
+    top: 20px;
+}
+  .three .container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+  }
+  .i1, .i2, .i3, .i4, .i5, .i6{
+    width: 400px;
+    height: 200px;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+}
+.int, .dom, .hon, .pil, .vi, .tra{
+    width: 400px;
+    height: 50px;   
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+.container .int > img, .container .dom > img, .container .hon > img, .container .pil > img, .container .vi > img, .container .tra > img{
+    width: 50px;
+    height: 50px;
+    margin-left: 100px;
+}
+.container .int > p, .container .dom > p, .container .hon > p, .container .pil > p, .container .vi > p, .container .tra > p{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.four .four-container{
+    gap: 10px;   
+}
+
+.four-container > .trips, .four-container > .experiences, .four-container > .travellers{
+    width:400px;
+    height: 300px;
+}
+
+.four-container .trips > img, .four-container .experiences > img, .four-container .travellers > img{
+    width: 80px;
+    height: 80px;
+    margin-top: 30px;
+}
+
+.five-container{
+  justify-content: center;
+  align-items: center;
+    width: 900px;
+    height: 300px;
+}
+.six .float-left > img{
+  width: 100px;
+  height: 300px;
+ 
+}
+.float-left{
+  margin-right: 30px;
+  margin-bottom: 5px;
+}
+  .six{
+    height: 1000px;
+  }
+  .six .para {
+    padding: 50px;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./prototype details/Borcelle-removebg-preview.png" alt="logo">
+        <div class="navbar">
+            <a href="./journey.html">Journey</a>
+            <div class="dropdown">
+              <button class="dropbtn">Packages</button>
+              <div class="dropdown-content">
+                <a href="./international.html">International</a>
+                <a href="./domestic.html">Domestic</a>
+                <a href="./pilgrimage.html">Pilgrimage</a>
+              </div>
+            </div>
+            <a href="./honeymoon.html">Honeymoon</a>
+            <a href="./wedding.html">Wedding</a>
+            <a href="./team.html">Our Team</a>
+            <a href="./getintouch.html">Get In Touch</a>
+          </div>
+
+        <div class="icons">
+            <img src="./prototype details/whatsapp.png" alt="whatsapp">
+            <img src="./prototype details/instagram.png" alt="instagram">
+            <img src="./prototype details/facebook.png" alt="facebook">
+            <img src="./prototype details/youtube.png" alt="youtube">
+            <div class="btn">
+              <button><a href="./login.html">Login/Register</a></button></div>
+        </div>        
+    </header>
+
+    <section class="one">
+        <img src="./prototype details/journey.jpg" alt="journey">
+    </section>
+
+    <section class="two">
+        <h2>Trusted Travel Agency in Chennai</h2>
+        <div class="block">
+            <div class="floatleft">
+                <img src="./prototype details/j1.jpg" alt="j1" class="img1">
+                <img src="./prototype details/j2.jpg" alt="j2" class="img2">
+                <img src="./prototype details/j3.jpg" alt="j3" class="img3">
+                <img src="./prototype details/j4.jpg" alt="j4" class="img4">
+                <img src="./prototype details/j5.jpg" alt="j5" class="img5">
+            </div>
+            <div class="content">
+                <p>
+                    The Best Travel Agency in Chennai, Heaven Holidays, provides that your next vacation will be very memorable.
+                    We personalize every aspect with the help of our knowledgeable staff of travel agents, ensuring a lifetime of 
+                    priceless memories. <br><br>
+                    <button>Know More</button>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="three">
+        <div class="container">
+            <div class="international">
+                <img src="./prototype details/dubai.png" alt="dubai" class="i1">
+                <div class="int">
+                    <img src="./prototype details/international (2).png" alt="international">
+                    <p>International</p>
+                </div>
+            </div>
+
+            <div class="domestic">
+                <img src="./prototype details/domestic-family.jpg" alt="domestic" class="i2">
+                <div class="dom">
+                    <img src="./prototype details/download__1_-removebg-preview.png" alt="domestic">
+                    <p>Domestic</p>
+                </div>
+            </div>
+
+            <div class="honeymoon">
+                <img src="./prototype details/honeymoon.jpg" alt="honeymoon" class="i3">
+                <div class="hon">
+                    <img src="./prototype details/honeymoon.png" alt="honeymoon">
+                    <p>Honeymoon<p>
+                </div>
+            </div>
+
+            <div class="pilgrimage">
+                <img src="./prototype details/pligrimage-tour-banner.jpg" alt="pilgrimage" class="i4">
+                <div class="pil">
+                    <img src="./prototype details/pilgrimage.png" alt="pilgrimage">
+                    <p>Pilgrimage</p>
+                </div>
+            </div>
+            
+            <div class="visa">
+                <img src="./prototype details/visa2.png" alt="visa" class="i5">
+                <div class="vi">
+                    <img src="./prototype details/visa.png" alt="visa">
+                    <p>Visa</p>
+                </div>
+            </div>
+
+            <div class="travel">
+                <img src="./prototype details/travel insurance.jpeg" alt="travel" class="i6">
+                <div class="tra">
+                    <img src="./prototype details/travelinsurance.webp" alt="travel">
+                    <p>Travel Insurance</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="four">
+        <div class="four-container">
+            <div class="trips">
+                <img src="./prototype details/Abroad-Trips.png" alt="trips">
+                <h4>50,000</h4>
+                <h4>+ Abroad Trips</h4> 
+                <p>For the last decade, GT holidays have organized more than 50,000 international itineraries.</p>
+            </div>
+
+            <div class="experiences">
+                <img src="./prototype details/Experiences.png" alt="experience">
+                <h4>Handcrafted</h4>
+                <h4>Experiences</h4>
+                <p>Each and every itinerary is customized according to the taste of the customers.</p>
+            </div>
+
+            <div class="travellers">
+                <img src="./prototype details/Travelers.png" alt="travelers">
+                <h4>Extremely</h4>
+                <h4>Happy Travellers</h4>
+                <p>Heaven Holidays holds record of great customer satisfaction and all customers are retained with us.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="five">
+        <div class="five-container">
+            
+        </div>
+    </section>
+
+    <section class="six">
+        <div class="six-container">
+            <img src="./prototype details/family-tour-services-500x500.png" alt="family" class="float-left">
+        
+        <div class="para">
+            <p>
+                Whether you're planning a romantic honeymoon or a family vacation, Our price section, featuring the Best 
+                Honeymoon Tours in Coimbatore, has got you covered. So, Start browsing today and find the perfect vacation 
+                package at a price that won't leave you feeling guilty.
+                <br><br>
+            <button class="b1"></button>
+            <button class="b2"></button>
+            <button class="b3"></button>
+            </p>
+            
+        </div>
+    </div>
+    </section>
+
+    <footer>
+        <h1>Travel beyond your imagination, with our Travel Agency!</h1>
+        <div class="logo"><img src="./prototype details/Borcelle-removebg-preview.png" alt="logo" width="200px" height="200px"></div>
+        
+        <div class="links">Quick Links
+          <ul>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Services</li>
+            <li>Packages</li>
+            <li>Privacy Policy</li>
+            <li>Refund Policy</li>
+            <li>Cancellation Policy</li>
+            <li>Terms & Conditions</li>
+          </ul>
+        </div>
+  
+        <div class="packages">Trending Packages
+          <ul>
+            <li>Japan Tour Packages</li>
+            <li>Bali Tour Packages</li>
+            <li>Munnar Tour Packages</li>
+            <li>Thailand Tour Packages</li>
+            <li>America Tour Packages</li>
+          </ul>
+        </div>
+  
+        <div class="address">
+          <p>
+            <img src="./prototype details/location.png" alt="location" >
+            No.21 Heaven Holiday, XYZ Street, ABC Nagar, Chennai-6000XX
+          </p>
+          <p>
+            <img src="./prototype details/phone.png" alt="phone" >
+            +91 9123456789
+          </p>
+          <p>
+            <img src="./prototype details/mail.png" alt="mail" >
+            infoholidays@gmail.com
+          </p>
+        </div>
+      </footer>
+</body>
+</html>

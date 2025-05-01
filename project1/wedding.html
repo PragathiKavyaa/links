@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <style>
+      *{margin: 0;padding: 0;box-sizing: border-box;}
+        body{
+            background-color: #FAF3E0;
+            font-family: Arial, sans-serif;
+        }
+        .one{
+            background: url(./image/destinationwedding.png) no-repeat center/cover;
+            text-align: center;
+            height: 500px;
+            padding: 250px 250px;
+        }
+        .one h1{
+            color: black;
+            font-size: 2.5rem;
+            font-weight: bolder;
+            margin: 25px;
+        }
+        .one h4{
+            color: black;
+            font-size: 35px;
+            font-weight: bolder;
+        }
+        .one {
+            position: relative;
+            overflow: hidden;
+        }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #000;
+    text-align: center;
+    padding: 5px;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.one:hover .overlay {
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+.overlay h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.overlay p {
+    font-size: 30px;
+    line-height: 1.6;
+}
+
+.overlay h3{
+    padding: 10px 20px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.wedding-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.text-content {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.text-content h1 {
+  font-size: 32px;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+.text-content h2 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.text-content p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #333;
+}
+.img1{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    border-radius: 15px;
+}
+
+.img2{
+    width: 150px;
+    height: 150px;
+    position: relative;
+    top: 10px;
+    right: 39px;
+    border-radius: 10px;
+}
+.img3{
+    width: 150px;
+    height: 150px;
+    position: relative;
+    left:310px;
+    top:-100px;
+    border-radius: 10px;
+}
+.img4{
+    width: 150px;
+    height: 150px;
+    position: relative;
+    right: -180px;
+    top: -80px;
+    border-radius: 10px;
+}
+.img5{
+    width: 150px;
+    height: 150px;
+    position: relative;
+    left: -270px;
+    top:180px;
+    border-radius: 10px;
+}
+.img6{
+    width: 150px;
+    height: 150px;
+    position: relative;
+    top:180px;
+    right: 150px;
+    border-radius: 10px;
+}
+.container{
+            display: grid;
+            grid-template-rows: 2fr 1fr;
+            justify-content: space-evenly;
+            padding: 50px;
+        }
+        .row-4{
+            display: grid;
+            grid-template-columns: 450px 450px;
+            padding: 10px;
+            gap: 10px;
+        }
+        .i10{width: 450px; height: 300px; object-fit: cover; border-radius: 50px; overflow: hidden;}
+        .i11{width: 450px; height: 300px; object-fit: cover; border-radius: 50px; overflow: hidden;}
+        .container1{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+        }
+        .col-1{
+            display: grid;
+            grid-template-rows: 500px 300px 300px;
+            gap: 10px;
+        }
+        .i1{width: 300px; height: 500px; object-fit: cover; border-radius: 50px; overflow: hidden;}
+        .i2{width: 300px; height: 300px; object-fit: cover; border-radius: 50px; overflow: hidden; }
+        .i3{width: 300px; height: 300px; object-fit: cover; border-radius: 50px; overflow: hidden; }
+        
+        .col-2{
+            display: grid;
+            grid-template-rows: 300px 500px 300px;
+            gap: 10px;
+        }
+        .i4{width: 300px; height: 300px; object-fit: cover; border-radius: 50px; overflow: hidden;}
+        .i5{width: 300px; height: 500px; object-fit: cover; border-radius: 50px; overflow: hidden;}
+        .i6{width: 300px; height: 300px; object-fit: cover; border-radius: 50px; overflow: hidden;}
+        .col-3{
+            display: grid;
+            grid-template-rows: 300px 300px 500px;
+            gap: 10px;
+        }
+        .i7{width: 300px; height: 300px; object-fit: cover; border-radius: 50px; overflow: hidden;}
+        .i8{width: 300px; height: 300px; object-fit: cover; border-radius: 50px; overflow: hidden;}
+        .i9{width: 300px; height: 500px; object-fit: cover; border-radius: 50px; overflow: hidden;}
+        .image-wrapper{
+            position: relative; 
+            width: 100%; 
+            height: 100%;
+        }
+        .image-wrapper h2{
+            position: absolute; 
+            bottom: 20px; 
+            left: 100px; 
+            color: white; 
+            font-size: 30px; 
+            text-align: center;
+        }
+        .image-wrapper-row{
+            position: relative; 
+            width: 100%; 
+            height: 100%;
+        }
+        .image-wrapper-row h2{
+            position: absolute; 
+            bottom: 100px; 
+            left: 200px; 
+            color: white; 
+            font-size: 30px; 
+            text-align: center;
+        }
+        .image-wrapper img{
+            transition: transform 0.5s ease;
+        }
+        .image-wrapper:hover img{
+            transform: scale(1.1);
+        }
+        .image-wrapper-row img{
+            transition: transform 0.5s ease;
+        }
+        .image-wrapper-row:hover img{
+            transform: scale(1.1);
+        }
+        .image-wrapper-left h2{
+            position: absolute;
+            top: 250%;
+            left: -40px;
+            transform: rotate(-90deg) translateY(-50%);
+            transform-origin: left-top;
+            text-align: center;
+            font-size: 40px;
+            color: #FFD700;
+        }
+        .image-wrapper-right h2{
+            position: absolute;
+            top: 250%;
+            right: -40px;
+            transform: rotate(90deg) translateY(-50%);
+            transform-origin: left-top;
+            text-align: center;
+            font-size: 40px;
+            color: #FFD700;
+        }
+        .international h1{
+          font-size: 35px;
+          font-weight: bold;
+          padding: 5px 10px;
+          margin: 10px;
+        }
+        .international p{
+          font-size: 15px;
+          padding: 5px 10px;
+          line-height: 1.6;
+          margin: 10px;
+        }
+.four h1{
+  font-size: 2rem;
+  font-weight: bold;
+}
+.four p{
+  font-size: 20px;
+  text-align: justify;
+}
+.four .four1, .four2{
+  line-break: 5px;
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .wedding-section {
+    margin-right: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+  .image-grid{
+    align-items: center;
+    width: 100%;
+    height: 500px;
+  }
+  .img1{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    align-items: center;justify-content: center;
+    top: 1000px;
+  }
+  .img2, .img3, .img4, .img5, .img6{
+    width: 150px;
+    height: 150px;
+  }
+  .img2{
+    position: relative;
+    top: 150px;
+  }
+  .img3{
+    position: relative;
+    top: 30px;
+  }
+  .img4{
+    position: relative;
+    top: 90px;
+    right: -160px;
+  }
+  .img5{
+    position: relative;
+    top: 300px;
+    left: -250px;
+  }
+  .img6{
+    position: relative;
+    right: -450px;
+    bottom: 15px;
+  }
+
+  .text-content h1, 
+  .text-content h2, 
+  .text-content p {
+    font-size: 95%;
+    text-align: center;
+  }
+
+  .destination{
+    height: 200vh;
+  }
+  .container1 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .col-1{
+            display: grid;
+            grid-template-rows: 400px 200px 200px;
+            gap: 10px;
+        }
+  .col-2{
+          display: grid;
+          grid-template-rows: 200px 400px 200px;
+          gap: 10px;
+        }
+  .col-3{
+          display: grid;
+          grid-template-rows: 200px 200px 400px;
+          gap: 10px;
+        }
+        .i1{width: 200px; height: 400px; object-fit: cover; border-radius: 50px; overflow: hidden;}
+        .i2{width: 200px; height: 200px; object-fit: cover; border-radius: 50px; overflow: hidden; }
+        .i3{width: 200px; height: 200px; object-fit: cover; border-radius: 50px; overflow: hidden; }
+
+        .i4{width: 200px; height: 200px; object-fit: cover; border-radius: 50px; overflow: hidden;}
+        .i5{width: 200px; height: 400px; object-fit: cover; border-radius: 50px; overflow: hidden;}
+        .i6{width: 200px; height: 200px; object-fit: cover; border-radius: 50px; overflow: hidden;}
+
+        .i7{width: 200px; height: 200px; object-fit: cover; border-radius: 50px; overflow: hidden;}
+        .i8{width: 200px; height: 200px; object-fit: cover; border-radius: 50px; overflow: hidden;}
+        .i9{width: 200px; height: 400px; object-fit: cover; border-radius: 50px; overflow: hidden;}
+
+        .row-4{
+            display: grid;
+            grid-template-columns: 300px 300px;
+            padding: 10px;
+            gap: 10px;
+        }
+
+        .i10{width: 300px; height: 300px; object-fit: cover; border-radius: 50px; overflow: hidden;}
+        .i11{width: 300px; height: 300px; object-fit: cover; border-radius: 50px; overflow: hidden;}
+
+        .image-wrapper h2, .image-wrapper-row h2{
+            bottom: 20px; 
+            left: 50px; 
+            font-size: 20px; 
+        }
+        .image-wrapper-row h2{
+            bottom: 150px; 
+            left: 70px; 
+            font-size: 20px; 
+        }
+        .image-wrapper-left h2{
+            top: 400%;
+            left: -50px;
+            font-size: 20px;
+        }
+        .image-wrapper-right h2{
+            top: 400%;
+            right: -50px;
+            font-size: 20px;
+        }
+    .international h1 {
+    font-size: 25px;
+  }
+
+  .international p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 600px){
+  .wedding-section {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .image-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: 200vh;
+  }
+
+  .img1, .img2, .img3, .img4, .img5, .img6{
+    width: 150px;
+    height: 150px;
+    align-items: center;justify-content: center;
+    
+  }
+  .img1{
+    right: 140px;
+  }
+  .img2{
+    left: -55px;
+  }
+  .img3{
+    top: 300px;
+    left: -55px;
+  }
+  .img4{
+    top: 130px;
+    left: -57px;
+  }
+  .img5{
+    top: 120px;
+    left: -55px;
+  }
+  .img6{
+    top: 110px;
+    left: -55px;
+  }
+  .destination{
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .container1 {
+    grid-template-columns: repeat(3, 1fr);
+    overflow: hidden;
+  }
+
+  .col-1{
+            display: grid;
+            grid-template-rows: 150px 90px 90px;
+            
+        }
+  .col-2{
+          display: grid;
+          grid-template-rows: 90px 150px 90px;
+          
+        }
+  .col-3{
+          display: grid;
+          grid-template-rows: 90px 90px 150px;
+          
+        }
+        .i1{width: 90px; height: 150px; object-fit: cover; border-radius: 15px; overflow: hidden;}
+        .i2{width: 90px; height: 90px; object-fit: cover; border-radius: 15px; overflow: hidden; }
+        .i3{width: 90px; height: 90px; object-fit: cover; border-radius: 15px; overflow: hidden; }
+
+        .i4{width: 90px; height: 90px; object-fit: cover; border-radius: 15px; overflow: hidden;}
+        .i5{width: 90px; height: 150px; object-fit: cover; border-radius: 15px; overflow: hidden;}
+        .i6{width: 90px; height: 90px; object-fit: cover; border-radius: 15px; overflow: hidden;}
+
+        .i7{width: 90px; height: 90px; object-fit: cover; border-radius: 15px; overflow: hidden;}
+        .i8{width: 90px; height: 90px; object-fit: cover; border-radius: 15px; overflow: hidden;}
+        .i9{width: 90px; height: 150px; object-fit: cover; border-radius: 15px; overflow: hidden;}
+
+        .row-4{
+            display: grid;
+            grid-template-columns: 135px 135px;
+            padding: 10px;
+            
+        }
+
+        .i10{width: 135px; height: 135px; object-fit: cover; border-radius: 15px; overflow: hidden;}
+        .i11{width: 135px; height: 135px; object-fit: cover; border-radius: 15px; overflow: hidden;}
+
+        .image-wrapper h2{
+            bottom: 200px; 
+            left: 30px; 
+            font-size: 10px; 
+        }
+        .image-wrapper-row h2{
+            bottom: 20px; 
+            left: 30px; 
+            font-size: 10px; 
+        }
+        .image-wrapper-left h2, .image-wrapper-right h2 {
+    font-size: 25px;
+    top: 400%;
+    left: 0;
+    right: 0;
+    transform: rotate(0deg);
+    text-align: center;
+  }
+  .text-content h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .text-content h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .text-content p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .overlay h2, .overlay h3, .overlay p {
+    font-size: 20px;
+  }
+
+  .one {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 350px;
+  }
+
+  .one h1 {
+    font-size: 1.5rem;
+  }
+
+  .one h4 {
+    font-size: 20px;
+  }
+
+  .container {
+    padding: 20px;
+    height: auto;
+  }
+  
+  .international{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+}
+@media (min-width: 1024px) {
+  body{
+    width: fit-content;
+   
+  }
+  .wedding-section {
+   flex-direction: row;
+    padding: 40px;
+    justify-content: space-around;
+    height: 150vh;
+  }
+
+  .text-content h1 {
+    font-size: 36px;
+  }
+
+  .text-content h2 {
+    font-size: 28px;
+  }
+
+  .text-content p {
+    font-size: 18px;
+  }
+
+  .image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .destination{
+    height: 250vh;
+  }
+  .container{
+            display: grid;
+            grid-template-rows: 2fr 1fr;
+        }
+        .row-4{
+            display: grid;
+            grid-template-columns: 375px 375px;
+            gap: 10px;
+        }
+        .i10{width: 375px; height: 300px; object-fit: cover; border-radius: 50px; overflow: hidden;}
+        .i11{width: 375px; height: 300px; object-fit: cover; border-radius: 50px; overflow: hidden;}
+        .container1{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+        }
+        .col-1{
+            display: grid;
+            grid-template-rows: 450px 250px 250px;
+            gap: 10px;
+        }
+        .i1{width: 250px; height: 450px; object-fit: cover; border-radius: 50px; overflow: hidden;}
+        .i2{width: 250px; height: 250px; object-fit: cover; border-radius: 50px; overflow: hidden; }
+        .i3{width: 250px; height: 250px; object-fit: cover; border-radius: 50px; overflow: hidden; }
+        
+        .col-2{
+            display: grid;
+            grid-template-rows: 250px 450px 250px;
+            gap: 10px;
+        }
+        .i4{width: 250px; height: 250px; object-fit: cover; border-radius: 50px; overflow: hidden;}
+        .i5{width: 250px; height: 450px; object-fit: cover; border-radius: 50px; overflow: hidden;}
+        .i6{width: 250px; height: 250px; object-fit: cover; border-radius: 50px; overflow: hidden;}
+        .col-3{
+            display: grid;
+            grid-template-rows: 250px 250px 450px;
+            gap: 10px;
+        }
+        .i7{width: 250px; height: 250px; object-fit: cover; border-radius: 50px; overflow: hidden;}
+        .i8{width: 250px; height: 250px; object-fit: cover; border-radius: 50px; overflow: hidden;}
+        .i9{width: 250px; height: 450px; object-fit: cover; border-radius: 50px; overflow: hidden;}
+        .image-wrapper{
+            position: relative; 
+            width: 100%; 
+            height: 100%;
+        }
+        .image-wrapper h2{
+            position: absolute; 
+            bottom: 50px; 
+            left: 50px; 
+            color: white; 
+            font-size: 20px; 
+            text-align: center;
+        }
+        .image-wrapper-row{
+            position: relative; 
+            width: 100%; 
+            height: 100%;
+        }
+        .image-wrapper-row h2{
+            position: absolute; 
+            bottom: 200px; 
+            left: 100px; 
+            color: white; 
+            font-size: 20px; 
+            text-align: center;
+        }
+        .image-wrapper-left h2{
+            position: absolute;
+            top: 350%;
+            left: -50px;
+            font-size: 30px;
+        }
+        .image-wrapper-right h2{
+            position: absolute;
+            top: 350%;
+            right: -50px;
+            font-size: 30px;
+        }
+}
+
+
+</style>
+</head>
+<body>
+    <header>
+        <img src="./prototype details/Borcelle-removebg-preview.png" alt="logo">
+        <div class="navbar">
+            <a href="./journey.html">Journey</a>
+            <div class="dropdown">
+              <button class="dropbtn">Packages</button>
+              <div class="dropdown-content">
+                <a href="./international.html">International</a>
+                <a href="./domestic.html">Domestic</a>
+                <a href="./pilgrimage.html">Pilgrimage</a>
+              </div>
+            </div>
+            <a href="./honeymoon.html">Honeymoon</a>
+            <a href="./wedding.html">Wedding</a>
+            <a href="./team.html">Our Team</a>
+            <a href="./getintouch.html">Get In Touch</a>
+          </div>
+
+        <div class="icons">
+            <img src="./prototype details/whatsapp.png" alt="whatsapp">
+            <img src="./prototype details/instagram.png" alt="instagram">
+            <img src="./prototype details/facebook.png" alt="facebook">
+            <img src="./prototype details/youtube.png" alt="youtube">
+            <div class="btn"><button><a href="./login.html">Login/Register</a></button></div>
+        </div>
+    </header>
+
+    <section class="one">
+        <h1>DESTINATION WEDDING</h1>
+        <h4>Explore Now</h4>
+
+        <div class="overlay">
+            <h2>DESTINATION WEDDING</h2>
+            <p>
+                A "destination wedding" is a wedding ceremony held in a location significantly away from the couple's hometown
+            </p>
+            <h3>Explore Now</h3>
+        </div>
+    </section>
+
+    <section class="wedding-section">
+        <div class="text-content">
+          <h1>Find The Perfect Destination</h1>
+          <h2>Wedding Packages</h2>
+          <p>
+            A destination wedding is all about marrying the love of your life while being thousands of miles away from home.
+            Whether you're planning a wedding at a beach resort, a heritage palace (turned into a luxury hotel),
+            or a quiet hillside house, Heaven Holidays offers the most affordable and best destination wedding packages in India.
+          </p>
+        </div>
+        <div class="image-grid">
+          <img src="./prototype details/wedding1.jpg" alt="Wedding 1" class="img3"/>
+          <img src="./prototype details/wedding2.jpg" alt="Wedding 2" class="img2"/>
+          <img src="./prototype details/wedding3.jpg" alt="Wedding 3" class="img1"/>
+          <img src="./prototype details/wedding4.jpg" alt="Wedding 4" class="img4"/>
+          <img src="./prototype details/wedding5.jpg" alt="Wedding 5" class="img5"/>
+          <img src="./prototype details/wedding6.jpg" alt="Wedding 6" class="img6"/>
+        </div>
+      </section>
+
+      <section class="destination">
+        <div class="image-wrapper-left">
+          <h2>DESTINATION WEDDING</h2>
+      </div>
+      <div class="image-wrapper-right">
+          <h2>DESTINATION WEDDING</h2>
+      </div>
+        <div class="container">
+          <div class="container1">
+              <div class="col-1">
+                  <div class="image-wrapper">
+                      <img src="./prototype details/jaipur.jpg" alt="jaipur" class="i1"/>
+                      <h2 class="j1">Jaipur</h2>
+                  </div>
+                  <div class="image-wrapper">
+                      <img src="./prototype details/udaipur.jpg" alt="udaipur" class="i2"/>
+                  <h2 class="j2">Udaipur</h2>
+                  </div>
+                  <div class="image-wrapper">
+                      <img src="./prototype details/jodhpur.jpg" alt="jodhpur" class="i3"/>
+                      <h2 class="j3">Jodhpur</h2>
+                  </div>
+              </div>
+  
+              <div class="col-2">
+                  <div class="image-wrapper">
+                      <img src="./prototype details/goa2.jpg" alt="goa" class="i4"/>
+                      <h2 class="j4">Goa</h2>
+                  </div>
+                  <div class="image-wrapper">
+                      <img src="./prototype details/kerala2.jpg" alt="kerala" class="i5"/>
+                      <h2 class="j5">Kerala</h2>
+                  </div>
+                  <div class="image-wrapper">
+                      <img src="./prototype details/andaman honeymoon.jpg" alt="andaman" class="i6"/>
+                  <h2 class="j6">Andaman</h2>
+                  </div>
+              </div>
+  
+              <div class="col-3">
+                  <div class="image-wrapper">
+                      <img src="./prototype details/jaisalmar.jpg" alt="jaisalmar" class="i7"/>
+                      <h2 class="j7">Jaisalmar</h2>
+                  </div>
+                  <div class="image-wrapper">
+                      <img src="./prototype details/bali2.jpg" alt="bali" class="i8"/>
+                      <h2 class="j8">Bali</h2>
+                  </div>
+                  <div class="image-wrapper">
+                      <img src="./prototype details/agra.jpg" alt="agra" class="i9"/>
+                      <h2 class="j9">Agra</h2>
+                  </div>  
+              </div>
+          </div>
+  
+          <div class="row-4">
+              <div class="image-wrapper-row">
+                  <img src="./prototype details/thailand2.jpg" alt="thailand" class="i10"/>
+                  <h2 class="j10">Thailand</h2>
+              </div> 
+              <div class="image-wrapper-row">
+                  <img src="./prototype details/dubai2.jpg" alt="dubai" class="i11"/>
+                  <h2 class="j11">Dubai</h2>
+              </div> 
+          </div>
+      </div>
+      </section>
+
+      <section class="international">
+        <h1>International</h1>
+        <p>Selecting the ideal location for an international wedding is a challenging process. It has to tick all the right
+          boxes. You need to pick a place that's breathtakingly stunning and dreamlike yet enjoyable and affordable. At Heaven
+          Holidays, we specialize in curating international destination wedding packages that match your style and budget. 
+        </p>
+        <h1>Popular International Destination Wedding Packages</h1>
+        <p>Wedding in the past were a hyper local event, orchestrated by a divergent group of individuals, ranging from the tent-men
+          and caterers to tailors, beauticians, and other ancillary staff. Today, it is a polished event conducted by professionals 
+          who can manage the entire event-from food and venue to entertainment and even finding honeymoon package deals. If you're
+          planning a dream wedding at an exotic location, Heaven Holidays can make your dreams come to life.
+
+        </p>
+      </section>
+
+    <footer>
+        <h1>Travel beyond your imagination, with our Travel Agency!</h1>
+        <div class="logo"><img src="./prototype details/Borcelle-removebg-preview.png" alt="logo" ></div>
+        
+        <div class="links">Quick Links
+          <ul>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Services</li>
+            <li>Packages</li>
+            <li>Privacy Policy</li>
+            <li>Refund Policy</li>
+            <li>Cancellation Policy</li>
+            <li>Terms & Conditions</li>
+          </ul>
+        </div>
+  
+        <div class="packages">Trending Packages
+          <ul>
+            <li>Japan Tour Packages</li>
+            <li>Bali Tour Packages</li>
+            <li>Munnar Tour Packages</li>
+            <li>Thailand Tour Packages</li>
+            <li>America Tour Packages</li>
+          </ul>
+        </div>
+  
+        <div class="address">
+          <p>
+            <img src="./prototype details/location.png" alt="location" >
+            No.21 Heaven Holiday, XYZ Street, ABC Nagar, Chennai-6000XX
+          </p>
+          <p>
+            <img src="./prototype details/phone.png" alt="phone" >
+            +91 9123456789
+          </p>
+          <p>
+            <img src="./prototype details/mail.png" alt="mail" >
+            infoholidays@gmail.com
+          </p>
+        </div>
+      </footer>
+</body>
+</html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        body{
+            background-color: #FAF3E0;
+        }
+        .one img{
+            width: 100%;
+            height: 500px;
+        }
+        .two h1{
+            font-weight: bold;
+            font-size: 50px;
+        }
+        .two p{
+            font-size: 20px;
+            line-height: 30px;
+        }
+        .three .content .para{
+            padding: 120px;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            font-size: 20px;
+        }
+        .float-left {
+            width: 700px;
+            height: 700px;
+            float: left;
+            margin-right: 50px;
+            margin-bottom: 10px;
+            border-radius: 25px;
+        }
+        .three .para button {
+            width: 200px;
+            height: 50px;
+            background-color: #FFD700;
+            color: black;
+            border-radius: 5px;
+            font-size: 25px;
+            font-weight: bold;
+            border: none;
+        }
+        .three .para button:hover{
+            background-color: #4169E1;
+        }
+        .four{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            text-align: center;
+            padding: 20px 30px;
+            column-gap: 200px;
+        }
+        .four img{
+            width: 150px;
+            height: 150px;
+        }
+        .four h1{
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .four p{
+            font-size: 20px;
+        }
+        .five{
+            padding: 10px 20px;
+            
+        }
+        .five p{
+            font-size: 20px;
+            text-align: center;
+            padding: 50px;
+        }
+        .six{
+            height: 700px;   
+        }
+        .six .block{
+            background-color: white;
+        }
+        .floatleft {
+            width: 500px;
+            height: 500px;
+            float: left;
+            margin-right: 50px;
+            margin-bottom: 10px;
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+        }
+        .forms form button {
+            width: 200px;
+            height: 50px;
+            background-color: #FFD700;
+            color: black;
+            border-radius: 5px;
+            font-size: 25px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover{
+            background-color: #4169E1;
+        }
+        .forms{
+            text-align: center;
+        }
+        .six .forms form{
+            padding: 100px; 
+        }
+        .six .forms input{
+            width: 500px;
+            height: 50px;
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            border-radius: 15px;
+            border: 2px solid #4169E1;
+            
+        }
+       
+@media screen and (max-width: 1024px) {
+    .two h1 {
+        font-size: 40px;
+    }
+    .two p, .three .content .para, .five p, .four p {
+        font-size: 18px;
+    }
+    .three{
+        height: 600px;
+    }
+    .four{
+        padding: 50px;
+        margin: 50px;
+    }
+    .three .content .para{
+        padding: 20px;
+    }
+    .float-left, .floatleft {
+        width: 500px;
+        height: 500px;
+    }
+    .four img {
+        width: 120px;
+        height: 120px;
+    }
+    .six .forms input {
+        width: 400px;
+    }
+    .six .forms form{
+            padding: 70px; 
+        }
+}
+
+
+@media screen and (max-width: 1023px) {
+    .four {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .four img {
+        width: 120px;
+        height: 120px;
+    }
+    .four h1 {
+        font-size: 22px;
+    }
+    .four p {
+        font-size: 18px;
+    }
+    
+    .two h1 {
+        font-size: 40px;
+    }
+    .two p, .five p {
+        font-size: 18px;
+    }
+    .three .content .para{
+        font-size: 15px;
+    }
+    .three .para button, .forms form button {
+        width: 100px;
+        height: 45px;
+        font-size: 15px;
+    }
+    .six .block {
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+     .float-left {
+        width: 300px;
+        height: 400px;
+    }
+    .floatleft {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .six .forms form {
+        padding: 0;
+    }
+
+    .six .forms input {
+        width: 300px;
+        height: 40px;
+    }
+
+    .forms form button {
+        width: 300px;
+        height: 45px;
+    }
+    
+}
+
+
+@media screen and (max-width: 760px) {
+    .two h1 {
+        font-size: 30px;
+    }
+    .two p, .five p, .four p {
+        font-size: 16px;
+    }
+    .float-left, .floatleft {
+        width: 300px;
+        height: 300px;
+        float: none;
+        display: block;
+        margin: 0 auto 20px;
+    }
+    
+    .three .content, .six .block {
+        text-align: center;
+    }
+    .three{
+        height: 1000px;
+    }
+    
+    .four{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+    }
+    .four img {
+        width: 80px;
+        height: 80px;
+    }
+    .six .block {
+        flex-direction: column;
+        align-items: center;
+        height: 1000px;
+    }
+
+    .floatleft {
+        width: 250px;
+        height: 250px;
+        border-radius: 50px;
+    }
+
+    .six .forms form {
+        width: 90%;
+        padding: 0;
+    }
+
+    .six .forms input {
+        width: 100px;
+        height: 40px;
+        border-radius: 15px;
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+
+    .forms form button {
+        width: 100px;
+        height: 45px;
+        border-radius: 15px;
+        font-size: 15px;
+    }
+    .one img {
+        height: 300px;
+        object-fit: cover;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./prototype details/Borcelle-removebg-preview.png" alt="logo">
+        <div class="navbar">
+            <a href="./journey.html">Journey</a>
+            <div class="dropdown">
+              <button class="dropbtn">Packages</button>
+              <div class="dropdown-content">
+                <a href="./international.html">International</a>
+                <a href="./domestic.html">Domestic</a>
+                <a href="./pilgrimage.html">Pilgrimage</a>
+              </div>
+            </div>
+            <a href="./honeymoon.html">Honeymoon</a>
+            <a href="./wedding.html">Wedding</a>
+            <a href="./team.html">Our Team</a>
+            <a href="./getintouch.html">Get In Touch</a>
+          </div>
+
+        <div class="icons">
+            <img src="./prototype details/whatsapp.png" alt="whatsapp">
+            <img src="./prototype details/instagram.png" alt="instagram">
+            <img src="./prototype details/facebook.png" alt="facebook">
+            <img src="./prototype details/youtube.png" alt="youtube">
+            <div class="btn"><button><a href="./login.html">Login/Register</a></button></div>
+        </div>
+    </header>
+
+    <section class="one">
+        <img src="./prototype details/teambg.jpg" alt="teambg">
+    </section>
+
+    <section class="two">
+        <h1>Best Travel Agency in Chennai</h1>
+        <p>Travel, once linked with relaxation and enjoyment, now holds greater importance in our fast-paced world. Nowadays, travel
+            serves multiple purposes and provides a variety of experiences. While individuals can efficiently plan thier tips, we, as 
+            the top Travel Agency in Chennai, offer a extensive range of travel and tourism services to ensure a smooth journey from the 
+            initial planning stages to the return trip.
+            <br><br>
+            Embarking on a length journey can feel like a daunting task, from organizing accomadations to managing finances. But why
+            go through the trouble of in-depth research when we're here to curate the most efficent plan and schedule for you? Let us take
+            of all the details seamless so you can savor your travel adventures without any worries.
+        </p>
+    </section>
+    <section class="three">
+        <div class="content">
+            <img src="./prototype details/Ai generated dubai.jpg" alt="dubai" class="float-left" />
+            <div class="para">
+            <p>
+                Turn your travel teams into your reality with our best international packages from chennai, and explore seamless,
+                stree-free journeys from start to finish . Additionally, discover our best domestic packages from Chennai for unforgettable
+                experiences closer to home.
+                <ul>
+                    <li>We offer wide range of travel tours to destinations all over the world.</li>
+                    <li>Our travel agents, including our dedicated team of tour operators in Chennai, are available to assist you every step of the way.</li>
+                    <li>Whether you're looking for exotic international adventures or memorable domestic gateways, we have the perfect package for you.</li>
+                </ul> 
+                <button>More Info</button>
+            </p>
+        </div>
+        </div>
+    </section>
+    <section class="four">
+        <div class="passport">
+            <img src="./prototype details/passport-icon.webp" alt="passport">
+            <h1>Passport</h1>
+            <p>Empowering your dreams to Soar Beyond Borders! Your Passport to POssibilities - Seamlessly delivered with 
+                expertise and care. From application to adventure, we've got you covered.</p>
+        </div>
+        <div class="hotel">
+            <img src="./prototype details/Hotel.webp" alt="hotel">
+            <h1>Hotel</h1>
+            <p>Your Home Away from Home Awaits! Creating Memories One Stay at a Time - Relax, we'll take care of the rest. 
+                Unwind in style abd luxury, because you deserve the finest.
+            </p>
+        </div>
+        <div class="visa">
+            <img src="./prototype details/visa-1.webp" alt="visa">
+            <h1>Visa</h1>
+            <p>Unlocking World Wonders, One Visa at a  Time - Your Gateway to Global Adventures! Seamlessly navigating visas 
+                so you can explore with ease, because borders shouldn't hold you back.
+            </p>
+        </div>
+        <div class="traveinsurance">
+            <img src="./prototype details/travelinsurance.webp" alt="visa">
+            <h1>Travel Insurance</h1>
+            <p>Embark on worry-free adventures, protected by our Travel Insurance Guardians! Your Safety Net Across the Globe - 
+                Explore with confidence.
+            </p>
+        </div>
+        <div class="ticket">
+            <img src="./prototype details/Ticket .webp" alt="ticket">
+            <h1>Ticket</h1>
+            <p>Your Passport to Seamless Journeys-Where Every Destination Begins! Elevating Travel, One Ticket at a time - We 
+                pave the way, you enjoy the ride.
+            </p>
+        </div>
+        <div class="currency">
+            <img src="./prototype details/currency exchange.webp" alt="currencyexchange">
+            <h1>Currency Exchange</h1>
+            <p>Travel the world with ease knowing that your currency exchange is taken care of. We're the currency exchange experts.
+            </p>
+        </div>
+    </section>
+    <section class="five">
+        <p>
+            Heavn Holiday is a full integrated travel company that offers comprehensive solutions for all the business and
+            leisure travelers across the world. This prestigious travel company in Chennai mainly aims to satisfy the client's 
+            requirements with ultimate transparency and cost-effectiveness. We asssure to offer round the clock support and assistance at 
+            any point of your travel.
+        </p>
+        <p>
+            Our Heaven Holiday Team is striving hard to become the world class travel company and industry leader in the near future.
+            We are planning to focus on customer centric approach and gain recognition among the worldwide clients. The travel 
+            company believes in maintaining highest quality standards and craft extraordinary moments especially for you. 
+        </p>
+
+    </section>
+    <section class="six">
+        <div class="block">
+            <img src="./prototype details/Koh Hong Island Bay, Andaman Sea - Thailand - Wrapped Canvas Photograph.jpg" alt="hong" class="floatleft">
+            <div class="forms">
+            <form>
+                <input type="text" id="name" name="name" required placeholder="Name" ><br><br>
+                <input type="number" id="number" name="number" required placeholder="Mobile" ><br><br>
+                <input type="email" id="email" name="email" required placeholder="Email" ><br><br>
+                <input type="textarea" id="textarea" name="textarea" required placeholder="Your Message" ><br><br>
+                <button>SUBMIT</button>
+            </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h1>Travel beyond your imagination, with our Travel Agency!</h1>
+        <div class="logo"><img src="./prototype details/Borcelle-removebg-preview.png" alt="logo" width="200px" height="200px"></div>
+        
+        <div class="links">Quick Links
+          <ul>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Services</li>
+            <li>Packages</li>
+            <li>Privacy Policy</li>
+            <li>Refund Policy</li>
+            <li>Cancellation Policy</li>
+            <li>Terms & Conditions</li>
+          </ul>
+        </div>
+  
+        <div class="packages">Trending Packages
+          <ul>
+            <li>Japan Tour Packages</li>
+            <li>Bali Tour Packages</li>
+            <li>Munnar Tour Packages</li>
+            <li>Thailand Tour Packages</li>
+            <li>America Tour Packages</li>
+          </ul>
+        </div>
+  
+        <div class="address">
+          <p>
+            <img src="./prototype details/location.png" alt="location" >
+            No.21 Heaven Holiday, XYZ Street, ABC Nagar, Chennai-6000XX
+          </p>
+          <p>
+            <img src="./prototype details/phone.png" alt="phone" >
+            +91 9123456789
+          </p>
+          <p>
+            <img src="./prototype details/mail.png" alt="mail" >
+            infoholidays@gmail.com
+          </p>
+        </div>
+      </footer>
+</body>
+</html>

@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honeymoon Tour Package</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        body{
+            background-color: #FAF3E0;
+        }
+        .one{
+            background: url(./image/honeymoon\ bg.jpg) no-repeat center/cover;
+            text-align: center;
+            height: 500px;
+            padding: 250px 250px;
+        }
+        .one h1{
+            color: black;
+            font-size: 2.5rem;
+            font-weight: bolder;
+            margin: 25px;
+        }
+        .one h4{
+            color: black;
+            font-size: 25px;
+            font-weight: bolder;
+        }
+        .one {
+            position: relative;
+            overflow: hidden;
+        }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #000;
+    text-align: center;
+    padding: 5px;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.one:hover .overlay {
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+.overlay h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.overlay p {
+    font-size: 30px;
+    line-height: 1.6;
+}
+
+.overlay h4 {
+    padding: 10px 20px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+        .main{
+            row-gap: 10px;
+        }
+        .maldives{
+            background-color: white;
+            color: black;
+            height: 500px;
+            width: 1300px;
+            border-radius: 15px;
+            margin: 30px;
+            overflow: hidden;
+        }
+        .maldives .h1 > img{
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+        .h2 h3{
+            padding: 20px 30px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .h2 .location >img{
+            width: 25px;
+            height: 25px;
+        }
+        .h2 .location{
+            font-size: 25px;
+            font-weight: bold;
+            padding: 20px 30px;
+        }
+        .maldives > .h2{
+            position: relative;
+            left: 500px;
+            overflow: hidden;
+        }
+        .inclusions span > img{
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+            margin: 10px;
+        }
+        .inclusions span{
+            background-color: #FFD700;
+            border-radius: 30px;
+            width: 50px;
+            height: 50px;
+            display: block;
+            margin: 10px; 
+        }
+        .inclusions{
+            font-size: 25px;
+            font-weight: bold;    
+            padding: 20px 30px;        
+        }
+        .inclusions .inclusions-icons{
+            display: flex;
+            gap: 10px;
+        }
+        
+        .h2 .duration > img{
+            width: 30px;
+            height: 30px;
+            
+        }
+        .h2 .duration{
+            font-size: 25px;
+            font-weight: bold;
+            background-color: #4169E1;
+            color: white;
+            width: 350px;
+            height: 50px;
+            border-radius: 15px;
+            text-align: left;
+            padding: 33px;
+            margin-left: 20px;
+        }
+        .bottom{
+            margin: 20px;
+        }
+        .bottom .details-btn{
+            width: 200px;
+            height: 50px;
+            background-color: #FFD700;
+            color: black;
+            border-radius: 15px;
+            font-size: 25px;
+            font-weight: bold;
+            border: none;
+            position: absolute;
+        }
+        .bottom .price{
+            font-size: 25px;
+            font-weight: bolder;
+            position: relative;
+            left: 600px;
+        }
+        .bottom .details-btn:hover{
+            background-color: #4169E1;
+        }
+        .bali{
+            background-color: white;
+            color: black;
+            height: 500px;
+            width: 1300px;
+            border-radius: 15px;
+            margin: 30px;
+            overflow: hidden;
+        }
+        .bali .h1 > img{
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            object-fit: cover;
+        }
+        .bali > .h2{
+            position: relative;
+            left: 500px;
+            overflow: hidden;
+        }
+        .singapore{
+            background-color: white;
+            color: black;
+            height: 500px;
+            width: 1300px;
+            border-radius: 15px;
+            margin: 30px;
+            overflow: hidden;
+        }
+        .singapore .h1 > img{
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            object-fit: cover;
+        }
+        .singapore > .h2{
+            position: relative;
+            left: 500px;
+            overflow: hidden;
+        }
+        .mauritius{
+            background-color: white;
+            color: black;
+            height: 500px;
+            width: 1300px;
+            border-radius: 15px;
+            margin: 30px;
+            overflow: hidden;
+        }
+        .mauritius .h1 > img{
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            border-radius: 15px;
+            object-fit: cover;
+        }
+        .mauritius > .h2{
+            position: relative;
+            left: 500px;
+            overflow: hidden;
+        }
+        .thailand{
+            background-color: white;
+            color: black;
+            height: 500px;
+            width: 1300px;
+            border-radius: 15px;
+            margin: 30px;
+            overflow: hidden;
+        }
+        .thailand .h1 > img{
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            border-radius: 15px;
+            object-fit: cover;
+        }
+        .thailand > .h2{
+            position: relative;
+            left: 500px;
+            overflow: hidden;
+        }
+        .kerala{
+            background-color: white;
+            color: black;
+            height: 500px;
+            width: 1300px;
+            border-radius: 15px;
+            margin: 30px;
+            overflow: hidden;
+        }
+        .kerala .h1 > img{
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            object-fit: cover;
+        }
+        .kerala > .h2{
+            position: relative;
+            left: 500px;
+            overflow: hidden;
+        }
+        .goa{
+            background-color: white;
+            color: black;
+            height: 500px;
+            width: 1300px;
+            border-radius: 15px;
+            margin: 30px;
+            overflow: hidden;
+        }
+        .goa .h1 > img{
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            object-fit: cover;
+        }
+        .goa > .h2{
+            position: relative;
+            left: 500px;
+            overflow: hidden;
+        }
+        .manali{
+            background-color: white;
+            color: black;
+            height: 500px;
+            width: 1300px;
+            border-radius: 15px;
+            margin: 30px;
+            overflow: hidden;
+        }
+        .manali .h1 > img{
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            object-fit: cover;
+        }
+        .manali > .h2{
+            position: relative;
+            left: 500px;
+            overflow: hidden;
+        }
+        .andaman{
+            background-color: white;
+            color: black;
+            height: 500px;
+            width: 1300px;
+            border-radius: 15px;
+            margin: 30px;
+            overflow: hidden;
+        }
+        .andaman .h1 > img{
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            object-fit: cover;
+        }
+        .andaman > .h2{
+            position: relative;
+            left: 500px;
+            overflow: hidden;
+        }
+        .vietnam{
+            background-color: white;
+            color: black;
+            height: 500px;
+            width: 1300px;
+            border-radius: 15px;
+            margin: 30px;
+            overflow: hidden;
+        }
+        .vietnam .h1 > img{
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            object-fit: cover;
+        }
+        .vietnam > .h2{
+            position: relative;
+            left: 500px;
+            overflow: hidden;
+        }
+
+@media (max-width: 600px) {
+    
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main > div {
+        flex-direction: column;
+        width: 300px;
+        height: 600px;
+    }
+    .one{
+            height: 100px;
+            text-align: center;
+            padding: 10px;
+        }
+        .one h1{
+            font-size:1rem;
+            font-weight:bolder;
+        }
+        .one h3{
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+    .maldives, .bali, .singapore, .mauritius, .thailand, .kerala, .goa, .manali, .andaman, .vietnam {
+        flex-direction: row;
+    }
+    .maldives .h1 > img, .bali .h1 > img, .singapore .h1 > img , .mauritius .h1 > img, .thailand .h1 > img, .kerala .h1 > img, .goa .h1 > img, .manali .h1 > img, .andaman .h1 > img, .vietnam .h1 > img {
+        width: 300px;
+        height: 300px;
+        border-radius: 15px;
+        object-fit: cover;
+        
+    }    
+    .maldives > .h2, .bali > .h2, .singapore > .h2, .mauritius > .h2, .thailand > .h2, .kerala > .h2, .goa > .h2, .manali > .h2, .andaman > .h2, .vietnam > .h2 {
+        position: relative;
+        left: 0;
+        top: 300px;  
+    }
+    .h2 h3{
+            padding: 5px 2px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .h2 .location >img{
+            width: 15px;
+            height: 15px;
+        }
+        .h2 .location{
+            font-size: 20px;
+            font-weight: bold;
+            padding: 5px 2px;
+        }
+        .inclusions span > img{
+            width: 15px;
+            height: 15px;
+            margin: 10px;
+        }
+        .inclusions span{
+            border-radius: 5px;
+            width: 25px;
+            height: 25px;
+            margin: 5px; 
+        }
+        .inclusions{
+            font-size: 15px;
+            font-weight: bold;    
+            padding: 5px 2px;        
+        }
+      
+        .h2 .duration{
+            font-size: 20px;
+            font-weight: bold;
+            width: 150px;
+            height: 50px;
+            text-align: left;
+            padding: 5px;
+            margin-left: 5px;
+        }
+        .bottom{
+            margin: 10px;
+        }
+        .bottom .details-btn{
+            width: 100px;
+            height: 50px;
+            border-radius: 15px;
+            font-size: 15px;
+        }
+        .bottom .price{
+            font-size: 15px;
+            font-weight: bolder;
+            left: 200px;
+        }
+    .one {
+        padding: 50px 15px;
+        height: 300px;
+    }
+    .overlay h2 {
+        font-size: 1.8rem;
+    }
+
+    .overlay p {
+        font-size: 1rem;
+    }
+
+    .one h1 {
+        font-size: 2rem;
+    }
+
+    .one h4 {
+        font-size: 1rem;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    
+    .maldives, .bali, .singapore, .mauritius, .thailand, .kerala, .goa, .manali, .andaman, .vietnam {
+        width: 90%;
+        height: 300px;
+        flex-direction: row;
+    }
+    .maldives .h1 > img, .bali .h1 > img, .singapore .h1 > img , .mauritius .h1 > img, .thailand .h1 > img, .kerala .h1 > img, .goa .h1 > img, .manali .h1 > img, .andaman .h1 > img, .vietnam .h1 > img {
+        width: 300px;
+        height: 300px;
+        border-radius: 15px 0 0 15px;
+        object-fit: cover;
+    }    
+    .maldives > .h2, .bali > .h2, .singapore > .h2, .mauritius > .h2, .thailand > .h2, .kerala > .h2, .goa > .h2, .manali > .h2, .andaman > .h2, .vietnam > .h2 {
+        left: 300px;
+        overflow: hidden;
+    }
+    .h2 h3{
+            padding: 10px 5px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .h2 .location >img{
+            width: 25px;
+            height: 25px;
+        }
+        .h2 .location{
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px 5px;
+        }
+        .inclusions span > img{
+            width: 15px;
+            height: 15px;
+            margin: 10px;
+        }
+        .inclusions span{
+            border-radius: 5px;
+            width: 25px;
+            height: 25px;
+            margin: 5px; 
+        }
+        .inclusions{
+            font-size: 20px;
+            font-weight: bold;    
+            padding: 10px 5px;        
+        }
+        
+        .h2 .duration{
+            font-size: 25px;
+            font-weight: bold;
+            width: 150px;
+            height: 50px;
+            text-align: left;
+            padding: 5px;
+            margin-left: 5px;
+        }
+        .bottom{
+            margin: 10px;
+        }
+        .bottom .details-btn{
+            width: 100px;
+            height: 50px;
+            border-radius: 15px;
+            font-size: 15px;
+        }
+        .bottom .price{
+            font-size: 20px;
+            font-weight: bolder;
+            left: 250px;
+        }
+    
+    .one {
+        padding: 80px 20px;
+        height: 400px;
+    }
+
+    .overlay h2 {
+        font-size: 1.5rem;
+    }
+
+    .overlay p {
+        font-size: 1rem;
+    }
+
+    .one h1 {
+        font-size: 2rem;
+    }
+
+    .one h4 {
+        font-size: 1.2rem;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px){
+        .maldives, .bali, .singapore, .mauritius, .thailand, .kerala, .goa, .manali, .andaman, .vietnam {
+        width: 90%;
+        height: 500px;
+        flex-direction: row;
+    }
+    .maldives .h1 > img, .bali .h1 > img, .singapore .h1 > img , .mauritius .h1 > img, .thailand .h1 > img, .kerala .h1 > img, .goa .h1 > img, .manali .h1 > img, .andaman .h1 > img, .vietnam .h1 > img {
+        width: 300px;
+        height: 500px;
+        border-radius: 15px 0 0 15px;
+        object-fit: cover;
+    }    
+    .maldives > .h2, .bali > .h2, .singapore > .h2, .mauritius > .h2, .thailand > .h2, .kerala > .h2, .goa > .h2, .manali > .h2, .andaman > .h2, .vietnam > .h2 {
+        left: 300px;
+    }
+    .bottom .price{
+            font-size: 25px;
+            font-weight: bolder;
+            left: 400px;
+        }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./prototype details/Borcelle-removebg-preview.png" alt="logo">
+        <div class="navbar">
+            <a href="./journey.html">Journey</a>
+            <div class="dropdown">
+              <button class="dropbtn">Packages</button>
+              <div class="dropdown-content">
+                <a href="./international.html">International</a>
+                <a href="./domestic.html">Domestic</a>
+                <a href="./pilgrimage.html">Pilgrimage</a>
+              </div>
+            </div>
+            <a href="./honeymoon.html">Honeymoon</a>
+            <a href="./wedding.html">Wedding</a>
+            <a href="./team.html">Our Team</a>
+            <a href="./getintouch.html">Get In Touch</a>
+          </div>
+
+        <div class="icons">
+            <img src="./prototype details/whatsapp.png" alt="whatsapp">
+            <img src="./prototype details/instagram.png" alt="instagram">
+            <img src="./prototype details/facebook.png" alt="facebook">
+            <img src="./prototype details/youtube.png" alt="youtube">
+            <div class="btn"><button><a href="./login.html">Login/Register</a></button></div>
+        </div>
+    </header>
+
+    <section class="one">
+        <h1>HONEYMOON TRIP PACKAGES</h1>
+        <h4>Explore Now</h4>
+
+        <div class="overlay">
+            <h2>Honeymoon</h2>
+            <p>
+                A honeymoon trip is a vacation taken by a newly married couple immediately after their wedding, typically to a romantic or exotic destination, serving as a celebratory getaway to mark the beginning of their life together and enjoy quality time alone as husband and wife.
+            </p>
+            <h4>Explore Now</h4>
+        </div>
+    </section>
+
+    <section class="main">
+      <div class="maldives">
+          <div class="h1">
+              <img src="./prototype details/Maldives.jpg" alt="maldives">
+          </div>
+          <div class="h2">
+              <h3>Maldives Romantic Couple Packages</h3>
+              <div class="location">
+                  <img src="./prototype details/location 2.png" alt="location">India <hr>
+              </div>
+
+              <div class="inclusions">Inclusions 
+                  <div class="inclusions-icons">
+                  <span><img src="./prototype details/ticket.png" alt="ticket"></span>
+                  <span><img src="./prototype details/transport.png" alt="transport"></span>
+                  <span><img src="./prototype details/hotel.jpg" alt="hotel"></span>
+                  </div>
+              </div>
+              
+              <div class="duration">
+                  <img src="./prototype details/clock.png" alt="clock"> 
+                  7 Days
+              </div>
+              
+              <div class="bottom">
+                  <button class="details-btn">Details</button>
+                  <div class="price"><p>From</p> <p>₹1,50,999</p></div>
+                </div>
+              
+          </div>
+          
+      </div>
+
+      <div class="bali">
+          <div class="h1">
+              <img src="./prototype details/bali.jpg" alt="bali">
+          </div>
+          <div class="h2">
+              <h3>Bali Honeymoon Tour Packages</h3>
+              <div class="location">
+                  <img src="./prototype details/location 2.png" alt="location">India <hr>
+              </div>
+
+              <div class="inclusions">Inclusions 
+                  <div class="inclusions-icons">
+                  <span><img src="./prototype details/ticket.png" alt="ticket"></span>
+                  <span><img src="./prototype details/transport.png" alt="transport"></span>
+                  <span><img src="./prototype details/hotel.jpg" alt="hotel"></span>
+                  </div>
+              </div>
+              
+              <div class="duration">
+                  <img src="./prototype details/clock.png" alt="clock"> 
+                  5 Days
+              </div>
+              
+              <div class="bottom">
+                  <button class="details-btn">Details</button>
+                  <div class="price"><p>From</p> <p>₹1,99,999</p></div>
+                </div>
+              
+          </div>
+          
+      </div>
+
+      <div class="singapore">
+          <div class="h1">
+              <img src="./prototype details/Singapore.jpg" alt="singapore">
+          </div>
+          <div class="h2">
+              <h3>Beautiful Singapore Tour Packages</h3>
+              <div class="location">
+                  <img src="./prototype details/location 2.png" alt="location">India <hr>
+              </div>
+
+              <div class="inclusions">Inclusions 
+                  <div class="inclusions-icons">
+                  <span><img src="./prototype details/ticket.png" alt="ticket"></span>
+                  <span><img src="./prototype details/transport.png" alt="transport"></span>
+                  <span><img src="./prototype details/hotel.jpg" alt="hotel"></span>
+                  </div>
+              </div>
+              
+              <div class="duration">
+                  <img src="./prototype details/clock.png" alt="clock"> 
+                  4 Days
+              </div>
+              
+              <div class="bottom">
+                  <button class="details-btn">Details</button>
+                  <div class="price"><p>From</p> <p>₹70,000</p></div>
+                </div>
+              
+          </div>
+          
+      </div>
+
+      <div class="mauritius">
+          <div class="h1">
+              <img src="./prototype details/Mauritius.jpg" alt="mauritius">
+          </div>
+          <div class="h2">
+              <h3>Romantic Magical Honeymoon in Mauritius</h3>
+              <div class="location">
+                  <img src="./prototype details/location 2.png" alt="location">India <hr>
+              </div>
+
+              <div class="inclusions">Inclusions 
+                  <div class="inclusions-icons">
+                  <span><img src="./prototype details/ticket.png" alt="ticket"></span>
+                  <span><img src="./prototype details/transport.png" alt="transport"></span>
+                  <span><img src="./prototype details/hotel.jpg" alt="hotel"></span>
+                  </div>
+              </div>
+              
+              <div class="duration">
+                  <img src="./prototype details/clock.png" alt="clock"> 
+                  6 Days
+              </div>
+              
+              <div class="bottom">
+                  <button class="details-btn">Details</button>
+                  <div class="price"><p>From</p> <p>₹96,999</p></div>
+                </div>
+              
+          </div>
+          
+      </div>
+
+      <div class="thailand">
+          <div class="h1">
+              <img src="./prototype details/Thailand.jpg" alt="thailand">
+          </div>
+          <div class="h2">
+              <h3>Magical Thailand Moneymoon Package</h3>
+              <div class="location">
+                  <img src="./prototype details/location 2.png" alt="location">India <hr>
+              </div>
+
+              <div class="inclusions">Inclusions 
+                  <div class="inclusions-icons">
+                  <span><img src="./prototype details/ticket.png" alt="ticket"></span>
+                  <span><img src="./prototype details/transport.png" alt="transport"></span>
+                  <span><img src="./prototype details/hotel.jpg" alt="hotel"></span>
+                  </div>
+              </div>
+              
+              <div class="duration">
+                  <img src="./prototype details/clock.png" alt="clock"> 
+                  5 Days
+              </div>
+              
+              <div class="bottom">
+                  <button class="details-btn">Details</button>
+                  <div class="price"><p>From</p> <p>₹60,000</p></div>
+                </div>
+              
+          </div>
+          
+      </div>
+
+      <div class="kerala">
+        <div class="h1">
+            <img src="./prototype details/Kerala.jpg" alt="kerala">
+        </div>
+        <div class="h2">
+            <h3>Beautiful Kerala Moneymoon Package</h3>
+            <div class="location">
+                <img src="./prototype details/location 2.png" alt="location">India <hr>
+            </div>
+
+            <div class="inclusions">Inclusions 
+                <div class="inclusions-icons">
+                <span><img src="./prototype details/ticket.png" alt="ticket"></span>
+                <span><img src="./prototype details/transport.png" alt="transport"></span>
+                <span><img src="./prototype details/hotel.jpg" alt="hotel"></span>
+                </div>
+            </div>
+            
+            <div class="duration">
+                <img src="./prototype details/clock.png" alt="clock"> 
+                5 Days
+            </div>
+            
+            <div class="bottom">
+                <button class="details-btn">Details</button>
+                <div class="price"><p>From</p> <p>₹60,000</p></div>
+              </div>
+            
+        </div>
+        
+    </div>
+
+    <div class="goa">
+      <div class="h1">
+          <img src="./prototype details/goa.jpg" alt="goa">
+      </div>
+      <div class="h2">
+          <h3>Lovely Goa Moneymoon Package</h3>
+          <div class="location">
+              <img src="./prototype details/location 2.png" alt="location">India <hr>
+          </div>
+
+          <div class="inclusions">Inclusions 
+              <div class="inclusions-icons">
+              <span><img src="./prototype details/ticket.png" alt="ticket"></span>
+              <span><img src="./prototype details/transport.png" alt="transport"></span>
+              <span><img src="./prototype details/hotel.jpg" alt="hotel"></span>
+              </div>
+          </div>
+          
+          <div class="duration">
+              <img src="./prototype details/clock.png" alt="clock"> 
+              5 Days
+          </div>
+          
+          <div class="bottom">
+              <button class="details-btn">Details</button>
+              <div class="price"><p>From</p> <p>₹25,000</p></div>
+            </div>
+          
+      </div>
+      
+  </div>
+
+  <div class="manali">
+    <div class="h1">
+        <img src="./prototype details/Manali Honeymoon Package_.jpg" alt="manali">
+    </div>
+    <div class="h2">
+        <h3>Memorable Manali Moneymoon Package</h3>
+        <div class="location">
+            <img src="./prototype details/location 2.png" alt="location">India <hr>
+        </div>
+
+        <div class="inclusions">Inclusions 
+            <div class="inclusions-icons">
+            <span><img src="./prototype details/ticket.png" alt="ticket"></span>
+            <span><img src="./prototype details/transport.png" alt="transport"></span>
+            <span><img src="./prototype details/hotel.jpg" alt="hotel"></span>
+            </div>
+        </div>
+        
+        <div class="duration">
+            <img src="./prototype details/clock.png" alt="clock"> 
+            5 Days
+        </div>
+        
+        <div class="bottom">
+            <button class="details-btn">Details</button>
+            <div class="price"><p>From</p> <p>₹63,000</p></div>
+          </div>
+        
+    </div>
+    
+</div>
+
+<div class="andaman">
+  <div class="h1">
+      <img src="./prototype details/andaman honeymoon.jpg" alt="andaman">
+  </div>
+  <div class="h2">
+      <h3>Magical Moneymoon in Andaman</h3>
+      <div class="location">
+          <img src="./prototype details/location 2.png" alt="location">India <hr>
+      </div>
+
+      <div class="inclusions">Inclusions 
+          <div class="inclusions-icons">
+          <span><img src="./prototype details/ticket.png" alt="ticket"></span>
+          <span><img src="./prototype details/transport.png" alt="transport"></span>
+          <span><img src="./prototype details/hotel.jpg" alt="hotel"></span>
+          </div>
+      </div>
+      
+      <div class="duration">
+          <img src="./prototype details/clock.png" alt="clock"> 
+          5 Days
+      </div>
+      
+      <div class="bottom">
+          <button class="details-btn">Details</button>
+          <div class="price"><p>From</p> <p>₹58,000</p></div>
+        </div>
+      
+  </div>
+  
+</div>
+
+<div class="vietnam">
+  <div class="h1">
+      <img src="./prototype details/andaman honeymoon.jpg" alt="andaman">
+  </div>
+  <div class="h2">
+      <h3>Vietnam Moneymoon Package</h3>
+      <div class="location">
+          <img src="./prototype details/location 2.png" alt="location">India <hr>
+      </div>
+
+      <div class="inclusions">Inclusions 
+          <div class="inclusions-icons">
+          <span><img src="./prototype details/ticket.png" alt="ticket"></span>
+          <span><img src="./prototype details/transport.png" alt="transport"></span>
+          <span><img src="./prototype details/hotel.jpg" alt="hotel"></span>
+          </div>
+      </div>
+      
+      <div class="duration">
+          <img src="./prototype details/clock.png" alt="clock"> 
+          5 Days
+      </div>
+      
+      <div class="bottom">
+          <button class="details-btn">Details</button>
+          <div class="price"><p>From</p> <p>₹60,000</p></div>
+        </div>
+      
+  </div>
+  
+</div>
+  </section>
+
+    <footer>
+        <h1>Travel beyond your imagination, with our Travel Agency!</h1>
+        <div class="logo"><img src="./prototype details/Borcelle-removebg-preview.png" alt="logo" width="200px" height="200px"></div>
+        
+        <div class="links">Quick Links
+          <ul>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Services</li>
+            <li>Packages</li>
+            <li>Privacy Policy</li>
+            <li>Refund Policy</li>
+            <li>Cancellation Policy</li>
+            <li>Terms & Conditions</li>
+          </ul>
+        </div>
+  
+        <div class="packages">Trending Packages
+          <ul>
+            <li>Japan Tour Packages</li>
+            <li>Bali Tour Packages</li>
+            <li>Munnar Tour Packages</li>
+            <li>Thailand Tour Packages</li>
+            <li>America Tour Packages</li>
+          </ul>
+        </div>
+  
+        <div class="address">
+          <p>
+            <img src="./prototype details/location.png" alt="location" >
+            No.21 Heaven Holiday, XYZ Street, ABC Nagar, Chennai-6000XX
+          </p>
+          <p>
+            <img src="./prototype details/phone.png" alt="phone" >
+            +91 9123456789
+          </p>
+          <p>
+            <img src="./prototype details/mail.png" alt="mail" >
+            infoholidays@gmail.com
+          </p>
+        </div>
+      </footer>
+</body>
+</html>
