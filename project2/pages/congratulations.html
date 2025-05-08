@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box; font-family: "Lato", sans-serif;}
+        .congratulations {
+            background-image: url(../Icons/party_paper-removebg-preview.png);
+            background-color: darkviolet;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 700px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 80px;
+        }
+        .congrats{width: 500px; height: 500px; background-color: #FFA725; padding: 20px; text-align: center;  padding: 20px; line-height: 50px;}
+        .c1 img{ width: 200px; height: 200px; align-items: center; justify-content: center;}
+        .success{ width: 50px; height: 50; border-radius: 5px; display: block; margin: 0 auto;}
+        .congrats h1, .congrats h2{text-align: center; color: black;}
+        .button {display: inline-block; width: 200px; height: 50px; line-height: 50px; font-size: 20px; background-color: #4648DD; color: white; border-radius: 5px; border: none; cursor: pointer; text-decoration: none;}
+    
+        @media (max-width: 600px){
+            .congrats{width: 100%;}
+            .c1{ width: 150px; height: 150px;}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <section class="logo">
+            <figure>
+                <img src="../Icons/leo_logo-removebg-preview.png" alt="logo">
+                <figcaption>Learn With Leo</figcaption>
+            </figure>
+        </section>
+        <section class="navbar">
+            <button>search <img src="../Icons/search.png" alt="search"></button>
+            <div class="bar">
+                    <a href="./home.html">Home</a>
+                    <a href="./languages.html">Languages</a>
+                    <a href="./pricing.html">Pricing</a>
+                    <a href="./aboutus.html">About us</a>
+            </div>
+        </section>
+        <section class="log">
+            <a href="./profile.html">
+            <figure>
+                <img src="../Icons/PROFILE_ICON-removebg-preview.png" alt="Login">
+                <figcaption>LOG IN/ <a href="./signup.html">SIGN UP</a></figcaption>
+            </figure>
+        </a>
+        </section>
+    </header>
+
+    <section class="congratulations">
+        <div class="congrats">
+            <img src="../Icons/leo_7-removebg-preview.png" alt="congrats" class="c1">
+            <h1>Congratulations...!</h1>
+            <h2>Your Profile has been Sucessfully Created</h2>
+            <img src="../Icons/success_icon-removebg-preview.png" alt="success" class="success">
+            <a href="./challenging.html" class="button">Continue</a>
+        </div>
+    </section>
+
+    <footer>
+        <section class="one">
+            <h1>Learn With Leo</h1>
+            <p>By speaking somone's language you learn about them, their culture and their ideas.
+                Breaking down the language barrier bridges cultural differences, fosters a world of inclusion and is a first step
+                in helping to address humanity's challenges. For us, language no boundaries.
+            </p>
+        </section>
+        <section class="two">
+            <h1>Languages</h1>
+            <div class="two1">
+                <div class="left">
+                <a href="">Japanese</a>
+                <a href="">Korean</a>
+                <a href="">Chinese</a>
+                <a href="">Spanish</a>
+                <a href="">German</a>
+                <a href="">French</a>
+                <a href="">Portuguese</a>
+                <a href="">Italian</a>
+                <a href="">Vietnamese</a>
+                <a href="">Thai</a>
+                </div>
+                
+                <div class="right">
+                    <a href="">Hindi</a>
+                    <a href="">Arabic</a>
+                    <a href="">Turkish</a>
+                    <a href="">Greek</a>
+                    <a href="">Ukrainian</a>
+                    <a href="">Indonesian</a>
+                    <a href="">Malay</a>
+                    <a href="">Spanish</a>
+                    <a href="">Polish</a>
+                    <a href="">Russian</a>
+                </div>
+            </div>
+            
+        </section>
+        <section class="three">
+            <h1>Pricing</h1>
+            <div class="three1">
+                <a href="">Basic</a>
+                <a href="">Standard</a>
+                <a href="">Premium</a>
+            </div>
+        </section>
+        <section class="four">
+            <h1>Support</h1>
+            <div class="four1">
+                <a href="./faq.html">FAQ</a>
+                <a href="./aboutus.html">About us</a>
+                <a href="./contactus.html">Contact us</a>
+            </div>
+        </section>
+        <section class="five"><p>Copyright@learnwithleo</p></section>
+    </footer>
+</body>
+</html>

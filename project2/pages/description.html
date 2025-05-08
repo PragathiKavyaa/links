@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Description</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box; font-family: "Lato", sans-serif;}
+        .description{display: flex; flex-direction: column; margin-top: 50px; margin-bottom: 50px; padding: 20px 100px;}
+        .des{display: flex;}
+        .des img{width: 50px; height: 50px; border-radius: 15px;}
+        .des h1{font-weight: bold;}
+        .description h1{font-weight: bold;}
+        .description p{font-size: 20px; line-height: 1.6;}
+        .japanlanguage{width: 500px; height: 700px; margin: auto;}
+
+        @media (min-width: 768px) and (max-width: 1023px){
+            
+            .description{width: 100%;}
+        }
+        @media (max-width: 600px){
+            .description{width: 100%; padding: 0;}
+            .japanlanguage{width: 100%;}
+        }
+    </style>    
+</head>
+<body>
+    <header>
+        <section class="logo">
+            <figure>
+                <img src="../Icons/leo_logo-removebg-preview.png" alt="logo">
+                <figcaption>Learn With Leo</figcaption>
+            </figure>
+        </section>
+        <section class="navbar">
+            <button>search <img src="../Icons/search.png" alt="search"></button>
+            <div class="bar">
+                    <a href="./home.html">Home</a>
+                    <a href="./languages.html">Languages</a>
+                    <a href="./pricing.html">Pricing</a>
+                    <a href="./aboutus.html">About us</a>
+            </div>
+        </section>
+        <section class="log">
+            <a href="./profile.html">
+            <figure>
+                <img src="../Icons/PROFILE_ICON-removebg-preview.png" alt="Login">
+                <figcaption>LOG IN/ <a href="./signup.html">SIGN UP</a></figcaption>
+            </figure>
+        </a>
+        </section>
+    </header>
+
+    <section class="description">
+        <div class="des">
+            <h1>Learning Japanese with us quick, effective, and fun.</h1>
+            <img src="../Images/japanese flag.png" alt="flag">
+        </div><br>
+        <p>
+            Japanese language (i.e., a language unrelated to any other language) and one of the world's major languages, with
+            more than 127 million speakers in the early 21st century. It is primarily spoken throughout there are also some 
+            1.5 million Japanese immigrants and their descendants living abroad, mainly in and who have varying degrees of
+            proficiency in Japanese. Since the mid-20th century, no nation other than has used Japanese as a first or a 
+            second language.
+        </p><br>
+        <h1>Literary history</h1><br>
+        <p>Written records of Japanese date to the 8th century, the oldest among them being the (712; "Records of Ancient
+            Matters"). If the history of the language were to be split in two, the division would fall somewhere between 
+            the 12th and 16th centuries., when the language shed most of its Old Japanese characteristics and acquired those of the 
+            modern language. It is common, however, to divide the 1,200-year history into four or five periods; Old Japanese
+            (up to the 8th century), Late Old Japanese(9th-11th century), Middle Japanese (12th-16th century), Early Modern Japanese
+            (17th-18th century), and Modern Japanese (19th century to the present).
+        </p><br>
+        <img src="../Icons/japanese language.jpg" alt="language" class="japanlanguage">
+    </section>
+
+    <footer>
+        <section class="one">
+            <h1>Learn With Leo</h1>
+            <p>By speaking somone's language you learn about them, their culture and their ideas.
+                Breaking down the language barrier bridges cultural differences, fosters a world of inclusion and is a first step
+                in helping to address humanity's challenges. For us, language no boundaries.
+            </p>
+        </section>
+        <section class="two">
+            <h1>Languages</h1>
+            <div class="two1">
+                <div class="left">
+                <a href="">Japanese</a>
+                <a href="">Korean</a>
+                <a href="">Chinese</a>
+                <a href="">Spanish</a>
+                <a href="">German</a>
+                <a href="">French</a>
+                <a href="">Portuguese</a>
+                <a href="">Italian</a>
+                <a href="">Vietnamese</a>
+                <a href="">Thai</a>
+                </div>
+                
+                <div class="right">
+                    <a href="">Hindi</a>
+                    <a href="">Arabic</a>
+                    <a href="">Turkish</a>
+                    <a href="">Greek</a>
+                    <a href="">Ukrainian</a>
+                    <a href="">Indonesian</a>
+                    <a href="">Malay</a>
+                    <a href="">Spanish</a>
+                    <a href="">Polish</a>
+                    <a href="">Russian</a>
+                </div>
+            </div>
+            
+        </section>
+        <section class="three">
+            <h1>Pricing</h1>
+            <div class="three1">
+                <a href="">Basic</a>
+                <a href="">Standard</a>
+                <a href="">Premium</a>
+            </div>
+        </section>
+        <section class="four">
+            <h1>Support</h1>
+            <div class="four1">
+                <a href="./faq.html">FAQ</a>
+                <a href="./aboutus.html">About us</a>
+                <a href="./contactus.html">Contact us</a>
+            </div>
+        </section>
+        <section class="five"><p>Copyright@learnwithleo</p></section>
+    </footer>
+</body>
+</html>

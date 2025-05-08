@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box; font-family: "Lato", sans-serif;}
+        .quiz{margin-top: 50px; margin-bottom: 50px; margin: 50px auto; display: flex; flex-direction: column; align-items: center; justify-content: center;}
+        .quiz p{width: 1000px; margin-bottom: 20px;}
+        .quiz-box {
+    background-image: url(../Icons/leo\ 8.jpg);
+    background-position: right center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1000px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 50px;
+}
+.box{gap: 20px; display: flex; flex-direction: column; justify-content: space-between; height: 300px; margin-left: 0;}
+.quiz1, .quiz2, .quiz3 {
+    width: 500px;
+    height: 80px;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: #FFA725;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
+        .quiz1 img, .quiz2 img, .quiz3 img{width: 50px; height: 50px; display: flex; flex-direction: column; }
+        .box a{text-decoration: none; color: black;}
+        .quiz1:hover{background-color: #EA1818;}
+
+        @media (min-width: 768px) and (max-width: 1023px){
+            .quiz-box{width: 100%;}
+            .quiz p{width: 100%;}
+            .quiz1, .quiz2, .quiz3 { width: 400px;}
+        }
+        @media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+    .quiz {
+        width: 100%;
+        margin: 20px 0;
+        align-items: center;
+    }
+    .quiz p{width: 100%;}
+    .quiz-box {
+        width: 90%;
+        height: auto;
+        padding: 0;
+        background-size: cover;
+        flex-direction: column;
+        align-items: center;
+    }
+    .box {
+        margin-left: 0;
+        height: auto;
+        width: 50%;
+    }   
+    .quiz1, .quiz2, .quiz3 {
+    width: 200px;
+    height: 50px;
+    font-size: 15px;
+    gap: 2px;
+    padding-left: 0;
+}
+    .quiz1 img, .quiz2 img, .quiz3 img {
+        width: 20px;
+        height: 20px;
+    }
+}
+        
+    </style>
+    
+</head>
+<body>
+    <header>
+        <section class="logo">
+            <figure>
+                <img src="../Icons/leo_logo-removebg-preview.png" alt="logo">
+                <figcaption>Learn With Leo</figcaption>
+            </figure>
+        </section>
+        <section class="navbar">
+            <button>search <img src="../Icons/search.png" alt="search"></button>
+            <div class="bar">
+                    <a href="./home.html">Home</a>
+                    <a href="./languages.html">Languages</a>
+                    <a href="./pricing.html">Pricing</a>
+                    <a href="./aboutus.html">About us</a>
+            </div>
+        </section>
+        <section class="log">
+            <a href="./profile.html">
+            <figure>
+                <img src="../Icons/PROFILE_ICON-removebg-preview.png" alt="Login">
+                <figcaption>LOG IN/ <a href="./signup.html">SIGN UP</a></figcaption>
+            </figure>
+        </a>
+        </section>
+    </header>
+    
+    <section class="quiz">
+        <p>Languages > Japanese > Lessons</p>
+        <div class="quiz-box">
+            <div class="box">
+        <a href="./hello.html">
+            <div class="quiz1">
+                <img src="../Icons/writing_icon-removebg-preview.png" alt="write">
+                <p>Beginner Level (QUIZ)</p>           
+        </div>
+        </a>
+        <div class="quiz2">
+            <img src="../Icons/grammar_icon-removebg-preview.png" alt="vocabulary">
+            <p>Intermediate Level (VOCABULARY)</p>
+        </div>
+        <div class="quiz3">
+            <img src="../Icons/g_icon-removebg-preview.png" alt="grammar">
+            <p>Proficient Level (GRAMMAR)</p>
+        </div>
+    </div>
+    </div>
+    </section>
+
+    <footer>
+        <section class="one">
+            <h1>Learn With Leo</h1>
+            <p>By speaking somone's language you learn about them, their culture and their ideas.
+                Breaking down the language barrier bridges cultural differences, fosters a world of inclusion and is a first step
+                in helping to address humanity's challenges. For us, language no boundaries.
+            </p>
+        </section>
+        <section class="two">
+            <h1>Languages</h1>
+            <div class="two1">
+                <div class="left">
+                <a href="">Japanese</a>
+                <a href="">Korean</a>
+                <a href="">Chinese</a>
+                <a href="">Spanish</a>
+                <a href="">German</a>
+                <a href="">French</a>
+                <a href="">Portuguese</a>
+                <a href="">Italian</a>
+                <a href="">Vietnamese</a>
+                <a href="">Thai</a>
+                </div>
+                
+                <div class="right">
+                    <a href="">Hindi</a>
+                    <a href="">Arabic</a>
+                    <a href="">Turkish</a>
+                    <a href="">Greek</a>
+                    <a href="">Ukrainian</a>
+                    <a href="">Indonesian</a>
+                    <a href="">Malay</a>
+                    <a href="">Spanish</a>
+                    <a href="">Polish</a>
+                    <a href="">Russian</a>
+                </div>
+            </div>
+            
+        </section>
+        <section class="three">
+            <h1>Pricing</h1>
+            <div class="three1">
+                <a href="">Basic</a>
+                <a href="">Standard</a>
+                <a href="">Premium</a>
+            </div>
+        </section>
+        <section class="four">
+            <h1>Support</h1>
+            <div class="four1">
+                <a href="./faq.html">FAQ</a>
+                <a href="./aboutus.html">About us</a>
+                <a href="./contactus.html">Contact us</a>
+            </div>
+        </section>
+        <section class="five"><p>Copyright@learnwithleo</p></section>
+    </footer>
+</body>
+</html>

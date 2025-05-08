@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box; font-family: "Lato", sans-serif;}
+        .faq{text-align: center; padding: 15px 20px;}
+        .faq img{width: 100px; height: 100px;}
+        .questions{display: flex; flex-direction: column; align-items: center; gap: 20px; margin-top: 20px;}
+        .d1, .d2, .d3, .d4{display: flex; flex-direction: row; width: 800px; height: 80px; border: 2px solid #FFA725; border-radius: 15px; background-color: white; font-size: 20px; padding: 15px 20px; margin-bottom: 20px; align-items: center; justify-content: space-between;}
+        .d1 img, .d2 img, .d3 img, .d4 img{width: 25px; height: 25px; margin-left: auto;}
+
+        @media (max-width: 600px){
+            .faq{width: 100%;}
+            .questions{width: 100%; gap: 10px; margin-top: 5px;}
+            .d1, .d2, .d3, .d4{width: 100%; margin-left: 0; height: 100px; font-size: 20px; padding: 5px; margin-bottom: 5px; text-wrap: wrap;}
+        }
+        @media (min-width: 768px) and (max-width: 1023px){
+            .faq{width: 100%;}
+            .questions{width: 100%;}
+            .d1, .d2, .d3, .d4{width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <section class="logo">
+            <figure>
+                <img src="../Icons/leo_logo-removebg-preview.png" alt="logo">
+                <figcaption>Learn With Leo</figcaption>
+            </figure>
+        </section>
+        <section class="navbar">
+            <button>search <img src="../Icons/search.png" alt="search"></button>
+            <div class="bar">
+                    <a href="./home.html">Home</a>
+                    <a href="./languages.html">Languages</a>
+                    <a href="./pricing.html">Pricing</a>
+                    <a href="./aboutus.html">About us</a>
+            </div>
+        </section>
+        <section class="log">
+            <a href="./profile.html">
+            <figure>
+                <img src="../Icons/PROFILE_ICON-removebg-preview.png" alt="Login">
+                <figcaption>LOG IN/ <a href="./signup.html">SIGN UP</a></figcaption>
+            </figure>
+        </a>
+        </section>
+    </header>
+
+    <section class="faq">
+        <h1>Frequently Asked Questions(FAQ)</h1>
+        <img src="../Icons/leo_5-removebg-preview.png" alt="faq">
+        <div class="questions">
+        <button class="d1">
+            Can I Learn More than One Language in LEO?
+            <img src="../Icons/chevron-down.png" alt="down">
+        </button>
+        <button class="d2">
+            Can I Use LEO on Multiple Devices?
+            <img src="../Icons/chevron-down.png" alt="down">
+        </button>
+        <button class="d3">
+            What's included in the Premium Access?
+            <img src="../Icons/chevron-down.png" alt="down">
+        </button>
+        <button class="d4">
+            Can I get refund If I change my Mind?
+            <img src="../Icons/chevron-down.png" alt="down">
+        </button>
+    </div>
+    </section>
+
+    <footer>
+        <section class="one">
+            <h1>Learn With Leo</h1>
+            <p>By speaking somone's language you learn about them, their culture and their ideas.
+                Breaking down the language barrier bridges cultural differences, fosters a world of inclusion and is a first step
+                in helping to address humanity's challenges. For us, language no boundaries.
+            </p>
+        </section>
+        <section class="two">
+            <h1>Languages</h1>
+            <div class="two1">
+                <div class="left">
+                <a href="">Japanese</a>
+                <a href="">Korean</a>
+                <a href="">Chinese</a>
+                <a href="">Spanish</a>
+                <a href="">German</a>
+                <a href="">French</a>
+                <a href="">Portuguese</a>
+                <a href="">Italian</a>
+                <a href="">Vietnamese</a>
+                <a href="">Thai</a>
+                </div>
+                
+                <div class="right">
+                    <a href="">Hindi</a>
+                    <a href="">Arabic</a>
+                    <a href="">Turkish</a>
+                    <a href="">Greek</a>
+                    <a href="">Ukrainian</a>
+                    <a href="">Indonesian</a>
+                    <a href="">Malay</a>
+                    <a href="">Spanish</a>
+                    <a href="">Polish</a>
+                    <a href="">Russian</a>
+                </div>
+            </div>
+            
+        </section>
+        <section class="three">
+            <h1>Pricing</h1>
+            <div class="three1">
+                <a href="">Basic</a>
+                <a href="">Standard</a>
+                <a href="">Premium</a>
+            </div>
+        </section>
+        <section class="four">
+            <h1>Support</h1>
+            <div class="four1">
+                <a href="./faq.html">FAQ</a>
+                <a href="./aboutus.html">About us</a>
+                <a href="./contactus.html">Contact us</a>
+            </div>
+        </section>
+        <section class="five"><p>Copyright@learnwithleo</p></section>
+    </footer>
+</body>
+</html>

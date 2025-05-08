@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box; font-family: "Lato", sans-serif;}
+
+        .profile{margin-top: 40px; margin-bottom: 40px; }
+        .profile1{display: flex; width: 100%; height: 150px;}
+        .name .p1{width: 100px; height: 100px; border-radius: 50px; position: absolute;}
+        .name .p2{width: 50px; height: 50px; border-radius: 30px; position: relative; left: 70px; top: 60px;}
+        .name1{margin-left: 80px; margin-top: 30px;}
+        .name1 h2{font-size: 35px;}
+        .name1 h5{font-size: 15px;}
+        .profile2{margin: auto; background-color: #f0ce94; width: 800px; height: 500px; display: flex; justify-content: space-between; padding: 30px; border-radius: 10px;}
+        .profile2>div{flex: 1;}
+        .floatleft{float: left; text-align: center; width: 400px; margin-top: 30px; padding: 10px;}
+            .chart-container {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: conic-gradient(
+        white 0% 60%,     
+        #EA1818 60% 70%,   
+        #4648DD  70% 90%,     
+        #1FB948 90% 100%        
+      );
+      position: relative;
+      text-align: center;
+      margin: auto;
+    }
+
+    .chart-container::before {
+      content: '';
+      position: absolute;
+      top: 20%;
+      left: 20%;
+      width: 60%;
+      height: 60%;
+      border-radius: 50%;
+      background-color: #f0ce94;
+    }
+
+    .legend {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .legend-item {
+        margin: auto;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 20px;
+    }
+
+    .color-box {
+      width: 15px;
+      height: 15px;
+      border-radius: 10px;
+    }
+
+    .blue { background: #4648DD; }
+    .green { background: #1FB948; }
+    .red { background: #EA1818; }
+
+    .floatright{float: right;  margin-top: 30px; }
+    .floatright table{margin-bottom: 30px;}
+            table th{color: #EA1818; font-size: 30px;}
+            table td{color: black; font-size: 20px; padding: 5px; font-weight: 700;}
+            .floatright button{width: 300px; height: 70px; border-radius: 15px; border: none; background-color: #FFA725; color: #EA1818; font-size: 20px;}
+    
+            @media (min-width: 768px) and (max-width: 1023px){ 
+                .profile2{width: 100%;}}
+
+                @media(max-width:600px){
+                    .profile{width: 100%;}
+                    .profile1{width: 100%;}
+                    .profile1 .floatleft{width: 100%;}
+                    .profile2{width: 100%; height: 1000px; display: flex; flex-direction: column; padding: 0; }
+                    .floatleft{padding: 0;}
+                    .profile2 .floatright{margin: auto;}
+                    
+                }
+
+    
+    </style>
+</head>
+<body>
+    <header>
+        <section class="logo">
+            <figure>
+                <img src="../Icons/leo_logo-removebg-preview.png" alt="logo">
+                <figcaption>Learn With Leo</figcaption>
+            </figure>
+        </section>
+        <section class="navbar">
+            <button>search <img src="../Icons/search.png" alt="search"></button>
+            <div class="bar">
+                    <a href="./home.html">Home</a>
+                    <a href="./languages.html">Languages</a>
+                    <a href="./pricing.html">Pricing</a>
+                    <a href="./aboutus.html">About us</a>
+            </div>
+        </section>
+        <section class="log">
+            <a href="./profile.html">
+            <figure>
+                <img src="../Icons/PROFILE_ICON-removebg-preview.png" alt="Login">
+                <figcaption>LOG IN/ <a href="./signup.html">SIGN UP</a></figcaption>
+            </figure>
+        </a>
+        </section>
+    </header>
+
+    <section class="profile">
+        <div class="profile1">
+            <div class="name">
+                <img src="../Icons/PROFILE_ICON-removebg-preview.png" alt="profile" class="p1">
+                <img src="../Images/India.png" alt="india" class="p2">
+            </div>
+            <div class="name1">
+                <h2>Monisha</h2>
+                <h5>India</h5>
+            </div>
+        </div>
+        <div class="profile2">
+            <div class="floatleft">
+                <h1>Fluency in Japanese</h1>
+                <div class="chart-container"></div>
+
+                <div class="legend">
+                 <div class="legend-item">
+                    <div class="color-box blue"></div>
+                        <span>Fluent in Japanese</span>
+                </div>
+                <div class="legend-item">
+                    <div class="color-box green"></div>
+                    <span>Correctness</span>
+                </div>
+                <div class="legend-item">
+                    <div class="color-box red"></div>
+                    <span>Wrong answers</span>
+                </div>
+            </div>
+            </div>
+            <div class="floatright">
+                <table>
+                    <tr>
+                        <th>Details:</th>
+                    </tr>
+                    <tr></tr><tr></tr>
+                    <tr>
+                        <td>Name:</td>
+                        <td>Monisha</td>
+                    </tr>
+                    <tr></tr><tr></tr>
+                    <tr>
+                        <td>Email ID:</td>
+                        <td>monisha@gmail.com</td>
+                    </tr>
+                    <tr></tr><tr></tr>
+                    <tr>
+                        <td>Contact:</td>
+                        <td>9876543210</td>
+                    </tr>
+                    <tr></tr><tr></tr>    
+                    <tr>
+                        <td>Nationality:</td>
+                        <td>Indian</td>
+                    </tr>
+                    <tr></tr><tr></tr>    
+                    <tr>
+                        <td>Want to Learn:</td>                     
+                        <td>Japanese</td>
+                    </tr>
+                </table>
+                <button>Completed Beginner level!</button>
+            </div>
+        </div>
+
+
+    </section>
+
+    <footer>
+        <section class="one">
+            <h1>Learn With Leo</h1>
+            <p>By speaking somone's language you learn about them, their culture and their ideas.
+                Breaking down the language barrier bridges cultural differences, fosters a world of inclusion and is a first step
+                in helping to address humanity's challenges. For us, language no boundaries.
+            </p>
+        </section>
+        <section class="two">
+            <h1>Languages</h1>
+            <div class="two1">
+                <div class="left">
+                <a href="">Japanese</a>
+                <a href="">Korean</a>
+                <a href="">Chinese</a>
+                <a href="">Spanish</a>
+                <a href="">German</a>
+                <a href="">French</a>
+                <a href="">Portuguese</a>
+                <a href="">Italian</a>
+                <a href="">Vietnamese</a>
+                <a href="">Thai</a>
+                </div>
+                
+                <div class="right">
+                    <a href="">Hindi</a>
+                    <a href="">Arabic</a>
+                    <a href="">Turkish</a>
+                    <a href="">Greek</a>
+                    <a href="">Ukrainian</a>
+                    <a href="">Indonesian</a>
+                    <a href="">Malay</a>
+                    <a href="">Spanish</a>
+                    <a href="">Polish</a>
+                    <a href="">Russian</a>
+                </div>
+            </div>
+            
+        </section>
+        <section class="three">
+            <h1>Pricing</h1>
+            <div class="three1">
+                <a href="">Basic</a>
+                <a href="">Standard</a>
+                <a href="">Premium</a>
+            </div>
+        </section>
+        <section class="four">
+            <h1>Support</h1>
+            <div class="four1">
+                <a href="./faq.html">FAQ</a>
+                <a href="./aboutus.html">About us</a>
+                <a href="./contactus.html">Contact us</a>
+            </div>
+        </section>
+        <section class="five"><p>Copyright@learnwithleo</p></section>
+    </footer>
+</body>
+</html>

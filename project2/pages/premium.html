@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <style>
+         *{margin: 0; padding: 0; box-sizing: border-box; font-family: "Lato", sans-serif;}
+         .premium{text-align: center; margin-top: 40px; margin-bottom: 40px; line-height: 50px;}
+         .level {
+               width: 800px;
+               height: 20px;
+               background-color: gray;
+               border-radius: 15px;
+               margin: 0 auto 20px auto;
+               overflow: hidden;
+             }
+        .progress {
+            width: 30%; 
+            height: 100%;
+            background-color: green;
+            border-radius: 15px 0 0 15px;
+        }
+        .premium img{ width: 200px; height: 200px; align-items: center; justify-content: center;}
+        .premium h1{font-size: 30px;}
+        form input{width: 500px; height: 50px; border-radius: 15px; border: 1px solid black; padding: 10px; font-size: 15px;}
+        .button {display: inline-block; width: 200px; height: 50px; line-height: 50px; font-size: 20px; background-color: #4648DD; color: white; border-radius: 5px; border: none; cursor: pointer; text-decoration: none;}
+        form p{font-size: 10px;}
+
+        @media (max-width: 600px){
+            .level {width: 100%;}
+            form input{width: 300px; height: 50px;}
+         }
+         @media (min-width: 768px) and (max-width: 1023px)
+         {
+            .level {width: 100%;}
+         }
+    </style>
+</head>
+<body>
+    <header>
+        <section class="logo">
+            <figure>
+                <img src="../Icons/leo_logo-removebg-preview.png" alt="logo">
+                <figcaption>Learn With Leo</figcaption>
+            </figure>
+        </section>
+        <section class="navbar">
+            <button>search <img src="../Icons/search.png" alt="search"></button>
+            <div class="bar">
+                    <a href="./home.html">Home</a>
+                    <a href="./languages.html">Languages</a>
+                    <a href="./pricing.html">Pricing</a>
+                    <a href="./aboutus.html">About us</a>
+            </div>
+        </section>
+        <section class="log">
+            <a href="./profile.html">
+            <figure>
+                <img src="../Icons/PROFILE_ICON-removebg-preview.png" alt="Login">
+                <figcaption>LOG IN/ <a href="./signup.html">SIGN UP</a></figcaption>
+            </figure>
+        </a>
+        </section>
+    </header>
+
+    <section class="premium">
+        <div class="level">
+            <div class="progress"></div>
+        </div>
+        <img src="../Icons/leo_4-removebg-preview.png" alt="premium">
+        <h1>Join our community of language learners</h1>
+        <form>
+            <input type="name" id="name" name="name" required placeholder="Enter Name"><br><br>
+
+            <input type="email" id="email" name="name" required placeholder="Enter Email ID"><br><br>
+
+            <input type="password" id="password" name="password" required placeholder="Password"><br><br>
+
+            <a href="./congratulations.html" class="button">Sign Up</a>
+            <p>By signing up, I agree to the Terms and Conditions and Privacy Policy</p>
+        </form>
+    </section>
+
+    <footer>
+        <section class="one">
+            <h1>Learn With Leo</h1>
+            <p>By speaking somone's language you learn about them, their culture and their ideas.
+                Breaking down the language barrier bridges cultural differences, fosters a world of inclusion and is a first step
+                in helping to address humanity's challenges. For us, language no boundaries.
+            </p>
+        </section>
+        <section class="two">
+            <h1>Languages</h1>
+            <div class="two1">
+                <div class="left">
+                <a href="">Japanese</a>
+                <a href="">Korean</a>
+                <a href="">Chinese</a>
+                <a href="">Spanish</a>
+                <a href="">German</a>
+                <a href="">French</a>
+                <a href="">Portuguese</a>
+                <a href="">Italian</a>
+                <a href="">Vietnamese</a>
+                <a href="">Thai</a>
+                </div>
+                
+                <div class="right">
+                    <a href="">Hindi</a>
+                    <a href="">Arabic</a>
+                    <a href="">Turkish</a>
+                    <a href="">Greek</a>
+                    <a href="">Ukrainian</a>
+                    <a href="">Indonesian</a>
+                    <a href="">Malay</a>
+                    <a href="">Spanish</a>
+                    <a href="">Polish</a>
+                    <a href="">Russian</a>
+                </div>
+            </div>
+            
+        </section>
+        <section class="three">
+            <h1>Pricing</h1>
+            <div class="three1">
+                <a href="">Basic</a>
+                <a href="">Standard</a>
+                <a href="">Premium</a>
+            </div>
+        </section>
+        <section class="four">
+            <h1>Support</h1>
+            <div class="four1">
+                <a href="./faq.html">FAQ</a>
+                <a href="./aboutus.html">About us</a>
+                <a href="./contactus.html">Contact us</a>
+            </div>
+        </section>
+        <section class="five"><p>Copyright@learnwithleo</p></section>
+    </footer>
+</body>
+</html>

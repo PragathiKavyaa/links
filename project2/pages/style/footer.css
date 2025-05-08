@@ -1,0 +1,118 @@
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px 20px;
+    column-gap: 20px;
+    background-color: #FFA725;
+}
+.one{
+    width: 350px;
+    margin-left: 50px;
+}
+.one p{
+    font-weight: 500;
+}
+.left, .right{
+    width: 50px;
+}
+.two{
+    width: 250px;
+    margin-left: 40px;
+}        
+.two1{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.three{
+    width: 250px;
+    text-align: center;
+}
+.three1{
+    display: flex;
+    flex-direction: column;
+}
+.four{
+    width: 250px;
+    text-align: center;
+}
+.four1{
+    display: flex;
+    flex-direction: column;
+}
+.left a, .right a, .three1 a, .four1 a{
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+}
+@media (max-width: 600px){
+    footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    margin-left: 0;
+    width: 100%;
+}  
+footer .one{
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+}
+.one h1, .one p{
+    width: 100%;
+} 
+footer .two h1{
+    text-align: center;
+    margin-left: 0;
+}
+footer .two1{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: 50px;
+    text-align: center;
+}
+}
+@media (min-width: 768px) and (max-width: 1023px){
+    footer{
+        width: 100%;
+    padding: 0;
+    margin-left: 0;
+    column-gap: 5px;
+}
+footer .one{
+    width: 200px;
+    margin-left: 0;
+
+}
+footer .two{
+    width: 200px;
+    margin-left: 5px;
+} 
+.three{
+    width: 50px;
+}
+.four{
+    width: 50px;
+}
+}
+@media(max-width: 1024px){
+    footer{
+    padding: 15px 20px;
+    column-gap: 20px;
+}
+.one{
+    width: 200px;
+    margin-left: 100px;
+}
+.two{
+    width: 200px;
+} 
+.three{
+    width: 100px;
+}
+.four{
+    width: 100px;
+}
+}

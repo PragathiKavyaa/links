@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box; font-family: "Lato", sans-serif;}
+        .offer{background-color: #FFA725; height: 700px; margin-bottom: 40px;}
+        .offer1{width: 100%; height: 200px;justify-content: center; align-items: center; gap: 50px;}
+        .floatleft{text-align: center; float: left; width: 500px; margin-top: 30px; margin-left: 300px;}
+        .floatleft h1{padding: 5px; font-size: 30px; font-weight: 800; margin-left: 180px;}
+        .floatleft h2{padding: 5px; font-size: 25px;height: 50px; width: 500px; font-weight: 400; margin-left: 100px; border-radius: 15px; background-color: #FFFFFF; color: #EA1818;}
+        .floatleft h3{padding: 20px; font-size: 25px; width: 700px; font-weight: 800; }
+        .floatright{float: right; width: 200px; height: 200px; margin-right: 150px;}
+        .grid{display: grid; grid-template-columns: repeat(3, 2fr); padding: 25px 30px; column-gap: 100px; margin-left: 150px; margin-top: 50px;}
+        .basic, .standard, .premium{width: 250px; height: 350px; border-radius: 15px; column-gap: 100px; background-color: #FFF5E4; text-align: center; padding: 10px 15px; position: relative;}
+        .basic button, .standard button, .premium button{ width: 200px; height: 50px; font-size: 20px; border-radius: 20px;}
+        .basic h2, .standard h2, .premium h2{padding: 5px; font-size: 35px; font-weight: bold; text-decoration-line: underline;}
+        .basic h4, .standard h4{padding: 5px; font-size: 25px; font-weight: 300;}
+        .premium h4{padding: 2px; font-size: 25px; font-weight: 300;}
+        .premium p{font-size: 20px;}
+        .basic h1, .standard h1, .premium h1{padding: 20px; font-size: 30px; color: #EA1818;}
+        .save1, .save2{width: 100px; height: 30px; border-radius: 5px; background-color: #000000; color: #FFFFFF; text-align: center;}
+        .save3{width: 100px; height: 30px; border-radius: 5px; background-color: yellow ; color: #000000; text-align: center; font-size: 15px;}
+        .save1, .save2, .save3{padding: 5px; position: absolute; bottom: 335px; left: 200px;}
+        .basic button:hover{background-color: #EA1818; color: #FFFFFF;}
+        .standard button:hover{background-color: #EA1818; color: #FFFFFF;}
+        .premium button:hover{background-color: #EA1818; color: #FFFFFF;}
+
+        .guarantee{padding: 10px 5px; background-color: #FFF5E4; display: flex; height: 300px; align-items: center; text-align: center; justify-content: space-evenly; margin-bottom: 40px;} 
+    
+        @media (max-width: 600px){
+            .offer{height: 1300px; width: 100%;}
+            .floatleft{display: flex; flex-direction: column; float:none; height: 200px; text-wrap: wrap;width: 100%;margin-left: 0;}
+            .floatleft h1{font-size: 20px; width: 100%; margin-top: 10px; margin-left: 0;}
+            .floatleft h2{font-size: 20px; width: 100%; margin-left: 0;}
+            .floatleft h3{ font-size: 20px; width: 100%;}
+            .floatright{width: 100%; height: 250px; margin-right: 1px;}
+            .grid{display: grid; grid-template-columns: 2fr; margin-left: 0; row-gap: 50px;margin-top: 70px;}
+            .basic button, .standard button, .premium button{ width: 150px; height: 30px; font-size: 15px;}
+            .basic, .standard, .premium{width: 200px; height: 200px;} 
+            .basic h2, .standard h2, .premium h2{font-size: 25px;}
+            .basic h4, .standard h4{font-size: 15px;}
+            .premium h4{padding: 2px; font-size: 15px;}
+            .premium p{font-size: 15px;}
+            .basic h1, .standard h1, .premium h1{font-size: 20px;}
+            .save1, .save2, .save3{padding: 5px; position: absolute; top: -10px; left: 180px;}
+            .guarantee{display: flex; flex-direction: column; height: 300px; width: 100%;}
+            
+        }
+        @media (min-width: 768px) and (max-width: 1023px){
+            .offer{width: 100%;}
+            .floatleft{width: 400px; margin-top: 30px auto; text-wrap: wrap; margin-left: 0; }
+            .floatleft h1{font-size: 35px; margin-top: 10px; margin-left: 50px; }
+            .floatleft h2{font-size: 30px; width: 500px; margin-left: 10px; }
+            .floatleft h3{ font-size: 25px; width: 500px; }
+            .floatright{width: 150px; height: 150px;margin-right: 100px;}
+            .grid{padding: 20px 25px; column-gap: 30px; margin-left: 2px; margin-top: 90px;}
+            .basic button, .standard button, .premium button{ width: 150px; height: 30px; font-size: 15px;}
+            .basic, .standard, .premium{width: 200px; height: 300px;} 
+            .basic h2, .standard h2, .premium h2{font-size: 30px;}
+            .basic h4, .standard h4{font-size: 20px;}
+            .premium h4{padding: 2px; font-size: 20px;}
+            .premium p{font-size: 18px;}
+            .basic h1, .standard h1, .premium h1{font-size: 20px;}
+            .save1, .save2{width: 80px;}
+            .save1, .save2, .save3{padding: 5px; position: absolute; top: -10px; left: 150px;}
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px){
+            .floatleft{margin-left: 0;}
+            .grid{margin-left: 30px; column-gap: 60px; }
+        }
+    
+    </style>
+</head>
+<body>
+    <header>
+        <section class="logo">
+            <figure>
+                <img src="../Icons/leo_logo-removebg-preview.png" alt="logo">
+                <figcaption>Learn With Leo</figcaption>
+            </figure>
+        </section>
+        <section class="navbar">
+            <button>search <img src="../Icons/search.png" alt="search"></button>
+            <div class="bar">
+                    <a href="./home.html">Home</a>
+                    <a href="./languages.html">Languages</a>
+                    <a href="./pricing.html">Pricing</a>
+                    <a href="./aboutus.html">About us</a>
+            </div>
+        </section>
+        <section class="log">
+            <a href="./profile.html">
+            <figure>
+                <img src="../Icons/PROFILE_ICON-removebg-preview.png" alt="Login">
+                <figcaption>LOG IN/ <a href="./signup.html">SIGN UP</a></figcaption>
+            </figure>
+        </a>
+        </section>
+    </header>
+
+    <section class="offer">
+        <div class="offer1">
+            <div class="floatleft">
+            <h1>OFFER END SOON!</h1>
+            <h2>Over 15 million subscriptions sold!</h2>
+            <h3>Start speaking in three weeks or your money back!*</h3>
+            </div>
+            <div class="floatright">
+            <img src="../Icons/leo_4-removebg-preview.png" alt="right">
+            </div>
+        </div>
+    <div class="offer2">
+        <div class="grid">
+            <div class="basic">
+                <h2>BASIC</h1>
+                <h4>6 Months</h4>
+                <h1>Rs.1000/month</h1>
+                <button>GET STARTED</button>
+                <div class="save1">
+                    <h5>SAVE 15%</h5>
+                </div>
+            </div>
+            <div class="standard">
+                <h2>STANDARD</h1>
+                <h4>12 Months</h4>
+                <h1>Rs.2000/month</h1>
+                <button>GET STARTED</button>
+                <div class="save2">
+                    <h5>SAVE 20%</h5>
+                </div>
+            </div>
+            <div class="premium">
+                <h2>PREMIUM</h1>
+                <h4>Access to all languages lifetime</h4>
+                <h1>Rs.10000</h1>
+                <button>GET STARTED</button>
+                <p>One Time Payment...!</p>
+                <div class="save3">
+                    <h5>BEST VALUE!!!</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section class="guarantee">
+        <div class="money">
+            <h1>20 Day Money - Back Guarantee</h1>
+            <p>Just write to customer service within 20 days for a full refund</p>
+        </div>
+        <div class="coupon">
+            <h1>Redeem a Coupon</h1>
+        </div>
+        <div class="payment">
+            <h1>Secure Payment</h1>
+            <p>All transactions will be processed over an SSL-encrypted connection.</p>
+        </div>
+    </section>
+
+    <footer>
+        <section class="one">
+            <h1>Learn With Leo</h1>
+            <p>By speaking somone's language you learn about them, their culture and their ideas.
+                Breaking down the language barrier bridges cultural differences, fosters a world of inclusion and is a first step
+                in helping to address humanity's challenges. For us, language no boundaries.
+            </p>
+        </section>
+        <section class="two">
+            <h1>Languages</h1>
+            <div class="two1">
+                <div class="left">
+                <a href="">Japanese</a>
+                <a href="">Korean</a>
+                <a href="">Chinese</a>
+                <a href="">Spanish</a>
+                <a href="">German</a>
+                <a href="">French</a>
+                <a href="">Portuguese</a>
+                <a href="">Italian</a>
+                <a href="">Vietnamese</a>
+                <a href="">Thai</a>
+                </div>
+                
+                <div class="right">
+                    <a href="">Hindi</a>
+                    <a href="">Arabic</a>
+                    <a href="">Turkish</a>
+                    <a href="">Greek</a>
+                    <a href="">Ukrainian</a>
+                    <a href="">Indonesian</a>
+                    <a href="">Malay</a>
+                    <a href="">Spanish</a>
+                    <a href="">Polish</a>
+                    <a href="">Russian</a>
+                </div>
+            </div>
+            
+        </section>
+        <section class="three">
+            <h1>Pricing</h1>
+            <div class="three1">
+                <a href="">Basic</a>
+                <a href="">Standard</a>
+                <a href="">Premium</a>
+            </div>
+        </section>
+        <section class="four">
+            <h1>Support</h1>
+            <div class="four1">
+                <a href="./faq.html">FAQ</a>
+                <a href="./aboutus.html">About us</a>
+                <a href="./contactus.html">Contact us</a>
+            </div>
+        </section>
+        <section class="five"><p>Copyright@learnwithleo</p></section>
+
+    </footer>
+</body>
+</html>

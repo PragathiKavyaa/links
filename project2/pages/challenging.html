@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenging</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <style>
+         *{margin: 0; padding: 0; box-sizing: border-box; font-family: "Lato", sans-serif;}
+         .challenging{text-align: center; margin-top: 40px; margin-bottom: 40px; line-height: 50px;}
+         .level {
+               width: 800px;
+               height: 20px;
+               background-color: gray;
+               border-radius: 15px;
+               margin: 0 auto 20px auto;
+               overflow: hidden;
+             }
+        .progress {
+            width: 60%; 
+            height: 100%;
+            background-color: green;
+            border-radius: 15px 0 0 15px;
+        }
+        .challenging img{ width: 200px; height: 200px; align-items: center; justify-content: center;}
+        .challenging h1{font-size: 30px;}
+        .grid{display: grid; grid-template-columns: repeat(2, 2fr); gap: 20px 40px; margin: 40px auto; width: fit-content;}
+        .grid1, .grid2, .grid3, .grid4, .grid5, .grid6{width: 500px; height: 70px; border: 2px solid #FFA725; border-radius: 15px; display: flex;}
+        .grid1 img, .grid2 img, .grid3 img, .grid4 img, .grid5 img, .grid6 img{width: 50px; height: 50px; margin-left: 50px; }
+        .grid1 p, .grid2 p, .grid3 p, .grid4 p, .grid5 p, .grid6 p {font-size: 25px; margin-left: 100px;}
+        .button {display: inline-block; width: 200px; height: 50px; line-height: 50px; font-size: 20px; background-color: #4648DD; color: white; border-radius: 5px; border: none; cursor: pointer; text-decoration: none;}
+        .grid a{text-decoration: none; color: black;}
+        .grid5{box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);}
+
+        @media (min-width: 769px) and (max-width: 1024px){
+            .grid{width: 100%; gap: 10px 20px;}
+        }
+        @media (min-width: 768px) and (max-width: 1023px){
+            .grid{width: 100%; gap: 10px 20px;}
+            .grid1, .grid2, .grid3, .grid4, .grid5, .grid6{width: 350px; height: 70px;}
+            .level{width: 100%;}
+        }
+        @media (max-width: 600px){
+            .grid{display: grid; grid-template-columns: 2fr;} 
+            .grid1, .grid2, .grid3, .grid4, .grid5, .grid6{width: 100%;}
+            .level{width: 100%;}
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <section class="logo">
+            <figure>
+                <img src="../Icons/leo_logo-removebg-preview.png" alt="logo">
+                <figcaption>Learn With Leo</figcaption>
+            </figure>
+        </section>
+        <section class="navbar">
+            <button>search <img src="../Icons/search.png" alt="search"></button>
+            <div class="bar">
+                    <a href="./home.html">Home</a>
+                    <a href="./languages.html">Languages</a>
+                    <a href="./pricing.html">Pricing</a>
+                    <a href="./aboutus.html">About us</a>
+            </div>
+        </section>
+        <section class="log">
+            <a href="./profile.html">
+            <figure>
+                <img src="../Icons/PROFILE_ICON-removebg-preview.png" alt="Login">
+                <figcaption>LOG IN/ <a href="./signup.html">SIGN UP</a></figcaption>
+            </figure>
+        </a>
+        </section>
+    </header>
+
+    <section class="challenging">
+        <div class="level">
+            <div class="progress"></div>
+        </div>
+        <img src="../Icons/leo_3-removebg-preview.png" alt="challenge">
+        <h1>Hi Monisha, why are you learning Japanese? </h1>
+        <p>Help us tailor your learning experience.</p>
+        <div class="grid">
+            <div class="grid1">
+                <img src="../Icons/work-removebg-preview.png" alt="work">
+                <p>Work</p>
+            </div>
+            <div class="grid2">
+                <img src="../Icons/travel_icon-removebg-preview.png" alt="travel">
+                <p>Travel</p>
+            </div>
+            <div class="grid3">
+                <img src="../Icons/study_icon-removebg-preview.png" alt="study">
+                <p>Study</p>
+            </div>
+            <div class="grid4">
+                <img src="../Icons/family_icon-removebg-preview.png" alt="family">
+                <p>Family</p>
+            </div>
+        <a href="./studygoal.html">
+            <div class="grid5">
+                <img src="../Icons/challenge_icon-removebg-preview.png" alt="challenge">
+                <p>Challenge</p>
+            </div>
+        </a>
+            <div class="grid6">
+                <p>Others</p>
+            </div>
+        </div>
+        <a href="" class="button">Continue</a>
+    </section>
+
+    <footer>
+        <section class="one">
+            <h1>Learn With Leo</h1>
+            <p>By speaking somone's language you learn about them, their culture and their ideas.
+                Breaking down the language barrier bridges cultural differences, fosters a world of inclusion and is a first step
+                in helping to address humanity's challenges. For us, language no boundaries.
+            </p>
+        </section>
+        <section class="two">
+            <h1>Languages</h1>
+            <div class="two1">
+                <div class="left">
+                <a href="">Japanese</a>
+                <a href="">Korean</a>
+                <a href="">Chinese</a>
+                <a href="">Spanish</a>
+                <a href="">German</a>
+                <a href="">French</a>
+                <a href="">Portuguese</a>
+                <a href="">Italian</a>
+                <a href="">Vietnamese</a>
+                <a href="">Thai</a>
+                </div>
+                
+                <div class="right">
+                    <a href="">Hindi</a>
+                    <a href="">Arabic</a>
+                    <a href="">Turkish</a>
+                    <a href="">Greek</a>
+                    <a href="">Ukrainian</a>
+                    <a href="">Indonesian</a>
+                    <a href="">Malay</a>
+                    <a href="">Spanish</a>
+                    <a href="">Polish</a>
+                    <a href="">Russian</a>
+                </div>
+            </div>
+            
+        </section>
+        <section class="three">
+            <h1>Pricing</h1>
+            <div class="three1">
+                <a href="">Basic</a>
+                <a href="">Standard</a>
+                <a href="">Premium</a>
+            </div>
+        </section>
+        <section class="four">
+            <h1>Support</h1>
+            <div class="four1">
+                <a href="./faq.html">FAQ</a>
+                <a href="./aboutus.html">About us</a>
+                <a href="./contactus.html">Contact us</a>
+            </div>
+        </section>
+        <section class="five"><p>Copyright@learnwithleo</p></section>
+    </footer>
+</body>
+</html>
