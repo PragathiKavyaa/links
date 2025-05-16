@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS141</title>
+</head>
+<body>
+
+  <h2>Retrieve and Use JSON Data</h2>
+  <button onclick="storeData()">Store JSON</button>
+  <button onclick="loadData()">Load and Use JSON</button>
+
+  <p id="output"></p>
+
+  <script>
+    function storeData() {
+      const user = {
+        name: "John Doe",
+        age: 25,
+        email: "john@example.com"
+      };
+
+      const jsonStr = JSON.stringify(user);
+      localStorage.setItem("userData", jsonStr);
+
+      document.getElementById("output").textContent = "User data stored as JSON.";
+    }
+
+    function loadData() {
+      const jsonStr = localStorage.getItem("userData");
+
+      if (jsonStr) {
+        const userObj = JSON.parse(jsonStr); 
+
+        // Use the object
+        document.getElementById("output").textContent =
+         ` Name: ${userObj.name}, Age: ${userObj.age}, Email: ${userObj.email}`;
+      } else {
+        document.getElementById("output").textContent = "No user data found.";
+      }
+    }
+  </script>
+
+</body>
+</html>

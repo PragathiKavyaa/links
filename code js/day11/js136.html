@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS136</title>
+</head>
+<body>
+
+  <h2>Save Form Inputs Temporarily</h2>
+
+  <form id="myForm">
+    <label>
+      Name:
+      <input type="text" id="name" name="name" />
+    </label>
+    <br><br>
+    <label>
+      Email:
+      <input type="email" id="email" name="email" />
+    </label>
+    <br><br>
+    <label>
+      Message:
+      <textarea id="message" name="message"></textarea>
+    </label>
+    <br><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    const form = document.getElementById('myForm');
+
+    window.onload = () => {
+      ['name', 'email', 'message'].forEach(id => {
+        const savedValue = sessionStorage.getItem(id);
+        if (savedValue) {
+          document.getElementById(id).value = savedValue;
+        }
+      });
+    };
+
+   
+    form.addEventListener('input', e => {
+      const target = e.target;
+      if (['name', 'email', 'message'].includes(target.id)) {
+        sessionStorage.setItem(target.id, target.value);
+      }
+    });
+
+   
+    form.addEventListener('submit', e => {
+      e.preventDefault(); 
+      alert('Form submitted!');
+      sessionStorage.removeItem('name');
+      sessionStorage.removeItem('email');
+      sessionStorage.removeItem('message');
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>

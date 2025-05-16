@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JS161</title>
+</head>
+<body>
+  <h2>LocalStorage JSON Example</h2>
+
+  <input id="name" placeholder="Enter Name" />
+  <input id="age" type="number" placeholder="Enter Age" />
+  <button onclick="addPerson()">Add Person</button>
+  <button onclick="loadData()">Load from LocalStorage</button>
+
+  <h3>People List:</h3>
+  <ul id="peopleList"></ul>
+
+  <script>
+    function addPerson() {
+      const name = document.getElementById("name").value;
+      const age = parseInt(document.getElementById("age").value);
+
+      if (!name || isNaN(age)) {
+        alert("Please enter valid name and age.");
+        return;
+      }
+
+      const people = JSON.parse(localStorage.getItem("people")) || [];
+
+      people.push({ name, age });
+
+      localStorage.setItem("people", JSON.stringify(people));
+
+      document.getElementById("name").value = "";
+      document.getElementById("age").value = "";
+      loadData(); t
+    }
+
+    function loadData() {
+      const people = JSON.parse(localStorage.getItem("people")) || [];
+      const list = document.getElementById("peopleList");
+      list.innerHTML = "";
+
+      people.forEach(person => {
+        const li = document.createElement("li");
+        li.textContent = `${person.name} (Age: ${person.age})`;
+        list.appendChild(li);
+      });
+    }
+
+    window.onload = loadData;
+  </script>
+</body>
+</html>

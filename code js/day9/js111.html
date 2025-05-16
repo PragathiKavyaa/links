@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS111</title>
+</head>
+<body>
+
+  <p id="myParagraph">This is a paragraph with changeable font size.</p>
+  <button onclick="changeFontSize()">Change Font Size</button>
+
+  <script>
+    function changeFontSize() {
+      const paragraph = document.getElementById("myParagraph");
+      paragraph.style.fontSize = "24px"; // You can set any size like "18px", "2em", etc.
+    }
+  </script>
+
+</body>
+</html>

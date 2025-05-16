@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS152</title>
+</head>
+<body>
+  <h1>Grade A Students Count</h1>
+  <p id="result"></p>
+
+  <script>
+    
+    const students = [
+      { name: "Alice", grade: "A" },
+      { name: "Bob", grade: "B" },
+      { name: "Charlie", grade: "A" },
+      { name: "David", grade: "C" }
+    ];
+
+    const count = students.filter(student => student.grade === "A").length;
+
+    document.getElementById("result").textContent = `Number of Grade A students: ${count}`;
+  </script>
+</body>
+</html>

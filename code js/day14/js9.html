@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS9</title>
+</head>
+<body>
+  <h1>Exchange Rates (Base: USD)</h1>
+  <button onclick="getRates()">Get Rates</button>
+  <ul id="rates"></ul>
+
+  <script>
+    function getRates() {
+      fetch('https://open.er-api.com/v6/latest/USD')
+        .then(response => {
+          if (!response.ok) throw new Error('Network error');
+          return response.json();
+        })
+        .then(data => {
+          const ratesList = document.getElementById('rates');
+          ratesList.innerHTML = ''; 
+
+          const currencies = ['EUR', 'GBP', 'JPY', 'AUD', 'CAD'];
+
+          currencies.forEach(currency => {
+            const li = document.createElement('li');
+            li.textContent = ${currency}: ${data.rates[currency]};
+            ratesList.appendChild(li);
+          });
+        })
+        .catch(err => {
+          console.error(err);
+          document.getElementById('rates').textContent = 'Failed to load rates.';
+        });
+    }
+  </script>
+</body>
+</html>

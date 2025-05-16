@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS150</title>
+</head>
+<body>
+  <h1>Names from Object Array</h1>
+  <ul id="nameList"></ul>
+
+  <script>
+   
+    const people = [
+      { name: "Alice", age: 30 },
+      { name: "Bob", age: 25 },
+      { name: "Charlie", age: 35 }
+    ];
+
+ 
+    const names = people.map(person => person.name);
+
+    const list = document.getElementById("nameList");
+    names.forEach(name => {
+      const listItem = document.createElement("li");
+      listItem.textContent = name;
+      list.appendChild(listItem);
+    });
+
+    console.log("Array of names:", names);
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS160</title>
+</head>
+<body>
+  <h1>Employee List</h1>
+  <ul id="employeeList"></ul>
+
+  <script>
+    fetch('data.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        const list = document.getElementById('employeeList');
+        data.forEach(employee => {
+          const li = document.createElement('li');
+          li.textContent = `${employee.name} - Age: ${employee.age}, Position: ${employee.position}`;
+          list.appendChild(li);
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching JSON:', error);
+      });
+  </script>
+</body>
+</html>

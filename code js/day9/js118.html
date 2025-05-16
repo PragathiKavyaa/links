@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS118</title>
+</head>
+<body>
+
+  <input type="text" id="myInput" value="Original Value">
+  <button onclick="changeInputValue()">Change Input Value</button>
+
+  <script>
+    function changeInputValue() {
+      const input = document.getElementById("myInput");
+      input.value = "New dynamic value";
+    }
+  </script>
+
+</body>
+</html>

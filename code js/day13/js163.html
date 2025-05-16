@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS163</title>
+</head>
+<body>
+
+  <h2>Modify Person in Array</h2>
+
+  <input id="searchName" placeholder="Name to Modify" />
+  <input id="newAge" type="number" placeholder="New Age" />
+  <button onclick="modifyPerson()">Update Age</button>
+
+  <h3>People List:</h3>
+  <ul id="peopleList"></ul>
+
+  <script>
+   
+    let people = [
+      { name: "Alice", age: 25 },
+      { name: "Bob", age: 30 },
+      { name: "Charlie", age: 35 }
+    ];
+
+    function displayPeople() {
+      const list = document.getElementById("peopleList");
+      list.innerHTML = "";
+      people.forEach(p => {
+        const li = document.createElement("li");
+        li.textContent = `${p.name} (Age: ${p.age})`;
+        list.appendChild(li);
+      });
+    }
+
+    function modifyPerson() {
+      const name = document.getElementById("searchName").value;
+      const newAge = parseInt(document.getElementById("newAge").value);
+
+      const person = people.find(p => p.name.toLowerCase() === name.toLowerCase());
+      if (person && !isNaN(newAge)) {
+        person.age = newAge;
+        alert(`${person.name}'s age updated to ${newAge}`);
+      } else {
+        alert("Person not found or invalid age.");
+      }
+
+      displayPeople();
+    }
+
+    // Display initial list
+    displayPeople();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS5</title>
+  <style>
+    #profile {
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      padding: 16px;
+      max-width: 300px;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>GitHub Profile Lookup</h1>
+  <input type="text" id="username" placeholder="Enter GitHub username" />
+  <button onclick="getProfile()">Get Profile</button>
+
+  <div id="profile"></div>
+
+  <script>
+    function getProfile() {
+      const username = document.getElementById('username').value.trim();
+      const profileDiv = document.getElementById('profile');
+
+      if (!username) {
+        profileDiv.innerHTML = "<p>Please enter a username.</p>";
+        return;
+      }
+
+      fetch("https://api.github.com/users/${username}")
+        .then(response => {
+          if (!response.ok) {
+            throw new Error("User not found");
+          }
+          return response.json();
+        })
+        .then(user => {
+          profileDiv.innerHTML = `
+            <img src="${user.avatar_url}" alt="${user.login}" />
+            <h3>${user.name || user.login}</h3>
+            <p><strong>Username:</strong> ${user.login}</p>
+            <p><strong>Bio:</strong> ${user.bio || 'N/A'}</p>
+            <p><strong>Location:</strong> ${user.location || 'N/A'}</p>
+            <p><strong>Public Repos:</strong> ${user.public_repos}</p>
+            <a href="${user.html_url}" target="_blank">View on GitHub</a>
+          `;
+        })
+        .catch(error => {
+          profileDiv.innerHTML = <p>${error.message}</p>;
+        });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS155</title>
+</head>
+<body>
+  <h1>Student List</h1>
+  <button onclick="removeStudent('Bob')">Remove Bob</button>
+  <ul id="studentList"></ul>
+
+  <script>
+ 
+    let students = [
+      { name: "Alice", grade: "A" },
+      { name: "Bob", grade: "B" },
+      { name: "Charlie", grade: "A" }
+    ];
+
+    function displayStudents() {
+      const list = document.getElementById("studentList");
+      list.innerHTML = ''; 
+      students.forEach(student => {
+        const li = document.createElement("li");
+        li.textContent = `${student.name} - Grade: ${student.grade}`;
+        list.appendChild(li);
+      });
+    }
+
+    function removeStudent(name) {
+      students = students.filter(student => student.name !== name);
+      displayStudents();
+    }
+
+    displayStudents();
+  </script>
+</body>
+</html>

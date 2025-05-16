@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS12</title>
+</head>
+<body>
+  <h1>Search Users</h1>
+  <input type="text" id="searchInput" placeholder="Type a name..." />
+  <button id="searchBtn">Search</button>
+
+  <ul id="results"></ul>
+
+  <script>
+    const searchBtn = document.getElementById('searchBtn');
+    const searchInput = document.getElementById('searchInput');
+    const results = document.getElementById('results');
+
+    searchBtn.addEventListener('click', () => {
+      const query = searchInput.value.trim().toLowerCase();
+      if (!query) {
+        results.innerHTML = '<li>Please enter a search term.</li>';
+        return;
+      }
+
+      fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response => response.json())
+        .then(users => {
+          const filtered = users.filter(user =>
+            user.name.toLowerCase().includes(query)
+          );
+
+          if (filtered.length === 0) {
+            results.innerHTML = '<li>No users found.</li>';
+            return;
+          }
+
+          results.innerHTML = '';
+          filtered.forEach(user => {
+            const li = document.createElement('li');
+            li.textContent = ${user.name} (${user.email});
+            results.appendChild(li);
+          });
+        })
+        .catch(err => {
+          results.innerHTML = '<li>Error fetching users.</li>';
+          console.error(err);
+        });
+    });
+  </script>
+</body>
+</html>

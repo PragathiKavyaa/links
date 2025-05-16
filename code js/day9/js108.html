@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS108</title>
+</head>
+<body>
+
+  <p id="myElement">This paragraph will be shown or hidden.</p>
+  <button onclick="toggleVisibility()">Toggle Show/Hide</button>
+
+  <script>
+    function toggleVisibility() {
+      const element = document.getElementById("myElement");
+      if (element.style.display === "none") {
+        element.style.display = "block";
+      } else {
+        element.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>

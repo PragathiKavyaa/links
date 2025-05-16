@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add to JSON Array</title>
+</head>
+<body>
+
+  <h2>Add Person to JSON Data</h2>
+
+  <input id="name" placeholder="Enter name" />
+  <input id="age" type="number" placeholder="Enter age" />
+  <button onclick="addPerson()">Add Person</button>
+
+  <h3>People List:</h3>
+  <ul id="peopleList"></ul>
+
+  <script>
+    let people = [
+      { name: "Alice", age: 25 },
+      { name: "Bob", age: 30 }
+    ];
+
+    function displayPeople() {
+      const list = document.getElementById("peopleList");
+      list.innerHTML = "";
+      people.forEach(p => {
+        const li = document.createElement("li");
+        li.textContent = `${p.name} (Age: ${p.age})`;
+        list.appendChild(li);
+      });
+    }
+
+    function addPerson() {
+      const name = document.getElementById("name").value.trim();
+      const age = parseInt(document.getElementById("age").value);
+
+      if (!name || isNaN(age)) {
+        alert("Please enter valid name and age.");
+        return;
+      }
+
+      const newPerson = { name, age };
+      people.push(newPerson); 
+
+      displayPeople();
+
+      document.getElementById("name").value = "";
+      document.getElementById("age").value = "";
+    }
+
+    displayPeople();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pagination with Fetch API</title>
+  <style>
+    #posts {
+      margin: 20px 0;
+    }
+    .post {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    #pagination {
+      margin-top: 20px;
+    }
+    button {
+      margin: 0 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Paginated Posts</h1>
+  <div id="posts"></div>
+  <div id="pagination">
+    <button onclick="changePage(-1)">Previous</button>
+    <span id="pageNumber">Page 1</span>
+    <button onclick="changePage(1)">Next</button>
+  </div>
+
+  <script>
+    let currentPage = 1;
+    const limit = 5;
+
+    function fetchPosts(page) {
+      fetch(https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=${limit})
+        .then(res => res.json())
+        .then(data => {
+          const postContainer = document.getElementById('posts');
+          postContainer.innerHTML = '';
+
+          data.forEach(post => {
+            const div = document.createElement('div');
+            div.className = 'post';
+            div.innerHTML = <h3>${post.title}</h3><p>${post.body}</p>;
+            postContainer.appendChild(div);
+          });
+
+          document.getElementById('pageNumber').textContent = Page ${currentPage};
+        })
+        .catch(error => {
+          console.error('Error fetching posts:', error);
+        });
+    }
+
+    function changePage(direction) {
+      if (currentPage + direction < 1) return;
+      currentPage += direction;
+      fetchPosts(currentPage);
+    }
+
+    fetchPosts(currentPage);
+  </script>
+</body>
+</html>

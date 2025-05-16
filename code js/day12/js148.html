@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS148</title>
+</head>
+<body>
+  <h1>Students with Grade A</h1>
+  <ul id="studentList"></ul>
+
+  <script>
+
+    const students = [
+      { name: "Alice", grade: "A" },
+      { name: "Bob", grade: "B" },
+      { name: "Charlie", grade: "A" },
+      { name: "David", grade: "C" }
+    ];
+
+    const gradeAStudents = students.filter(student => student.grade === "A");
+
+    const list = document.getElementById("studentList");
+    gradeAStudents.forEach(student => {
+      const listItem = document.createElement("li");
+      listItem.textContent = `${student.name} - Grade: ${student.grade}`;
+      list.appendChild(listItem);
+    });
+  </script>
+</body>
+</html>

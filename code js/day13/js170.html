@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS170</title>
+</head>
+<body>
+  <h2>Users from API</h2>
+  <button onclick="loadUsers()">Load Users</button>
+  <ul id="userList"></ul>
+
+  <script>
+    function loadUsers() {
+      fetch("https://jsonplaceholder.typicode.com/users")
+        .then(res => res.json())
+        .then(data => {
+          const list = document.getElementById("userList");
+          list.innerHTML = "";
+          data.forEach(user => {
+            const li = document.createElement("li");
+            li.textContent = ${user.name} - ${user.email};
+            list.appendChild(li);
+          });
+        })
+        .catch(error => {
+          alert("Error fetching data. Please try again later.");
+          console.error(error);
+        });
+    }
+  </script>
+</body>
+</html>

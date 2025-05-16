@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MP2</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    input, button, select { margin: 5px; padding: 5px; }
+    .section { margin-top: 20px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+  </style>
+</head>
+<body>
+  <h2>Library Book Management System</h2>
+
+  <div class="section">
+    <h3>Add Book</h3>
+    <input id="bookId" placeholder="Book ID" />
+    <input id="title" placeholder="Title" />
+    <input id="author" placeholder="Author" />
+    <input id="genre" placeholder="Genre" />
+    <button onclick="addBook()">Add Book</button>
+  </div>
+
+  <div class="section">
+    <h3>Search Books</h3>
+    <input id="searchQuery" placeholder="Search by Title, Author or Genre" />
+    <button onclick="searchBooks()">Search</button>
+    <ul id="searchResults"></ul>
+  </div>
+
+  <div class="section">
+    <h3>Issue/Return Book</h3>
+    <input id="issueBookId" placeholder="Book ID" />
+    <input id="borrower" placeholder="Borrower Name" />
+    <select id="action">
+      <option value="issue">Issue</option>
+      <option value="return">Return</option>
+    </select>
+    <button onclick="updateBookStatus()">Submit</button>
+  </div>
+
+  <div class="section">
+    <h3>Available Books</h3>
+    <button onclick="listAvailableBooks()">Show Available Books</button>
+    <table id="availableTable">
+      <thead>
+        <tr><th>ID</th><th>Title</th><th>Author</th><th>Genre</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script>
+    let library = [];
+
+    function addBook() {
+      const id = document.getElementById("bookId").value;
+      const title = document.getElementById("title").value;
+      const author = document.getElementById("author").value;
+      const genre = document.getElementById("genre").value;
+
+      if (!id || !title || !author || !genre) {
+        alert("Please enter all book details.");
+        return;
+      }
+
+      library.push({
+        id,
+        title,
+        author,
+        genre,
+        available: true,
+        borrower: ""
+      });
+
+      alert("Book added successfully.");
+      clearInputs("bookId", "title", "author", "genre");
+    }
+
+    function searchBooks() {
+      const query = document.getElementById("searchQuery").value.toLowerCase();
+      const results = library.filter(b =>
+        b.title.toLowerCase().includes(query) ||
+        b.author.toLowerCase().includes(query) ||
+        b.genre.toLowerCase().includes(query)
+      );
+
+      const resultsList = document.getElementById("searchResults");
+      resultsList.innerHTML = results.length ? "" : "<li>No books found.</li>";
+      results.forEach(b => {
+        const li = document.createElement("li");
+        li.textContent = ${b.title} by ${b.author} [${b.genre}] - ${b.available ? "Available" : "Borrowed by " + b.borrower};
+        resultsList.appendChild(li);
+      });
+    }
+
+    function updateBookStatus() {
+      const id = document.getElementById("issueBookId").value;
+      const borrower = document.getElementById("borrower").value;
+      const action = document.getElementById("action").value;
+      const book = library.find(b => b.id === id);
+
+      if (!book) {
+        alert("Book not found.");
+        return;
+      }
+
+      if (action === "issue") {
+        if (!book.available) {
+          alert("Book is already borrowed.");
+          return;
+        }
+        if (!borrower) {
+          alert("Borrower name required.");
+          return;
+        }
+        book.available = false;
+        book.borrower = borrower;
+        alert("Book issued.");
+      } else {
+        if (book.available) {
+          alert("Book is already available.");
+          return;
+        }
+        book.available = true;
+        book.borrower = "";
+        alert("Book returned.");
+      }
+
+      clearInputs("issueBookId", "borrower");
+    }
+
+    function listAvailableBooks() {
+      const tableBody = document.getElementById("availableTable").getElementsByTagName("tbody")[0];
+      tableBody.innerHTML = "";
+
+      const availableBooks = library.filter(b => b.available);
+      availableBooks.forEach(b => {
+        const row = `<tr>
+          <td>${b.id}</td>
+          <td>${b.title}</td>
+          <td>${b.author}</td>
+          <td>${b.genre}</td>
+        </tr>`;
+        tableBody.innerHTML += row;
+      });
+    }
+
+    function clearInputs(...ids) {
+      ids.forEach(id => document.getElementById(id).value = "");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS132</title>
+</head>
+<body>
+
+  <h2>Enter your username</h2>
+  <input type="text" id="usernameInput" placeholder="Username">
+  <button onclick="saveUsername()">Save Username</button>
+
+  <h3>Stored Username:</h3>
+  <p id="storedUsername">None</p>
+
+  <script>
+    const storedUsernameDisplay = document.getElementById("storedUsername");
+    const usernameInput = document.getElementById("usernameInput");
+
+    window.onload = function() {
+      const savedUsername = localStorage.getItem("username");
+      if (savedUsername) {
+        storedUsernameDisplay.textContent = savedUsername;
+      }
+    };
+
+    function saveUsername() {
+      const username = usernameInput.value.trim();
+      if (username) {
+        localStorage.setItem("username", username);
+        storedUsernameDisplay.textContent = username;
+        usernameInput.value = "";
+        alert("Username saved!");
+      } else {
+        alert("Please enter a username.");
+      }
+    }
+  </script>
+
+</body>
+</html>

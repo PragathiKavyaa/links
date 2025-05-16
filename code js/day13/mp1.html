@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MP1</title>
+</head>
+<body>
+  <h2>Product Catalog</h2>
+  <button onclick="filterPrice()">Filter Price < $500</button>
+  <button onclick="sortPrice()">Sort by Price</button>
+  <ul id="productList"></ul>
+
+  <script>
+    let products = [];
+
+    fetch("products.json")
+      .then(res => res.json())
+      .then(data => {
+        products = data;
+        displayProducts(products);
+      });
+
+    function displayProducts(items) {
+      const list = document.getElementById("productList");
+      list.innerHTML = "";
+      items.forEach(p => {
+        const li = document.createElement("li");
+        li.innerHTML = <strong>${p.name}</strong> - $`${p.price} - ${p.category}`;
+        li.onclick = () => alert(`Details:\nName: ${p.name}\nPrice: $${p.price}\nCategory: ${p.category}`);
+        list.appendChild(li);
+      });
+    }
+
+    function filterPrice() {
+      const filtered = products.filter(p => p.price < 500);
+      displayProducts(filtered);
+    }
+
+    function sortPrice() {
+      const sorted = [...products].sort((a, b) => a.price - b.price);
+      displayProducts(sorted);
+    }
+  </script>
+</body>
+</html>

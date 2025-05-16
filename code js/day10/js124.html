@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mouse Coordinates</title>
+  <style>
+    #coords {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Move your mouse anywhere on the page</h2>
+  <div id="coords">X: 0, Y: 0</div>
+
+  <script>
+    const coordsDisplay = document.getElementById("coords");
+
+    document.addEventListener("mousemove", function(event) {
+      coordsDisplay.textContent = `X: ${event.clientX}, Y: ${event.clientY}`;
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS133</title>
+  <style>
+    body.light-mode {
+      background-color: white;
+      color: black;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    body.dark-mode {
+      background-color: #121212;
+      color: white;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 30px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Dark/Light Mode Toggle</h1>
+  <button id="toggleBtn">Toggle Mode</button>
+
+  <script>
+    const toggleBtn = document.getElementById("toggleBtn");
+
+    window.onload = function() {
+      const savedMode = localStorage.getItem("mode");
+      if (savedMode) {
+        document.body.className = savedMode;
+        updateButtonText(savedMode);
+      } else {
+        document.body.className = "light-mode";
+        updateButtonText("light-mode");
+      }
+    };
+
+    toggleBtn.addEventListener("click", () => {
+      if (document.body.classList.contains("light-mode")) {
+        document.body.className = "dark-mode";
+        localStorage.setItem("mode", "dark-mode");
+        updateButtonText("dark-mode");
+      } else {
+        document.body.className = "light-mode";
+        localStorage.setItem("mode", "light-mode");
+        updateButtonText("light-mode");
+      }
+    });
+
+    function updateButtonText(mode) {
+      toggleBtn.textContent = mode === "light-mode" ? "Switch to Dark Mode" : "Switch to Light Mode";
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS135</title>
+</head>
+<body>
+
+  <h2>Login Status Demo</h2>
+
+  <div id="status">You are not logged in.</div>
+
+  <button id="loginBtn">Log In</button>
+  <button id="logoutBtn" style="display:none;">Log Out</button>
+
+  <script>
+    const statusDiv = document.getElementById('status');
+    const loginBtn = document.getElementById('loginBtn');
+    const logoutBtn = document.getElementById('logoutBtn');
+
+    window.onload = () => {
+      const loggedIn = sessionStorage.getItem('loggedIn');
+      if (loggedIn === 'true') {
+        updateUI(true);
+      } else {
+        updateUI(false);
+      }
+    };
+
+    loginBtn.addEventListener('click', () => {
+      sessionStorage.setItem('loggedIn', 'true');
+      updateUI(true);
+    });
+
+    logoutBtn.addEventListener('click', () => {
+      sessionStorage.removeItem('loggedIn');
+      updateUI(false);
+    });
+
+    function updateUI(isLoggedIn) {
+      if (isLoggedIn) {
+        statusDiv.textContent = 'You are logged in.';
+        loginBtn.style.display = 'none';
+        logoutBtn.style.display = 'inline-block';
+      } else {
+        statusDiv.textContent = 'You are not logged in.';
+        loginBtn.style.display = 'inline-block';
+        logoutBtn.style.display = 'none';
+      }
+    }
+  </script>
+
+</body>
+</html>

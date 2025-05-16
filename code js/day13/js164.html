@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS164</title>
+</head>
+<body>
+
+  <h2>Filter People by Age</h2>
+
+  <input id="ageInput" type="number" placeholder="Enter minimum age" />
+  <button onclick="filterByAge()">Filter</button>
+
+  <h3>Filtered Results:</h3>
+  <ul id="resultList"></ul>
+
+  <script>
+    const people = [
+      { name: "Alice", age: 25 },
+      { name: "Bob", age: 32 },
+      { name: "Charlie", age: 40 },
+      { name: "David", age: 28 }
+    ];
+
+    function filterByAge() {
+      const minAge = parseInt(document.getElementById("ageInput").value);
+      const list = document.getElementById("resultList");
+      list.innerHTML = "";
+
+      if (isNaN(minAge)) {
+        list.innerHTML = "<li>Please enter a valid age.</li>";
+        return;
+      }
+
+      const filtered = people.filter(person => person.age >= minAge);
+
+      if (filtered.length === 0) {
+        list.innerHTML = "<li>No people match the condition.</li>";
+      } else {
+        filtered.forEach(p => {
+          const li = document.createElement("li");
+          li.textContent = `${p.name} (Age: ${p.age})`;
+          list.appendChild(li);
+        });
+      }
+    }
+  </script>
+
+</body>
+</html>

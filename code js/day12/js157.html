@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS157</title>
+</head>
+<body>
+  <h1>Highest Priced Product</h1>
+  <p id="highestProduct"></p>
+
+  <script>
+    const products = [
+      { name: "Laptop", price: 1200 },
+      { name: "Phone", price: 800 },
+      { name: "Tablet", price: 500 }
+    ];
+
+    const highestProduct = products.reduce((max, product) => {
+      return (product.price > max.price) ? product : max;
+    }, products[0]);
+
+    document.getElementById("highestProduct").textContent =
+      `Product: ${highestProduct.name}, Price: $${highestProduct.price}`;
+  </script>
+</body>
+</html>

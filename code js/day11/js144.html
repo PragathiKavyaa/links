@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS144</title>
+  <style>
+    body { font-family: Arial; max-width: 600px; margin: 30px auto; }
+    .question { margin-bottom: 20px; }
+    label { display: block; margin-top: 5px; }
+  </style>
+</head>
+<body>
+
+  <h2>Simple Quiz</h2>
+
+  <form id="quizForm">
+    <div class="question">
+      <p>1. What is the capital of France?</p>
+      <label><input type="radio" name="q1" value="Paris"> Paris</label>
+      <label><input type="radio" name="q1" value="London"> London</label>
+      <label><input type="radio" name="q1" value="Berlin"> Berlin</label>
+    </div>
+
+    <div class="question">
+      <p>2. What is 2 + 2?</p>
+      <label><input type="radio" name="q2" value="3"> 3</label>
+      <label><input type="radio" name="q2" value="4"> 4</label>
+      <label><input type="radio" name="q2" value="5"> 5</label>
+    </div>
+
+    <button type="submit">Submit Answers</button>
+  </form>
+
+  <div id="results" style="margin-top: 20px;"></div>
+
+  <script>
+    const form = document.getElementById('quizForm');
+    const results = document.getElementById('results');
+
+    // Load answers from SessionStorage on page load
+    window.onload = () => {
+      const savedAnswers = JSON.parse(sessionStorage.getItem('quizAnswers')) || {};
+      for (let q in savedAnswers) {
+        const radio = document.querySelector(input[name="${q}"][value="${savedAnswers[q]}"]);
+        if (radio) radio.checked = true;
+      }
+    };
+
+    form.addEventListener('change', e => {
+      const savedAnswers = JSON.parse(sessionStorage.getItem('quizAnswers')) || {};
+      if (e.target.name && e.target.type === 'radio') {
+        savedAnswers[e.target.name] = e.target.value;
+        sessionStorage.setItem('quizAnswers', JSON.stringify(savedAnswers));
+      }
+    });
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+
+      const savedAnswers = JSON.parse(sessionStorage.getItem('quizAnswers')) || {};
+      const correctAnswers = { q1: "Paris", q2: "4" };
+      let score = 0;
+
+      for (let key in correctAnswers) {
+        if (savedAnswers[key] === correctAnswers[key]) score++;
+      }
+
+      results.innerHTML = <h3>Your Score: ${score}/2</h3>;
+    });
+  </script>
+
+</body>
+</html>

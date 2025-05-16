@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS139</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 400px;
+      margin: 40px auto;
+    }
+    input, button {
+      padding: 8px;
+      font-size: 16px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin: 8px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .delete-btn {
+      cursor: pointer;
+      color: red;
+      border: none;
+      background: none;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>To-Do List</h2>
+
+  <input type="text" id="taskInput" placeholder="Enter a new task" />
+  <button onclick="addTask()">Add Task</button>
+
+  <ul id="taskList"></ul>
+
+  <script>
+    const taskInput = document.getElementById('taskInput');
+    const taskList = document.getElementById('taskList');
+
+    // Load tasks from LocalStorage on page load
+    window.onload = function() {
+      displayTasks();
+    };
+
+    function getTasks() {
+      return JSON.parse(localStorage.getItem('tasks')) || [];
+    }
+
+    function saveTasks(tasks) {
+      localStorage.setItem('tasks', JSON.stringify(tasks));
+    }
+
+    function displayTasks() {
+      const tasks = getTasks();
+      taskList.innerHTML = '';
+
+      if (tasks.length === 0) {
+        taskList.innerHTML = '<li>No tasks added yet.</li>';
+        return;
+      }
+
+      tasks.forEach((task, index) => {
+        const li = document.createElement('li');
+        li.textContent = task;
+
+        const deleteBtn = document.createElement('button');
+        deleteBtn.textContent = '×';
+        deleteBtn.className = 'delete-btn';
+        deleteBtn.onclick = () => {
+          deleteTask(index);
+        };
+
+        li.appendChild(deleteBtn);
+        taskList.appendChild(li);
+      });
+    }
+
+    function addTask() {
+      const newTask = taskInput.value.trim();
+      if (newTask === '') {
+        alert('Please enter a task.');
+        return;
+      }
+
+      const tasks = getTasks();
+      tasks.push(newTask);
+      saveTasks(tasks);
+      taskInput.value = '';
+      displayTasks();
+    }
+
+    function deleteTask(index) {
+      const tasks = getTasks();
+      tasks.splice(index, 1);
+      saveTasks(tasks);
+      displayTasks();
+    }
+  </script>
+
+</body>
+</html>

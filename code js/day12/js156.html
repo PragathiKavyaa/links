@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS156</title>
+</head>
+<body>
+  <h1>Employee List</h1>
+
+  <form id="employeeForm">
+    <input type="text" id="name" placeholder="Name" required />
+    <input type="number" id="age" placeholder="Age" required min="1" />
+    <input type="text" id="position" placeholder="Position" required />
+    <button type="submit">Add Employee</button>
+  </form>
+
+  <ul id="employeeList"></ul>
+
+  <script>
+    let employees = [
+      { name: "Alice", age: 30, position: "Developer" },
+      { name: "Bob", age: 25, position: "Designer" }
+    ];
+
+    const list = document.getElementById("employeeList");
+    const form = document.getElementById("employeeForm");
+
+    // Function to display employees
+    function displayEmployees() {
+      list.innerHTML = "";
+      employees.forEach(emp => {
+        const li = document.createElement("li");
+        li.textContent = `${emp.name}, Age: ${emp.age}, Position: ${emp.position}`;
+        list.appendChild(li);
+      });
+    }
+
+    displayEmployees();
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const age = parseInt(document.getElementById("age").value);
+      const position = document.getElementById("position").value.trim();
+
+      if (name && age && position) {
+        employees.push({ name, age, position });
+        displayEmployees();
+        form.reset();
+      }
+    });
+  </script>
+</body>
+</html>

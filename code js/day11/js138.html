@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS138</title>
+</head>
+<body>
+
+  <h2>Click Counter</h2>
+  <button id="clickBtn">Click me!</button>
+  <p>You've clicked <span id="count">0</span> times.</p>
+  <button id="resetBtn">Reset Counter</button>
+
+  <script>
+    const clickBtn = document.getElementById('clickBtn');
+    const resetBtn = document.getElementById('resetBtn');
+    const countSpan = document.getElementById('count');
+
+    // Load count from localStorage or start at 0
+    let count = parseInt(localStorage.getItem('clickCount')) || 0;
+    countSpan.textContent = count;
+
+    // Increment count and save
+    clickBtn.addEventListener('click', () => {
+      count++;
+      localStorage.setItem('clickCount', count);
+      countSpan.textContent = count;
+    });
+
+    // Reset count and save
+    resetBtn.addEventListener('click', () => {
+      count = 0;
+      localStorage.setItem('clickCount', count);
+      countSpan.textContent = count;
+    });
+  </script>
+
+</body>
+</html>

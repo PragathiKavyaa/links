@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stopwatch Timer</title>
+  <style>
+    #timer {
+      font-size: 48px;
+      font-family: monospace;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 15px;
+      margin-right: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="timer">0</div>
+
+  <button id="startBtn">Start</button>
+  <button id="stopBtn">Stop</button>
+  <button id="resetBtn">Reset</button>
+
+  <script>
+    let seconds = 0;
+    let interval = null;
+
+    const timerDisplay = document.getElementById("timer");
+    const startBtn = document.getElementById("startBtn");
+    const stopBtn = document.getElementById("stopBtn");
+    const resetBtn = document.getElementById("resetBtn");
+
+    startBtn.addEventListener("click", () => {
+      if (interval === null) {
+        interval = setInterval(() => {
+          seconds++;
+          timerDisplay.textContent = seconds;
+        }, 1000);
+      }
+    });
+
+    stopBtn.addEventListener("click", () => {
+      clearInterval(interval);
+      interval = null;
+    });
+
+    resetBtn.addEventListener("click", () => {
+      clearInterval(interval);
+      interval = null;
+      seconds = 0;
+      timerDisplay.textContent = seconds;
+    });
+  </script>
+
+</body>
+</html>

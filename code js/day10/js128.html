@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS128</title>
+  <style>
+    #content {
+      display: none;
+      margin-top: 10px;
+      color: darkblue;
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="toggleVisibility()">Toggle Content</button>
+
+  <div id="content">This content will appear and disappear.</div>
+
+  <script>
+    function toggleVisibility() {
+      const element = document.getElementById("content");
+      if (element.style.display === "none" || element.style.display === "") {
+        element.style.display = "block";
+      } else {
+        element.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>

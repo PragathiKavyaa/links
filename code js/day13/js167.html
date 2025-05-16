@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JS167</title>
+</head>
+<body>
+
+  <h2>Find Person by Name</h2>
+
+  <input id="searchName" placeholder="Enter name to search" />
+  <button onclick="findPerson()">Find</button>
+
+  <h3>Result:</h3>
+  <p id="result"></p>
+
+  <script>
+    
+    const people = [
+      { name: "Alice", age: 25 },
+      { name: "Bob", age: 30 },
+      { name: "Charlie", age: 35 }
+    ];
+
+    function findPerson() {
+      const name = document.getElementById("searchName").value.trim().toLowerCase();
+      const result = document.getElementById("result");
+
+      const person = people.find(p => p.name.toLowerCase() === name);
+
+      if (person) {
+        result.textContent = `${person.name} is ${person.age} years old.`;
+      } else {
+        result.textContent = "Person not found.";
+      }
+    }
+  </script>
+
+</body>
+</html>

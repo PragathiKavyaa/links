@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS123</title>
+</head>
+<body>
+
+  <input type="password" id="passwordField" placeholder="Enter password">
+  <button onclick="togglePassword()">Show/Hide Password</button>
+
+  <script>
+    function togglePassword() {
+      const passwordInput = document.getElementById("passwordField");
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+      } else {
+        passwordInput.type = "password";
+      }
+    }
+  </script>
+
+</body>
+</html>

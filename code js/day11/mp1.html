@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>mp1</title>
+  <style>
+    body { font-family: Arial; text-align: center; margin-top: 50px; }
+    #timer { font-size: 2em; margin: 20px 0; }
+    button { padding: 10px 20px; margin: 5px; font-size: 16px; }
+  </style>
+</head>
+<body>
+
+  <h2>Persistent Stopwatch</h2>
+  <div id="timer">00:00:00</div>
+
+  <button onclick="startTimer()">Start</button>
+  <button onclick="stopTimer()">Stop</button>
+  <button onclick="resetTimer()">Reset</button>
+
+  <script>
+    let interval;
+    let startTime = null;
+    let elapsed = 0;
+
+    function formatTime(ms) {
+      const totalSeconds = Math.floor(ms / 1000);
+      const hrs = String(Math.floor(totalSeconds / 3600)).padStart(2, '0');
+      const mins = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
+      const secs = String(totalSeconds % 60).padStart(2, '0');
+      return `${hrs}:${mins}:${secs}`;
+    }
+
+    function updateDisplay() {
+      const now = Date.now();
+      let time = elapsed;
+      if (startTime !== null) {
+        time += now - startTime;
+      }
+      document.getElementById('timer').textContent = formatTime(time);
+    }
+
+    function startTimer() {
+      if (!startTime) {
+        startTime = Date.now();
+        sessionStorage.setItem('startTime', startTime);
+        interval = setInterval(updateDisplay, 1000);
+      }
+    }
+
+    function stopTimer() {
+      if (startTime) {
+        elapsed += Date.now() - startTime;
+        startTime = null;
+        clearInterval(interval);
+        sessionStorage.setItem('elapsed', elapsed);
+        sessionStorage.removeItem('startTime');
+      }
+    }
+
+    function resetTimer() {
+      clearInterval(interval);
+      startTime = null;
+      elapsed = 0;
+      sessionStorage.removeItem('startTime');
+      sessionStorage.removeItem('elapsed');
+      updateDisplay();
+    }
+
+    // Restore state on load
+    window.onload = () => {
+      const savedStart = sessionStorage.getItem('startTime');
+      const savedElapsed = sessionStorage.getItem('elapsed');
+
+      if (savedElapsed) elapsed = parseInt(savedElapsed);
+      if (savedStart) {
+        startTime = parseInt(savedStart);
+        interval = setInterval(updateDisplay, 1000);
+      }
+      updateDisplay();
+    };
+  </script>
+
+</body>
+</html>

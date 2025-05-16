@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS165</title>
+</head>
+<body>
+
+  <h2>Sort People by Age</h2>
+
+  <button onclick="sortByAgeAsc()">Sort by Age (Ascending)</button>
+  <button onclick="sortByAgeDesc()">Sort by Age (Descending)</button>
+
+  <h3>Sorted List:</h3>
+  <ul id="peopleList"></ul>
+
+  <script>
+    let people = [
+      { name: "Alice", age: 32 },
+      { name: "Bob", age: 25 },
+      { name: "Charlie", age: 40 },
+      { name: "David", age: 28 }
+    ];
+
+    function displayList(data) {
+      const list = document.getElementById("peopleList");
+      list.innerHTML = "";
+      data.forEach(p => {
+        const li = document.createElement("li");
+        li.textContent = `${p.name} (Age: ${p.age})`;
+        list.appendChild(li);
+      });
+    }
+
+    function sortByAgeAsc() {
+      const sorted = [...people].sort((a, b) => a.age - b.age);
+      displayList(sorted);
+    }
+
+    function sortByAgeDesc() {
+      const sorted = [...people].sort((a, b) => b.age - a.age);
+      displayList(sorted);
+    }
+
+    displayList(people);
+  </script>
+
+</body>
+</html>

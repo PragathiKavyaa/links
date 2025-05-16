@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS143</title>
+</head>
+<body>
+
+  <h2>Page Visit Tracker</h2>
+  <p>You have visited this page <span id="visitCount">0</span> times.</p>
+
+  <script>
+   
+    let visits = localStorage.getItem('pageVisits');
+
+    if (visits) {
+      visits = parseInt(visits) + 1;
+    } else {
+      visits = 1;
+    }
+
+    localStorage.setItem('pageVisits', visits);
+
+    document.getElementById('visitCount').textContent = visits;
+  </script>
+
+</body>
+</html>

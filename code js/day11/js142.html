@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS142</title>
+  <style>
+    body { font-family: Arial; max-width: 500px; margin: 40px auto; }
+    label { display: block; margin-top: 10px; }
+    input, select, textarea, button { width: 100%; padding: 8px; margin-top: 5px; }
+  </style>
+</head>
+<body>
+
+  <h2>Simple Survey Form</h2>
+
+  <form id="surveyForm">
+    <label>
+      Name:
+      <input type="text" id="name" name="name" />
+    </label>
+
+    <label>
+      Age:
+      <input type="number" id="age" name="age" />
+    </label>
+
+    <label>
+      Favorite Color:
+      <select id="color" name="color">
+        <option value="">Select</option>
+        <option value="Red">Red</option>
+        <option value="Blue">Blue</option>
+        <option value="Green">Green</option>
+        <option value="Yellow">Yellow</option>
+      </select>
+    </label>
+
+    <label>
+      Comments:
+      <textarea id="comments" name="comments"></textarea>
+    </label>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="result" style="margin-top: 20px;"></div>
+
+  <script>
+    const form = document.getElementById('surveyForm');
+    const result = document.getElementById('result');
+
+    window.onload = () => {
+      ['name', 'age', 'color', 'comments'].forEach(id => {
+        const saved = sessionStorage.getItem(id);
+        if (saved) {
+          document.getElementById(id).value = saved;
+        }
+      });
+    };
+
+    form.addEventListener('input', e => {
+      sessionStorage.setItem(e.target.id, e.target.value);
+    });
+
+    form.addEventListener('submit', e => {
+      e.preventDefault(); 
+
+      const data = {
+        name: document.getElementById('name').value,
+        age: document.getElementById('age').value,
+        color: document.getElementById('color').value,
+        comments: document.getElementById('comments').value
+      };
+
+      result.innerHTML = `
+        <h3>Submitted Data:</h3>
+        <p><strong>Name:</strong> ${data.name}</p>
+        <p><strong>Age:</strong> ${data.age}</p>
+        <p><strong>Favorite Color:</strong> ${data.color}</p>
+        <p><strong>Comments:</strong> ${data.comments}</p>
+      `;
+
+    });
+  </script>
+
+</body>
+</html>

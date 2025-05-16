@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MP1</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    input, button { margin: 5px; padding: 5px; }
+    .section { margin-top: 20px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+  </style>
+</head>
+<body>
+  <h2>Inventory Management System</h2>
+
+  <div class="section">
+    <h3>Add Product</h3>
+    <input id="pid" placeholder="Product ID" />
+    <input id="pname" placeholder="Product Name" />
+    <input id="pcategory" placeholder="Category" />
+    <input id="pqty" type="number" placeholder="Quantity" />
+    <input id="pprice" type="number" placeholder="Price" />
+    <button onclick="addProduct()">Add Product</button>
+  </div>
+
+  <div class="section">
+    <h3>Search Product</h3>
+    <input id="searchInput" placeholder="Enter ID or Name" />
+    <button onclick="searchProduct()">Search</button>
+    <p id="searchResult"></p>
+  </div>
+
+  <div class="section">
+    <h3>Update Inventory</h3>
+    <input id="updateId" placeholder="Product ID" />
+    <input id="updateQty" type="number" placeholder="Quantity to Add(+)/Remove(-)" />
+    <button onclick="updateInventory()">Update</button>
+  </div>
+
+  <div class="section">
+    <h3>Total Inventory Value</h3>
+    <button onclick="calculateTotalValue()">Calculate Total Value</button>
+    <p id="totalValue"></p>
+  </div>
+
+  <div class="section">
+    <h3>Product List</h3>
+    <table id="productTable">
+      <thead>
+        <tr><th>ID</th><th>Name</th><th>Category</th><th>Quantity</th><th>Price</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script>
+    let inventory = [];
+
+    function addProduct() {
+      const id = document.getElementById("pid").value;
+      const name = document.getElementById("pname").value;
+      const category = document.getElementById("pcategory").value;
+      const quantity = parseInt(document.getElementById("pqty").value);
+      const price = parseFloat(document.getElementById("pprice").value);
+
+      if (!id || !name || isNaN(quantity) || isNaN(price)) {
+        alert("Please enter all product details correctly.");
+        return;
+      }
+
+      inventory.push({ id, name, category, quantity, price });
+      displayProducts();
+    }
+
+    function searchProduct() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      const product = inventory.find(p => p.id.toLowerCase() === query || p.name.toLowerCase() === query);
+      const result = product
+        ? Found: ${product.name} - Qty: ${product.quantity}
+        : "Product not found.";
+      document.getElementById("searchResult").innerText = result;
+    }
+
+    function updateInventory() {
+      const id = document.getElementById("updateId").value;
+      const qtyChange = parseInt(document.getElementById("updateQty").value);
+      const product = inventory.find(p => p.id === id);
+
+      if (product) {
+        product.quantity += qtyChange;
+        if (product.quantity < 0) product.quantity = 0;
+        displayProducts();
+      } else {
+        alert("Product not found.");
+      }
+    }
+
+    function calculateTotalValue() {
+      const total = inventory.reduce((sum, p) => sum + (p.quantity * p.price), 0);
+      document.getElementById("totalValue").innerText = `Total Inventory Value: $${total.toFixed(2)}`;
+    }
+
+    function displayProducts() {
+      const tableBody = document.getElementById("productTable").getElementsByTagName("tbody")[0];
+      tableBody.innerHTML = "";
+
+      inventory.forEach(p => {
+        const row = `<tr>
+          <td>${p.id}</td>
+          <td>${p.name}</td>
+          <td>${p.category}</td>
+          <td>${p.quantity}</td>
+          <td>$${p.price.toFixed(2)}</td>
+        </tr>`;
+        tableBody.innerHTML += row;
+      });
+    }
+  </script>
+</body>
+</html>

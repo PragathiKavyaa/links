@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS158</title>
+</head>
+<body>
+  <h1>Convert Object to JSON</h1>
+  <pre id="output"></pre>
+
+  <script>
+
+    const student = {
+      name: "Alice",
+      age: 22,
+      grade: "A"
+    };
+
+    const jsonString = JSON.stringify(student, null, 2);
+
+    document.getElementById("output").textContent = jsonString;
+  </script>
+</body>
+</html>

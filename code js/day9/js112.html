@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS112</title>
+</head>
+<body>
+
+  <p>This is paragraph 1.</p>
+  <p>This is paragraph 2.</p>
+  <p>This is paragraph 3.</p>
+
+  <button onclick="changeTextColors()">Change Text Color</button>
+
+  <script>
+    function changeTextColors() {
+      const paragraphs = document.querySelectorAll("p");
+      paragraphs.forEach(function(p) {
+        p.style.color = "blue"; 
+      });
+    }
+  </script>
+
+</body>
+</html>

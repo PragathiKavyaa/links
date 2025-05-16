@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS134</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+    }
+    .product {
+      margin-bottom: 15px;
+    }
+    button {
+      margin-left: 10px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    #cartItems {
+      margin-top: 30px;
+      border-top: 1px solid #ccc;
+      padding-top: 15px;
+    }
+    #cartItems li {
+      margin-bottom: 8px;
+    }
+    #clearCart {
+      margin-top: 15px;
+      padding: 8px 15px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Simple Shopping Cart</h1>
+
+  <div class="product">
+    <span>Apple</span>
+    <button onclick="addToCart('Apple')">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <span>Banana</span>
+    <button onclick="addToCart('Banana')">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <span>Orange</span>
+    <button onclick="addToCart('Orange')">Add to Cart</button>
+  </div>
+
+  <h2>Your Cart:</h2>
+  <ul id="cartItems"></ul>
+  <button id="clearCart" onclick="clearCart()">Clear Cart</button>
+
+  <script>
+    const cartItemsUl = document.getElementById('cartItems');
+
+    window.onload = () => {
+      displayCart();
+    };
+
+    function addToCart(item) {
+      
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      cart.push(item);
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+
+      displayCart();
+    }
+
+    function displayCart() {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      cartItemsUl.innerHTML = '';
+
+      if (cart.length === 0) {
+        cartItemsUl.innerHTML = '<li>Your cart is empty.</li>';
+        return;
+      }
+
+      const counts = {};
+      cart.forEach(item => {
+        counts[item] = (counts[item] || 0) + 1;
+      });
+
+      for (const [item, qty] of Object.entries(counts)) {
+        const li = document.createElement('li');
+        li.textContent = `${item} (x${qty}) `;
+        
+        const removeBtn = document.createElement('button');
+        removeBtn.textContent = 'Remove one';
+        removeBtn.onclick = () => removeOne(item);
+        li.appendChild(removeBtn);
+
+        cartItemsUl.appendChild(li);
+      }
+    }
+
+    function clearCart() {
+      localStorage.removeItem('cart');
+      displayCart();
+    }
+
+    function removeOne(item) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const index = cart.indexOf(item);
+      if (index > -1) {
+        cart.splice(index, 1); 
+      }
+      localStorage.setItem('cart', JSON.stringify(cart));
+      displayCart();
+    }
+  </script>
+
+</body>
+</html>

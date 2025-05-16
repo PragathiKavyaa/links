@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS146</title>
+</head>
+<body>
+  <h1>Product List</h1>
+  <ul id="productList"></ul>
+
+  <script>
+    
+    const apiUrl = 'https://fakestoreapi.com/products';
+
+    fetch(apiUrl)
+      .then(response => response.json())
+      .then(products => {
+        const list = document.getElementById('productList');
+
+        products.forEach(product => {
+          const listItem = document.createElement('li');
+          listItem.innerHTML = `
+            <strong>${product.title}</strong><br>
+            Price: $${product.price}<br>
+            <img src="${product.image}" alt="${product.title}" width="100">
+          `;
+          list.appendChild(listItem);
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching products:', error);
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS137</title>
+</head>
+<body>
+
+  <h2>Welcome to this page!</h2>
+  <p id="lastVisitMsg">Checking last visit...</p>
+
+  <script>
+    const lastVisitMsg = document.getElementById('lastVisitMsg');
+
+    window.onload = () => {
+      const lastPage = localStorage.getItem('lastVisitedPage');
+      if (lastPage && lastPage !== window.location.href) {
+        lastVisitMsg.textContent = Your last visited page was: ${lastPage};
+      } else {
+        lastVisitMsg.textContent = "This is your first visit or you've refreshed this page.";
+      }
+
+      localStorage.setItem('lastVisitedPage', window.location.href);
+    };
+  </script>
+
+</body>
+</html>

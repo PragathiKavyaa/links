@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS109</title>
+</head>
+<body>
+
+  <ul id="myList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+  </ul>
+
+  <button onclick="addListItem()">Add Item</button>
+
+  <script>
+    function addListItem() {
+      const list = document.getElementById("myList");
+      const newItem = document.createElement("li");
+      newItem.textContent = "New Item";
+      list.appendChild(newItem);
+    }
+  </script>
+
+</body>
+</html>

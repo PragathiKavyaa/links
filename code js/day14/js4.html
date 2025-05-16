@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS4</title>
+</head>
+<body>
+  <h1>Weather Lookup</h1>
+  <input type="text" id="city" placeholder="Enter city name">
+  <button onclick="getWeather()">Get Weather</button>
+  <p id="weatherResult"></p>
+
+  <script>
+    const apiKey = 'YOUR_API_KEY_HERE'; 
+
+    function getWeather() {
+      const city = document.getElementById('city').value.trim();
+      if (!city) return;
+
+      fetch("https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric")
+        .then(response => {
+          if (!response.ok) {
+            throw new Error("City not found");
+          }
+          return response.json();
+        })
+        .then(data => {
+          const result = Weather in `${data.name}: ${data.weather[0].description}, Temp: ${data.main.temp}°C`;
+          document.getElementById('weatherResult').textContent = result;
+        })
+        .catch(error => {
+          document.getElementById('weatherResult').textContent = error.message;
+        });
+    }
+  </script>
+</body>
+</html>

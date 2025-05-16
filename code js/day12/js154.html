@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS154</title>
+</head>
+<body>
+  <h1>Employees Grouped by Department</h1>
+  <div id="groupedOutput"></div>
+
+  <script>
+   
+    const employees = [
+      { name: "Alice", department: "Engineering" },
+      { name: "Bob", department: "HR" },
+      { name: "Charlie", department: "Engineering" },
+      { name: "Diana", department: "Marketing" },
+      { name: "Ethan", department: "HR" }
+    ];
+
+    const grouped = employees.reduce((acc, emp) => {
+      if (!acc[emp.department]) {
+        acc[emp.department] = [];
+      }
+      acc[emp.department].push(emp.name);
+      return acc;
+    }, {});
+
+    const output = document.getElementById("groupedOutput");
+    for (const department in grouped) {
+      const section = document.createElement("div");
+      section.innerHTML = `<h3>${department}</h3><ul>${grouped[department].map(name => `<li>${name}</li>`).join('')}</ul>`;
+      output.appendChild(section);
+    }
+  </script>
+</body>
+</html>

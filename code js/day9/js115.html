@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS115</title>
+</head>
+<body>
+
+  <p id="toggleText">This is the first text.</p>
+  <button onclick="toggleContent()">Toggle Text</button>
+
+  <script>
+    function toggleContent() {
+      const paragraph = document.getElementById("toggleText");
+      if (paragraph.innerText === "This is the first text.") {
+        paragraph.innerText = "This is the second text.";
+      } else {
+        paragraph.innerText = "This is the first text.";
+      }
+    }
+  </script>
+
+</body>
+</html>

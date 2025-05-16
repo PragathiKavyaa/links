@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS113</title>
+  <style>
+    img {
+      transition: border 0.3s ease;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <img id="myImage" src="./bgimages/headerimage.png" alt="Example Image">
+
+  <script>
+    const image = document.getElementById("myImage");
+
+    image.addEventListener("mouseover", function () {
+      image.style.border = "3px solid red";
+    });
+
+    image.addEventListener("mouseout", function () {
+      image.style.border = "none";
+    });
+  </script>
+
+</body>
+</html>

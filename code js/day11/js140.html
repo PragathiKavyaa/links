@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Store Object as JSON</title>
+</head>
+<body>
+
+  <h2>Store Object as JSON String</h2>
+  <button onclick="storeObject()">Store Object</button>
+  <button onclick="showStored()">Show Stored JSON</button>
+
+  <pre id="output"></pre>
+
+  <script>
+    const output = document.getElementById('output');
+
+    function storeObject() {
+      const person = {
+        name: "Alice",
+        age: 30,
+        hobbies: ["reading", "gaming", "hiking"]
+      };
+
+      
+      const jsonString = JSON.stringify(person);
+
+     
+      localStorage.setItem('personData', jsonString);
+
+      output.textContent = 'Object stored as JSON string!';
+    }
+
+    function showStored() {
+      const stored = localStorage.getItem('personData');
+      if (stored) {
+        output.textContent = stored;
+      } else {
+        output.textContent = 'No data found in localStorage.';
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS149</title>
+</head>
+<body>
+  <h1>Find a Product</h1>
+
+  <input type="text" id="searchInput" placeholder="Enter product name">
+  <button onclick="findProduct()">Search</button>
+
+  <p id="result"></p>
+
+  <script>
+    const products = [
+      { name: "Laptop", price: 1200 },
+      { name: "Phone", price: 800 },
+      { name: "Tablet", price: 500 }
+    ];
+
+    function findProduct() {
+      const searchName = document.getElementById("searchInput").value.trim().toLowerCase();
+      const resultElement = document.getElementById("result");
+
+      const foundProduct = products.find(product => product.name.toLowerCase() === searchName);
+
+      if (foundProduct) {
+        resultElement.textContent = `Product Found: ${foundProduct.name} - $${foundProduct.price}`;
+      } else {
+        resultElement.textContent = "Product not found.";
+      }
+    }
+  </script>
+</body>
+</html>

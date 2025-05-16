@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS116</title>
+</head>
+<body>
+
+  <button onclick="addHeading()">Add New Heading</button>
+
+  <script>
+    function addHeading() {
+      const newHeading = document.createElement("h2");
+      newHeading.textContent = "This is a new dynamic heading!";
+      document.body.appendChild(newHeading);
+    }
+  </script>
+
+</body>
+</html>

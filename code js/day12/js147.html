@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sort by Age</title>
+</head>
+<body>
+  <h1>Sorted Employees by Age</h1>
+  <ul id="employeeList"></ul>
+
+  <script>
+   
+    const employees = [
+      { name: "Alice", age: 30, position: "Developer" },
+      { name: "Bob", age: 25, position: "Designer" },
+      { name: "Charlie", age: 35, position: "Manager" }
+    ];
+
+    employees.sort((a, b) => a.age - b.age);
+
+    const list = document.getElementById("employeeList");
+    employees.forEach(employee => {
+      const listItem = document.createElement("li");
+      listItem.textContent = `${employee.name}, Age: ${employee.age}, Position: ${employee.position}`;
+      list.appendChild(listItem);
+    });
+  </script>
+</body>
+</html>
