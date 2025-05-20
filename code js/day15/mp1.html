@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MP1</title>
+  <style>
+    .error { color: red; font-size: 0.9em; }
+    input { display: block; margin-bottom: 5px; }
+  </style>
+</head>
+<body>
+    <script src="./script/mp1.js"></script>
+  <h2>User Registration</h2>
+  <form id="registrationForm">
+    <label>
+      Name:
+      <input type="text" id="name">
+      <div id="nameError" class="error"></div>
+    </label>
+
+    <label>
+      Email:
+      <input type="text" id="email">
+      <div id="emailError" class="error"></div>
+    </label>
+
+    <button type="submit">Register</button>
+  </form>
+
+</body>
+</html>

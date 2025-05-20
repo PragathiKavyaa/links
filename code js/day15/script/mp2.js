@@ -1,0 +1,30 @@
+
+    function logErrorToLocalStorage(error) {
+      const logKey = 'apiErrorLogs';
+      const timestamp = new Date().toISOString();
+      const errorLog = {
+        message: error.message || 'Unknown error',
+        time: timestamp
+      };
+
+      const existingLogs = JSON.parse(localStorage.getItem(logKey)) || [];
+      existingLogs.push(errorLog);
+      localStorage.setItem(logKey, JSON.stringify(existingLogs));
+    }
+
+    async function callApi() {
+      try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts/1');
+
+        if (!response.ok) {
+          throw new Error(API Error: `${response.status} ${response.statusText}`);
+        }
+
+        const data = await response.json();
+        console.log('API Response:', data);
+      } catch (error) {
+        console.error('Caught API error:', error.message);
+        logErrorToLocalStorage(error);
+      }
+    }
+    console.table(JSON.parse(localStorage.getItem('apiErrorLogs')));
