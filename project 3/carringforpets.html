@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carring For Pets</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <style>
+
+        *{margin: 0; padding: 0; box-sizing: border-box;font-family: "Nunito", sans-serif; font-optical-sizing: auto;  font-weight: 500; font-style: normal;}
+        
+        .advice{margin: auto; margin-top: 30px; margin-bottom: 100px; height: 700px;}
+        .advice1 .one{display: flex;align-items: center; justify-content: center;}
+        .advice1 .one img{width: 70px; height: 70px; position: relative; left: 130px;}
+        .advice1 .one figcaption{font-size: 35px; color: #471c51; font-weight: 700; position: absolute;}
+        .blogs .two{display: flex;align-items: center; justify-content: center;}
+        .blogs .two img{width: 70px; height: 70px;position: relative; left: -130px; bottom: 10px; transform: rotate(-90deg);}
+        .blogs .two figcaption{font-size: 35px; color: #471c51; font-weight: 700; position: absolute; margin-left: 20px;}
+        .advice1 p{color: black; font-size: 30px;  margin: auto; text-align: center;width: 800px; }
+        .advice2 {display: flex; column-gap: 50px; height: 350px; justify-content: space-evenly; padding: 20px 50px; }
+        .advice2 img{width: 350px; height: 300px;}
+        .advice2 h1{width: 300px; font-size: 25px; font-weight: bold;}
+        .advice2 p{width: 300px; font-size: 20px;}
+        .advice2 a{text-decoration: none; color: black;}
+
+        .petcare{margin: auto; margin-top: 30px; margin-bottom: 100px; height: 700px;}
+        .petcare1 figure{display: flex;align-items: center; justify-content: center;}
+        .petcare1 figure img{width: 70px; height: 70px;position: relative; left: -130px; bottom: 10px; transform: rotate(-90deg);}
+        .petcare1 figure figcaption{font-size: 35px; color: #471c51; font-weight: 700; position: absolute; margin-left: 20px;}
+        
+        .petcare2 {display: flex; justify-content: center;  gap: 20px; padding: 10px 20px; }
+        .petcare2 img{width: 400px; height: 350px; border-radius: 50px;}
+        .petcare2 h1{width: 350px; font-size: 25px; font-weight: bold;}
+        .petcare2 p{width: 300px; font-size: 20px;}
+
+        @media(max-width:600px){
+            .advice{width: 100%; height: 1900px;}
+            .advice1 .one img{left: 100px;}
+            .advice1 .one figcaption{text-align: center; font-size: 25px;}
+            .advice1 p{text-align: center; width: 100%; font-size: 25px;}
+            .advice1 .two img{left: -90px;}
+            .advice1 .two figcaption{font-size: 25px; text-align: center;}
+            .advice2 {flex-direction: column; row-gap: 50px; height: 700px; padding: 10px 20px;}
+            .advice2 img{width: 250px; height: 300px;}
+            .advice2 h1{width: 100%; font-size: 25px;}
+            .advice2 p{width: 300px; font-size: 20px;}
+            .petcare{height: 1200px;}
+            .petcare1 .two img{left: 50px; margin-bottom: 50px;}
+            .petcare1 .two figcaption{font-size: 20px; text-align: center;}
+            .petcare2 {width: 100%; flex-direction: column; row-gap: 50px;  padding: 5px 10px;}
+            .petcare2 img{width: 300px;}
+            .petcare2 h1{width: 300px; font-size: 20px; }
+            .petcare2 p{width: 300px; font-size: 18px;}
+        }
+
+        @media(min-width:601px) and (max-width:1023px){
+            .advice{width: 100%; height: 1200px;}
+            .advice1 p{width: 100%;}
+            .advice2 {display: grid; grid-template-columns: repeat(2,1fr); column-gap: 10px; row-gap: 20px; width: 80%;}
+            .petcare2{width: 100%;}
+            .petcare2 img{width: 300px; height: 350px;}
+            .petcare2 h1{width: 300px; font-size: 20px;}
+            .petcare2 p{width: 300px; font-size: 18px;}
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px){
+            .advice2{width: 100%;}
+            .advice2 img{width: 200px; height: 250px;}
+            .advice2 h1{width: 250px; }
+            .advice2 p{width: 250px; }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="headone">
+            <a href="./petme.html"><img src="./images/logo.png" alt="logo"></a>
+        </div>
+        <div class="navbar">
+            <a href="./findapet.html">Find a Pet</a>
+            <a href="./adoptionfaq.html">Adoption FAQ</a>
+            <a href="./carringforpets.html">Caring for Pets</a>
+            <a href="./aboutus.html">About Us</a>
+            <a href=""><img src="./images/user.png" alt="user"></a>
+        </div>
+    </header>
+
+    <section class="advice">
+        <div class="advice1">
+         <figure class="one">
+            <figcaption>Carring for Pets</figcaption>
+            <img src="./images/paw icon.png" alt="paw">
+        </figure>
+        <p>Get guidance on how to take care of PETS!</p>
+        <div class="blogs">
+         <figure class="two">
+            <img src="./images/paw icon.png" alt="paw">
+            <figcaption>Blogs on Pet Care</figcaption>
+        </figure>
+        </div>
+        </div>
+        <div class="advice2">
+            <a href="./carryingforpets2.html">
+            <div class="a1">
+                <img src="./images/blog 1.png" alt="blog1">
+                <h1>The Ultimate Check-list for First-time pet parents</h1>
+                <p>Getting a new pet? Here's everything you need to know before you pring them home</p>    
+            </div>
+            </a>
+            <a href="./carryingforpets2.html">
+            <div class="a2">
+                <img src="./images/blog 2.png" alt="blog2">
+                <h1>Essential questions to ask before adopting a pet</h1>
+                <p>Not sure if you're ready? Here are the key things to consider before adopting</p>    
+            </div>
+            </a>
+            <a href="./carryingforpets2.html">
+            <div class="a3">
+                <img src="./images/blog 3.png" alt="blog3">
+                <h1>The First 24-hours with your adopted pet!</h1>
+                <p>From feeding to bonding... Here's what you need to know about your first day together</p>    
+            </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="petcare">
+        <div class="petcare1">
+         <figure>
+            <img src="./images/paw icon.png" alt="paw">
+            <figcaption>Blogs on Pet Care</figcaption>
+        </figure>
+        </div>
+        <div class="petcare2">
+            <div class="c1">
+                <img src="./images/gif 1 caring for pets.gif" alt="blog1">
+                <h1>Pets and Mental Wellness - How cool it is to have pet...</h1>
+                <p>Getting a new pet? Here's everything you need to know before you pring them home</p>    
+            </div>
+            <div class="c2">
+                <img src="./images/gif 2.gif" alt="blog2">
+                <h1>Tips to keeping your dog active & Healthy</h1>
+                <p>Not sure if you're ready? Here are the key things to consider before adopting</p>    
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <section class="f1">
+        <div class="footer1">
+            <figure>
+                <img src="./images/logo.png" alt="logo">
+                <figcaption>Find And Adopt Your New Little Bestfriend</figcaption>
+            </figure>
+        </div>
+        <div class="footer2">
+            <h1>DISCOVER</h1>
+            <a href="./findapet.html">Find a pet</a>
+            <a href="./adoptionworks.html">How adoption works</a>
+            <a href="./aboutus.html">About us</a>
+        </div>
+        <div class="footer3">
+            <h1>INFO</h1>
+            <a href="./adoptionfaq.html">FAQ</a>
+            <a href="">Contact Us</a>
+            <a href="./privacypolicy.html">Privacy Policy</a>
+            <a href="./termsofservice.html">Terms of service</a>
+        </div>
+    </section>
+    <section class="f2">
+        <div class="footer4">
+            <figure>
+                <img src="./images/social icons footer.png" alt="social">
+                <figcaption>PetMe @ 2020.All Rights Reserved</figcaption>
+            </figure>
+        </div>
+    </section>
+    </footer>
+</body>
+</html>

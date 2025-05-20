@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birds</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;font-family: "Nunito", sans-serif; font-optical-sizing: auto;  font-weight: 500; font-style: normal;}
+
+        .dogs{margin: auto; margin-top: 30px; margin-bottom: 30px;}
+        .dogs1 figure{display: flex;align-items: center; justify-content: center;}
+        .dogs1 figure img{width: 70px; height: 70px;position: relative; right: 30px; bottom: 10px; transform: rotate(-90deg);}
+        .dogs1 figure figcaption{font-size: 35px; color: #471c51; font-weight: 700; position: absolute;}
+        .dogs1 p{color: black; font-size: 30px;  margin: auto; text-align: center; padding: 50px 100px; width: 1000px; line-height: 1.6;}
+        .dogs .grids{display: grid; grid-template-columns: repeat(3,1fr);  justify-content: center; align-items: center; row-gap: 50px; column-gap: 30px; max-width: 1000px; margin: auto;}
+        .grids .grids1 > img, .grids .grids2 > img, .grids .grids3 > img, .grids .grids4 > img, .grids .grids5 > img{width: 300px; height: 300px; border-radius: 15px; text-align: center;}
+        .grids .name{display: flex; column-gap: 10px;}
+        .grids h1{font-size: 30px; font-weight: 800;}
+        .grids p{font-size: 20px; font-weight: 600;}
+        .grids a{text-decoration: none; color: black;}
+
+        .works{margin: auto; margin-top: 30px; margin-bottom: 30px;}
+        .works1 figure{display: flex;align-items: center; justify-content: center;}
+        .works1 figure img{width: 70px; height: 70px;position: relative; right: 180px; transform: rotate(-90deg);}
+        .works1 figure figcaption{font-size: 35px; color: #471c51; font-weight: 700; position: absolute;}
+        .works1 p{color: black; font-size: 25px;  margin: auto; text-align: center; padding: 50px 100px; width: 800px; line-height: 1.6;}
+        
+        .works .works2{display: flex; padding: 20px 50px; justify-content: space-evenly;}
+        .works2 img{width: 310px; height: 310px; border-radius: 50px; align-items: center; position: absolute; }
+        .works2 button{width: 60px; height: 60px; background-color: #EF4E3A; color: #FFFFFF; border: none; border-radius: 15px; font-weight: 800; font-size: 20px;}
+        .works2 h1{font-size: 25px; color: #471c51; font-weight: 800; text-align: center;}
+        .works2 p{font-size: 20px; color: black; text-align: center; width: 300px;}
+
+        .works2 .b1, .works2 .b2, .works2 .b3{width: 300px; height: 300px; border-radius: 50px; border: 3px solid #471c51; position: relative; z-index: 1;}
+        .works2 .b1{ transform: rotate(5deg);}
+        .works2 .b2{transform: rotate(-10deg);}
+        .works2 .b3{transform: rotate(5deg);}
+
+        .works2 .w1 > .one{position: relative; bottom: 320px; left: 250px; transform: rotate(-10deg); z-index: 2;}
+        .works2 .w2 > .two{position: relative; bottom: 320px; left: 250px; transform: rotate(10deg); z-index: 2;}
+        .works2 .w3 > .three{position: relative; bottom: 320px; left: 250px; transform: rotate(-15deg);z-index: 2;}
+
+        @media(max-width:600px){
+
+            .dogs{width: 100%;}
+            .dogs1 figure img{right: 30px;}
+            .dogs1 figure figcaption{font-size: 20px; text-align: center;}
+            .dogs1 p{padding: 10px 20px; width: 100%; font-size: 20px;}
+            .dogs .grids{grid-template-columns: 1fr; align-items: center; width: 100%;}
+            .grids .grids1 > img, .grids .grids2 > img, .grids .grids3 > img, .grids .grids4 > img, .grids .grids5 > img{width: 250px; height: 250px; margin-left: 30px;}
+            .grids h1{font-size: 25px;}
+            .grids .name{justify-content: space-evenly;column-gap: 0;}
+            .grids p{font-size: 15px; text-align: center;}
+            .grids h2{text-align: center;}
+            .works{width: 100%;}
+            .works1 figure img{right: 130px;}
+            .works1 figure figcaption{font-size: 25px; text-align: center;}
+            .works1 p{padding: 10px 20px; width: 100%;font-size: 20px;}
+            .works .works2{flex-direction: column; padding: 10px 15px; row-gap: 50px;}
+            .works2 img{width: 250px; height: 250px;}
+            .works2 .b1, .works2 .b2, .works2 .b3{width: 250px; height: 250px;}
+            .works2 .w1 > .one{bottom: 290px; left: 200px;}
+            .works2 .w2 > .two{bottom: 290px; left: 200px;}
+            .works2 .w3 > .three{bottom: 290px; left: 200px;}
+        }
+
+        @media(min-width:601px) and (max-width:1023px){
+            body{overflow-x: hidden; width: 100%;}
+            .dogs{width: 100%; overflow-x: hidden;}
+            .dogs1 p{padding: 10px 50px; width: 90%;}
+            .dogs .grids{width: 100%; margin-left: 30px; grid-template-columns: repeat(2,1fr); column-gap: 50px; row-gap: 20px;}
+            .works{width: 100%;}
+            .works1 p{width: 100%;}
+            .works .works2{width: 100%; display: grid; grid-template-columns: repeat(2,1fr); column-gap: 50px; row-gap: 20px; overflow-x: hidden;}
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px){
+
+            .works{width: 100%;}
+            .works .works2{row-gap: 30px;}
+            .works2 img{width: 230px; height: 230px;}
+            .works2 .b1, .works2 .b2, .works2 .b3{width: 230px; height: 230px;}
+            .works2 .w1 > .one{ bottom: 250px; left: 200px; }
+            .works2 .w2 > .two{ bottom: 250px; left: 200px;}
+            .works2 .w3 > .three{ bottom: 250px; left: 200px;}
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="headone">
+            <a href="./petme.html"><img src="./images/logo.png" alt="logo"></a>
+        </div>
+        <div class="navbar">
+            <a href="./findapet.html">Find a Pet</a>
+            <a href="./adoptionfaq.html">Adoption FAQ</a>
+            <a href="./carringforpets.html">Caring for Pets</a>
+            <a href="./aboutus.html">About Us</a>
+            <a href=""><img src="./images/user.png" alt="user"></a>
+        </div>
+    </header>
+
+    <section class="dogs">
+        <div class="dogs1">
+         <figure>
+            <img src="./images/paw icon.png" alt="paw">
+            <figcaption>Birds</figcaption>
+        </figure>
+        <p>These categories encompass a wide range  of animals looking for loving homes!</p>
+        </div>
+        <div class="grids">
+            <a href="./birdsdetails.html"><figure class="grids1">
+                <img src="./images/birds 1.png" alt="dogs1">
+                <div class="name">
+                    <h1>Pepper</h1>
+                    <img src="./images/female icon.png" alt="female">
+                </div>
+                <p>Juvenile - 7 to 12 months</p><hr>
+                <h2>World of All Animal Care & Adoption</h2>
+            </figure></a>
+            <a href="./birdsdetails.html"><figure class="grids2">
+                <img src="./images/birds 2.png" alt="dogs2">
+                <div class="name">
+                    <h1>Drake</h1>
+                    <img src="./images/male icon.png" alt="male">
+                </div>
+                <p>Young Adult - 13 months</p><hr>
+                <h2>World of All Animal Care & Adoption</h2>
+            </figure></a>
+            <a href="./birdsdetails.html"><figure class="grids3">
+                <img src="./images/birds 3.png" alt="dogs3">
+                <div class="name">
+                    <h1>Chiko</h1>
+                    <img src="./images/female icon.png" alt="female">
+                </div>
+                <p>Puppy 0 - 3 months</p><hr>
+                <h2>World of All Animal Care & Adoption</h2>
+            </figure></a>
+            <a href="./birdsdetails.html"><figure class="grids4">
+                <img src="./images/birds 4.png" alt="dogs4">
+                <div class="name">
+                    <h1>Pepper</h1>
+                    <img src="./images/female icon.png" alt="female">
+                </div>
+                <p>Juvenile - 7 to 12 months</p><hr>
+                <h2>World of All Animal Care & Adoption</h2>
+            </figure></a>
+            <a href="./birdsdetails.html"><figure class="grids5">
+                <img src="./images/birds 5.png" alt="dogs5">
+                <div class="name">
+                    <h1>Drake</h1>
+                    <img src="./images/male icon.png" alt="male">
+                </div>
+                <p>Young Adult - 13 months</p><hr>
+                <h2>World of All Animal Care & Adoption</h2>
+            </figure></a>
+            <a href="./birdsdetails.html"><figure class="grids6">
+                <img src="./images/birds 6.png" alt="dogs6">
+                <div class="name">
+                    <h1>Chiko</h1>
+                    <img src="./images/female icon.png" alt="female">
+                </div>
+                <p>Puppy 0 - 3 months</p><hr>
+                <h2>World of All Animal Care & Adoption</h2>
+            </figure></a>
+             <a href="./birdsdetails.html"><figure class="grids7">
+                <img src="./images/birds 7.png" alt="dogs7">
+                <div class="name">
+                    <h1>Pepper</h1>
+                    <img src="./images/female icon.png" alt="female">
+                </div>
+                <p>Juvenile - 7 to 12 months</p><hr>
+                <h2>World of All Animal Care & Adoption</h2>
+            </figure></a>
+            <a href="./birdsdetails.html"><figure class="grids8">
+                <img src="./images/birds 8.png" alt="dogs8">
+                <div class="name">
+                    <h1>Drake</h1>
+                    <img src="./images/male icon.png" alt="male">
+                </div>
+                <p>Young Adult - 13 months</p><hr>
+                <h2>World of All Animal Care & Adoption</h2>
+            </figure></a>
+            <a href="./birdsdetails.html"><figure class="grids9">
+                <img src="./images/birds 9.png" alt="dogs9">
+                <div class="name">
+                    <h1>Chiko</h1>
+                    <img src="./images/female icon.png" alt="female">
+                </div>
+                <p>Puppy 0 - 3 months</p><hr>
+                <h2>World of All Animal Care & Adoption</h2>
+            </figure></a>
+            <a href="./birdsdetails.html"><figure class="grids10">
+                <img src="./images/birds 10.png" alt="dogs10">
+                <div class="name">
+                    <h1>Pepper</h1>
+                    <img src="./images/female icon.png" alt="female">
+                </div>
+                <p>Juvenile - 7 to 12 months</p><hr>
+                <h2>World of All Animal Care & Adoption</h2>
+            </figure></a>
+            
+        </div>
+    </section>
+
+    <section class="works">
+        <div class="works1">
+         <figure>
+            <img src="./images/paw icon.png" alt="paw">
+            <figcaption>How Adoption Works</figcaption>
+        </figure>
+        <p>To Embrace the joy of pet adoption, and create a lasting bond with your new companion you will only
+            need to follow the below <b>THREE STEPS</b>
+        </p>
+        </div>
+        <div class="works2">
+            <div class="w1">
+                <img src="./images/find your pet.png" alt="pet" class="p1"><div class="b1"></div>
+                <button class="one">1</button>
+                <h1>FIND YOUR PET</h1>
+                <p>Discover your perfect companion by browsing our extensive databasae of adoptable animals</p>    
+            </div>
+            <div class="w2">
+                <img src="./images/know your pet.png" alt="pet" class="p2"><div class="b2"></div>
+                <button class="two">2</button>
+                <h1>KNOW YOUR PET</h1>
+                <p>Before bringing a new friend home, take the time to get to know them</p>    
+            </div>
+            <div class="w3">
+                <img src="./images/take your pet.png" alt="pet" class="p3"><div class="b3"></div>
+                <button class="three">3</button>
+                <h1>TAKE YOUR PET HOME</h1>
+                <p>Once you've found your ideal pet, prepare your home for thier arrival</p>    
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <section class="f1">
+        <div class="footer1">
+            <figure>
+                <img src="./images/logo.png" alt="logo">
+                <figcaption>Find And Adopt Your New Little Bestfriend</figcaption>
+            </figure>
+        </div>
+        <div class="footer2">
+            <h1>DISCOVER</h1>
+            <a href="./findapet.html">Find a pet</a>
+            <a href="./adoptionworks.html">How adoption works</a>
+            <a href="./aboutus.html">About us</a>
+        </div>
+        <div class="footer3">
+            <h1>INFO</h1>
+            <a href="./adoptionfaq.html">FAQ</a>
+            <a href="">Contact Us</a>
+            <a href="./privacypolicy.html">Privacy Policy</a>
+            <a href="./termsofservice.html">Terms of service</a>
+        </div>
+    </section>
+
+    <section class="f2">
+        <div class="footer4">
+            <figure>
+                <img src="./images/social icons footer.png" alt="social">
+                <figcaption>PetMe @ 2020.All Rights Reserved</figcaption>
+            </figure>
+        </div>
+    </section>
+    </footer>
+</body>
+</html>

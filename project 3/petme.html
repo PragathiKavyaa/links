@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PET ME</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/script.js">
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;font-family: "Nunito", sans-serif; font-optical-sizing: auto;  font-weight: 500; font-style: normal;}
+        
+        .bestfriend{background: url(./bgimages/headerimage.png) no-repeat center/cover; width: 100%; height: 500px; padding: 70px 250px; }
+        .bestfriend1{color: #471c51; float: right;align-items: left; width: 400px; justify-content: center; line-height: 1.6;}
+        .bestfriend1 h1{font-weight: 800; font-size: 40px;}
+        .bestfriend1 p{ font-size: 25px; width: 400px; font-weight: 500;}
+        .bestfriend1 button{width: 150px; height: 50px;font-weight: 800; border-radius: 15px; border: 2px solid #471c51; color: #471c51; font-size: 20px; background-color: transparent; cursor: pointer;}
+        .bestfriend1 a{text-decoration: none; }
+
+        .figures{display: flex; align-items: center; justify-content: center;}
+        .figures img{width: 200px; height: 200px;}
+
+        .whoweare{align-items: center; margin: auto; justify-content: space-around;}
+        .whoweare1 figure{display: flex;align-items: center; justify-content: center;}
+        .whoweare1 figure img{width: 70px; height: 70px; position: relative; left: 100px;}
+        .whoweare1 figure figcaption{font-size: 35px; color: #471c51; font-weight: 700; position: absolute;}
+        .whoweare1 p{color: black; font-size: 25px;  margin: auto; text-align: center; padding: 5px 100px;}
+        .whoweare2 {display: flex; background-color: #EF4E3A; width: 800px; height: 150px; border-radius: 15px; justify-content: space-evenly; margin: auto; padding: 20px 15px; margin-top: 30px;}
+        .whoweare2 h1{font-weight: 800;}
+
+        .adoption{margin: auto; margin-top: 30px; margin-bottom: 30px;}
+        .adoption1 figure{display: flex;align-items: center; justify-content: center;}
+        .adoption1 figure img{width: 70px; height: 70px;position: relative; right: 200px; transform: rotate(-90deg);}
+        .adoption1 figure figcaption{font-size: 35px; color: #471c51; font-weight: 700; position: absolute;}
+        .adoption1 p{color: black; font-size: 25px;  margin: auto; text-align: center; padding: 50px 100px; width: 1000px; line-height: 1.6;}
+        .adoption .grids{display: flex; justify-content: space-evenly; margin: auto;}
+        .adoption .grids a{text-decoration: none; color: black;}
+        .grids .grids1 > img, .grids .grids2 > img, .grids .grids3 > img, .grids .grids4 > img, .grids .grids5 > img{width: 100px; height: 100px; border-radius: 10px;}
+        .grids .grids1 > figcaption, .grids .grids2 > figcaption, .grids .grids3 > figcaption, .grids .grids4 > figcaption, .grids .grids5 > figcaption{color: black; font-size: 25px; text-align: center;}
+        .grids .grids1 > img, .grids .grids2 > img, .grids .grids3 > img, .grids .grids4 > img, .grids .grids5 > img{transition: background-color 0.3s, transform 0.2s;}
+        .grids .grids1 > img:hover, .grids .grids2 > img:hover, .grids .grids3 > img:hover, .grids .grids4 > img:hover, .grids .grids5 > img:hover{transform: scale(1.1); }
+
+        .featured{width: 100%;}
+        .featured1 figure{display: flex;align-items: center; justify-content: center;}
+        .featured1 figure img{width: 70px; height: 70px; position: relative; left: 150px;}
+        .featured1 figure figcaption{font-size: 35px; color: #471c51; font-weight: 700; position: absolute;}
+        .featured2 {display: flex; column-gap: 50px; height: 350px;}
+        .p1 figure, .p2 figure, .p3 figure{ text-align: center; position: relative;}
+        .p1 figure>img, .p2 figure>img, .p3 figure>img{width: 300px; height: 300px; border-radius: 15px;}
+        .p1 figure>figcaption, .p2 figure>figcaption, .p3 figure>figcaption{color: black; font-size: 30px; padding: 10px;}
+        .p1 figure>figcaption{margin-top: 350px; left: 250px;}
+        .p2 figure>figcaption{margin-top: 350px; left: 250px;}
+        .p3 figure>figcaption{margin-top: 350px; left: 250px;}
+        .featured1 button{margin-left: 550px; width: 250px; height: 70px; border-radius: 50px; border: none; align-items: center; background-color: #EF4E3A; color: #FFFFFF; font-size:30px; }
+        .featured1 a{text-decoration: none;}
+        .p1 .hover-info, .p2 .hover-info, .p3 .hover-info {position: absolute; margin-left: 300px;  width: 300px; height: 300px; background-image: url(./images/home\ feature\ image\ 1.png) no-repeat center/cover; z-index: 1; color: black; border-radius: 15px; display: flex; flex-direction: column; align-items: flex-start;  opacity: 0; transition: opacity 0.3s ease; padding: 10px;}
+        .hover-info img{ margin-left: -150px; margin-bottom: 10px;}
+        .hover-info h3{font-size: 30px; font-weight: bold;}
+        .hover-info p{font-size: 25px;}
+        .p1 figure:hover .hover-info, .p2 figure:hover .hover-info, .p3 figure:hover .hover-info {opacity: 1;}
+
+
+        .lovedones{position: relative; background: url(./bgimages/posterhomeimage.png) no-repeat center/cover ; margin-top: 30px; width: 100%; height: 400px; color: #FFFFFF;  border-radius: 15px; overflow: hidden;}
+        .lovedones::before {content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%;background-color: rgba(0, 0, 0, 0.5); z-index: 0;}
+        .lovedones1 {position: relative; z-index: 1; float: left;width: 500px; padding: 50px 100px; color: #FFFFFF; opacity: 1;}
+        .lovedones1 button {width: 250px;height: 70px;border-radius: 50px; background-color: transparent;color: #FFFFFF; border: 2px solid #FFFFFF;font-size: 25px;font-weight: bold;cursor: pointer;}
+        .lovedones1 a{text-decoration: none;}
+        .lovedones1 h1{font-weight: 800; font-size: 35px;}
+        .lovedones1 p{font-size: 25px;}
+
+        .works{margin: auto; margin-top: 30px; margin-bottom: 30px;}
+        .works1 figure{display: flex;align-items: center; justify-content: center;}
+        .works1 figure img{width: 70px; height: 70px;position: relative; right: 180px; transform: rotate(-90deg);}
+        .works1 figure figcaption{font-size: 35px; color: #471c51; font-weight: 700; position: absolute;}
+        .works1 p{color: black; font-size: 25px;  margin: auto; text-align: center; padding: 50px 100px; width: 800px; line-height: 1.6;}
+        
+        .works .works2{display: flex; padding: 20px 50px; justify-content: space-evenly;}
+        .works2 img{width: 310px; height: 310px; border-radius: 50px; align-items: center; position: absolute; }
+        .works2 button{width: 60px; height: 60px; background-color: #EF4E3A; color: #FFFFFF; border: none; border-radius: 15px; font-weight: 800; font-size: 20px;}
+        .works2 h1{font-size: 25px; color: #471c51; font-weight: 800; text-align: center;}
+        .works2 p{font-size: 20px; color: black; text-align: center; width: 300px;}
+
+        .works2 .b1, .works2 .b2, .works2 .b3{width: 300px; height: 300px; border-radius: 50px; border: 3px solid #471c51; position: relative; z-index: 1;}
+        .works2 .b1{ transform: rotate(5deg);}
+        .works2 .b2{transform: rotate(-10deg);}
+        .works2 .b3{transform: rotate(5deg);}
+
+        .works2 .w1 > .one{position: relative; bottom: 320px; left: 250px; transform: rotate(-10deg); z-index: 2;}
+        .works2 .w2 > .two{position: relative; bottom: 320px; left: 250px; transform: rotate(10deg); z-index: 2;}
+        .works2 .w3 > .three{position: relative; bottom: 320px; left: 250px; transform: rotate(-15deg);z-index: 2;}
+
+        .advice{margin: auto; margin-top: 30px; margin-bottom: 100px;}
+        .advice1 figure{display: flex;align-items: center; justify-content: center;}
+        .advice1 figure img{width: 70px; height: 70px; position: relative; left: 200px;}
+        .advice1 figure figcaption{font-size: 35px; color: #471c51; font-weight: 700; position: absolute;}
+        .advice1 p{color: black; font-size: 30px;  margin: auto; text-align: center;width: 800px; }
+        .advice2 {display: flex; column-gap: 50px; height: 350px; justify-content: space-evenly; padding: 20px 50px; }
+        .advice2 img{width: 350px; height: 300px;}
+        .advice2 h1{width: 300px; font-size: 25px; font-weight: bold;}
+        .advice2 p{width: 300px; font-size: 20px;}
+        .advice a{text-decoration: none; color: black;}
+
+        .testimonies{margin: auto; margin-top: 120px; margin-bottom: 30px; height: 1000px;}
+        .testimonies1 figure{display: flex;align-items: center; justify-content: center;}
+        .testimonies1 figure img{width: 70px; height: 70px;position: relative; right: 220px; transform: rotate(-90deg);}
+        .testimonies1 figure figcaption{font-size: 35px; color: #471c51; font-weight: 700; position: absolute;}
+        
+        .testimonies2{height: 450px;}
+        .testimonies2 .floatleft{float: left; padding: 20px 100px; position: absolute; z-index: 2;}
+        .testimonies2 .floatleft > img{width: 400px; height: 400px; position: relative;}
+        .testimonies2 .floatleft > .box{width: 400px; height: 400px; border: 5px solid #471c51; border-radius: 50px; position: absolute; z-index: 2; transform: rotate(10deg);}
+        .testimonies2 .floatright{float: right; padding: 20px 50px; right: 230px; top: 50px; position: relative; z-index: 2;}
+        .testimonies2 .floatright > .right1{background-color: #e1d4e4; color: #471c51; width: 600px; height: 150px; text-align: center; border-radius: 15px; padding: 20px;}
+        .testimonies2 .right1 > h1{font-size: 25px; font-weight: bold;}
+        .testimonies2 .right1 > p{font-size: 20px;}
+        .testimonies2 .floatright > .right2{background-color: #471c51; color: white; width: 250px; height: 80px; border-radius: 15px; text-align: left;position: relative; right: 100px; top: 80px; z-index: 3;} 
+        .testimonies2 .right2 > h2{font-size: 20px; font-weight: bold; padding: 10px;}
+        .testimonies2 .right2 > p{font-size: 18px; padding: 5px;}
+        
+        .testimonies3{height: 450px;}
+        .testimonies3 .floatl{float: left; padding: 20px 50px; left: 230px; top: 50px; position: relative; z-index: 2;}
+        .testimonies3 .floatl > .l1{background-color: #e1d4e4; color: #471c51; width: 600px; height: 150px; text-align: center; border-radius: 15px; padding: 20px;}
+        .testimonies3 .l1 > h1{font-size: 25px; font-weight: bold;}
+        .testimonies3 .l1 > p{font-size: 20px;}
+        .testimonies3 .floatl > .l2{background-color: #471c51; color: white; width: 250px; height: 80px; border-radius: 15px; text-align: left; position: relative; left: 350px; top: 80px; z-index: 3;} 
+        .testimonies3 .l2 > h2{font-size: 20px; font-weight: bold; padding: 10px;}
+        .testimonies3 .l2 > p{font-size: 18px; padding: 5px;}
+        .testimonies3 .floatr{float: right; padding: 20px 100px; }
+        .testimonies3 .floatr > img{width: 400px; height: 400px; position: relative;}
+        .testimonies3 .floatr > .boxr{width: 400px; height: 400px; border: 5px solid #471c51; border-radius: 50px; position: absolute; z-index: 2; transform: rotate(-10deg);}
+
+        footer{color: #FFFFFF; border-radius: 50px 50px 0 0; height: 550px; }
+        footer .f0{display: flex; justify-content: space-evenly; position: relative; top: 80px;}
+        .f0 .c1, .f0 .c2, .f0 .c3{width: 350px; height: 150px; border-radius: 30px; font-size: 35px; text-align: center;}
+        .f0 .c1, .f0 .c3{background-color: #EC9015;}
+        .f0 .c2{background-color: #EF4E3A;}
+        .c1 img, .c2 img, .c3 img{width: 50px; height: 50px;}
+        footer a{text-decoration: none; color: white;}
+        footer .f01{background-color: #471c51; color: #FFFFFF;border-radius: 50px 50px 0 0; height: 400px; align-items: center; justify-content: center; padding: 20px 30px; position: static;}
+        footer .f1{display: flex; justify-content: space-evenly; padding: 10px; margin-top: 50px;}
+        .f1 .footer1{width: 250px; text-align: center; }
+        .f1 .footer2, .f1 .footer3{display: flex; flex-direction: column; line-height: 2;}
+        .footer1 figure figcaption{font-size: 25px; line-height: 1.5;}
+        .footer2 h1, .footer3 h1{font-size: 30px; font-weight: 800;} 
+        .footer2 a, .footer3 a{font-size: 20px; text-decoration: none; color: #FFFFFF;}
+        .footer1 img{width: 100px; height: 70px;}
+        .f2{text-align: center; line-height: 2;}
+        .f2 figure figcaption{font-size: 25px;}
+
+        @media(max-width:600px){
+
+            body{overflow-x: hidden;}
+            .bestfriend{width: 100%; background-position: center; background-size: cover;  padding: 10px 50px; }
+            .bestfriend1{float: left; text-align: center; width: 100%;}
+            .bestfriend1 h1{ font-size: 30px; width: 200px;}
+            .bestfriend1 p{ font-size: 20px; width: 200px;}
+            .bestfriend1 button{width: 150px;font-size: 20px;}
+
+            .figures{width: 100%; flex-direction: column;}
+
+            .whoweare{width: 100%;}
+            .whoweare1 p{padding: 5px 20px;}
+            .whoweare2{flex-direction: column; width: 80%; height: 500px; text-align: center;}
+
+            .adoption{width: 100%;}
+            .adoption1 figure img{right: 130px;}
+            .adoption1 figure figcaption{font-size: 20px; text-align: center;}
+            .adoption1 p{padding: 10px 20px; width: 100%; font-size: 20px;}
+            .adoption .grids{flex-direction: column; align-items: center;}
+            
+            .featured{width: 100%;}
+            .featured1 figure img{left: 100px;}
+            .featured1 figure figcaption{font-size: 25px;}
+            .featured2 {flex-direction: column; height: 850px; row-gap: 70px; width: 100%;}
+            .p1 figure>img, .p2 figure>img, .p3 figure>img{width: 200px; height: 200px; left: 10px; }
+            .p1 .hover-info, .p2 .hover-info, .p3 .hover-info {margin-left: 20px; width: 200px; height: 200px;}
+            .hover-info img{ margin-left: -100px;}
+
+            .p1 figure>figcaption, .p2 figure>figcaption, .p3 figure>figcaption{font-size: 25px; margin-left: 70px;}
+            .p1 figure>figcaption{margin-top: 300px; left: 50px;}
+            .p2 figure>figcaption{margin-top: 300px; left: 50px;}
+            .p3 figure>figcaption{margin-top: 300px; left: 50px;}
+            .featured1 button{margin-left: 50px;}
+            .hover-info h3{font-size: 25px;}
+            .hover-info p{font-size: 20px;}
+
+            .lovedones{width: 100%; background-position: center; background-size: cover; }
+            .lovedones1{padding: 10px 50px; width: 300px;}
+            .lovedones1 h1{font-size: 30px;}
+            .lovedones1 p{font-size: 20px;}
+
+            .works{width: 100%;}
+            .works1 figure img{right: 130px;}
+            .works1 figure figcaption{font-size: 25px; text-align: center;}
+            .works1 p{padding: 10px 20px; width: 100%;font-size: 20px;}
+            .works .works2{flex-direction: column; padding: 10px 15px; row-gap: 50px;}
+            .works2 img{width: 250px; height: 250px;}
+            .works2 .b1, .works2 .b2, .works2 .b3{width: 250px; height: 250px;}
+            .works2 .w1 > .one{bottom: 290px; left: 200px;}
+            .works2 .w2 > .two{bottom: 290px; left: 200px;}
+            .works2 .w3 > .three{bottom: 290px; left: 200px;}
+            
+            .advice{width: 100%;}
+            .advice1{width: 100%;}
+            .advice1 figure img{left: 100px;}
+            .advice1 figure figcaption{text-align: center; font-size: 20px;}
+            .advice1 p{text-align: center; width: 100%;}
+            .advice2 {flex-direction: column; row-gap: 50px; height: 1500px; padding: 10px 20px;}
+            .advice2 img{width: 250px; height: 300px;}
+            .advice2 h1{width: 100%; font-size: 25px;}
+            .advice2 p{width: 300px; font-size: 20px;}
+             
+            .testimonies{width: 100%; height: 1400px;}
+            .testimonies1 figure img{right:130px;}
+            .testimonies1 figure figcaption{font-size: 25px; text-align: center;}
+
+            .testimonies2{height: 600px; display: flex; flex-direction: column; width: 100%; }
+            .testimonies2 .floatleft{ padding: 10px 30px; align-items: center; justify-content: center;}
+            .testimonies2 .floatleft > img{width: 250px; height: 300px;}
+            .testimonies2 .floatleft > .box{width: 250px; height: 300px;}
+            .testimonies2 .floatright{float: none; padding: 10px 20px; right: 10px; top: 320px; align-items: center; justify-content: center;}
+            .testimonies2 .floatright > .right1{width: 90%; height: 200px; margin: auto;}
+            .testimonies2 .right1 > h1{font-size: 20px;}
+            .testimonies2 .right1 > p{font-size: 18px;}
+            .testimonies2 .floatright > .right2{width: 80%; right: 5px; top: 30px; margin: auto;}
+            .testimonies2 .right2 > h2{font-size: 20px;}
+            .testimonies2 .right2 > p{font-size: 18px;} 
+
+            .testimonies3{height: 600px; display: flex; flex-direction: column; width: 100%; row-gap: 70px;}
+            .testimonies3 .floatl{float: none; padding: 10px 20px; left: 0; top: 50px; height: 700px; align-items: center; justify-content: center;}
+            .testimonies3 .floatl > .l1{width: 90%; height: 200px; margin: auto; }
+            .testimonies3 .l1 > h1{font-size: 20px;}
+            .testimonies3 .l1 > p{font-size: 18px;}
+            .testimonies3 .floatl > .l2{width: 80%; left: 5px; top: 10px; margin: auto;} 
+            .testimonies3 .l2 > h2{font-size: 20px;}
+            .testimonies3 .l2 > p{font-size: 18px;}
+            .testimonies3 .floatr{float: none; padding: 10px 50px;}
+            .testimonies3 .floatr > img{width: 250px; height: 300px;}
+            .testimonies3 .floatr > .boxr{width: 250px; height: 300px;}
+
+            footer{width: 100%; display: flex; flex-direction: column; height: 1300px; background-color: #471c51; border-radius: 0;}
+            footer .f0{display: flex; flex-direction: column; align-items: center; row-gap: 10px;}
+            footer .f01 .f1{ display: flex; flex-direction: column;}
+            .f0 .c1, .f0 .c2, .f0 .c3{width: 250px; height: 130px; font-size: 20px;  }
+            .f1 .footer2, .f1 .footer3{text-align: center;}
+        }
+
+        @media(min-width:601px) and (max-width:1023px){
+
+            body{overflow-x: hidden;}
+            .bestfriend{padding: 70px 50px;}
+            .figures img{width: 100px; height: 100px;}
+            .whoweare2 {width: 700px;}
+            .adoption1 p{padding: 10px 50px; width: 100%;}
+            .p1 figure>img, .p2 figure>img, .p3 figure>img{width: 200px; height: 200px; left: 10px;}
+            .p1 figure>figcaption{left: 50px;}
+            .p2 figure>figcaption{left: 50px;}
+            .p3 figure>figcaption{left: 50px;}
+            .featured1 button{margin-left: 250px;}
+            .p1 .hover-info, .p2 .hover-info, .p3 .hover-info { margin-left: 0;  width: 200px; height: 200px;}
+            .hover-info img{ margin-left: -150px; margin-bottom: 10px;}
+            .hover-info h3{font-size: 30px; font-weight: bold;}
+            .hover-info p{font-size: 25px;}
+            .works1 p{width: 100%;}
+            .works .works2{display: grid; grid-template-columns: repeat(2,1fr); column-gap: 50px; row-gap: 20px; width: 100%;}
+            .advice{width: 100%; height: 1000px;}
+            .advice1 p{width: 100%;}
+            .advice2 {display: grid; grid-template-columns: repeat(2,1fr); column-gap: 40px; row-gap: 20px; width: 100%;}
+            .testimonies{width: 100%; height: 1700px; margin-bottom: 50px; align-items: center; justify-content: center; margin: auto;}
+            .testimonies2{width: 100%; height: 800px; }
+            .testimonies2 .floatleft{ align-items: center; justify-content: center;}
+            .testimonies2 .floatright{padding: 20px 50px; right: 20px; top: 430px; align-items: center; justify-content: center;}
+            .testimonies2 .floatright > .right2{right: 10px; top: 30px;} 
+            .testimonies3{width: 100%; height: 500px; padding: 0; text-align: center;}
+            .testimonies3 .floatl{left: 50px; top: 10px; align-items: center; justify-content: center;}
+            .testimonies3 .floatl > .l1{width: 600px;}
+            .testimonies3 .floatl > .l2{left: 10px; top: 10px;} 
+            .testimonies3 .floatr{left: 50px;align-items: center; justify-content: center; float: left;}
+           
+
+            footer{width: 100%;}
+            .f0 .c1, .f0 .c2, .f0 .c3{width: 200px; height: 150px; font-size: 20px;}
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px){
+
+            .bestfriend{padding: 70px 50px;}
+            .figures img{width: 150px; height: 150px;}
+            .featured2 {row-gap: 20px;}
+            .p1 figure>img, .p2 figure>img, .p3 figure>img{left: 10px; width: 250px; height: 250px;}
+            .p1 .hover-info, .p2 .hover-info, .p3 .hover-info { margin-left: 0;  width: 250px; height: 250px;}
+            .p1 figure>figcaption, .p2 figure>figcaption, .p3 figure>figcaption{left: 5px;}
+            .p1 figure>figcaption{ left: 50px;}
+            .p2 figure>figcaption{ left: 75px;}
+            .p3 figure>figcaption{ left: 75px;}
+            .featured1 button{margin-left: 400px;}
+            .works .works2{row-gap: 30px;}
+            .works2 img{width: 230px; height: 230px;}
+            .works2 .b1, .works2 .b2, .works2 .b3{width: 230px; height: 230px;}
+            .works2 .w1 > .one{ bottom: 250px; left: 200px; }
+            .works2 .w2 > .two{ bottom: 250px; left: 200px;}
+            .works2 .w3 > .three{ bottom: 250px; left: 200px;}
+            .advice2{width: 100%;}
+            .advice2 img{width: 200px; height: 250px;}
+            .advice2 h1{width: 250px; }
+            .advice2 p{width: 250px; }
+            .testimonies{height: 1000px; margin-bottom: 300px;}
+            .testimonies2, .testimonies3{height: 500px;}
+            .testimonies2 .floatright{ right: 10px; top: 50px;}
+            .testimonies2 .floatright > .right2{ right: 5px; top: 80px;} 
+            .testimonies3 .floatl{left: 30px; top: 300px;}
+            .testimonies3 .floatl > .l2{left: 300px; top: 100px;}
+            .testimonies3 .floatr{padding: 10px 20px; bottom: 300px; } 
+
+            .f0 .c1, .f0 .c2, .f0 .c3{width: 300px; font-size: 30px;}
+        }
+    
+    </style>
+</head>
+<body>
+    <header>
+        <div class="headone">
+            <a href=""><img src="./images/logo.png" alt="logo"></a>
+        </div>
+        <div class="navbar" id="navbar">
+            <a href="./findapet.html">Find a Pet</a>
+            <a href="./adoptionfaq.html">Adoption FAQ</a>
+            <a href="./carringforpets.html">Caring for Pets</a>
+            <a href="./aboutus.html">About Us</a>
+            <a href=""><img src="./images/user.png" alt="user"></a>
+        </div>
+    </header>
+
+</script>
+   
+    <section class="bestfriend">
+        <div class="bestfriend1">
+            <h1>FIND YOUR  NEW BEST FRIEND!</h1>
+            <P>Discover your perfect companion with ease-browse, adopt, and bring home the pet that fits your lifestyle.</P>
+            <a href="./register.html"><button>REGISTER</button></a>
+        </div>
+    </section>
+    <section class="figures">
+        <img src="./images/animal rescue logo.png" alt="rescue">
+        <img src="./images/black house logo.png" alt="house">
+        <img src="./images/hope rescur logo.png" alt="hope">
+        <img src="./images/ray logo.png" alt="ray">
+        <img src="./images/saving shots logo.png" alt="saving">
+        <img src="./images/tree logo.png" alt="tree">
+    </section>
+    <section class="whoweare">
+        <div class="whoweare1">
+        <figure>
+            <figcaption>Who We Are</figcaption>
+            <img src="./images/paw icon.png" alt="paw">
+        </figure>
+        <p>Pet Me is a 150(d)(3) nonprofit organization and a dedicated community of pet lovers working to reduce
+                euthanasia in local shelters and increase awarness of rescue doys being wonderful pets. We rescue pets
+                and place them in loving homes
+            </p>
+        </div>
+        <div class="whoweare2">
+            <div class="g1">
+                <h1>1000+</h1>
+                <h2>Adoption</h2>
+                <h2>Applications</h2>
+            </div>
+            <div class="g2">
+                <h1>600+</h1>
+                <h2>Pets</h2>
+                <h2>Adopted</h2>
+            </div>
+            <div class="g3">
+                <h1>200+</h1>
+                <h2>Pets</h2>
+                <h2>On Boarded</h2>
+            </div>
+            <div class="g4">
+                <h1>2200+</h1>
+                <h2>Rescued</h2>
+            </div>
+        </div>
+    </section>
+    <section class="adoption">
+        <div class="adoption1">
+         <figure>
+            <img src="./images/paw icon.png" alt="paw">
+            <figcaption>Our Adoptions Categories</figcaption>
+        </figure>
+        <p>These categories encompass a wide range  of animals looking for loving homes!</p>
+        </div>
+        <div class="grids">
+            <a href="./dogs.html"><figure class="grids1">
+                <img src="./images/dogs icon.png" alt="dogs">
+                <figcaption>Dogs</figcaption>
+            </figure></a>
+            <a href="./cats.html"><figure class="grids2">
+                <img src="./images/cats icon.png" alt="cats">
+                <figcaption>Cats</figcaption>
+            </figure></a>
+            <a href="./rabbits.html"><figure class="grids3">
+                <img src="./images/rabbits icon.png" alt="rabbits">
+                <figcaption>Rabbits</figcaption>
+            </figure></a>
+            <a href="./hamster.html"><figure class="grids4">
+                <img src="./images/hamster icon.png" alt="hamster">
+                <figcaption>Hamster</figcaption>
+            </figure></a>
+            <a href="./birds.html"><figure class="grids5">
+                <img src="./images/birds icon.png" alt="birds">
+                <figcaption>Birds</figcaption>
+            </figure></a>
+        </div>
+    </section>
+    <section class="featured">
+        <div class="featured1">
+            <figure>
+            <figcaption>Our Featured Pets</figcaption>
+            <img src="./images/paw icon.png" alt="paw">
+        </figure>
+        <div class="featured2">
+            <div class="p1">
+                <figure>
+                    <img src="./images/home feature image 1.png" alt="hamster">
+                    <figcaption>Twisky</figcaption>
+                    <div class="hover-info">
+                        <h3>Hamster</h3>
+                        <p>0-5 months old</p>
+                        <img src="./images/female icon.png" alt="female">
+                    </div>
+                </figure>
+            </div>
+            <div class="p2">
+                <figure>
+                    <img src="./images/Home featured image 2.png" alt="lara">
+                    <figcaption>Lara</figcaption>
+                    <div class="hover-info">
+                        <h3>Cat</h3>
+                        <p>0-3 months old</p>
+                        <img src="./images/male icon.png" alt="male">
+                    </div>
+                </figure>
+            </div>
+            <div class="p3">
+                <figure>
+                    <img src="./images/home featured image 3.png" alt="cacti">
+                    <figcaption>Cacti</figcaption>
+                    <div class="hover-info">
+                        <h3>Rabbit</h3>
+                        <p>0-4 months old</p>
+                        <img src="./images/female icon.png" alt="male">
+                    </div>
+                </figure>
+            </div>
+        </div>
+        <a href=""><button>Find More Pets</button></a>
+        </div>
+    </section>
+    <section class="lovedones">
+        <div class="lovedones1">
+            <h1>Want a pet for your loved ones?!</h1>
+            <p>Make your loved one's day with our wide range of pets as gift who also loved pets.</p>
+            <a href=""><button>EXPLORE NOW</button></a>
+        </div>
+    </section>
+    <section class="works">
+        <div class="works1">
+         <figure>
+            <img src="./images/paw icon.png" alt="paw">
+            <figcaption>How Adoption Works</figcaption>
+        </figure>
+        <p>To Embrace the joy of pet adoption, and create a lasting bond with your new companion you will only
+            need to follow the below <b>THREE STEPS</b>
+        </p>
+        </div>
+        <div class="works2">
+            <div class="w1">
+                <img src="./images/find your pet.png" alt="pet" class="p1"><div class="b1"></div>
+                <button class="one">1</button>
+                <h1>FIND YOUR PET</h1>
+                <p>Discover your perfect companion by browsing our extensive databasae of adoptable animals</p>    
+            </div>
+            <div class="w2">
+                <img src="./images/know your pet.png" alt="pet" class="p2"><div class="b2"></div>
+                <button class="two">2</button>
+                <h1>KNOW YOUR PET</h1>
+                <p>Before bringing a new friend home, take the time to get to know them</p>    
+            </div>
+            <div class="w3">
+                <img src="./images/take your pet.png" alt="pet" class="p3"><div class="b3"></div>
+                <button class="three">3</button>
+                <h1>TAKE YOUR PET HOME</h1>
+                <p>Once you've found your ideal pet, prepare your home for thier arrival</p>    
+            </div>
+        </div>
+    </section>
+    <section class="advice">
+        <div class="advice1">
+         <figure>
+            <figcaption>Check our Experts Advice</figcaption>
+            <img src="./images/paw icon.png" alt="paw">
+        </figure>
+        <p>Get guidance on all things pet adoption</p>
+        </div>
+        <a href="./carringforpets.html"><div class="advice2">
+            <div class="a1">
+                <img src="./images/blog 1.png" alt="blog1">
+                <h1>The Ultimate Check-list for First-time pet parents</h1>
+                <p>Getting a new pet? Here's everything you need to know before you pring them home</p>    
+            </div></a>
+            <a href="./carringforpets.html"><div class="a2">
+                <img src="./images/blog 2.png" alt="blog2">
+                <h1>Essential questions to ask before adopting a pet</h1>
+                <p>Not sure if you're ready? Here are the key things to consider before adopting</p>    
+            </div></a>
+            <a href="./carringforpets.html"><div class="a3">
+                <img src="./images/blog 3.png" alt="blog3">
+                <h1>The First 24-hours with your adopted pet!</h1>
+                <p>From feeding to bonding... Here's what you need to know about your first day together</p>    
+            </div></a>
+        </div>
+    </section>
+        
+    <section class="testimonies">
+         <div class="testimonies1">
+         <figure>
+            <img src="./images/paw icon.png" alt="paw">
+            <figcaption>Our Customes Testimonies</figcaption>
+        </figure>
+        </div>
+        <div class="testimonies2">
+            <div class="floatleft">
+                <div class="box"></div>
+                <img src="./images/testimonies 1.png" alt="testimonies">
+            </div>
+            <div class="floatright">
+                <div class="right1">
+                    <h1>"It was the best thing ever happened"</h1>
+                    <p>I was very much confused together Tio will like me.</p>
+                    <p>I was wrong, we became on the very first day...</p>
+                </div>
+                <div class="right2">
+                    <h2>Kiro & Tio</h2>
+                    <p>Adopted February 2025</p>
+                </div>
+            </div>
+        </div>
+        <div class="testimonies3">
+            <div class="floatl">
+                <div class="l1">
+                    <h1>"She filled my lonely days with joy"</h1>
+                    <p>I was very much confused whether Moa will like me.</p>
+                    <p>I was wrong, we became on the very first day...</p>
+                </div>
+                <div class="l2">
+                    <h2>Tify & Moa</h2>
+                    <p>Adopted April 2025</p>
+                </div>
+            </div>
+            <div class="floatr">
+                <div class="boxr"></div>
+                <img src="./images/testimonies 2.png" alt="testimonies">
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <section class="f0">
+            <div class="c1">
+                <a href="./carringforpets.html"><figure>
+                    <img src="./images/blog icon-home scrn.png" alt="home">
+                    <figcaption>Blogs For You</figcaption>
+                    <img src="./images/arrow icon home.png" alt="arrow">
+                </figure></a>
+            </div>
+            <a href="./findapet.html"><div class="c2">
+                <figure>
+                    <img src="./images/book our service icon-home.png" alt="home">
+                    <figcaption>Book Our Service</figcaption>
+                    <img src="./images/arrow icon home.png" alt="arrow">
+                </figure></a>
+            </div>
+            <div class="c3">
+                <figure>
+                    <img src="./images/speak to us home.png" alt="home">
+                    <figcaption>Speak To Our Export</figcaption>
+                    <img src="./images/arrow icon home.png" alt="arrow">
+                </figure>
+            </div>
+        </section>
+        <section class="f01">
+        <section class="f1">
+        <div class="footer1">
+            <figure>
+                <img src="./images/logo.png" alt="logo">
+                <figcaption>Find And Adopt Your New Little Bestfriend</figcaption>
+            </figure>
+        </div>
+        <div class="footer2">
+            <h1>DISCOVER</h1>
+            <a href="./findapet.html">Find a pet</a>
+            <a href="./adoptionworks.html">How adoption works</a>
+            <a href="./aboutus.html">About us</a>
+        </div>
+        <div class="footer3">
+            <h1>INFO</h1>
+            <a href="./adoptionfaq.html">FAQ</a>
+            <a href="">Contact Us</a>
+            <a href="./privacypolicy.html">Privacy Policy</a>
+            <a href="./termsofservice.html">Terms of service</a>
+        </div>
+    </section>
+    <section class="f2">
+        <div class="footer4">
+            <figure>
+                <img src="./images/social icons footer.png" alt="social">
+                <figcaption>PetMe @ 2020.All Rights Reserved</figcaption>
+            </figure>
+        </div>
+    </section>
+</section>
+</section>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cats Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;font-family: "Nunito", sans-serif; font-optical-sizing: auto;  font-weight: 500; font-style: normal;}
+
+        .dogs{margin: 30px auto; width: 70%; padding: 30px; display: flex; flex-direction: column; gap: 30px;}
+        .dogs1 figure{display: flex;align-items: center; justify-content: center;}
+        .dogs1 figure img{width: 70px; height: 70px;position: relative; right: 30px; bottom: 10px; transform: rotate(-90deg);}
+        .dogs1 figure figcaption{font-size: 35px; color: #471c51; font-weight: 700; position: absolute;}
+        .dogs .dogs2 > img {width: 100%; height: 500px; border-radius: 15px;}
+        .heading{display: flex; width: 1000px;}
+        .heading h1{float: left; font-size: 30px; font-weight: 800;}
+        .heading a{float: right; text-decoration: none; margin-left: 650px; }
+        .heading button{width: 150px; height: 50px; background-color: #471c51;border-radius: 15px; border: none; font-size: 25px; font-weight: 800; color: #FFFFFF;} 
+        .para p{font-size: 25px; align-items: left; font-weight: 600;}
+        .list{font-size: 25px; align-items: center; margin-left: 50px;}        
+        .paradetails{gap: 20px; align-items: left;}
+        .paradetails h3{font-size: 30px; font-weight: 800;}
+        .paradetails p{font-size: 25px; font-weight: 600; }
+        
+        .featured{width: 100%;}
+        .featured1 figure{display: flex;align-items: center; justify-content: center;}
+        .featured1 figure img{width: 70px; height: 70px; position: relative; left: 150px;}
+        .featured1 figure figcaption{font-size: 35px; color: #471c51; font-weight: 700; position: absolute;}
+        .featured2 {display: flex; column-gap: 50px; height: 350px;}
+        .p1 figure, .p2 figure, .p3 figure{ text-align: center;}
+        .p1 figure>img, .p2 figure>img, .p3 figure>img{width: 300px; height: 300px; border-radius: 15px;}
+        .p1 figure>figcaption, .p2 figure>figcaption, .p3 figure>figcaption{color: black; font-size: 30px; padding: 10px;}
+        .p1 figure>figcaption{margin-top: 350px; left: 250px;}
+        .p2 figure>figcaption{margin-top: 350px; left: 620px;}
+        .p3 figure>figcaption{margin-top: 350px; left: 970px;}
+        .featured1 button{margin-left: 550px; width: 250px; height: 50px; border-radius: 50px; border: none; align-items: center; background-color: #EF4E3A; color: #FFFFFF; font-size:30px; }
+        .featured1 a{text-decoration: none;}
+
+        .whoweare{align-items: center; margin: auto; justify-content: space-around; margin-bottom: 30px;}
+        .whoweare2 {display: flex; background-color: #EF4E3A; width: 800px; height: 150px; border-radius: 15px; justify-content: space-evenly; margin: auto; padding: 20px 15px; margin-top: 30px;}
+        .whoweare2 h1{font-weight: 800;}
+
+         @media(max-width:600px){
+
+            .dogs{width: 100%;}
+            .dogs1 figure img{right: 30px;}
+            .dogs1 figure figcaption{font-size: 20px; text-align: center;}
+            .dogs1 p{padding: 10px 20px; width: 100%; font-size: 20px;}
+            .heading{flex-direction: column; text-align: center; width: 100%;}
+            .heading a{margin-left: 0; }
+
+            .featured{width: 100%;}
+            .featured1 figure img{left: 100px;}
+            .featured1 figure figcaption{font-size: 25px;}
+            .featured2 {flex-direction: column; height: 850px; row-gap: 70px; width: 100%;}
+            .p1 figure>img, .p2 figure>img, .p3 figure>img{width: 200px; height: 200px; left: 10px;}
+            .p1 figure>figcaption, .p2 figure>figcaption, .p3 figure>figcaption{font-size: 25px; margin-left: 70px;}
+            .p1 figure>figcaption{margin-top: 300px; left: 50px;}
+            .p2 figure>figcaption{margin-top: 300px; left: 50px;}
+            .p3 figure>figcaption{margin-top: 300px; left: 50px;}
+            .featured1 button{margin-left: 50px;}
+
+            .whoweare{width: 100%;}
+            .whoweare2{flex-direction: column; width: 80%; height: 500px; text-align: center;}
+         }
+
+         @media(min-width:601px) and (max-width:1023px){
+            
+            .heading{width: 100%;}
+            .heading a{margin-left: 300px; }
+            .p1 figure>img, .p2 figure>img, .p3 figure>img{width: 200px; height: 200px; left: 10px;}
+            .p1 figure>figcaption{left: 50px;}
+            .p2 figure>figcaption{left: 300px;}
+            .p3 figure>figcaption{left: 550px;}
+            .featured1 button{margin-left: 250px;}
+            .whoweare2 {width: 700px;}
+         }
+
+         @media (min-width: 769px) and (max-width: 1024px){
+
+            .heading a{ margin-left: 500px;}
+            .featured2 {row-gap: 20px;}
+            .p1 figure>img, .p2 figure>img, .p3 figure>img{left: 10px; width: 250px; height: 250px;}
+            .p1 figure>figcaption, .p2 figure>figcaption, .p3 figure>figcaption{left: 5px;}
+            .p1 figure>figcaption{ left: 50px;}
+            .p2 figure>figcaption{ left: 400px;}
+            .p3 figure>figcaption{ left: 700px;}
+            .featured1 button{margin-left: 400px;}
+         }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="headone">
+            <a href="./petme.html"><img src="./images/logo.png" alt="logo"></a>
+        </div>
+        <div class="navbar">
+            <a href="./findapet.html">Find a Pet</a>
+            <a href="./adoptionfaq.html">Adoption FAQ</a>
+            <a href="./carringforpets.html">Caring for Pets</a>
+            <a href="./aboutus.html">About Us</a>
+            <a href=""><img src="./images/user.png" alt="user"></a>
+        </div>
+    </header>
+
+    <section class="dogs">
+        <div class="dogs1">
+         <figure>
+            <img src="./images/paw icon.png" alt="paw">
+            <figcaption>Cats</figcaption>
+        </figure>
+        </div>
+        <div class="dogs2">
+            <img src="./images/cats 9.png" alt="dog">
+        </div>
+        
+        <div class="heading">
+            <h1>Saucer</h1>
+            <a href="./petassesment.html"><button>Adopt Me</button></a>
+        </div>
+        <div class="para">
+            <p> Look at the cuteness! He is full of love and is super playfull. They are highly social creatures with a strong bond with humans, having 
+            been domesticated for thousands of years. Dogs come in a wide variety of breeds, each with unique physical characteristics and 
+            temperaments</p><br>
+        </div>
+        <div class="list">
+            <ul>
+                <li>Type - Juvenile <6 to12 months> </li>
+                <li>Gender - Female</li>
+                <li>Breed - Indie</li>
+                <li>Neutered - No</li>
+                <li>Age (in months) - 8</li>
+                <li>Shelter - World For All Animal Care and Adoptions</li>
+            </ul><br>
+        </div>
+        <div class="paradetails">
+            <h3> Appearance:</h3><br>
+            <p>Dogs are generally four-legged animals with a coat of hair, varying 
+            in size, shape, and color depending on the breed.</p><br>
+            <h3>Sensory Abilities:</h3><br>
+            <p>They have an exceptional sense of smell, superior hearing, and a 
+            larger field of vision than humans. </p><br>
+            <h3>Behavior:</h3><br>
+            <p>Dogs are social animals that communicate through body language, 
+            scent, and vocalizations. They exhibit a range of behaviors, from 
+            playful and affectionate to protective and territorial. </p><br>
+            <h3>Intelligence:</h3><br>
+            <p>Dogs are known for their ability to learn, problem-solve, and 
+            understand human communication. </p><br>
+            <h3>Loyalty and Bond:</h3><br>
+            <p>Dogs have a strong bond with their owners, often displaying loyalty 
+            and affection.</p><br>
+        </div>
+    </section>
+
+    <section class="featured">
+        <div class="featured1">
+            <figure>
+            <figcaption>Our Featured Pets</figcaption>
+            <img src="./images/paw icon.png" alt="paw">
+        </figure>
+        <div class="featured2">
+            <div class="p1">
+                <figure>
+                    <img src="./images/home feature image 1.png" alt="hamster">
+                    <figcaption>Twisky</figcaption>
+                </figure>
+            </div>
+            <div class="p2">
+                <figure>
+                    <img src="./images/Home featured image 2.png" alt="lara">
+                    <figcaption>Lara</figcaption>
+                </figure>
+            </div>
+            <div class="p3">
+                <figure>
+                    <img src="./images/home featured image 3.png" alt="cacti">
+                    <figcaption>Cacti</figcaption>
+                </figure>
+            </div>
+        </div>
+        <a href=""><button>Find More Pets</button></a>
+        </div>
+    </section>
+
+    <section class="whoweare">
+        <div class="whoweare2">
+            <div class="g1">
+                <h1>1000+</h1>
+                <h2>Adoption</h2>
+                <h2>Applications</h2>
+            </div>
+            <div class="g2">
+                <h1>600+</h1>
+                <h2>Pets</h2>
+                <h2>Adopted</h2>
+            </div>
+            <div class="g3">
+                <h1>200+</h1>
+                <h2>Pets</h2>
+                <h2>On Boarded</h2>
+            </div>
+            <div class="g4">
+                <h1>2200+</h1>
+                <h2>Rescued</h2>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <section class="f1">
+        <div class="footer1">
+            <figure>
+                <img src="./images/logo.png" alt="logo">
+                <figcaption>Find And Adopt Your New Little Bestfriend</figcaption>
+            </figure>
+        </div>
+        <div class="footer2">
+            <h1>DISCOVER</h1>
+            <a href="./findapet.html">Find a pet</a>
+            <a href="./adoptionworks.html">How adoption works</a>
+            <a href="./aboutus.html">About us</a>
+        </div>
+        <div class="footer3">
+            <h1>INFO</h1>
+            <a href="./adoptionfaq.html">FAQ</a>
+            <a href="">Contact Us</a>
+            <a href="./privacypolicy.html">Privacy Policy</a>
+            <a href="./termsofservice.html">Terms of service</a>
+        </div>
+    </section>
+    <section class="f2">
+        <div class="footer4">
+            <figure>
+                <img src="./images/social icons footer.png" alt="social">
+                <figcaption>PetMe @ 2020.All Rights Reserved</figcaption>
+            </figure>
+        </div>
+    </section>
+    </footer>
+</body>
+</html>
