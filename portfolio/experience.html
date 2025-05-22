@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Nunito", sans-serif;
+        }
+
+        .navbar {
+            background-color: #471c51;
+            height: 200px;
+            display: flex;
+        }
+
+        .navbar .fig {
+            width: 400px;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .fig figure img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50px;
+            border: 2px solid white;
+        }
+
+        .fig figure h2 {
+            color: white;
+            font-size: 20px;
+        }
+
+        .navbar .link {
+            display: flex;
+        }
+
+        .navbar .link a {
+            text-decoration: none;
+            color: white;
+            font-size: 25px;
+            margin: auto;
+            padding: 30px;
+        }
+
+        .experience {
+            background-color: #d7cdda;
+            height: 100vh;
+            margin: auto;
+            text-align: center;
+        }
+
+        .experience1 {
+            padding: 10px;
+            height: 250px;
+            justify-content: center;
+            line-height: 1.6;
+            display: flex;
+            column-gap: 10px;
+        }
+
+        .experience1 ul li {
+            list-style-type: none;
+            font-size: 18px;
+        }
+
+        .experience h2 {
+            font-size: 30px;
+        }
+
+        .experience1 h3 {
+            font-size: 25px;
+        }
+
+        .exp1 p, .exp2 p {
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .experience1 .exp1, .experience1 .exp2{
+            border: 2px solid black;
+            width: 500px;
+            height: 600px;
+        }
+
+        @media(max-width: 600px){
+            .navbar{width: 100%; flex-direction: column; height: auto; padding: 10px; }
+            .navbar .fig{padding: 0; width: 100%;}
+            .fig figure img{width: 100px; height: 100px;}
+            .navbar .link{display: flex; flex-direction: column;}
+            .navbar .link a{padding: 0; font-size: 20px;}
+            .experience{ height: auto; padding: 20px; width: 100%; margin: 0; display: block;}
+            .experience1{width: 100%; height: auto; padding: 10px 0; flex-direction: column;  align-items: center; gap: 20px;}
+            .experience1 .exp1, .experience1 .exp2{ width: 90%; height: auto;}
+        }
+
+        @media(min-width:601px) and (max-width:1023px){
+            .navbar{width: 100%; height: 250px;}
+            .navbar .fig{width: 300px;}
+            .education{width: 100%;}
+            .fig figure h2{ font-size: 20px;}
+            .navbar .link a{font-size: 20px; padding: 10px;}
+            .experience1 .exp1, .experience1 .exp2{height: 700px;}
+            .experience1 h3 {font-size: 20px;}
+        }
+
+        @media(max-width:1024px){
+            .navbar .fig{width: 300px;}
+            .navbar .link a{ padding: 20px;}
+        }
+    </style>
+</head>
+
+<body>
+    <section class="navbar">
+        <div class="fig">
+            <figure>
+                <img src="./image/IMG_20250518_191509.jpg" alt="profilephoto">
+                <h2>N.PRAGATHI KAVYAA</h2>
+            </figure>
+        </div>
+
+        <div class="link">
+            <a href="./about.html">About</a>
+            <a href="./educationskills.html">Education & Skills</a>
+            <a href="./experience.html">Experience</a>
+            <a href="./projects.html">Projects</a>
+            <a href="./contactus.html">Contact Us</a>
+        </div>
+
+    </section>
+
+    <section class="experience">
+        <h2>Experience</h2>
+        <div class="experience1">
+            
+            <div class="exp1">
+                <h3>Regulatory Assistant - Cologenesis Healthcare Pvt Ltd</h3>
+                <p>January 2020 – November 2023</p>
+                <ul>
+                    <li>Monitored tender alerts and participated in tenders across India.</li>
+                    <li>Handled online customer inquiries via India Mart, Exporters India, etc.</li>
+                    <li>Communicated with customers to understand product needs.</li>
+                    <li>Prepared and submitted documents for product registration in other countries.</li>
+                    <li>Created leads using SAP software.</li>
+                    <li>Updated ISO documentation.</li>
+                    <li>Handled renewal of company licenses and certifications.</li>
+                    <li>Submitted documents for vendor registration.</li>
+                    <li>Coordinated with vendors during the tender process.</li>
+                    <li>Arranged documents per tender requirements.</li>
+                    <li>Submitted online and physical bids.</li>
+                    <li>Maintained communication with vendors until order generation.</li>
+                </ul>
+            </div>
+
+            <div class="exp2">
+                <h3>Content Writer (Intern) - Fresher’s Voice Technology</h3>
+                <p>June 2019 – August 2019</p>
+                <ul>
+                    <li>Published job vacancies and results online.</li>
+                    <li>Edit and revise content based on client feedback.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
