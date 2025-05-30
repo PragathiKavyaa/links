@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payslip Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand" rel="stylesheet">
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box; font-family: "Quicksand", sans-serif;}
+        body{display: grid; grid-template-columns: 200px 1100px;}
+        .overview{background-color: #455A64; height: 100vh;}
+        .overview .nav{padding: 10px; margin: auto;}
+        .nav figure{display: flex; column-gap: 20px; padding: 10px 20px;}
+        .nav a{text-decoration: none;}
+        .nav3 figure figcaption{color: #f8cc14;}
+        .nav2 figure figcaption, .nav1 figure figcaption{color: white;}
+        .payslip h1{font-size: 30px; text-align: center; margin-top: 50px;}
+        .payslipdetails{background-color: #feeba8; height: 500px; margin-top: 50px; margin-left: 50px;}
+        .pay1{display: grid; grid-template-columns: repeat(2, 3fr); column-gap: 50px; row-gap: 20px;  padding: 50px 100px; font-size: 25px;}
+        .pay2 table{margin: auto;}
+        table td{padding: 5px; font-size: 18px; width: 15%; text-align: center; border: 1px solid black;}
+        .pay2 .row1, .pay2 .row2{background-color: #f8cc14;}
+        .pay2 .row3{background-color: #6b5f2e;}
+        .pay2 .row1{font-weight: bold;}
+        .pay2 .earn{text-align: right; width: 900px; font-weight: bold; margin-top: 20px; font-size: 18px;}
+        .pay3{margin-top: 20px; align-items: center; justify-content: center; display: flex; column-gap: 30px;}
+        .pay3 a{text-decoration: none;}
+        .pay3 button{width: 100px; height: 30px; border-radius: 3px; border: none;}
+        .b1{background-color: #f8cc14; color: #455A64;}
+        .b2{background-color: #455A64; color: white;}
+        .mobile-payslip {display: none;}
+
+        @media (max-width: 600px) {
+         body {
+        display: block;
+    }
+    .overview {
+        width: 100%;
+        height: auto;
+    }
+    .nav figure {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 5px;
+    }
+    .payslip {
+        display: block;
+        width: 100%;
+        margin-left: 0;
+    }
+    .payslipdetails {
+        margin-left: 0;
+        height: auto;
+        padding: 10px;
+    }
+    .pay1 {
+        grid-template-columns: 1fr;
+        padding: 10px 20px;
+        width: 100%;
+    }
+    .pay2 table {
+        display: none;
+    }
+    .mobile-payslip {
+        display: block;
+        padding: 10px;
+    }
+    .mobile-section {
+        background-color: #fff9dc;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 15px;
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+    .mobile-section h4 {
+        margin-bottom: 10px;
+        color: #333;
+    }
+    .pay2 .earn {
+        text-align: center;
+        width: 100%;
+    }
+        }
+    </style>
+</head>
+<body>
+    <section class="overview">
+        <div class="nav">
+            <div class="nav1">
+                <a href="./overview.html"><figure>
+                    <img src="./Payslip Images/Overview.png" alt="overview">
+                    <figcaption>Overview</figcaption>
+                </figure></a>
+            </div>
+            <div class="nav2">
+                <a href="./payrolldetails.html"><figure>
+                    <img src="./Payslip Images/Payroll.png" alt="Payroll">
+                    <figcaption>Payroll</figcaption>
+                </figure></a>
+            </div>
+            <div class="nav3">
+                <figure>
+                    <img src="./Payslip Images/Payroll.png" alt="Payslip">
+                    <figcaption>Payslip</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+    <section class="payslip">
+        <h1>Payslip Details</h1>
+        <div class="payslipdetails">
+            <div class="pay1">
+                
+                    <div class="r1">
+                        <strong>Employee Name:</strong>
+                        <span class="empname"> </span>
+                    </div>
+                    <div class="r2">
+                        <strong>Date:</strong>
+                        <span class="empdate"> </span>
+                    </div>
+                    <div class="r3">
+                        <strong>Employee I'D:</strong>
+                        <span class="empid"> </span>
+                    </div>
+                    <div class="r4">
+                        <strong>Month:</strong>
+                        <span class="empmonth"> </span>
+                    </div>
+                    <div class="r5">
+                        <strong>Role:</strong>
+                        <span class="emprole"> </span>
+                    </div>
+            </div>
+            <div class="pay2">
+                <table>
+                    <tr class="row1">
+                        <td colspan="2">Employee Details</td>
+                        <td colspan="2">Earnings</td>
+                        <td colspan="2">Additions</td>
+                        <td colspan="2">Deductions</td>
+                    </tr>
+                    <tr class="row2"> 
+                        <td>Employee I'd</td>
+                        <td>Employee Name</td>
+                        <td>Basic Salary</td>
+                        <td>Total Salary</td>
+                        <td colspan="2"></td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr class="row3">
+                        <td class="emid"></td>
+                        <td class="emname"></td>
+                        <td class="basicsalary"></td>
+                        <td class="totalsalary"></td>
+                        <td class="add" colspan="2"></td>
+                        <td class="deduct" colspan="2"></td>
+                    </tr>
+                </table>
+                <div class="earn">
+                    <p>Total Earnings:₹ <span class="total"></span></p>
+                </div>
+            </div>
+            <div class="mobile-payslip">
+    <div class="mobile-section">
+        <h4>Employee Details</h4>
+        <p><strong>Employee ID:</strong> <span class="eid"></span></p>
+        <p><strong>Name:</strong> <span class="ename"></span></p>
+    </div>
+    <div class="mobile-section">
+        <h4>Earnings</h4>
+        <p><strong>Basic Salary:</strong> ₹<span class="basalary"></span></p>
+        <p><strong>Total Salary:</strong> ₹<span class="tosalary"></span></p>
+    </div>
+    <div class="mobile-section">
+        <h4>Additions & Deductions</h4>
+        <p><strong>Additions:</strong> ₹<span class="ad"></span></p>
+        <p><strong>Deductions:</strong> ₹<span class="ded"></span></p>
+    </div>
+</div>
+            <div class="pay3">
+                <a href="./overview.html"><button class="b1">Save</button></a>
+                <button class="b2">Download</button>
+            </div>
+        </div>
+
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            document.querySelector(".empname").textContent = localStorage.getItem("empname") || "N/A";
+            document.querySelector(".empdate").textContent = localStorage.getItem("empdate") || "N/A";
+            document.querySelector(".empid").textContent = localStorage.getItem("empid") || "N/A";
+            document.querySelector(".empmonth").textContent = localStorage.getItem("empdate") || "N/A";
+            document.querySelector(".emprole").textContent = localStorage.getItem("emprole") || "N/A";
+            document.querySelector(".emid").textContent = localStorage.getItem("emid") || "N/A";
+            document.querySelector(".emname").textContent = localStorage.getItem("emname") || "N/A";
+            document.querySelector(".basicsalary").textContent = localStorage.getItem("basicsalary") || "N/A";
+            document.querySelector(".totalsalary").textContent = localStorage.getItem("totalsalary") || "N/A";
+            document.querySelector(".add").textContent = localStorage.getItem("add") || "N/A";
+            document.querySelector(".deduct").textContent = localStorage.getItem("deduct") || "N/A";
+            document.querySelector(".total").textContent = localStorage.getItem("total") || "N/A";
+
+            document.querySelector(".eid").textContent = localStorage.getItem("eid") || "N/A";
+            document.querySelector(".ename").textContent = localStorage.getItem("ename") || "N/A";
+            document.querySelector(".basalary").textContent = localStorage.getItem("basalary") || "N/A";
+            document.querySelector(".tosalary").textContent = localStorage.getItem("tosalary") || "N/A";
+            document.querySelector(".ad").textContent = localStorage.getItem("ad") || "N/A";
+            document.querySelector(".ded").textContent = localStorage.getItem("ded") || "N/A";
+        });
+    </script>
+</body>
+</html>

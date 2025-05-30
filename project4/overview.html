@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand" rel="stylesheet">
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;font-family: "Quicksand", sans-serif;}
+        body{display: grid; grid-template-columns: 200px 800px;}
+        .overview{background-color: #455A64; height: 100vh;}
+        .overview .nav{padding: 10px; margin: auto;}
+        .nav figure{display: flex; column-gap: 20px; padding: 10px 20px;}
+        .nav a{text-decoration: none;}
+        .nav1 figure figcaption{color: #f8cc14;}
+        .nav2 figure figcaption, .nav3 figure figcaption{color: white;}
+        .content{display: grid; grid-template-rows: 100px 600px; row-gap: 50px;}
+        .content .c1{display: flex; gap: 300px; background-color: #FEEBAB; width: 1000px; height: 100px;padding: 10px 20px; margin-left: 50px; margin-top: 20px; border-radius: 5px;}
+        .c01 h1{width: 250px; text-align: center; padding: 30px;}
+        .content .c02{display: flex; column-gap: 20px; padding: 30px;  align-items: flex-end;}
+        .c02 .c021 input{width: 200px; height: 30px; border-radius: 5px; font-size: 18px; background-color: transparent;}
+        .c021 .i1{position: relative; right: 50px; top: 3px; width: 15px; height: 15px;}
+        .c02 .i2{width: 30px; height: 30px;}
+        .c02 .i3{width: 30px; height: 30px;}
+        .c2{background-color: #FEEBAB; width: 1000px; height: 500px; margin-left: 50px;}
+        .c21{display: flex; justify-content: space-around;}
+        .c21 .c211, .c21 .c212, .c21 .c213, .c21 .c214{padding: 10px 20px; display: flex; gap: 5px; margin-top: 20px; width: 200px; height: 70px; border-radius: 5px; background-color: #f8cc14; font-size: 15px;}
+        .c21 .c211 > img, .c21 .c212 > img, .c21 .c213 > img, .c21 .c214 > img{margin-top: 10px; width: 30px; height: 30px; border-radius: 15px;}
+        .c3{display: flex; justify-content: space-between; align-items: flex-start; padding: 20px 50px; gap: 50px;}
+        .c31{width: 300px; padding: 20px; border-radius: 5px;}
+        .c31 .c311{width: 250px; height: 250px; border-radius: 5px;background-color: #f8cc14; padding: 10px;}
+        .c312{display: flex; column-gap: 5px;}
+        .c312 .arrow{margin-left: 100px; display: flex; column-gap: 30px;}
+        .arrow .prev, .arrow .next{width: 50x; height: 25px; border-radius: 10px; border: 2px solid #ff8016;}
+        table {width: 100%; border-collapse: collapse; text-align: center; margin-top: 10px;}
+        table td{padding: 5px; font-size: 14px; width: 14%;}
+        table .active{width: 25px; height: 25px; border-radius: 15px; background-color: #ff8016;}
+        .c32{margin-left: 250px;}
+        .c32 .c321{display: flex; margin-top: 20px; justify-content: space-around;}
+        .c32 .c321 h5{color: red;}
+        .c322{width: 300px; height: 300px; background-color: #ff8016; border-radius: 5px; padding: 10px 10px;margin-top: 10px; display: flex; flex-direction: column; gap: 20px;}
+        .c322 .c322-1{display: flex; width: 280px; height: 50px; border: 1px solid black; border-radius: 5px; justify-content: space-evenly;}
+
+        @media (max-width:1024px){
+            body{display: grid; grid-template-columns: 150px 700px;}
+            .overview{height: 90vh;}
+            .overview .nav{padding: 5px; }
+            .nav figure{column-gap: 10px; padding: 5px 10px;}
+            .content .c1, .content .c2{margin-left: 10px;}
+        }
+        @media screen and (max-width: 600px) {
+    body {
+        display: block;
+    }
+
+    .overview {
+        width: 100%;
+        height: auto;
+    }
+
+    .nav figure {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 5px;
+    }
+
+    .content {
+        display: block;
+        width: 100%;
+    }
+
+    .content .c1 {
+        flex-direction: column;
+        width: 100%;
+        height: 250px;
+        gap: 10px;
+        margin-left: 0;
+        padding: 5px;
+    }
+
+    .c01 h1 {
+        text-align: center;
+        padding: 5px;
+        font-size: 20px;
+    }
+
+    .c02 {
+        flex-direction: column;
+        margin: auto;
+        gap: 10px;
+        padding: 5px;
+    }
+     .c02 .i2, .c02 .i3{
+       margin-right: 100px;
+    }
+
+    .c2 {
+        width: 100%;
+        margin-left: 0;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .c21 {
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+
+    .c21 .c211, .c212, .c213, .c214 {
+        width: 90%;
+        justify-content: center;
+    }
+
+    .c3 {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .c31, .c32 {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .c31 .c311 {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .c322 {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .c322 .c322-1 {
+        width: 100%;
+        height: 60px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .arrow {
+        margin-left: 0;
+        justify-content: center;
+    }
+}
+    </style>
+</head>
+<body>
+    <section class="overview">
+        <div class="nav">
+            <div class="nav1">
+                <figure>
+                    <img src="./Payslip Images/Overview.png" alt="overview">
+                    <figcaption>Overview</figcaption>
+                </figure>
+            </div>
+            <div class="nav2">
+                <a href="./payrolldetails.html"><figure>
+                    <img src="./Payslip Images/Payroll.png" alt="Payroll">
+                    <figcaption>Payroll</figcaption>
+                </figure></a>
+            </div>
+            <div class="nav3">
+                <a href="./payrolldetails.html"><figure>
+                    <img src="./Payslip Images/Payroll.png" alt="Payslip">
+                    <figcaption>Payslip</figcaption>
+                </figure></a>
+            </div>
+        </div>
+    </section>
+    <section class="content">
+        <div class="c1">
+            <div class="c01">
+                <h1>Good Morning!!!</h1>
+            </div>
+            <div class="c02">
+                <div class="c021">
+                    <input type="text" id="text" required placeholder="search">
+                    <img src="./Payslip Images/search.png" alt="search" class="i1">
+                </div>
+                <img src="./Payslip Images/notification.png" alt="notification" class="i2">
+                <img src="./Payslip Images/Profile.png" alt="Profile" class="i3">
+            </div>
+        </div>
+        <div class="c2">
+            <div class="c21">
+                <div class="c211">
+                    <img src="./Payslip Images/Total.png" alt="total">
+                    <h2>Total Employees</h2>
+                </div>
+                <div class="c212">
+                    <img src="./Payslip Images/no of leave.png" alt="leave">
+                    <h2>Number Of Leave</h2>
+                </div>
+                <div class="c213">
+                    <img src="./Payslip Images/add.png" alt="add">
+                    <h2>New Employee's</h2>
+                </div>
+                <div class="c214">
+                    <img src="./Payslip Images/holiday.png" alt="holiday">
+                    <h2>Holiday of this Year</h2>
+                </div>
+            </div>
+            <div class="c3">
+            <div class="c31">
+                <h3>Calendar</h3>
+                <div class="c311">
+                    <div class="c312">
+                        <p>May 2025</p>
+                        <div class="arrow">
+                            <span class="prev">&#10094;</span>
+                            <span class="next">&#10095;</span>
+                        </div>
+                    </div>
+                    <table>
+                        <tr>
+                            <td>Sun</td>
+                            <td>Mon</td>
+                            <td>Tue</td>
+                            <td>Wed</td>
+                            <td>Thu</td>
+                            <td>Fri</td>
+                            <td>Sat</td>
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td class="active">17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td>31</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="c32">
+                <div class="c321">
+                    <h3>Upcoming Meetings</h3>
+                    <h5>View All</h5>
+                </div>
+                <div class="c322">
+                    <div class="c322-1">
+                        <h5>Client Meeting - 10.00 Am</h5>
+                        <div class="c322-11">
+                            <p>Wed <br> May 17</p>
+                        </div>
+                    </div>
+                    <div class="c322-1">
+                        <h5>Team Meeting - 11.00 Am</h5>
+                        <div class="c322-11">
+                            <p>Wed <br> May 17</p>
+                        </div>
+                    </div>
+                    <div class="c322-1">
+                        <h5>HR Interview - 2.00 Pm</h5>
+                        <div class="c322-11">
+                            <p>Mon <br> May 17</p>
+                        </div>
+                    </div>
+                    <div class="c322-1">
+                        <h5>Client Meeting - 4.00 Pm</h5>
+                        <div class="c322-11">
+                            <p>Mon <br> May 17</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+    </section>
+</body>
+</html>
