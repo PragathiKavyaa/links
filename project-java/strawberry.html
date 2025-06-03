@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strawberry</title>
+    <style>
+        body{margin: 0; padding: 0; box-sizing: border-box; background-color: blanchedalmond; height: 100vh;}
+        .one {background-color: white; width: 400px; height: 480px; margin: auto; margin-top: 70px;}
+        .three{margin-left: 70px;position: absolute; top: 10px;}
+        .three img{width: 250px; height: 250px; }
+        .two1{position: relative; top: 200px;}
+        .four{margin-top: 20px; margin-bottom: 20px;}
+        .four h1{color: red; letter-spacing: 1.5px; text-align: center; font-size: 30px;}
+        .four1{display: flex; gap: 10px; align-items: center; justify-content: space-between; padding: 0 10px; }
+        .four1 .a1, .four1 .a2{width: 40px; height: 40px; border-radius: 25px; background-color: red; color: white; display: flex; text-align: center; align-items: center; justify-content: center; font-size: 20px; }
+        .four1 .a1{position: relative; left: -25px;}
+        .four1 .a2{position: relative; left: 27px;}
+        .four1 p{width: 300px; margin: 0; flex-grow: 1; text-align: center; line-height: 1.5;}
+        .five table{width: 380px; margin: auto; margin-top: 20px;}
+        .five table td{color: gray; padding: 5px 10px; font-size: 20px; text-align: center;}
+        .five .r1 > span{width: 50px; height: 50px; border-radius: 25px; background-color: gray; color: black;}
+        .five .r2{display: flex; column-gap: 2px;}
+        .r2 span > img{width: 25px; height: 25px;}
+        .six{margin-top: 30px; text-align: center;}
+        .six button{ width: 150px; height: 50px; border-radius: 25px; font-weight: bold; background-color: red; border:none; color: white; text-align: center;}
+    </style>
+</head>
+<body>
+    <section class="Strawberry">
+        <div class="one">
+            <div class="two">
+                <div class="three">
+                    <img src="./image/strawberry.webp" alt="strawberry">
+                </div>
+            </div>
+            <div class="two1">
+                <div class="four">
+                    <h1>Strawberries</h1>
+                    <div class="four1">
+                    <span class="a1">←</span>
+                    <p>The garden strawberry is a widely grown hydbrid species of the genus Fragaria. 
+                    It is cultivated worldwide for its fruit.</p>
+                    <span class="a2">→</span>
+                    </div>
+                </div>
+                <div class="five">
+                    <table>
+                        <tr>
+                            <td><strong>Quantity</strong></td>
+                            <td><strong>Total Price</strong></td>
+                            <td><strong>Delivery</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="r1"><span>－</span>1<span>＋</span></td>
+                            <td> <strong>₹7</strong></td>
+                            <td class="r2"><span><img src="./image/airplane-mode.png" alt="airplane-mode"></span>In 60 mins</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="six">
+                    <button>ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
