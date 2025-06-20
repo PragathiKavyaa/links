@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=700, initial-scale=1.0">
+    <title>My Cart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "DM Sans", sans-serif;
+        }
+        #cartSection .one {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    padding: 20px;
+    
+}
+
+        body {
+            background-color: #1c3301;
+            width: 700px;
+            height: 700px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 30px;
+        }
+
+        header .head1 h1 {
+            color: white;
+            font-size: 50px;
+        }
+
+        header .head1 p {
+            color: white;
+            font-size: 30px;
+        }
+        .one {
+            margin-top: 10px;
+            width: 300px;
+            height: auto;
+            flex-shrink: 0;
+            border-radius: 25px;
+            background-color: #D9EDC2;
+            margin-left: 10px;
+            padding: 20px;
+            display: flex;
+            column-gap: 10px;
+        }
+
+        .one-1 {
+            display: flex;
+            column-gap: 20px;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .one11 img {
+            width: 150px;
+            height: 150px;
+            border-radius: 15px;
+        }
+
+        .one12 {
+            color: black;
+            line-height: 1.6;
+            font-size: 20px;
+        }
+
+        .one2 {
+            margin-top: 10px;
+        }
+
+        .one2 .r1,
+        .one2 .r2,
+        .one2 .r3,
+        .one2 .r4 {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+        }
+
+        .one2 p {
+            font-size: 20px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="head1">
+            <h1>My Cart</h1>
+            <p class="total"></p>
+        </div>
+    </header>
+    <hr>
+    <section id="cartSection">
+     
+    </section>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const container = document.getElementById("cartSection");
+
+    function loadCart() {
+        const cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+        container.innerHTML = "";
+
+        let totalQty = cart.length;
+        let totalPrice = 0;
+
+        if (cart.length === 0) {
+            container.innerHTML = "<p style='color:white; text-align:center;'>Your cart is empty.</p>";
+            return;
+        }
+
+        cart.forEach((item, index) => {
+            totalPrice += item.price;
+
+            container.innerHTML += `
+            <div class="one">
+                <div class="one-1">
+                    <div class="one1">
+                        <div class="one11">
+                            <img src="${item.img}" alt="Product Image" width="100" height="100">
+                        </div>
+                        <div class="one12">
+                            <p>${item.name}</p>
+                            <p>${item.weight}</p>
+                            <h5>₹${item.price}</h5>
+                            <p>Save For later <span>&hearts;</span></p>
+                            <button class="removeBtn" data-index="${index}" style="margin-top:10px; padding:5px 10px; background:red; color:white; border:none; border-radius:5px;">Remove</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="one2">
+                    <div class="r1"><p>Bill Details</p></div><hr>
+                    <div class="r2"><p>Total qty(1)</p><p>1</p></div><hr>
+                    <div class="r3"><p>Handling Fee</p><p>₹10</p></div><hr>
+                    <div class="r4"><p>To Pay</p><p>₹${item.price + 10}</p></div>
+                </div>
+            </div>`;
+        });
+
+        // Show total summary
+        container.innerHTML += `
+            <div style="color:white; text-align:center; margin-top:20px;">
+                <h2>Total Items: ${totalQty}</h2>
+                <h2>Subtotal: ₹${totalPrice}</h2>
+                <h2>Final Total (with handling ₹10 per item): ₹${totalPrice + totalQty * 10}</h2>
+                <a href="buynow.html" target="_blank" rel="noopener noreferrer"><button style="padding: 10px 20px; border: none; background-color: green; color: white; border-radius: 10px;">Buy Now</button></a>
+            </div>
+        `;
+
+        // Attach event listeners to remove buttons
+        document.querySelectorAll(".removeBtn").forEach(button => {
+            button.addEventListener("click", function () {
+                const index = this.getAttribute("data-index");
+                const cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+                cart.splice(index, 1); // remove item at index
+                localStorage.setItem("cartItems", JSON.stringify(cart));
+                loadCart(); // re-render the cart
+            });
+        });
+    }
+
+    loadCart();
+});
+</script>
+</body>
+</html>
