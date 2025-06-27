@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital" rel="stylesheet">
+    <title>Contact</title>
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        header{background-color: black; height: 100px;}
+        header .h1{display: flex; justify-content: space-around; column-gap: 40px; padding: 10px 20px;}
+        .h1 .h1-1 > img{width: 150px; height: 80px;}
+        .h1 .h1-2{display: flex; justify-content: space-evenly; column-gap: 40px; padding: 20px 30px;}
+        .h1-2 a{text-decoration: none; color: white; font-size: 20px;}
+        .h1-2 .link4{color: yellow;}
+        .one{width: 100%; height: 150px; align-items: center; justify-content: center; background-color: black; border-bottom: 1px solid white;}
+        .one h1{font-size: 50px; text-align: center; color: white;}
+        .two{display: grid; grid-template-columns: repeat(2, 350px); column-gap: 20px; background-color: black; align-items: center; justify-content: center; padding:10px 20px;}
+        .two1 p{color: white; font-size: 20px;}
+        .two2{width: 500px; height: 500px; background-color: gray; padding: 10px 20px; color: white;}
+        .two2 label{color: white;}
+        .two2 input{width: 400px; height:50px; border: 1px solid white; background-color: gray; cursor: pointer;}
+        .two2 button{width: 100px; height: 30px; background-color: yellow; color: white; font-size: 18px; text-align: center; border: none; cursor: pointer;}
+        footer{background-color: black; color: white;}
+        footer .f1{display: flex; flex-direction: column; row-gap: 10px; align-items: center; justify-content: center;}
+        .f1 .f11{display: grid; grid-template-columns: repeat(3, 350px); column-gap: 20px; align-items: center; justify-content: center; padding: 20px 30px;}
+        .f02 h1, .f03 h1{color: #ddaf4b;}
+        .f12 p{text-align: center; color: #ddaf4b;}
+    </style>
+</head>
+<body>
+    <header>
+        <section class="h1">
+            <div class="h1-1">
+                <img src="./images/Nangaya-Designs-Logo.png" alt="logo">
+            </div>
+            <div class="h1-2">
+                <a href="home.html" class="link1">Home</a>
+                <a href="about.html" class="link2">About</a>
+                <a href="aariclass.html" class="link3">Aari Class</a>
+                <a href="" class="link4">Contact</a>
+            </div>
+        </section>
+    </header>
+    <section class="one">
+        <h1>Contact</h1>
+    </section>
+    <section class="two">
+        <div class="two1">
+            <p>Phone:+91 9874561230</p><br><br>
+            <p>Email:nangayaaariworks@gmail.com</p><br><br>
+            <p>Address: Mala Builders, 4/423, Veera Anjaneyar Koil St, 
+                    Sevanthi Nagar, Kirubanandavariyar Nagar, Mangadu, 
+                    Chennai, Tamil Nadu 600056</p><br><br>
+            <p>Working hours: Monday - Saturday : 9.00 am - 7.00 pm</p>
+        </div>
+        <div class="two2">
+            <label>Your Name</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label>Your email</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label>Subject</label><br>
+            <input type="text" id="subject" name="subject" required><br><br>
+            <label>Your message(Optional)</label><br>
+            <input type="text" id="message" name="message" rows="4"><br><br>
+            <button type="submit"><strong>Submit</strong></button>
+        </div>
+    </section>
+    <footer>
+        <section class="f1">
+            <div class="f11">
+                <div class="f01">
+                <img src="./images/Nangaya-Designs-Logo.png" alt="logo">
+                </div>
+            <div class="f02">
+                <h1>Contatc Us</h1><br>
+                <p>Email:nangayaaariworks@gmail.com</p>
+                <p>Address: Mala Builders, 4/423, Veera Anjaneyar Koil St, 
+                    Sevanthi Nagar, Kirubanandavariyar Nagar, Mangadu, 
+                    Chennai, Tamil Nadu 600056</p><br>
+                <p>Working hours: Monday - Saturday : 9.00 am - 7.00 pm</p>
+            </div>
+            <div class="f03">
+                <h1>Get a Free Quote</h1><br>
+                <h3>Ph no:+91 9874561230</h3>
+                <p>Get in touch to get a free quote or</p><br><br>
+                <p> <strong>REQUEST A QUOTE NOW</strong></p>
+            </div>
+            </div>
+            <div class="f12">
+                <p>© 2024 Nangaya Designs - Marketing by SEO With Sandeep</p>
+            </div>
+        </section>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const submitButton = document.querySelector('.two2 button');
+
+        submitButton.addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent form from refreshing the page
+            alert("Message submitted successfully!");
+        });
+    });
+</script>
+</body>/</html>

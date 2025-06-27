@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deals</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000" rel="stylesheet">
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+
+        .h22 .deals{text-decoration-line: underline; text-decoration-color: #8BC34A; color: black; gap: 10px;}
+
+        .one{background-image: url(./images/backgroundimage.png); background-position: cover; width: 100%; height: 200px; display: flex; justify-content: space-evenly; margin-bottom: 20px;}
+        .one1{text-align: center;}
+        .one1 h3{color: white; font-size: 30px;}
+        .one1 h1{color: white; font-size: 50px;}
+        .one1 button{width: 100px; height: 50px; background-color: white; color: black; border: none;}
+        .one2 img{width: 400px; height: 200px;}
+        .five h1{color: black; padding: 10px 30px;}
+        .five1{display: flex; justify-content: space-evenly; margin-bottom: 20px;}
+        .five1 .f51, .five1 .f52, .five1 .f53, .five1 .f54, .five1 .f55, .five1 .f56{width:180px; height: 300px; border-radius: 15px; background-color: #D9EDC2; line-height: 1.6; padding: 10px 15px;} 
+        .f51 img, .f52 img, .f53 img, .f54 img, .f55 img, .f56 img{width: 100px; height: 150px; text-align: center; display: block; margin: auto;}
+        .f51 p, .f52 p, .f53 p, .f54 p, .f55 p, .f56 p{font-size: 15px; color: black;}
+        .f51 h6, .f52 h6, .f53 h6, .f54 h6, .f55 h6, .f56 h6{color: gray;}
+        .f51 .rupees, .f52 .rupees, .f53 .rupees, .f54 .rupees, .f55 .rupees, .f56 .rupees{display: flex; gap: 50px;}
+        .five1 .rupees button{width: 30px; height: 40px; border-radius: 5px; border: none; text-align: center; font-size: 20px; color: gray;}
+        .six h1{color: black; padding: 10px 30px;}
+        .six1{display: flex; justify-content: space-evenly; margin-bottom: 20px;}
+        .six1 .f61, .six1 .f62, .six1 .f63, .six1 .f64, .six1 .f65, .six1 .f66{width:180px; height: 300px; border-radius: 15px; background-color: #D9EDC2; line-height: 1.6; padding: 10px 15px;} 
+        .f61 img, .f62 img, .f63 img, .f64 img, .f65 img, .f66 img{width: 100px; height: 150px; text-align: center; display: block; margin: auto;}
+        .f61 p, .f62 p, .f63 p, .f64 p, .f65 p, .f66 p{font-size: 15px; color: black;}
+        .f61 h6, .f62 h6, .f63 h6, .f64 h6, .f65 h6, .f66 h6{color: gray;}
+        .f61 .rupees, .f62 .rupees, .f63 .rupees, .f64 .rupees, .f65 .rupees, .f66 .rupees{display: flex; gap: 70px; align-items: center; justify-content: center;}
+        .six1 .rupees .option{width: 100px; height: 30px; border-radius: 5px; background-color: white; color:blue; border: none; font-size: 10px;}
+        .six1 .rupees button{width: 30px; height: 40px; border-radius: 5px; border: none; text-align: center; font-size: 20px; color: gray;}
+        .seven h1{color: black; padding: 10px 30px;}
+        .seven1{display: flex; justify-content: space-evenly; margin-bottom: 20px;}
+        .seven1 .f71, .seven1 .f72, .seven1 .f73, .seven1 .f74, .seven1 .f75, .seven1 .f76{width:180px; height: 300px; border-radius: 15px; background-color: #D9EDC2; line-height: 1.6; padding: 10px 15px;} 
+        .f71 img, .f72 img, .f73 img, .f74 img, .f75 img, .f76 img{width: 100px; height: 150px; text-align: center; display: block; margin: auto;}
+        .f71 p, .f72 p, .f73 p, .f74 p, .f75 p, .f76 p{font-size: 15px; color: black;}
+        .f71 h6, .f72 h6, .f73 h6, .f74 h6, .f75 h6, .f76 h6{color: gray;}
+        .f71 .rupees, .f72 .rupees, .f73 .rupees, .f74 .rupees, .f75 .rupees, .f76 .rupees{display: flex; gap: 60px; align-items: center; justify-content: center;}
+        
+        .seven1 .rupees button{width: 30px; height: 40px; border-radius: 5px; border: none; text-align: center; font-size: 20px; color: gray;}
+
+        @media (max-width:600px){
+            .one{height: 500px; display: flex; flex-direction: column; row-gap: 10px; width: 100%;}
+            .one2 img{width: 300px; height: 200px;}
+            .five h1{text-align: center; width: 100%;}
+            .five1{display: flex; flex-direction: column; row-gap: 5px; align-items: center; justify-content: center; width: 100%;}
+            .six h1{text-align: center; width: 100%; font-size: 20px;}
+            .six1{display: flex; flex-direction: column; row-gap: 5px; align-items: center; justify-content: center; width: 100%;}
+            .seven h1{text-align: center;}
+            .seven1{display: flex; flex-direction: column; row-gap: 5px; align-items: center; justify-content: center; width: 100%;}
+
+           #loginModal, #mycartModal {
+    width: 90vw !important;
+    height: auto !important;
+    max-height: 90vh;
+    top: 5vh !important;
+    left: 5vw !important;
+    transform: none !important;
+    border-radius: 10px !important;
+    overflow: hidden;
+  }
+
+  #loginModal iframe, #mycartModal iframe {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 90vh;
+    border: none;
+  }
+
+  #modalOverlay {
+    width: 100vw;
+    height: 100vh;
+  }
+        }
+        @media (min-width: 601px) and (max-width:1023px){
+            .one{width: 100%;}
+            .five h1{ width: 100%;}
+            .five1{ display: grid; grid-template-columns: repeat(3,1fr); column-gap: 20px; row-gap: 10px; padding: 10px 20px;}
+            .six h1{ width: 100%;}
+            .six1{ display: grid; grid-template-columns: repeat(3,1fr); column-gap: 20px; row-gap: 10px; padding: 10px 20px;}
+            .seven h1{ width: 100%;}
+            .seven1{ display: grid; grid-template-columns: repeat(3,1fr); column-gap: 20px; row-gap: 10px; padding: 10px 20px;}
+
+            .loginModal, .mycartModal{width: 90%; height: 600px; top:100px;}
+        }
+        @media(max-width:1024px){
+            .one{width: 100%;}
+            .five1 .f51, .five1 .f52, .five1 .f53, .five1 .f54, .five1 .f55, .five1 .f56{width:150px; height: 300px;}
+            .six1 .f61, .six1 .f62, .six1 .f63, .six1 .f64, .six1 .f65, .six1 .f66{width:150px; height: 300px;}
+            .seven1 .f71, .seven1 .f72, .seven1 .f73, .seven1 .f74, .seven1 .f75, .seven1 .f76{width:150px; height: 300px;} 
+        }
+    </style>
+</head>
+<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <header class="header1">
+        <div class="h1">
+            <div class="h1-1">
+                <img src="./images/Vector V.png" alt="phone">
+                <p>+91 87642 987687</p>
+            </div>
+            <div class="h1-2">
+                <img src="./images/Vector 1.png" alt="whatsapp">
+                <p>+91 87642 987687</p>
+            </div>
+        </div>
+        <div class="h2">
+            <p>World Fastest Online Destination Shopping</p>
+        </div>
+        <div class="h3">
+            <div class="h3-1">
+                <p>Current Location</p>
+                <img src="./images/Vector.png" alt="arrow">
+            </div>
+            <div class="h3-2">
+                <p>Account</p>
+                <img src="./images/Vector.png" alt="arrow">
+            </div>
+            <div class="h3-3">
+                <img src="./images/SVG.png" alt="login">
+                <p>Login/Logout</p>
+            </div>
+        </div>
+    </header>
+    <header class="header2">
+        <div class="h21">
+            <img src="./images/Ellipse 1.png" alt="logo">
+            <p>Grocery Hub</p>
+        </div>
+        <div class="h22">
+            <a href="./home.html" class="home">Home</a>
+            <a href="./categories.html" class="category">Categories</a>
+            <a href="./deals.html" class="deals">Deals</a>
+        </div>
+        <div class="h23">
+            <figure class="one-1">
+                <img src="./images/SEARCH.png" alt="search">
+                <figcaption>Search</figcaption>
+            </figure>
+            <figure class="two-2">
+                <img src="./images/Vector 8.png" alt="cart">
+                <figcaption>Cart</figcaption>
+            </figure>
+            <figure class="three-3">
+                <img src="./images/Vector O.png" alt="liked">
+                <figcaption>Liked</figcaption>
+            </figure>
+        </div>
+    </header>
+
+    <section class="one">
+        <div class="one1">
+            <h3>FLAT 20% OFF</h3>
+            <h1>SUPER SALE</h1>
+            <h3>LIMITED TIME OFFER</h3>
+            <button>SHOP NOW</button>
+        </div>
+        <div class="one2">
+            <img src="./images/Screenshot_2025-03-29_160452-removebg-preview 1.png" alt="basket">
+        </div>
+    </section>
+
+    <section class="five">
+        <h1>Top Selling 25% OFF</h1>
+        <div class="five1">
+            <div class="f51">
+                <img src="./images/Premium Chicken Whole Skinless 1.png" alt="chicken" class="image">
+                <p class="pdt">Premium Chicken Whole Skinless</p>
+                <h6 class="qty">250 GM</h6><br>
+                <div class="rupees">
+                    <h5 class="rup">₹74.75</h5>
+                    <button onclick="addToCart(this)">+</button>
+                </div>
+            </div>
+            <div class="f52">
+                <img src="./images/Chicken Boneless Breast Fillet.png" alt="chicken">
+                <p>Chicken Boneless Breast Fillet</p>
+                <h6>250 GM</h6><br>
+                <div class="rupees">
+                    <h5>₹107.75</h5>
+                    <button onclick="addToCart(this)">+</button>
+                </div>
+            </div>
+            <div class="f53">
+                <img src="./images/Goat Currycut.png" alt="chicken">
+                <p>Goat Currycut</p><br>
+                <h6>250 GM</h6>
+                <h6><strike>₹190</strike></h6>
+                <div class="rupees">
+                    <h5>₹212.25</h5>
+                    <button onclick="addToCart(this)">+</button>
+                </div>
+            </div>
+            <div class="f54">
+                <img src="./images/Chicken Liver Cut Pieces U.png" alt="chicken">
+                <p>Chicken Liver Cut Pieces</p>
+                <h6>250 GM</h6><br>
+                <div class="rupees">
+                    <h5>₹249.75</h5>
+                    <button onclick="addToCart(this)">+</button>
+                </div>
+            </div>
+            <div class="f55">
+                <img src="./images/Premium Chicken Whole Skinless 1.png" alt="chicken">
+                <p>Chicken Dressed With Skin Whole</p>
+                <h6>250 GM</h6><br>
+                <div class="rupees">
+                    <h5>₹59.75</h5>
+                    <button onclick="addToCart(this)">+</button>
+                </div>
+            </div>
+            <div class="f56">
+                <img src="./images/Premium Chicken Drumstick Skinless U.png" alt="chicken">
+                <p>Premium Chicken Drumstick Skinless</p>
+                <h6>250 GM</h6><br>
+                <div class="rupees">
+                    <h5>₹107.25</h5>
+                    <button onclick="addToCart(this)">+</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="six">
+        <h1>Best Deals Up to 20% OFF</h1>
+        <div class="six1">
+            <div class="f61">
+                <img src="./images/Jersey Badam Flavoured Milk 190ML.png" alt="badammilk">
+                <p>Jersey Badam Flavoured Milk 190ML</p>
+                <h6>190 ML</h6><br>
+                <div class="rupees">
+                    <h5>₹40</h5>
+                    <button onclick="addToCart(this)">+</button>
+                </div>
+            </div>
+            <div class="f62">
+                <img src="./images/Nandini Goodlife Milk 500GM.png" alt="Milk">
+                <p>Nandini Good Life Milk 500GM</p>
+                <h6>500 GM</h6>
+                <h6><strike>₹30</strike></h6>
+                <div class="rupees">
+                    <h5>₹29</h5>
+                    <button onclick="addToCart(this)">+</button>
+                </div>
+            </div>
+            <div class="f63">
+                <img src="./images/Nandini Goodlife Milk 180ML.png" alt="Milk">
+                <p>Nandini Good Life Milk 180 ML</p>
+                <h6>180 ML</h6><br>
+                <div class="rupees">
+                    <h5>₹14</h5>
+                    <button onclick="addToCart(this)">+</button>
+                </div>
+            </div>
+            <div class="f64">
+                <img src="./images/Nandini Slim Uht Milk 1L.png" alt="Slim">
+                <p>Nandini Slim Uht Milk 1L</p>
+                <h6>1 L</h6><br>
+                <div class="rupees">
+                    <h5>₹71</h5>
+                    <button onclick="addToCart(this)">+</button>
+                </div>
+            </div>
+            <div class="f65">
+                <img src="./images/Milky Mist Paneer-P.png" alt="paneer">
+                <p>Milky Mist Paneer</p>
+                <h6>200 GM</h6><br><br>
+                <div class="rupees">
+                    <h5>₹128</h5>
+                    <button onclick="addToCart(this)">+</button>
+                </div>
+            </div>
+            <div class="f66">
+                <img src="./images/Heritage Premium Badam Milk With Badam Bits 180ML.png" alt="badam">
+                <p>Heritage Premium Badam Milk with...</p>
+                <h6>180 ML</h6>
+                <div class="rupees">
+                    <h5>₹35</h5>
+                    <button onclick="addToCart(this)">+</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="seven">
+        <h1>Trending Items</h1>
+        <div class="seven1">
+            <div class="f71">
+                <img src="./images/SPAR Select Urad Dal 500G.png" alt="dal">
+                <p>SPAR Select Urad Dal 500G</p>
+                <h6>500 GM</h6><br>
+                <div class="rupees">
+                    <h5>₹110</h5>
+                    <button onclick="addToCart(this)">+</button>
+                </div>
+            </div>
+            <div class="f72">
+                <img src="./images/Bhagyalakshmi Fried Gram-P.png" alt="gram">
+                <p>Bhagyalakshmi Fried Gram</p>
+                <h6>250 GM</h6><br>
+                <div class="rupees">
+                    <h5>₹40</h5>
+                    <button onclick="addToCart(this)">+</button>
+                </div>
+            </div>
+            <div class="f73">
+                <img src="./images/Screenshot_2025-03-31_150052-removebg-preview 1.png" alt="Milk">
+                <p>Popular Moong Dal 1 KG</p>
+                <h6>1 KG</h6><br>
+                <div class="rupees">
+                    <h5>₹159</h5>
+                    <button onclick="addToCart(this)">+</button>
+                </div>
+            </div>
+            <div class="f74">
+                <img src="./images/Screenshot_2025-03-31_150157-removebg-preview 1.png" alt="Slim">
+                <p>SPAR Select Spotted Double Beans</p>
+                <h6>200 GM</h6><br>
+                <div class="rupees">
+                    <h5>₹150</h5>
+                    <button onclick="addToCart(this)">+</button>
+                </div>
+            </div>
+            <div class="f75">
+                <img src="./images/Milky Mist Paneer-P.png" alt="paneer">
+                <p>Loose Best Price Friend Gram</p>
+                <h6>250 GM</h6><br>
+                <div class="rupees">
+                    <h5>₹42.25</h5>
+                    <button onclick="addToCart(this)">+</button>
+                </div>
+            </div>
+            <div class="f76">
+                <img src="./images/Heritage Premium Badam Milk With Badam Bits 180ML.png" alt="badam">
+                <p>Popular Moong Dal 2KG</p>
+                <h6>2 KG</h6>
+                <h6><strike>₹299</strike></h6>
+                <div class="rupees">
+                    <h5>₹258</h5>
+                    <button onclick="addToCart(this)">+</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="f1">
+            <div class="f01">
+                <figure>
+                    <img src="./images/Ellipse 1.png" alt="logo">
+                    <figcaption>Grocery Hub</figcaption>
+                </figure>
+                <p>
+                    GroceryHub brings its customers low prices every day. We offer a wide choice covering fresh & packaged
+                    food, grains, pulses, dairy, frozen, plastics, utensils, crocery, travel, stationery, & more. SPAR has
+                    13,900 stores in 48 countries. In India, SPAR has 23 stores across 8 cities.
+                </p>
+            </div>
+            <div class="f02">
+                <h3>Our Services</h3>
+                <ul>
+                    <li>Your Account</li>
+                    <li>FAQS</li>
+                    <li>Store List</li>
+                </ul>
+            </div>
+            <div class="f03">
+                <h3>Let Us Help You</h3>
+                <ul>
+                    <li>Help & Support</li>
+                    <li>Share Feedback</li>
+                    <li>Call Us</li>
+                </ul>
+            </div>
+            <div class="f04">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li>About Us</li>
+                    <li>Terms</li>
+                    <li>Privacy Policy</li>
+                    <li>Return & Refund Policy</li>
+                </ul>
+            </div>
+        </div>
+        <div class="f2">
+        <div class="f20">
+            <div class="f201"><span><img src="./images/Mail.png" alt="images">business@groceryhub.com</span></div>
+            <div class="f202"><span><img src="./images/Internet.png" alt="internet">www.Grocery.in</span></div>
+        </div>
+        <div class="f21">
+            <h3>Connect With Us</h3>
+            <div class="f211">
+                <img src="./images/Item.png" alt="facebook">
+                <img src="./images/Item H.png" alt="x">
+                <img src="./images/Item P.png" alt="insta">
+                <img src="./images/Item 9.png" alt="linkedin">
+            </div>
+        </div>
+        </div>
+        <div class="f3">
+            <div class="f31"></div>
+            <div class="f32"><h3>GroceryHub India @ All Rights Reserved</h3></div>
+            <div class="f33">
+                <img src="./images/Link → app-store-image.png" alt="app">
+                <img src="./images/Link → paly-store-image.png" alt="play">
+            </div>
+        </div>
+    </footer>
+
+   <div id="loginModal" style="display:none; position:absolute; top:120px; left:50%; width:700px; height:700px; background-color:white; border-radius: 15px; transform: translateX(-50%); z-index: 1000; overflow: hidden;">
+  <div style="width:100%; height: 100%; position:relative;">
+    <span onclick="closeModal()" style="position:absolute; top:10px; right:20px; font-size:30px; cursor:pointer; z-index: 10;">&times;</span>
+    <iframe src="login.html" style="width:100%; height:100%; border:none;"></iframe>
+  </div>
+</div>
+
+    <div id="mycartModal" style="display:none; position:absolute; top:120px; left:50%; width:900px; height:700px; background-color:white; border-radius: 15px; transform: translateX(-50%); z-index: 1000; overflow: hidden;">
+    <div style="width:100%; height: 100%; position:relative;">
+        <span onclick="closeModal()" style="position:absolute; top:10px; right:20px; font-size:30px; color: white; cursor:pointer; z-index: 10;">&times;</span>
+        <iframe src="mycart.html" style="width:100%; height:100%; border:none; overflow: hidden;"></iframe>
+    </div>
+</div>
+
+<script>
+    const overlay = document.getElementById('modalOverlay');
+    const loginModal = document.getElementById('loginModal');
+    const cartModal = document.getElementById('mycartModal');
+
+    // Open login modal
+    document.querySelector('.h3-3').addEventListener('click', function(event) {
+        event.preventDefault();
+        loginModal.style.display = 'block';
+        overlay.style.display = 'block';
+    });
+
+    // Open cart modal
+    document.querySelector('.two-2').addEventListener('click', function(event) {
+        event.preventDefault();
+        cartModal.style.display = 'block';
+        overlay.style.display = 'block';
+    });
+
+    // Close modals
+    function closeModal() {
+        loginModal.style.display = 'none';
+        cartModal.style.display = 'none';
+        overlay.style.display = 'none';
+    }
+
+    // Add to cart
+    function addToCart(button) {
+        const card = button.closest("div[class^='f']");
+
+        const img = card.querySelector("img")?.src;
+        const name = card.querySelector("p")?.innerText.trim();
+        const weight = card.querySelector("h6")?.innerText.trim();
+        const price = card.querySelector("h5")?.innerText.trim().replace("₹", "") || "0";
+
+        let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+        cart.push({
+            img,
+            name,
+            weight,
+            price: parseFloat(price)
+        });
+
+        localStorage.setItem("cartItems", JSON.stringify(cart));
+    }
+</script>
+</body>
+</html>

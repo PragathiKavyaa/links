@@ -51,25 +51,79 @@
         .seven2 figure{gap: 10px;}
         .seven2 img{width: 150px; height: 150px; border-radius: 15px;}
         .seven2 figcaption{font-size: 18px; text-align: center; color: gray;}
+
+        @media(max-width:600px){
+            .one{display: flex; flex-direction: column; row-gap: 10px; padding: 10px 20px; width: 100%;}
+            .three, .three1{width: 100%;}
+            .three1{margin-left: -80px;}
+            .three .three2{display: flex; flex-direction: column; row-gap: 10px; padding: 10px 20px; width: 100%; align-items: center; justify-content: center; margin-left: 0;}
+            .four, .four1{width: 100%;}
+            .four1{margin-left: 0;}
+            .four .four2{display: flex; flex-direction: column; row-gap: 10px; padding: 10px 20px; width: 100%; align-items: center; justify-content: center; margin-left: 0;}
+            .five, .five1{width: 100%;}
+            .five1{margin-left: 0;}
+            .five .five2{display: flex; flex-direction: column; row-gap: 10px; padding: 10px 20px; width: 100%; align-items: center; justify-content: center; margin-left: 0;} 
+            .six, .six1{width: 100%;}
+            .six1{margin-left: 0;}
+            .six .six2{display: flex; flex-direction: column; row-gap: 10px; padding: 10px 20px; width: 100%; align-items: center; justify-content: center; margin-left: 0;}
+            .seven, .seven1{width: 100%;}
+            .seven1{margin-left: 0;}
+            .seven .seven2{display: flex; flex-direction: column; row-gap: 10px; padding: 10px 20px; width: 100%; align-items: center; justify-content: center; margin-left: 0;}
+        }
+
+        @media (min-width: 601px) and (max-width:1023px){
+            .one{display: grid; grid-template-columns: repeat(3,1fr); column-gap: 10px; row-gap: 5px; padding: 10px 20px; width: 100%;}
+            .three .three1{ margin-left: 50px;}
+            .three .three2{display: grid; grid-template-columns: repeat(3,1fr); column-gap: 10px; row-gap: 5px; width: 100%; margin-left: 20px;}
+            .three2 figcaption{width: 100%; margin-left: -30px;}
+            .four .four1{margin-left: 0;}
+            .four .four2{width: 100%; }
+            .five .five1{margin-left: 100px;}
+            .five .five2{display: grid; grid-template-columns: repeat(2,1fr); column-gap: 10px; row-gap: 5px; width: 100%; margin-left: 50px;}
+            .five2 figcaption{width: 100%; margin-left: -100px;}
+            .six.six1{margin-left: 0;}
+            .six .six2{display: grid; grid-template-columns: repeat(3,1fr); column-gap: 10px; row-gap: 5px; width: 100%; margin-left: 20px;}
+            .six2 figcaption{width: 100%; margin-left: -30px;}
+            .seven .seven1{margin-left: 100px;} 
+            .seven .seven2{display: grid; grid-template-columns: repeat(2,1fr); column-gap: 10px; row-gap: 5px; width: 100%; margin-left: 50px;}
+            .seven2 figcaption{width: 100%; margin-left: -100px;}
+        }
+
+        @media(max-width:1024px){
+            .one{width: 100%;}
+            .three{width: 100%;}
+            .four{width: 100%;}
+            .five{width: 100%;}
+            .six{width: 100%;}
+            .seven{width: 100%;}
+        }
     </style>
 </head>
 <body>
     <header class="header1">
         <div class="h1">
-            <img src="./images/Vector V.png" alt="phone">
-            <p>+91 87642 987687</p>
-            <img src="./images/Vector 1.png" alt="whatsapp">
-            <p>+91 87642 987687</p>
+            <div class="h1-1">
+                <img src="./images/Vector V.png" alt="phone">
+                <p>+91 87642 987687</p>
+            </div>
+            <div class="h1-2">
+                <img src="./images/Vector 1.png" alt="whatsapp">
+                <p>+91 87642 987687</p>
+            </div>
         </div>
         <div class="h2">
             <p>World Fastest Online Destination Shopping</p>
         </div>
         <div class="h3">
-            <p>Current Location</p>
-            <img src="./images/Vector.png" alt="arrow">
-            <p>Account</p>
-            <img src="./images/Vector.png" alt="arrow">
-            <div class="h30">
+            <div class="h3-1">
+                <p>Current Location</p>
+                <img src="./images/Vector.png" alt="arrow">
+            </div>
+            <div class="h3-2">
+                <p>Account</p>
+                <img src="./images/Vector.png" alt="arrow">
+            </div>
+            <div class="h3-3">
                 <img src="./images/SVG.png" alt="login">
                 <p>Login/Logout</p>
             </div>
@@ -329,7 +383,7 @@
     </div>
 </div>
 
-    <div id="modalOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(255,255,255,0.5); z-index: 999;"></div>
+   
     <div id="mycartModal" style="display:none; position:absolute; top:120px; left:50%; width:900px; height:700px; background-color:white; border-radius: 15px; transform: translateX(-50%); z-index: 1000; overflow: hidden;">
     <div style="width:100%; height: 100%; position:relative;">
         <span onclick="closeModal()" style="position:absolute; top:10px; right:20px; font-size:30px; color: white; cursor:pointer; z-index: 10;">&times;</span>
@@ -338,34 +392,29 @@
 </div>
 
 <script>
-    // Open modal
-    const modal = document.getElementById('loginModal');
-    const overlay = document.getElementById('modalOverlay');
-    document.querySelector('.h30').addEventListener('click', function(event) {
-        event.preventDefault(); // prevent any default link behavior
-        modal.style.display = 'block';
+   const overlay = document.getElementById('modalOverlay');
+    const loginModal = document.getElementById('loginModal');
+    const cartModal = document.getElementById('mycartModal');
+
+    // Open login modal
+    document.querySelector('.h3-3').addEventListener('click', function(event) {
+        event.preventDefault();
+        loginModal.style.display = 'block';
         overlay.style.display = 'block';
     });
 
-    // Close modal
-    function closeModal() {
-        modal.style.display = 'none';
-        overlay.style.display = 'none';
-    }
-
-    const modal2 = document.getElementById('mycartModal');
-    const overlay2 = document.getElementById('modalOverlay');
-    document.querySelector('.two-2').addEventListener('click', function(event){
+    // Open cart modal
+    document.querySelector('.two-2').addEventListener('click', function(event) {
         event.preventDefault();
-        modal2.style.display = 'block';
-        overlay2.style.display = 'block';
+        cartModal.style.display = 'block';
+        overlay.style.display = 'block';
     });
 
+    // Close modals
     function closeModal() {
-        document.getElementById('loginModal').style.display = 'none';
-        document.getElementById('mycartModal').style.display = 'none';
-        document.getElementById('modalOverlay').style.display = 'none';
-
+        loginModal.style.display = 'none';
+        cartModal.style.display = 'none';
+        overlay.style.display = 'none';
     }
 
 </script>
