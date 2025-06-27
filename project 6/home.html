@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital" rel="stylesheet">
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        header{background-image: linear-gradient(to right, rgb(41, 40, 40), #8b6f47); height: 100px;}
+        header .h1{display: flex; justify-content: space-around; column-gap: 40px; padding: 10px 20px;}
+        .h1 .h1-1 > img{width: 150px; height: 80px;}
+        .h1 .h1-2{display: flex; justify-content: space-evenly; column-gap: 40px; padding: 20px 30px;}
+        .h1-2 a{text-decoration: none; color: white; font-size: 20px;}
+        .h1-2 .link1{color: yellow;}
+        .one{display: flex; column-gap: 10px; background-image: linear-gradient(to right, rgb(41, 40, 40), #8b6f47); padding: 10px 20px; justify-content: space-around;} 
+        .one1{display: flex; flex-direction: column; row-gap: 30px; padding: 10px 20px;}
+        .one1 p{color: yellow; letter-spacing: 1px;}
+        .one1 h1{color: white; font-size: 55px;}
+        .one1 h6{color: white; font-size: 20px;}
+        .one1 h5{color: white; font-size: 25px; border-left: 5px solid #d4ac6e; padding: 5px 10px;}
+        .one1-1{display: flex; column-gap: 10px; justify-content: space-evenly; text-align: center;}
+        .star .p1{color: yellow;}
+        .star .p2{color: white;}
+        .one1-2{display: flex; column-gap: 10px; padding: 10px 20px;}
+        .one1-2 .call{display: flex; column-gap: 10px; width: 300px; height: 50px; align-items: center; justify-content: center; border-radius: 50px; padding: 20px 30px; background-color: #d4ac6e;}
+        .call p{color: black;}
+        .one1-2 .call > img{width: 25px; height: 25px;}
+        .one .one2 > img{width: 500px; height: 500px; border-radius: 250px;}
+        .two{background-color: black;}
+        .two h2{color: #d4ac6e; text-align: center; top: 10px; font-size: 50px; padding: 10px 20px; border-bottom: 2px solid #d4ac6e;}
+        .two1 .two1-1{display: flex; row-gap: 10px; padding: 20px 50px; margin-left: 100px;}
+        .two1-1 img{width: 50px; height: 50px;}
+        .two1-1 .content > h5{color: white; font-size: 20px;}
+        .two1-1 .content > p{color: #ddaf4b;}
+        .two2{display: grid; grid-template-columns: repeat(4, 250px); column-gap: 5px; row-gap: 5px; align-items: center; justify-content: center; padding: 20px 30px;}
+        .two2 img{width: 250px; height: 300px;}
+        .two3{display: flex; column-gap: 10px; align-items: center; justify-content: center;}
+        .two3 .b1{width: 100px; height: 30px; background-color: gray; color: white; border-radius: 5px; border: none;}
+        .two3 .b2{width: 150px; height: 30px; background-color: blue; color: white; border-radius: 5px; border: none;}
+        .three{display: flex; row-gap: 10px;  justify-content: space-around; background-color: black; padding: 30px 60px;}
+        .three1{width: 70%;}
+        .three1 .p1{color: white;}
+        .three1 h3{font-size: 50px; color: #ddaf4b; }
+        .three1 .p2{font-size: 20px; color: white;}
+        .three1 ul{display: grid; grid-template-columns: repeat(2, 200px); row-gap: 20px; column-gap: 20px; list-style-type: circle;color: white; padding: 10px 20px;}
+        .three1 button{width: 300px; height: 50px; align-items: center; justify-content: center; border-radius: 50px; border: none; padding: 10px 20px; color: black; background-color: #d4ac6e; font-size: 25px;}
+        .three .three2 > img{width: 300px; height: 500px; border-radius: 120px;}
+        footer{background-color: black; color: white;}
+        footer .f1{display: flex; flex-direction: column; row-gap: 10px; align-items: center; justify-content: center;}
+        .f1 .f11{display: grid; grid-template-columns: repeat(3, 350px); column-gap: 20px; align-items: center; justify-content: center; padding: 20px 30px;}
+        .f02 h1, .f03 h1{color: #ddaf4b;}
+        .f12 p{text-align: center; color: #ddaf4b;}
+
+        @media (max-width: 600px) {
+    header {
+        height: auto;
+    }
+
+    header .h1 {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 10px;
+    }
+
+    .h1 .h1-2 {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 10px;
+    }
+
+    .one {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .one .one2 img {
+        width: 90%;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    .one1 h1 {
+        font-size: 28px;
+    }
+
+    .one1 h5 {
+        font-size: 14px;
+    }
+
+    .one1-1, .one1-2 {
+        flex-direction: column;
+        row-gap: 10px;
+        align-items: center;
+    }
+    .two1 .two1-1{width: 100%; margin-left: 0;}
+    .two2 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .three {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .three1{width: 100%; margin-left: 0;}
+    .three1 button{width: 100%; height: 70px;}
+    .three2 img {
+        width: 90%;
+        height: auto;
+    }
+
+    .three1 ul {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .f1{
+        width: 100%;
+    }
+    .f1 .f11 {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 350px);
+        row-gap: 10px;
+        text-align: center;
+    }
+    .f11 .f01, .f11 .f02, .f11 .f03{width: 100%;}
+}
+@media (min-width: 601px) and (max-width: 1023px) {
+
+    header{width: 100%; height: 150px;}
+
+    header .h1 {
+        width: 100%;
+        
+        flex-direction: column;
+        align-items: center;
+        row-gap: 10px;
+    }
+
+    .h1 .h1-2 {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 20px;
+    }
+
+    .one {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .one .one2 img {
+        width: 80%;
+        height: auto;
+        border-radius: 40px;
+    }
+
+    .one1 h1 {
+        font-size: 36px;
+    }
+
+    .one1 h5 {
+        font-size: 16px;
+    }
+
+    .one1-1, .one1-2 {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .two2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .three {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .three2 img {
+        width: 80%;
+        height: auto;
+    }
+
+    .three1 ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .f1 .f11 {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 350px);
+        row-gap: 10px;
+        text-align: center;
+    }
+    .f11 .f01, .f11 .f02, .f11 .f03{width: 100%;}
+}
+@media (max-width: 1024px) {
+
+    header, .h1, .h1-1, .h1-2{width: 100%;}
+
+    .one, .one2{width: 100%;}
+    .one{column-gap: 5px; justify-content: space-evenly; padding: 5px 5px;}
+    .one .one2 > img{width: 300px; height: 300px; border-radius: 50px;}
+   
+    .two2 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .three {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .f11 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <section class="h1">
+            <div class="h1-1">
+                <img src="./images/Nangaya-Designs-Logo.png" alt="logo">
+            </div>
+            <div class="h1-2">
+                <a href="" class="link1">Home</a>
+                <a href="./about.html" class="link2">About</a>
+                <a href="./aariclass.html" class="link3">Aari Class</a>
+                <a href="./contact.html" class="link4">Location</a>
+            </div>
+        </section>
+    </header>
+    <section class="one">
+        <div class="one1">
+            <p>Aari Work Blouse Price Starts From 1500rs</p>
+        <h1>Best Aari Work Blouse Chennai</h1>
+        <h6>Leading Aari Work Service Provider in Chennai</h6>
+        <h5>Nangaya Designs Provides professional aari work design blouses in Chennai. We offer a wide range of 
+            aari work in Chennai, including bridal aari work blouses, simple aari work blouses, etc., to meet the 
+            specific needs of our clients.
+        </h5>
+        <div class="one1-1">
+            <div class="star">
+                <p class="p1">⭐⭐⭐⭐⭐</p>
+                <p class="p2">5 Rated Star Artist</p>
+            </div>
+            <div class="star">
+                <p class="p1">Stitching</p>
+                <p class="p2">Included</p>
+            </div>
+            <div class="star">
+                <p class="p1">100% Unique</p>
+                <p class="p2">Designs</p>
+            </div>
+        </div>
+        <div class="one1-2">
+            <div class="call">
+                <img src="./images/Vector V.png" alt="vector">
+                <p> <strong>CALL:+91 9874561230</strong></p>
+            </div>
+            <div class="call">
+                <img src="./images/Vector 1.png" alt="vector">
+                <p> <strong>WHATSAPP US</strong></p>
+            </div>
+        </div>
+        </div>
+        <div class="one2">
+            <img src="./images/aari1.jpg" alt="aari">
+        </div>
+    </section>
+    <section class="two">
+        <h2>Our Recent Aari Designs</h2>
+        <div class="two1">
+            <div class="two1-1">
+                <img src="./images/icon.png" alt="icon">
+                <div class="content">
+                    <h5>nangayadesigns</h5>
+                    <p>Get Your Customized Aari work blouse now!</p>
+                </div>
+            </div>
+            <div class="two2">
+                <img src="./images/image1.jpg" alt="i1">
+                <img src="./images/image2.jpg" alt="i2">
+                <img src="./images/image3.jpg" alt="i3">
+                <img src="./images/image4.jpg" alt="i4">
+                <img src="./images/image5.jpg" alt="i5">
+                <img src="./images/image6.jpg" alt="i6">
+                <img src="./images/image7.jpg" alt="i7">
+                <img src="./images/image8.jpg" alt="i8">
+                <img src="./images/image9.jpg" alt="i9">
+                <img src="./images/image10.jpg" alt="i10">
+                <img src="./images/image11.jpg" alt="i11">
+                <img src="./images/image12.jpg" alt="i12">
+                <img src="./images/image13.jpg" alt="i13">
+                <img src="./images/image14.jpg" alt="i14">
+                <img src="./images/image15.jpg" alt="i15">
+                <img src="./images/image16.jpg" alt="i16">
+            </div>
+            <div class="two3">
+                <button class="b1">Load More</button>
+                <button class="b2">Follow on Instagram</button>
+            </div>
+        </div>
+    </section>
+    <section class="three">
+        <div class="three1">
+            <p class="p1">WHO WE ARE</p>
+            <h3>About Nangaya Designs</h3><br><br>
+            <p class="p2">
+                I, Preethi Ezhilan, founded Nangaya Designs to provide quality aari work services for women. 
+                Every woman deserves to look and feel her best, and my team is dedicated to helping our clients achieve that goal. <br><br>
+                We provide customized services to meet the unique needs of our clients. 
+                Whatever your vision, we can help you bring it to life. <br><br>
+                If you’re looking for a trustworthy and reliable Aari work service in Chennai, look no further than Nangaya Designs. 
+                We’re here to help you look and feel your best! <br><br>
+            </p>
+            <ul>
+                <li>Professional Dealing</li>
+                <li>Affordable Pricing</li>
+                <li>Unique Designs</li>
+                <li>Stitching Available</li>
+                <li>100% cutomizable</li>
+                <li>Delivery available worldwide</li>
+            </ul><br><br>  
+            <button class="call">CALL: 9874561230</button>
+        </div>
+        <div class="three2">
+            <img src="./images/aari model.jpg" alt="preethi">
+        </div>
+    </section>
+    <footer>
+        <section class="f1">
+            <div class="f11">
+                <div class="f01">
+                <img src="./images/Nangaya-Designs-Logo.png" alt="logo">
+                </div>
+            <div class="f02">
+                <h1>Contatc Us</h1><br>
+                <p>Email:nangayaaariworks@gmail.com</p>
+                <p>Address: Mala Builders, 4/423, Veera Anjaneyar Koil St, 
+                    Sevanthi Nagar, Kirubanandavariyar Nagar, Mangadu, 
+                    Chennai, Tamil Nadu 600056</p><br>
+                <p>Working hours: Monday - Saturday : 9.00 am - 7.00 pm</p>
+            </div>
+            <div class="f03">
+                <h1>Get a Free Quote</h1><br>
+                <h3>Ph no:+91 9874561230</h3>
+                <p>Get in touch to get a free quote or</p><br><br>
+                <p> <strong>REQUEST A QUOTE NOW</strong></p>
+            </div>
+            </div>
+            <div class="f12">
+                <p>© 2024 Nangaya Designs - Marketing by SEO With Sandeep</p>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>
