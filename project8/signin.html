@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif;}
+        body{background-color: #B88E2F; height: 100vh; place-items: center;}
+        section{display: flex; align-items: center; justify-content: center; margin: auto; width: 500px; height: 500px;}
+        .one a{text-decoration: none;}
+        .one a > .log, .one a > .reg{width: 150px; height: 50px; border-radius: 15px; border: none; cursor: pointer; color: white; font-size: 25px;}
+        .one a > .log{background-color: green;}
+        .one a > .reg{background-color: red;}
+
+        @media(max-width:600px){
+            section{width: 100%;}
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div class="one">
+            <a href="login.html"><button class="log">Login</button></a>
+            <a href="register.html"><button class="reg">Register</button></a><br>
+        </div>
+    </section>
+</body>
+</html>

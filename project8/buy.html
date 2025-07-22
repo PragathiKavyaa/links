@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Now</title>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+     <style>
+        *{margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif;}
+        section{background-color: #FFF3E3; width: 500px; height: 500px; display: block; margin: auto; border: none; border-radius: 15px;}
+        .one{text-align: center;}
+        .one img{width: 150px; height: 150px; display: block; margin: auto;}
+        .details{text-align: center;}
+
+        @media(max-width:600px){
+            section{width: 100%;}
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="one">
+            <img src="./images/Group 51.png" alt="tick"><br>
+            <h1>Thanks For Ordering</h1><br>
+            <h2>Your order will be delivered within 7 working days</h2><br>
+        </div>
+        <div class="details">
+            <h3>Order Details:</h3>
+            <h1 class="pdtname"></h1><br>
+            <h2 class="price"></h2><br>
+        </div>
+    </section>
+
+    <script>
+ function getParam(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+  }
+
+  window.onload = function () {
+    const product = getParam('product');
+    const price = getParam('price');
+
+    document.querySelector('.pdtname').textContent = product || 'No product';
+    document.querySelector('.price').textContent = price || 'No price';
+  };
+</script>
+</body>
+</html>

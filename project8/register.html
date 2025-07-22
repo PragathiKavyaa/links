@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif;}
+        body{background-color: #B88E2F; height: 100vh; place-items: center; padding: 50px 50px;}
+        section{background-color: white; width: 500px; height: 600px;  border: none; align-items: center; justify-content: center;}
+        .one{padding: 50px 50px; text-align: center;}
+        .one label{color: black;}
+        .one input{width: 300px; height: 50px; border: 2px solid black;}
+        .one button{background-color: #B88E2F; width: 100px; height: 30px; color: white; border: none; cursor: pointer;}
+
+        @media(max-width:600px){
+            section{width: 100%;}
+            .one{padding: 10px 10px;}
+            .one input{width: 100%;}
+        }
+
+        @media(min-width:601px) and (max-width:1023px){
+            section{width: 100%;}
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div class="one">
+            <h1>Register</h1><br><br>
+            <label>Enter Name</label><br><br>
+            <input type="text" name="name" required placeholder="abc"><br><br>
+            <label>Enter Phone No</label><br><br>
+            <input type="number" name="phone" required placeholder="1234567890"><br><br>
+            <label>Password</label><br><br>
+            <input type="text" name="password" required placeholder="xxxxx"><br><br>
+            <button onclick="register()">Register</button>
+        </div>
+    </section>
+
+    <script>
+    function register() {
+      alert("Register successfully");
+      window.location.href = "home.html"; 
+    }
+  </script>
+</body>
+</html>

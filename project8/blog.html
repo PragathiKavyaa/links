@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif;}
+        header{display: flex; column-gap: 10px; justify-content: space-evenly; height: 150px; background-color: #B88E2F;}
+        header .h1{display: flex; column-gap: 5px; align-items: center; justify-content: center; color: white;}
+        header .h2{display: flex; column-gap: 20px; align-items: center; justify-content: center;}
+        .h2 a{text-decoration: none; color: white;}
+        header .h3{display: flex; column-gap: 20px; color: white; align-items: center; justify-content: center;}
+        .h3 .h3-1{display: flex; flex-direction: column; row-gap: 1px;}
+        .h3 .h3-1 > img{width: 25px; height: 25px;}
+        .h3 .h3-1 > p{font-size: 10px;}
+        .h3-4 a{text-decoration: none; color: #B88E2F; }
+        .h3 .h3-4{width: 120px; height: 30px; border-radius: 5px; border: none; background-color: white; padding: 5px; color: #B88E2F; text-align: center; font-size: 12px;}
+
+        .blog{background-image: url(./images/Screenshot\ 2025-04-18\ 121046\ 1.png); background-repeat: no-repeat; background-size: cover; background-position: center; height: 500px;}
+        .blog .blog1{place-items: center; padding: 150px 150px;} 
+       
+        .one{display: flex; column-gap: 30px; padding: 20px 70px; background-color: #FFF3E3;}
+        .one1{width: 700px;}
+        .one1 img{width: 700px; height: 500px; }
+        .one1 .details{display: flex;  column-gap: 5px;}
+        .details .d1, .details .d2, .details .d3{display: flex; column-gap: 5px; color: gray;}
+        .details .d1 > img, .details .d2 > img, .details .d3 > img{width: 25px; height: 25px;}
+        .one1 .para{color: gray;}
+        .one1 .read{border-bottom: 2px solid black; width: 100px; text-align: center;}
+
+        .two{display: flex; flex-direction: column; row-gap: 20px; }
+        .two1{background-color: white; width: 300px; height: 500px; padding: 20px 20px;}
+        .two1 .two1-1{display: flex; width: 200px; height: 30px; border-radius: 5px; padding: 3px; column-gap: 10px; justify-content: space-between; border: 2px solid black;}
+        .two1-1 img{width: 20px; height: 20px;}
+        .two1-2{display: flex; flex-direction: column; row-gap: 20px; padding: 10px 20px;}
+        .two1-2 .r1, .two1-2 .r2, .two1-2 .r3, .two1-2 .r4, .two1-2 .r5{display: flex; column-gap: 50px; width: 150px; justify-content: space-between;}
+        .two2-1{display: flex; flex-direction: column; row-gap: 20px; padding: 10px 20px;}
+        .two2-1 .c1, .two2-1 .c2, .two2-1 .c3, .two2-1 .c4, .two2-1 .c5{display: flex; column-gap: 20px;}
+        .c1 .col2 > .l1, .c2 .col2 > .l1, .c3 .col2 > .l1, .c4 .col2 > .l1, .c5 .col2 > .l1{font-size: 15px;}
+        .c1 .col2 > .l2, .c2 .col2 > .l2, .c3 .col2 > .l2, .c4 .col2 > .l2, .c5 .col2 > .l2{font-size: 12px; color: gray;}
+        .two2{background-color: white; width: 300px; height: 700px; padding: 20px 20px;}
+
+
+        footer{display: flex; flex-direction: column; row-gap: 5px; background-color: #B88E2F; line-height: 1.6;}
+        footer .footer1{display: flex; column-gap: 30px;  border-bottom: 1px solid white; padding: 10px 20px; justify-content: space-evenly;}
+        .footer1 .f1{display: flex; flex-direction: column; row-gap: 10px; width: 500px;}
+        .footer1 .f1 > .f-1{display: flex; column-gap: 5px; align-items: center; justify-content: center; color: white;}
+        .f1 .f-2 > p{color: white; font-size: 15px;}
+        .f-3{width: 400px; align-items: center;}
+        .f-3 .i1, .f-3 .i2, .f-3 .i3{display: flex; column-gap: 5px; color: white;}
+        .f2{display: flex; column-gap: 20px; }
+        .f2 .u1, .f2 .u2{color: white; line-height: 1.6;}
+        .f2 .u1 > li, .f2 .u2 > li{list-style-type: none; color: white;}
+        .f3{display: flex; flex-direction: column; row-gap: 250px;}
+        .f3 .subscribe{display: flex; flex-direction: column; row-gap: 10px;}
+        .f3 .subscribe > h2{color: white;}   
+        .subscribe .subscribe1{display: flex; column-gap: 0;}     
+        .subscribe1 .sub{width: 150px; height: 30px; background-color: white; border: 1px solid black; color: gray;}
+        .subscribe1 .sign{width: 70px; height: 30px; background-color: #FFF3E3; color: #B88E2F; border: 1px solid black;}
+        .follow{display: flex; flex-direction: column; row-gap: 5px; align-items: center; justify-content: center;}
+        .follow h4{color: rgb(216, 199, 199);}
+        .follow .follow1{display: flex; column-gap: 10px;}
+        .footer2 p{color: white; text-align: center;}
+ 
+        @media(max-width:600px){
+        header{width: 100%; height:500px; display: flex; flex-direction: column; row-gap: 10px; align-items: center; justify-content: center;}
+        header .h2{display: flex; flex-direction: column; row-gap: 5px;}
+
+        
+        .blog1{padding: 10px 10px;}
+
+        .one{display: flex; flex-direction: column; row-gap: 10px; width: 100%;}
+        .one1{width: 100%;}
+        .one1 img{width: 100%; height: 300px; }
+        .one1 .details{width: 100%; column-gap: 3px;}
+        .two{width: 100%;}
+        .two1, .two2{width: 100%;}
+
+        footer{width: 100%; align-items: center; justify-content: center;}
+        footer .footer1{display: flex; flex-direction: column; row-gap: 10px; width: 100%;}
+        footer .footer2{width: 100%;}
+        .footer1 .f1{width: 100%;}
+        .f-3{width: 100%;}
+        .f3{row-gap: 10px; align-items: center; justify-content: center;}
+        }
+
+        @media(min-width:601px) and (max-width:1023px){
+        header{width: 100%; height: 150px; display: flex; flex-direction: column; row-gap: 5px; align-items: center; justify-content: center;}
+
+        .blog1{padding: 100px 100px;}
+        .one{column-gap: 10px; padding: 20px 20px; }
+        .one1{width: 400px;}
+        .one1 img{width: 380px; height: 400px; }
+
+
+        footer{width: 100%;}
+        .footer1 .f1{row-gap: 5px;}
+        .f-3{width: 300px;}
+        .subscribe1 .sub{width: 130px; height: 50px;}
+        .subscribe1 .sign{width: 50px; height: 50px;}
+        }
+
+        @media(max-width:1024px){
+            .one{padding: 10px 10px; column-gap: 5px;}
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="h1">
+            <img src="./images/Group 206.png" alt="logo">
+            <h3>Wooden Dreams</h3>
+        </div>
+        <div class="h2">
+            <a href="home.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="category.html">Categories</a>
+            <a href="shop.html">Shop</a>
+            <a href=""style="text-decoration: underline;">Blog</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="h3">
+            <div class="h3-1">
+                <img src="./images/material-symbols_search.png" alt="search">
+                <p>Search</p>
+            </div>
+            <div class="h3-2">
+                <img src="./images/Group 189.png" alt="cart">
+                
+            </div>
+            <div class="h3-3">
+                <img src="./images/Group 190.png" alt="liked">
+                
+            </div>
+            <div class="h3-4">
+                <a href="signin.html"><p>Sign Up/Sign In</p></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="blog">
+        <div class="blog1">
+            <h1>Blog</h1>
+            <p>Home > Blog</p>
+        </div>
+    </section>
+
+    <section class="one">
+        <div class="one1">
+            <img src="./images/Rectangle 68.png" alt="laptop">
+            <div class="details">
+                <figure class="d1">
+                    <img src="./images/user-122-16.png" alt="user">
+                    <figcaption>Admin</figcaption>
+                </figure>
+                <figure class="d2">
+                    <img src="./images/calendar-129-16.png" alt="calendar">
+                    <figcaption>14 Oct 2022</figcaption>
+                </figure>
+                <figure class="d3">
+                    <img src="./images/tag-19-16.png" alt="tag">
+                    <figcaption>Wood</figcaption>
+                </figure>
+            </div><br>
+            <h1>Going all-in with millennial design</h1><br>
+            <p class="para">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dolorum, adipisci beatae cumque 
+                fuga nobis commodi ducimus, illum modi facilis accusantium? Iure ea cumque culpa aut eius commodi 
+                architecto accusantium. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur unde 
+                ducimus quia alias quas neque inventore possimus ipsa explicabo quibusdam sed maxime nesciunt voluptatum 
+                non debitis animi repudiandae eos quod asperiores quo perferendis, quaerat veritatis quos. Cupiditate, 
+                repellendus laudantium ratione soluta eaque minima fuga commodi!
+            </p><br>
+            <p class="read">Read More</p><br><br>
+            <img src="./images/Rectangle 68 h.png" alt="desk">
+            <h1>Exploring new ways of decorating</h1><br>
+            <p class="para">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dolorum, adipisci beatae cumque 
+                fuga nobis commodi ducimus, illum modi facilis accusantium? Iure ea cumque culpa aut eius commodi 
+                architecto accusantium. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur unde 
+                ducimus quia alias quas neque inventore possimus ipsa explicabo quibusdam sed maxime nesciunt voluptatum 
+                non debitis animi repudiandae eos quod asperiores quo perferendis, quaerat veritatis quos. Cupiditate, 
+                repellendus laudantium ratione soluta eaque minima fuga commodi!
+            </p><br>
+            <p class="read">Read More</p><br><br>
+            <img src="./images/Rectangle 68 p.png" alt="table">
+        </div>
+        <div class="two">
+            <div class="two1">
+                <div class="two1-1">
+                    <p>Search</p>
+                    <img src="./images/akar-icons_search.png" alt="search">
+                </div><br>
+                <h3>Categories</h3><br>
+                <div class="two1-2">
+                    <div class="r1">
+                        <p>Crafts</p>
+                        <p>2</p>
+                    </div>
+                    <div class="r2">
+                        <p>Design</p>
+                        <p>8</p>
+                    </div>
+                    <div class="r3">
+                        <p>Handmade</p>
+                        <p>7</p>
+                    </div>
+                    <div class="r4">
+                        <p>Interior</p>
+                        <p>1</p>
+                    </div>
+                    <div class="r5">
+                        <p>Wood</p>
+                        <p>6</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="two2">
+                <h3>Recent Posts</h3>
+                <div class="two2-1">
+                    <div class="c1">
+                        <div class="col1">
+                            <img src="./images/Rectangle 69.png" alt="book">
+                        </div>
+                        <div class="col2">
+                            <p class="l1">Going all-in with millennial design</p>
+                            <p class="l2">03 Aug 2022</p>
+                        </div>
+                    </div>
+                    <div class="c2">
+                        <div class="col1">
+                            <img src="./images/Rectangle 69 g.png" alt="book">
+                        </div>
+                        <div class="col2">
+                            <p class="l1">Exploring new ways of decorating</p>
+                            <p class="l2">03 Aug 2022</p>
+                        </div>
+                    </div>
+                     <div class="c3">
+                        <div class="col1">
+                            <img src="./images/Rectangle 69g.png" alt="book">
+                        </div>
+                        <div class="col2">
+                            <p class="l1">Handmade pieces that took time to make</p>
+                            <p class="l2">03 Aug 2022</p>
+                        </div>
+                    </div>
+                    <div class="c4">
+                        <div class="col1">
+                            <img src="./images/Rectangle 69d.png" alt="book">
+                        </div>
+                        <div class="col2">
+                            <p class="l1">Modern home in Millan</p>
+                            <p class="l2">03 Aug 2022</p>
+                        </div>
+                    </div>
+                    <div class="c5">
+                        <div class="col1">
+                            <img src="./images/q.png" alt="book">
+                        </div>
+                        <div class="col2">
+                            <p class="l1">Colorfull office redesign</p>
+                            <p class="l2">03 Aug 2022</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer1">
+        <div class="f1">
+            <div class="f-1">
+                <img src="./images/Group 206.png" alt="logo">
+                <h3>Wooden Dreams</h3>
+            </div>
+            <div class="f-2">
+                <p>"At Wooden Dreams, we craft furniture that brings warmth and comfort to your home. Our wooden creations
+                    are designed to inspire sweet dreams and peaceful nights. Every piece is carefully crafted to provide 
+                    a heaven of relaxation and tranquility. Sleep tight, dream big with Wooden Dreams." 
+                </p>
+            </div>
+            <div class="f-3">
+                <figure class="i1">
+                    <img src="./images/raphael_loaction2.png" alt="location">
+                    <p>Head Office 13/5, Post Office Opposite, Chennai-876543</p>
+                </figure> <br>
+                <figure class="i2">
+                    <img src="./images/mdi_internet.png" alt="internet">
+                    <p>www.woodendreams.in</p>
+                </figure> <br>
+                <figure class="i3">
+                    <img src="./images/material-symbols_mail-outline.png" alt="location">
+                    <p>woodendreams@gmail.com</p>
+                </figure>
+            </div>
+        </div>
+        <div class="f2">
+            <ul class="u1">LINKS 
+                <li>Home</li><br>
+                <li>About</li><br>
+                <li>Categories</li><br>
+                <li>Shop</li><br>
+                <li>BLog</li><br>
+                <li>Contact</li><br>
+            </ul>
+            <ul class="u2">HELP 
+                <li>Payment Options</li><br>
+                <li>Returns</li><br>
+                <li>Privacy Policies</li><br>
+            </ul>
+        </div>
+        <div class="f3">
+            <div class="subscribe">
+                <h2>Subscribe</h2>
+                <div class="subscribe1">
+                    <button class="sub">Enter your email</button>
+                    <button class="sign">SIGN UP</button>
+                </div>
+            </div>
+            
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="follow1">
+                    <img src="./images/icon-instagram.png" alt="insta">
+                    <img src="./images/Google.png" alt="google">
+                    <img src="./images/SVG.png" alt="fb">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="footer2">
+            <p>2025 Wooden Dreams. All rights reserved</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif;}
+        header{display: flex; column-gap: 10px; justify-content: space-evenly; height: 150px; background-color: #B88E2F;}
+        header .h1{display: flex; column-gap: 5px; align-items: center; justify-content: center; color: white;}
+        header .h2{display: flex; column-gap: 20px; align-items: center; justify-content: center;}
+        .h2 a{text-decoration: none; color: white;}
+        header .h3{display: flex; column-gap: 20px; color: white; align-items: center; justify-content: center;}
+        .h3 .h3-1{display: flex; flex-direction: column; row-gap: 1px;}
+        .h3 .h3-1 > img{width: 25px; height: 25px;}
+        .h3 .h3-1 > p{font-size: 10px;}
+        .h3-4 a{text-decoration: none; color: #B88E2F; }
+        .h3 .h3-4{width: 120px; height: 30px; border-radius: 5px; border: none; background-color: white; padding: 5px; color: #B88E2F; text-align: center; font-size: 12px;}
+
+        .one h1{text-align: center; font-weight: bold;}
+        .one .para{text-align: center; width: 700px; margin: auto;}
+        .one .one1{display: flex; column-gap: 30px; padding: 50px 50px; place-items: center; align-items: center; justify-content: center;}
+        .one1 .address{display: flex; flex-direction: column; row-gap: 5px; background-color: #FFF3E3; width: 400px; padding: 10px;}
+        .address .r1, .address .r2, .address .r3{display: flex; column-gap: 5px; padding: 10px 10px;}
+        .r1 .c1, .r2 .c1, .r3 .c1{width: 50px;}
+        .r1 .c2, .r2 .c2, .r3 .c2{width: 250px;display: flex; flex-direction: column; row-gap: 1px; text-align: left; padding: 5px;}
+        .r1 .c2 > p, .r2 .c2 > p, .r3 .c2 > p{font-size: 15px; margin-left: 0;}
+        .one1 .form{display: flex; flex-direction: column; row-gap: 2px; background-color: #FFF3E3; width: 600px; padding: 10px 10px;}
+        .form input{width: 500px; height: 50px; border-radius: 5px; padding: 5px 3px;}
+        .form button{width: 150px; height: 50px; background-color: #B88E2F; color: white; border: none;}
+        .form input::placeholder{color: gray;}
+
+
+
+        footer{display: flex; flex-direction: column; row-gap: 5px; background-color: #B88E2F; line-height: 1.6;}
+        footer .footer1{display: flex; column-gap: 30px;  border-bottom: 1px solid white; padding: 10px 20px; justify-content: space-evenly;}
+        .footer1 .f1{display: flex; flex-direction: column; row-gap: 10px; width: 500px;}
+        .footer1 .f1 > .f-1{display: flex; column-gap: 5px; align-items: center; justify-content: center; color: white;}
+        .f1 .f-2 > p{color: white; font-size: 15px;}
+        .f-3{width: 400px; align-items: center;}
+        .f-3 .i1, .f-3 .i2, .f-3 .i3{display: flex; column-gap: 5px; color: white;}
+        .f2{display: flex; column-gap: 20px; }
+        .f2 .u1, .f2 .u2{color: white; line-height: 1.6;}
+        .f2 .u1 > li, .f2 .u2 > li{list-style-type: none; color: white;}
+        .f3{display: flex; flex-direction: column; row-gap: 250px;}
+        .f3 .subscribe{display: flex; flex-direction: column; row-gap: 10px;}
+        .f3 .subscribe > h2{color: white;}   
+        .subscribe .subscribe1{display: flex; column-gap: 0;}     
+        .subscribe1 .sub{width: 150px; height: 30px; background-color: white; border: 1px solid black; color: gray;}
+        .subscribe1 .sign{width: 70px; height: 30px; background-color: #FFF3E3; color: #B88E2F; border: 1px solid black;}
+        .follow{display: flex; flex-direction: column; row-gap: 5px; align-items: center; justify-content: center;}
+        .follow h4{color: rgb(216, 199, 199);}
+        .follow .follow1{display: flex; column-gap: 10px;}
+        .footer2 p{color: white; text-align: center;}
+
+        @media(max-width:600px){
+        header{width: 100%; height:500px; display: flex; flex-direction: column; row-gap: 10px; align-items: center; justify-content: center;}
+        header .h2{display: flex; flex-direction: column; row-gap: 5px;}
+
+        .one .h1{width: 100%;}
+        .one .para{width: 100%;}
+        .one .one1{display: flex; flex-direction: column; row-gap: 5px;}
+        .one1 .address{width: 100%;}
+        .one1 .form{width: 100%;}
+        .form input{width: 100%;}
+               
+
+        footer{width: 100%; align-items: center; justify-content: center;}
+        footer .footer1{display: flex; flex-direction: column; row-gap: 10px; width: 100%;}
+        footer .footer2{width: 100%;}
+        .footer1 .f1{width: 100%;}
+        .f-3{width: 100%;}
+        .f3{row-gap: 10px; align-items: center; justify-content: center;}
+
+        }
+        @media(min-width:601px) and (max-width:1023px){
+        header{width: 100%; height: 150px; display: flex; flex-direction: column; row-gap: 5px; align-items: center; justify-content: center;}
+        
+        .one .one1{padding: 5px 5px;}
+        .one1 .address{width: 350px;}
+        .one1 .form{width: 500px;}
+        .form input{width: 400px;}
+
+        footer{width: 100%;}
+        .footer1 .f1{row-gap: 5px;}
+        .f-3{width: 300px;}
+        .subscribe1 .sub{width: 130px; height: 50px;}
+        .subscribe1 .sign{width: 50px; height: 50px;}
+        }
+
+        @media(max-width:1024px){
+           
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="h1">
+            <img src="./images/Group 206.png" alt="logo">
+            <h3>Wooden Dreams</h3>
+        </div>
+        <div class="h2">
+            <a href="home.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="category.html">Categories</a>
+            <a href="shop.html">Shop</a>
+            <a href="blog.html">Blog</a>
+            <a href=""style="text-decoration: underline;">Contact</a>
+        </div>
+        <div class="h3">
+            <div class="h3-1">
+                <img src="./images/material-symbols_search.png" alt="search">
+                <p>Search</p>
+            </div>
+            <div class="h3-2">
+                <img src="./images/Group 189.png" alt="cart">
+                
+            </div>
+            <div class="h3-3">
+                <img src="./images/Group 190.png" alt="liked">
+                
+            </div>
+            <div class="h3-4">
+                <a href="signin.html"><p>Sign Up/Sign In</p></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="one">
+        <h1>Get In Touch With Us</h1><br>
+        <p class="para">For more information about our product & services. Please feel free to drop us an email.
+            Our sraff always be there to help you out. Do not hesitate!
+        </p>
+        <div class="one1">
+            <div class="address">
+                <div class="r1">
+                    <div class="c1">
+                        <img src="./images/p.png" alt="address">
+                    </div>
+                    <div class="c2">
+                        <h5>Address</h5>
+                        <p>236 5th SE Avenue, New York NY10000, United States</p>
+                    </div>
+                </div>
+                <div class="r2">
+                    <div class="c1">
+                        <img src="./images/bxs_phone.png" alt="phone">
+                    </div>
+                    <div class="c2">
+                        <h5>Phone</h5>
+                        <p>Mobile: +(84) 546-6789</p>
+                        <p>Hotline: +(84) 456-6789</p>
+                    </div>
+                </div>
+                <div class="r3">
+                    <div class="c1">
+                        <img src="./images/bi_clock-fill.png" alt="clock">
+                    </div>
+                    <div class="c2">
+                        <h5>Working Time</h5>
+                        <p>Monday-Friday: 9:00-22:00</p>
+                        <p>Saturday-Sunday: 9:00-21:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="form">
+                <label>Your Name</label><br>
+                <input type="text" value="Abc" name="name" ><br>
+                <label>Email address </label><br>
+                <input type="email" value="Abc@def.com" name="email" ><br>
+                <label>Subject</label><br>
+                <input type="text" value="This is an optional" name="subject"><br>
+                <label>Message</label><br>
+                <input type="text" value="Hi! i'd like to ask about" name="message"><br>
+                <button onclick="submit()">Submit</button>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer1">
+        <div class="f1">
+            <div class="f-1">
+                <img src="./images/Group 206.png" alt="logo">
+                <h3>Wooden Dreams</h3>
+            </div>
+            <div class="f-2">
+                <p>"At Wooden Dreams, we craft furniture that brings warmth and comfort to your home. Our wooden creations
+                    are designed to inspire sweet dreams and peaceful nights. Every piece is carefully crafted to provide 
+                    a heaven of relaxation and tranquility. Sleep tight, dream big with Wooden Dreams." 
+                </p>
+            </div>
+            <div class="f-3">
+                <figure class="i1">
+                    <img src="./images/raphael_loaction2.png" alt="location">
+                    <p>Head Office 13/5, Post Office Opposite, Chennai-876543</p>
+                </figure> <br>
+                <figure class="i2">
+                    <img src="./images/mdi_internet.png" alt="internet">
+                    <p>www.woodendreams.in</p>
+                </figure> <br>
+                <figure class="i3">
+                    <img src="./images/material-symbols_mail-outline.png" alt="location">
+                    <p>woodendreams@gmail.com</p>
+                </figure>
+            </div>
+        </div>
+        <div class="f2">
+            <ul class="u1">LINKS 
+                <li>Home</li><br>
+                <li>About</li><br>
+                <li>Categories</li><br>
+                <li>Shop</li><br>
+                <li>BLog</li><br>
+                <li>Contact</li><br>
+            </ul>
+            <ul class="u2">HELP 
+                <li>Payment Options</li><br>
+                <li>Returns</li><br>
+                <li>Privacy Policies</li><br>
+            </ul>
+        </div>
+        <div class="f3">
+            <div class="subscribe">
+                <h2>Subscribe</h2>
+                <div class="subscribe1">
+                    <button class="sub">Enter your email</button>
+                    <button class="sign">SIGN UP</button>
+                </div>
+            </div>
+            
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="follow1">
+                    <img src="./images/icon-instagram.png" alt="insta">
+                    <img src="./images/Google.png" alt="google">
+                    <img src="./images/SVG.png" alt="fb">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="footer2">
+            <p>2025 Wooden Dreams. All rights reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        function submit() {
+            alert ("Information Added Successfully");
+        }
+    </script>
+    
+</body>
+</html>

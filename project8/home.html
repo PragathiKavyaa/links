@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif;}
+        header{display: flex; column-gap: 10px; justify-content: space-evenly; height: 150px; background-color: #B88E2F;}
+        header .h1{display: flex; column-gap: 5px; align-items: center; justify-content: center; color: white;}
+        header .h2{display: flex; column-gap: 20px; align-items: center; justify-content: center;}
+        .h2 a{text-decoration: none; color: white;}
+        header .h3{display: flex; column-gap: 20px; color: white; align-items: center; justify-content: center;}
+        .h3 .h3-1{display: flex; flex-direction: column; row-gap: 1px;}
+        .h3 .h3-1 > img{width: 25px; height: 25px;}
+        .h3 .h3-1 > p{font-size: 10px;}
+        .h3-4 a{text-decoration: none; color: #B88E2F; }
+        .h3 .h3-4{width: 120px; height: 30px; border-radius: 5px; border: none; background-color: white; padding: 5px; text-align: center; font-size: 12px;}
+
+        .one{background-image: url(./images/beautiful-tan-modern-furniture-1p8lqahjzvgac2vw.png); background-size: cover; background-repeat: no-repeat; background-position: center center; margin-top: 10px; margin-bottom: 10px; height: 700px; position: relative;}
+        .one .one1{background-color: #FFF3E3; width: 400px; height: 250px; border-radius: 15px; padding: 10px 20px; position: absolute; top: 30%; right: 180px; transform: translateY(-50%); line-height: 1.6;}
+        .one1 h4{color: black;}
+        .one1 h1{color: #B88E2F; width: 250px;}
+        .one1 a{text-decoration: none; }
+        .one1 a > button{width: 150px; height: 50px; border-radius: 30px; margin-left: 100px; border: none; background-color: #B88E2F; color: white; font-weight: 700;}
+
+        .two{padding: 10px 20px;}
+        .two h1{text-align: center; color: #B88E2F;}
+        .two h5{text-align: center; color: black;}
+        .two .category{display: grid; grid-template-columns: repeat(4,1fr); row-gap: 10px; column-gap: 10px; align-items: center; justify-content: center; padding: 50px 30px; place-items: center;}
+        .category .c1 > .image, .category .c2 > .image, .category .c3 > .image, .category .c4 > .image, .category .c5  > .image, .category .c6 > .image, .category .c7 > .image, .category .c8 > .image{background-color: #FFF3E3; width: 250px; height: 250px; padding: 10px 20px;}
+        .category img{width: 200px; height: 200px; display: block; margin: auto; margin-top: 10px;}
+        .category h3{color: #B88E2F; margin-left: 80px;}
+        .two p{text-align: right; color: yellow; font-weight: bolder;}
+
+        .three{padding: 10px 20px;}
+        .three h1{text-align: center; color: #B88E2F;}
+        .three h5{text-align: center; color: black;}
+        .three .sellars{display: grid; grid-template-columns: repeat(3,1fr); row-gap: 10px; column-gap: 10px; align-items: center; justify-content: center; padding: 70px 50px; place-items: center;}
+        .sellars .s1, .sellars .s2, .sellars .s3, .sellars .s4, .sellars .s5, .sellars .s6{width: 300px; height: 500px; background-color: #FFF3E3; padding: 10px 20px; position: relative;}
+        .sellars img{width: 250px; height: 300px; display: block; margin: auto; margin-top: 10px; }
+        .s1 .image, .s2 .image, .s3 .image, .s4 .image, .s5 .image, .s6 .image{width: 250px; height: 150px; background-color: rgb(191, 223, 243); margin: auto;}
+        .sellars .discount{width: 50px; height: 50px; border-radius: 25px; background-color: rgb(221, 111, 111); color: white; padding: 10px 5px; position: absolute; bottom: 450px; left: 250px;}
+        .sellars h2, .sellars h3{padding: 10px; color: rgb(53, 52, 52);}
+        .sellars h3{font-size: 15px;}
+        .s1 .image > p, .s2 .image > p, .s3 .image > p, .s4 .image > p, .s5 .image > p, .s6 .image > p{color: gray; padding: 10px;}
+        .three .explore{color: yellow; font-weight: bolder; text-align: right; }
+
+        .four{padding: 10px 20px;}
+        .four h1{text-align: center; color: #B88E2F;}
+        .four h5{text-align: center; color: black;}
+        .four .arrivals{display: grid; grid-template-columns: repeat(3,1fr); row-gap: 10px; column-gap: 10px; align-items: center; justify-content: center; padding: 70px 50px; place-items: center;}
+        .arrivals .a1, .arrivals .a2, .arrivals .a3, .arrivals .a4, .arrivals .a5, .arrivals .a6{width: 300px; height: 500px; background-color: #FFF3E3; padding: 10px 20px; position: relative;}
+        .arrivals img{width: 250px; height: 300px; display: block; margin: auto; margin-top: 10px; }
+        .a1 .image, .a2 .image, .a3 .image, .a4 .image, .a5 .image, .a6 .image{width: 250px; height: 150px; background-color: rgb(191, 223, 243); margin: auto;}
+        .arrivals .new{width: 50px; height: 50px; border-radius: 25px; background-color: darkcyan; color: white; padding: 10px 10px; position: absolute; bottom: 450px; left: 250px;}
+        .arrivals h2, .arrivals h3{padding: 10px; color: rgb(53, 52, 52);}
+        .arrivals h3{font-size: 15px;}
+        .a1 .image > p, .a2 .image > p, .a3 .image > p, .a4 .image > p, .a5 .image > p, .a6 .image > p{color: gray; padding: 10px;}
+        .four .explore{color: yellow; font-weight: bolder; text-align: right; }
+
+        .five h1{text-align: center; color: #B88E2F; font-weight: 600;}
+        .five .dream{display: flex; column-gap: 20px; align-items: center; justify-content: center; padding: 20px 20px;}
+        .dream .five1, .dream .five2{width: 500px; height: 600px; background-color: #FFF3E3; place-items: center; padding: 20px 20px;}
+        .five1 img, .five2 img{width: 300px; height: 300px; display: block; margin: auto;}
+        .five1 p, .five2 p{color: black; font-weight: bold; width: 400px;}
+        .five1 .star, .five2 .star{display: flex; width: 450px; column-gap: 50px; margin-left: 100px;}
+        .star img{width: 100px; height: 30px;}
+        .five1 p, .five2 p{text-align: center;}
+        .five .see{color: yellow; font-weight: bolder; text-align: right; }
+
+
+        footer{display: flex; flex-direction: column; row-gap: 5px; background-color: #B88E2F; line-height: 1.6;}
+        footer .footer1{display: flex; column-gap: 30px;  border-bottom: 1px solid white; padding: 10px 20px; justify-content: space-evenly;}
+        .footer1 .f1{display: flex; flex-direction: column; row-gap: 10px; width: 500px;}
+        .footer1 .f1 > .f-1{display: flex; column-gap: 5px; align-items: center; justify-content: center; color: white;}
+        .f1 .f-2 > p{color: white; font-size: 15px;}
+        .f-3{width: 400px; align-items: center;}
+        .f-3 .i1, .f-3 .i2, .f-3 .i3{display: flex; column-gap: 5px; color: white;}
+        .f2{display: flex; column-gap: 20px; }
+        .f2 .u1, .f2 .u2{color: white; line-height: 1.6;}
+        .f2 .u1 > li, .f2 .u2 > li{list-style-type: none; color: white;}
+        .f3{display: flex; flex-direction: column; row-gap: 250px;}
+        .f3 .subscribe{display: flex; flex-direction: column; row-gap: 10px;}
+        .f3 .subscribe > h2{color: white;}   
+        .subscribe .subscribe1{display: flex; column-gap: 0;}     
+        .subscribe1 .sub{width: 150px; height: 30px; background-color: white; border: 1px solid black; color: gray;}
+        .subscribe1 .sign{width: 70px; height: 30px; background-color: #FFF3E3; color: #B88E2F; border: 1px solid black;}
+        .follow{display: flex; flex-direction: column; row-gap: 5px; align-items: center; justify-content: center;}
+        .follow h4{color: rgb(216, 199, 199);}
+        .follow .follow1{display: flex; column-gap: 10px;}
+        .footer2 p{color: white; text-align: center;}
+ 
+        @media(max-width:600px){
+        header{width: 100%; height:500px; display: flex; flex-direction: column; row-gap: 10px; align-items: center; justify-content: center;}
+        header .h2{display: flex; flex-direction: column; row-gap: 5px;}
+        
+
+        .one{width: 100%; height: 500px; }
+        .one .one1{right: 0; left: 50px; width: 250px; height: 300px; top: 50px; bottom: 20px; transform: none;}
+        .one1 a > button{margin-left: 30px;}
+
+        .two{width: 100%;}
+        .two .category{display: grid; grid-template-columns: 1fr; }
+        .two p{text-align: center;}
+
+        .three{width: 100%;}
+        .three .sellars{display: grid; grid-template-columns: 1fr;}
+        
+
+        .four{width: 100%;}
+        .four .arrivals{display: grid; grid-template-columns: 1fr;}
+        
+
+        .five{width: 100%;}
+        .five .dream{display: flex; flex-direction: column; row-gap: 10px; width: 100%;}
+        .dream .five1, .dream .five2{width: 300px; height: 700px;}
+        .five1 img, .five2 img{width: 250px; height: 300px;}
+        .five1 .star, .five2 .star{margin-left: 10px;  width: 250px; column-gap: 10px;}
+        .five p{text-align: center;}
+        .five1 p, .five2 p{width: 250px;}
+        .star img{width: 50px; height: 30px;}
+
+
+        footer{width: 100%; align-items: center; justify-content: center;}
+        footer .footer1{display: flex; flex-direction: column; row-gap: 10px; width: 100%;}
+        footer .footer2{width: 100%;}
+        .footer1 .f1{width: 100%;}
+        .f-3{width: 100%;}
+        .f3{row-gap: 10px; align-items: center; justify-content: center;}
+        }
+
+        @media(min-width:601px) and (max-width:1023px){
+        header{width: 100%; height: 150px; display: flex; flex-direction: column; row-gap: 5px; align-items: center; justify-content: center;}
+
+        .one{width: 100%; height: 500px;}
+        .one .one1{right: 50px; width: 300px; height: auto; top: 100px; transform: translateY(-30%);}
+
+        .two{width: 100%;}
+        .two .category{display: grid; grid-template-columns: repeat(2,1fr); }
+        .two p{width: 100%;}
+
+        .three{width: 100%;}
+        .three .sellars{display: grid; grid-template-columns: repeat(2,1fr); }
+        .three p{width: 100%;}
+
+        .four{width: 100%;}
+        .four .arrivals{display: grid; grid-template-columns: repeat(2,1fr); }
+        .four p{width: 100%;}
+
+        .five{width: 100%;}
+        .dream .five1, .dream .five2{width: 300px; height: 700px;}
+        .five1 img, .five2 img{width: 250px; height: 350px;}
+        .five1 p, .five2 p{width: 200px;}
+        .star img{width: 50px; height: 30px;}
+        .five1 .star, .five2 .star{margin-left: 20px; column-gap: 30px; width: 300px;}
+
+        footer{width: 100%;}
+        .footer1 .f1{row-gap: 5px;}
+        .f-3{width: 300px;}
+        .subscribe1 .sub{width: 130px; height: 50px;}
+        .subscribe1 .sign{width: 50px; height: 50px;}
+
+        }
+
+        @media(max-width:1024px){
+            .one .one1{right: 100px;}
+        }
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="h1">
+            <img src="./images/Group 206.png" alt="logo">
+            <h3>Wooden Dreams</h3>
+        </div>
+        <div class="h2">
+            <a href="" style="text-decoration: underline;">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="category.html">Categories</a>
+            <a href="shop.html">Shop</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="h3">
+            <div class="h3-1">
+                <img src="./images/material-symbols_search.png" alt="search">
+                <p>Search</p>
+            </div>
+            <div class="h3-2">
+                <img src="./images/Group 189.png" alt="cart">
+                
+            </div>
+            <div class="h3-3">
+                <img src="./images/Group 190.png" alt="liked">
+                
+            </div>
+            <div class="h3-4">
+                <a href="signin.html"><p>Sign Up/Sign In</p></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="one">
+        <div class="one1">
+            <h4>New Arrival</h4>
+            <h1>Discover Our New Collection</h1>
+            <h4>Experiene the art of wooden craftsmanship in our latest collection</h4><br>
+            <a href="./category.html"><button>BUY NOW</button></a>
+        </div>
+    </section>
+
+    <section class="two">
+        <h1>Popular Categories</h1><br>
+        <h5>Organize your space, elevate your style</h5>
+        <div class="category">
+            <div class="c1">
+                <div class="image">
+                    <img src="./images/Rectangle 286 0.png" alt="recliner">
+                </div>
+                <h3>Recliner</h3>
+            </div>
+            <div class="c2">
+                <div class="image">
+                    <img src="./images/Rectangle 275.png" alt="dinning">
+                </div>
+                <h3>Dinning Set</h3>
+            </div>
+            <div class="c3">
+                <div class="image">
+                    <img src="./images/Rectangle 276.png" alt="decor">
+                </div>
+                <h3>Decor</h3>
+            </div>
+            <div class="c4">
+                <div class="image">
+                    <img src="./images/Rectangle 277 p.png" alt="study">
+                </div>
+                <h3>Study Tables</h3>
+            </div>
+            <div class="c5">
+                <div class="image">
+                    <img src="./images/Rectangle 279.png" alt="mattress">
+                </div>
+                <h3>Mattress</h3>
+            </div>
+            <div class="c6">
+                <div class="image">
+                    <img src="./images/Rectangle 278.png" alt="beds">
+                </div>
+                <h3>Beds</h3>
+            </div>
+            <div class="c7">
+                <div class="image">
+                    <img src="./images/Rectangle 280.png" alt="wardrobes">
+                </div>
+                <h3>Wardrobes</h3>
+            </div>
+            <div class="c8">
+                <div class="image">
+                    <img src="./images/Rectangle 281.png" alt="sofa">
+                </div>
+                <h3>Sofa</h3>
+            </div>
+        </div>
+        <p>EXPLORE ALL</p>
+    </section>
+
+    <section class="three">
+        <h1>Best Sellers</h1><br>
+        <h5>Our Most Loved Pieces</h5>
+        <div class="sellars">
+            <div class="s1">
+                <img src="./images/image 1.png" alt="syltherine">
+                <div class="image">
+                    <h2>Syltherine</h2>
+                    <p>Stylish cafe chair</p>
+                    <h3>Rp 2.500.000 <strike>Rp 3.500.000</strike></h3>
+                </div>
+                <div class="discount"><p>-30%</p></div>
+            </div>
+            <div class="s2">
+                <img src="./images/image 3.png" alt="lolito">
+                <div class="image">
+                    <h2>Lolito</h2>
+                    <p>Luxury big sofa</p>
+                    <h3>Rp 7.000.000 <strike>Rp 14.000.000</strike></h3>
+                </div>
+                <div class="discount"><p>-50%</p></div>
+            </div>
+            <div class="s3">
+                <img src="./images/image 7.png" alt="pingky">
+                <div class="image">
+                    <h2>Pingky</h2>
+                    <p>Cute Bed Set</p>
+                    <h3>Rp 7.000.000 <strike>Rp 14.000.000</strike></h3>
+                </div>
+                <div class="discount"><p>-50%</p></div>
+            </div>
+            <div class="s4">
+                <img src="./images/Rectangle 286 p.png" alt="patio">
+                <div class="image">
+                    <h2>Patio</h2>
+                    <p>Cute Bed Set</p>
+                    <h3>Rp 7.000.000 <strike>Rp 14.000.000</strike></h3>
+                </div>
+                <div class="discount"><p>-45%</p></div>
+            </div>
+            <div class="s5">
+                <img src="./images/Images q.png" alt="lamp">
+                <div class="image">
+                    <h2>Grifo</h2>
+                    <p>Night Lamp</p>
+                    <h3>Rp 1.500.000</h3>
+                </div>
+                <div class="discount"><p>-45%</p></div>
+            </div>
+            <div class="s6">
+                <img src="./images/image 2.png" alt="chair">
+                <div class="image">
+                    <h2>Leviosa</h2>
+                    <p>Stylish Cafe Chair</p>
+                    <h3>Rp 2.500.000</h3>
+                </div>
+                <div class="discount"><p>-45%</p></div>
+            </div>
+        </div>   
+            <p class="explore">EXPLORE ALL</p>
+    </section>
+
+    <section class="four">
+        <h1>New Arrivals</h1><br>
+        <h5>Discover What's New</h5>
+        <div class="arrivals">
+            <div class="a1">
+                <img src="./images/Images i.png" alt="respira">
+                <div class="image">
+                    <h2>Respira</h2>
+                    <p>Outdoor bar table and stool</p>
+                    <h3>Rp 500.000</h3>
+                </div>
+                <div class="new"><p>New</p></div>
+            </div>
+            <div class="a2">
+                <img src="./images/image 6 8.png" alt="muggo">
+                <div class="image">
+                    <h2>Muggo</h2>
+                    <p>Small Mug</p>
+                    <h3>Rp 150.000</h3>
+                </div>
+                <div class="new"><p>New</p></div>
+            </div>
+            <div class="a3">
+                <img src="./images/Images j.png" alt="potty">
+                <div class="image">
+                    <h2>Potty</h2>
+                    <p>Minimalist Flower Pot</p>
+                    <h3>Rp 5.000.000</h3>
+                </div>
+                <div class="new"><p>New</p></div>
+            </div>
+            <div class="a4">
+                <img src="./images/th 1 j.png" alt="sofa">
+                <div class="image">
+                    <h2>Assgard Sofa</h2>
+                    <p>Outdoor bar table and stool</p>
+                    <h3>Rp 25.000.000</h3>
+                </div>
+                <div class="new"><p>New</p></div>
+            </div>
+            <div class="a5">
+                <img src="./images/Rectangle 286 j.png" alt="lamp">
+                <div class="image">
+                    <h2>Patio</h2>
+                    <p>Cute Bed Set</p>
+                    <h3>Rp 7.000.000 <strike>Rp 14.000.000</strike></h3>
+                </div>
+                <div class="new"><p>New</p></div>
+            </div>
+            <div class="a6">
+                <img src="./images/Rectangle 286 0.png" alt="chair">
+                <div class="image">
+                    <h2>Patio</h2>
+                    <p>Cute Bed Set</p>
+                    <h3>Rp 7.000.000 <strike>Rp 14.000.000</strike></h3>
+                </div>
+                <div class="new"><p>New</p></div>
+            </div>
+        </div>   
+            <p class="explore">EXPLORE ALL</p>
+    </section>
+
+    <section class="five">
+        <h1>What Customers Say About Wooden Dreams</h1>
+        <div class="dream">
+        <div class="five1">
+            <img src="./images/Rectangle 38 j.png" alt="office desk">
+            <p>
+                "I'm absolutely thrilled with my new office desk! The quality is top-notch, and it looks fantastic in my
+                home office."
+            </p><br>
+            <div class="star">
+                <img src="./images/Group 483.png" alt="star">
+                <p>13.5k view</p>
+            </div><br>
+            <p>Megna</p>
+            <p>India</p>
+        </div>
+        <div class="five2">
+            <img src="./images/Rectangle 43 k.png" alt="bed">
+            <p>
+                "Sleeping on this bed is like resting on a cloud. The mattress is heavenly, and the luxurious materials 
+                make me feel pampered every night."
+            </p><br>
+            <div class="star">
+                <img src="./images/Group 483.png" alt="star">
+                <p>20.5k view</p>
+            </div><br>
+            <p>Shasha</p>
+            <p>India</p>
+        </div>
+        </div>
+        <p class="see">SEE ALL</p>
+    </section>
+
+    <footer>
+        <div class="footer1">
+        <div class="f1">
+            <div class="f-1">
+                <img src="./images/Group 206.png" alt="logo">
+                <h3>Wooden Dreams</h3>
+            </div>
+            <div class="f-2">
+                <p>"At Wooden Dreams, we craft furniture that brings warmth and comfort to your home. Our wooden creations
+                    are designed to inspire sweet dreams and peaceful nights. Every piece is carefully crafted to provide 
+                    a heaven of relaxation and tranquility. Sleep tight, dream big with Wooden Dreams." 
+                </p>
+            </div>
+            <div class="f-3">
+                <figure class="i1">
+                    <img src="./images/raphael_loaction2.png" alt="location">
+                    <p>Head Office 13/5, Post Office Opposite, Chennai-876543</p>
+                </figure> <br>
+                <figure class="i2">
+                    <img src="./images/mdi_internet.png" alt="internet">
+                    <p>www.woodendreams.in</p>
+                </figure> <br>
+                <figure class="i3">
+                    <img src="./images/material-symbols_mail-outline.png" alt="location">
+                    <p>woodendreams@gmail.com</p>
+                </figure>
+            </div>
+        </div>
+        <div class="f2">
+            <ul class="u1">LINKS
+                <li>Home</li><br>
+                <li>About</li><br>
+                <li>Categories</li><br>
+                <li>Shop</li><br>
+                <li>BLog</li><br>
+                <li>Contact</li><br>
+            </ul>
+            <ul class="u2">HELP 
+                <li>Payment Options</li><br>
+                <li>Returns</li><br>
+                <li>Privacy Policies</li><br>
+            </ul>
+        </div>
+        <div class="f3">
+            <div class="subscribe">
+                <h2>Subscribe</h2>
+                <div class="subscribe1">
+                    <button class="sub">Enter your email</button>
+                    <button class="sign">SIGN UP</button>
+                </div>
+            </div>
+            
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="follow1">
+                    <img src="./images/icon-instagram.png" alt="insta">
+                    <img src="./images/Google.png" alt="google">
+                    <img src="./images/SVG.png" alt="fb">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="footer2">
+            <p>2025 Wooden Dreams. All rights reserved</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif;}
+        header{display: flex; column-gap: 10px; justify-content: space-evenly; height: 150px; background-color: #B88E2F;}
+        header .h1{display: flex; column-gap: 5px; align-items: center; justify-content: center; color: white;}
+        header .h2{display: flex; column-gap: 20px; align-items: center; justify-content: center;}
+        .h2 a{text-decoration: none; color: white;}
+        header .h3{display: flex; column-gap: 20px; color: white; align-items: center; justify-content: center;}
+        .h3 .h3-1{display: flex; flex-direction: column; row-gap: 1px;}
+        .h3 .h3-1 > img{width: 25px; height: 25px;}
+        .h3 .h3-1 > p{font-size: 10px;}
+        .h3-4 a{text-decoration: none; color: #B88E2F; }
+        .h3 .h3-4{width: 120px; height: 30px; border-radius: 5px; border: none; background-color: white; padding: 5px; color: #B88E2F; text-align: center; font-size: 12px;}
+
+        .shop{background-image: url(./images/Rectangle\ 283.png); background-repeat: no-repeat; background-size: cover; background-position: center; height: 300px;}
+        .shop .shop1{place-items: center; padding: 150px 150px;} 
+
+        .one{background-color: #FFF3E3; height: 100px; margin-top: 10px;}
+        .one .one1 > p{padding: 30px 25px;}
+
+        .two{display: flex; column-gap: 10px; padding: 50px 50px;}
+        .two1 img{width: 500px; height: 500px;}
+        .two2{display: flex; flex-direction: column; row-gap: 5px;  width: 700px;}
+        .two2 h3{color: gray;}
+        .two2 .star{width: 50px; height: 30px;} 
+        .review{display: flex; column-gap: 5px;}
+        .size, .color{color: gray;}
+        .size1{display: flex; column-gap: 10px;}
+        .size1 .l{width: 50px; height: 50px; border-radius: 5px; background-color: #B88E2F; color: white; text-align: center; padding: 10px;}
+        .size1 .xl{width: 50px; height: 50px; border-radius: 5px; background-color: #FFF3E3; color: black; text-align: center; padding: 10px;}
+        .size1 .xs{width: 50px; height: 50px; border-radius: 5px; background-color: #FFF3E3; color: black; text-align: center; padding: 10px;}
+        .color1{display: flex; column-gap: 10px;}
+        .color1 .blue{width: 50px; height: 50px; border-radius: 25px; background-color: blue;}
+        .color1 .black{width: 50px; height: 50px; border-radius: 25px; background-color: black;}
+        .color1 .sandal{width: 50px; height: 50px; border-radius: 25px; background-color: #B88E2F;}
+        .cart{display: flex; column-gap: 5px; padding: 5px 5px; cursor: pointer;}
+        .cart .qty{width: 100px; height: 50px; color: black; background-color: white; border: 1px solid black; border-radius: 5px; text-align: center; letter-spacing: 8px; padding: 10px;}
+        .cart .add{width: 100px; height: 50px; color: black; background-color: #FFF3E3; border: 1px solid black; border-radius: 5px; text-align: center; padding: 4px;}
+        .add:hover{background-color: #B88E2F; color: white;}
+        .cart .buy{width: 100px; height: 50px; color: white; background-color: #B88E2F; border: none; border-radius: 5px; text-align: center; padding: 10px; cursor: pointer;}
+        .sku, .cat, .tag, .share{display: flex; column-gap: 5px;}
+        .share .s2{display: flex; column-gap: 10px;}
+
+        .three{width: 900px; display: block; margin: auto;}
+        .three .three1{display: flex; column-gap: 100px; align-items: center; justify-content: center;}
+        .three .des{border-bottom: 1px solid black;}
+        .three .rev{color: gray;}
+        .three img{width: 500px; height: 500px; display: block; margin: auto;}
+        .three p{color: gray;}
+
+
+        footer{display: flex; flex-direction: column; row-gap: 5px; background-color: #B88E2F; line-height: 1.6;}
+        footer .footer1{display: flex; column-gap: 30px;  border-bottom: 1px solid white; padding: 10px 20px; justify-content: space-evenly;}
+        .footer1 .f1{display: flex; flex-direction: column; row-gap: 10px; width: 500px;}
+        .footer1 .f1 > .f-1{display: flex; column-gap: 5px; align-items: center; justify-content: center; color: white;}
+        .f1 .f-2 > p{color: white; font-size: 15px;}
+        .f-3{width: 400px; align-items: center;}
+        .f-3 .i1, .f-3 .i2, .f-3 .i3{display: flex; column-gap: 5px; color: white;}
+        .f2{display: flex; column-gap: 20px; }
+        .f2 .u1, .f2 .u2{color: white; line-height: 1.6;}
+        .f2 .u1 > li, .f2 .u2 > li{list-style-type: none; color: white;}
+        .f3{display: flex; flex-direction: column; row-gap: 250px;}
+        .f3 .subscribe{display: flex; flex-direction: column; row-gap: 10px;}
+        .f3 .subscribe > h2{color: white;}   
+        .subscribe .subscribe1{display: flex; column-gap: 0;}     
+        .subscribe1 .sub{width: 150px; height: 30px; background-color: white; border: 1px solid black; color: gray;}
+        .subscribe1 .sign{width: 70px; height: 30px; background-color: #FFF3E3; color: #B88E2F; border: 1px solid black;}
+        .follow{display: flex; flex-direction: column; row-gap: 5px; align-items: center; justify-content: center;}
+        .follow h4{color: rgb(216, 199, 199);}
+        .follow .follow1{display: flex; column-gap: 10px;}
+        .footer2 p{color: white; text-align: center;}
+
+        @media(max-width:600px){
+        header{width: 100%; height:500px; display: flex; flex-direction: column; row-gap: 10px; align-items: center; justify-content: center;}
+        header .h2{display: flex; flex-direction: column; row-gap: 5px;}
+
+        .shop1{padding: 10px 10px;}
+        .one{width: 100%;}
+
+        .two{display: flex; flex-direction: column; row-gap: 5; width: 100%;}
+        .two1 img{width: 100%;}
+        .two2{width: 100%;}
+        .cart .qty, .cart .add, .cart .buy{width: 100px; height: 70px;}
+        .sku, .cat, .tag, .share{align-items: center; justify-content: center;}
+        .three{width: 100%;}
+        .three1{display: flex; flex-direction: column; row-gap: 5px;}
+        .three img{width: 100%;}
+
+
+        footer{width: 100%; align-items: center; justify-content: center;}
+        footer .footer1{display: flex; flex-direction: column; row-gap: 10px; width: 100%;}
+        footer .footer2{width: 100%;}
+        .footer1 .f1{width: 100%;}
+        .f-3{width: 100%;}
+        .f3{row-gap: 10px; align-items: center; justify-content: center;}
+
+        }
+        @media(min-width:601px) and (max-width:1023px){
+        header{width: 100%; height: 150px; display: flex; flex-direction: column; row-gap: 5px; align-items: center; justify-content: center;}
+        
+       .shop1{padding: 100px 100px;}
+       .one{width: 100%;}
+
+        .two{display: flex; flex-direction: column; row-gap: 5; width: 100%;}
+        .two1 img{width: 100%;}
+        .two2{width: 100%;}
+        .three{width: 100%;}
+
+        footer{width: 100%;}
+        .footer1 .f1{row-gap: 5px;}
+        .f-3{width: 300px;}
+        .subscribe1 .sub{width: 130px; height: 50px;}
+        .subscribe1 .sign{width: 50px; height: 50px;}
+        }
+
+        @media(max-width:1024px){
+            
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="h1">
+            <img src="./images/Group 206.png" alt="logo">
+            <h3>Wooden Dreams</h3>
+        </div>
+        <div class="h2">
+            <a href="home.html">Home</a>
+            <a href="aboutus.html" >About Us</a>
+            <a href="category.html">Categories</a>
+            <a href=""style="text-decoration: underline;">Shop</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="h3">
+            <div class="h3-1">
+                <img src="./images/material-symbols_search.png" alt="search">
+                <p>Search</p>
+            </div>
+            <div class="h3-2">
+                <img src="./images/Group 189.png" alt="cart">
+                
+            </div>
+            <div class="h3-3">
+                <img src="./images/Group 190.png" alt="liked">
+                
+            </div>
+            <div class="h3-4">
+                <a href="signin.html"><p>Sign Up/Sign In</p></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="shop">
+        <div class="shop1">
+            <h1>Shop</h1>
+            <p>Home > Shop</p>
+        </div>
+    </section>
+
+    <section class="one">
+        <div class="one1">
+            <p>Home > Shop > | Asgaard sofa</p>
+        </div>
+    </section>
+
+    <section class="two">
+        <div class="two1">
+            <img src="./images/Group 285.png" alt="sofa">
+        </div>
+        <div class="two2">
+            <h1 class="pdt">Asgaard Sofa</h1>
+            <h3 class="price">Rs.250,000.00</h3>
+            <div class="review">
+                <img src="./images/Group 483.png" class="star" alt="star">
+                <p> | 5 customer reviews</p>
+            </div>
+            <p class="para">
+                Setting the bar as one of the loudest speakers in its class, the kilburn is a compact, stout-hearted 
+                hero with a well-balanced audio which boosts a clear midrange and extended highs for a sound.
+            </p>
+            <p class="size">Size</p>
+            <div class="size1">
+                <div class="l">L</div>
+                <div class="xl">XL</div>
+                <div class="xs">XS</div>
+            </div>
+            <p class="color">Color</p>
+            <div class="color1">
+                <div class="blue"></div>
+                <div class="black"></div>
+                <div class="sandal"></div>
+            </div>
+            <div class="cart">
+                <div class="qty">- 1 +</div>
+                <button class="add" onclick="cart()">Add to Cart</button>
+                <button class="buy" onclick="openBuyPopup('Asgaard Sofa', 'Rs. 250,000.00')">Buy Now</button>
+            </div><hr>
+            <div class="sku">
+                <p>SKU :</p>
+                <p>SS001</p>
+            </div>
+           <div class="cat">
+                <p>Category :</p>
+                <p>Sofas</p>
+           </div>
+           <div class="tag">
+                <p>Tags :</p>
+                <p>Sofa, Chair, Homes, Shop</p>
+           </div>
+            <div class="share">
+                <div class="s1">Share :</div>
+                <div class="s2">
+                    <img src="./images/akar-icons_facebook-fill.png" alt="fb">
+                    <img src="./images/akar-icons_linkedin-box-fill.png" alt="linkedin">
+                    <img src="./images/ant-design_twitter-circle-filled.png" alt="twitter">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="three">
+        <div class="three1">
+            <h1 class="des">Description</h1>
+            <h1 class="info">Additional Information</h1>
+            <h1 class="rev">Reviews [5]</h1>
+        </div><br>
+        <p>
+            Weighing under 7 pounds, the kilburn is a lighweight piece of vintage styled engineering. Setting the bar as one 
+            of the loudest speakers in its class, the kilburn is a compact, stout-hearted hero with a well-balanced audio 
+            which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The 
+            analogue knobs allow you to fine tune the controls to your perosnal preferences while the guitar-influenced 
+            leather strap enables easy and stylish travel.
+        </p>
+        <img src="./images/Asgaard sofa 4.png" alt="sofa">
+    </section>
+    
+
+    <footer>
+        <div class="footer1">
+        <div class="f1">
+            <div class="f-1">
+                <img src="./images/Group 206.png" alt="logo">
+                <h3>Wooden Dreams</h3>
+            </div>
+            <div class="f-2">
+                <p>"At Wooden Dreams, we craft furniture that brings warmth and comfort to your home. Our wooden creations
+                    are designed to inspire sweet dreams and peaceful nights. Every piece is carefully crafted to provide 
+                    a heaven of relaxation and tranquility. Sleep tight, dream big with Wooden Dreams." 
+                </p>
+            </div>
+            <div class="f-3">
+                <figure class="i1">
+                    <img src="./images/raphael_loaction2.png" alt="location">
+                    <p>Head Office 13/5, Post Office Opposite, Chennai-876543</p>
+                </figure> <br>
+                <figure class="i2">
+                    <img src="./images/mdi_internet.png" alt="internet">
+                    <p>www.woodendreams.in</p>
+                </figure> <br>
+                <figure class="i3">
+                    <img src="./images/material-symbols_mail-outline.png" alt="location">
+                    <p>woodendreams@gmail.com</p>
+                </figure>
+            </div>
+        </div>
+        <div class="f2">
+            <ul class="u1">LINKS 
+                <li>Home</li><br>
+                <li>About</li><br>
+                <li>Categories</li><br>
+                <li>Shop</li><br>
+                <li>BLog</li><br>
+                <li>Contact</li><br>
+            </ul>
+            <ul class="u2">HELP 
+                <li>Payment Options</li><br>
+                <li>Returns</li><br>
+                <li>Privacy Policies</li><br>
+            </ul>
+        </div>
+        <div class="f3">
+            <div class="subscribe">
+                <h2>Subscribe</h2>
+                <div class="subscribe1">
+                    <button class="sub">Enter your email</button>
+                    <button class="sign">SIGN UP</button>
+                </div>
+            </div>
+            
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="follow1">
+                    <img src="./images/icon-instagram.png" alt="insta">
+                    <img src="./images/Google.png" alt="google">
+                    <img src="./images/SVG.png" alt="fb">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="footer2">
+            <p>2025 Wooden Dreams. All rights reserved</p>
+        </div>
+    </footer>
+
+    <div id="popup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.5); justify-content:center; align-items:center;">
+  <div style="background:#fff; width:80%; height:80%; border-radius:10px; overflow:hidden; position:relative;">
+    <span onclick="closePopup()" style="position:absolute; top:10px; right:20px; font-size:24px; cursor:pointer;">&times;</span>
+    <iframe id="popupFrame" src="" style="width:100%; height:100%; border:none;"></iframe>
+  </div>
+</div>
+
+     <script>
+
+        function cart() {
+            alert("Added to Cart successfully");
+        } 
+
+    function openBuyPopup(product, price) {
+    const iframe = document.getElementById("popupFrame");
+    const popup = document.getElementById("popup");
+
+    // Pass data to buy.html using query params
+    const url = `buy.html?product=${encodeURIComponent(product)}&price=${encodeURIComponent(price)}`;
+    iframe.src = url;
+
+    // Show the popup
+    popup.style.display = "flex";
+}
+
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+}
+
+  </script>
+</body>
+</html>
