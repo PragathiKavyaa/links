@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./headerfooter.css">
+    <style>
+         *{margin: 0; padding: 0; font-family: "Montserrat", sans-serif; box-sizing: border-box;}
+        .one{background-image: url(./images/Screenshot\ 2025-06-12\ 152750.png); background-repeat: no-repeat;  background-size: cover; background-position: center center;  height: 500px; z-index: 1; position: relative; display: flex; justify-content: flex-end; align-items: center;}
+        .one::before{content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 500px; background-color: rgba(0, 0, 0, 0.4); z-index: 2;}
+        .one .one1{ padding: 10px 20px; margin-right: 100px; background-color: transparent; backdrop-filter: none; position: relative; z-index: 3;}
+        .one1 h5{color: white;  font-size: 20px; margin-top: 50px;}
+        .one1 p{color: white; }
+
+        .two{display: block; margin: auto; text-align: center; width: 900px; margin-top: 20px;}
+
+        .three{width: 700px; padding: 30px 50px; margin-left: 100px;}
+        .three .h1{display: flex; column-gap: 5px;}
+
+        .four{display: grid; grid-template-columns: repeat(2, 1fr); column-gap: 10px; row-gap: 20px; margin-left: 100px; padding: 20px 30px;}
+        .four label{color: #4B69A9; font-size: 20px; font-weight: 500;}
+        .four input{width: 500px; height: 70px; border: 2px solid #4B69A9; border-radius: 5px;}
+        .four input::placeholder{font-size: 20px; font-weight: 500; padding: 5px 10px;}
+
+        .six{padding: 10px 20px; margin-left: 100px; display: flex; column-gap: 10px; width: 500px; align-items: center; justify-content: center;}
+        .six .box{width: 50px; height: 50px; background-color: #4B69A9;}
+
+        .seven .submit{width: 150px; height: 50px; align-items: center; justify-content: center; margin: auto; cursor: pointer; background-color: #4B69A9; color: white; display: flex; column-gap: 10px; border-radius: 5px; margin-bottom: 10px;}
+        .submit img{width: 25px; height: 25px;}
+
+        @media(max-width:600px){
+            .one{width: 100%; flex-direction: column; justify-content: flex-start; align-items: center; padding: 20px 10px; height: auto;}
+            .one::before{top: 0; height: 100%;}
+            .one .one1{margin-right: 0;  padding: 10px; box-sizing: border-box; text-align: center; border: 2px solid black; width: 90%;}
+            .one1 h5, .one1 p{text-align: center;}
+            .two{width: 100%;}
+            .three{width: 100%; margin-left: 0;}
+            .four{width: 100%; display: grid; grid-template-columns: 1fr; row-gap: 10px; margin-left: 0;}
+            .four input{width: 300px;}
+            .six{width: 100%; margin-left: 0;}
+            .seven{width: 100%;}
+        }
+
+        @media(min-width:601px) and (max-width:1023px){
+            .one{width: 100%; justify-content: center;}
+            .one .one1{margin-right: 500px;}
+            .one1 h5, .one1 p{width: 350px;}
+            .two{width: 100%;}
+            .three{width: 100%; margin-left: 0;}
+            .four{width: 100%; margin-left: 0;}
+            .four input{width: 300px;}
+            .six{width: 100%; margin-left: 0;}
+            .seven{width: 100%;}
+        }
+
+        @media(max-width:1024px){
+            .one .one1{margin-left: 600px;}
+            .four{width: 100%; margin-left: 0; padding: 0;}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="h1">
+            <img src="./images/Screenshot 2025-06-12 135749.png" alt="logo">
+            <h2>ZAHRIX</h2>
+        </div>
+        <div class="h2">
+            <a href="./home.html" class="link1">Home</a>
+            <a href="" class="link2">About Us</a>
+            <div class="dropdown">
+                <a href="" class="link3">Services 
+                    <span><img src="./images/icon-park-outline_down.png" alt="down"></span>
+                </a>
+            <div class="dropdown-content">
+                <a href="./electrical.html">Electrical</a>
+                <a href="./cctv.html">CCTV</a>
+                <a href="./bms.html">BMS</a>
+            </div>
+            </div>
+            <a href="./projects.html" class="link4">Projects</a>
+        </div>
+        <div class="h3">
+            <a href="./quote.html"><button> <strong>Get a Quote</strong> </button></a>
+        </div>
+    </header>
+
+    <section class="one">
+        <div class="one1">
+            <h5><strong>Home <span>&#11122;</span>Contact Us</strong></h5><br><br>
+            <p><strong>Sparking Innovation, Illuminating Lives</strong></p>
+        </div>
+    </section>
+
+    <section class="two">
+        <h1>Get In Touch With Us</h1><br>
+        <p>For More Information About Our Services.</p>
+    </section>
+
+    <section class="three">
+            <div class="h1">
+                <h1>Booking Your Service Today!</h1>
+                <img src="./images/material-symbols_electric-bolt-outline.png" alt="bolt">
+            </div><br>
+            <p>Whether you are planning a new project or need emergency support, we're available to provide fast and 
+                reliable assistance.
+            </p><br>
+    </section>
+
+    <section class="four">
+        <div class="four1">
+            <label>First name</label><br><br>
+            <input type="text" name="name" id="name" placeholder="e.g xxx">
+        </div>
+        <div class="four2">
+            <label>Last name</label><br><br>
+            <input type="text" name="lname" id="lname" placeholder="e.g yyy">
+        </div>
+        <div class="four3">
+            <label>Email</label><br><br>
+            <input type="email" name="email" id="email" placeholder="e.g xxx@gmail.com">
+        </div>
+        <div class="four4">
+            <label>Phone</label><br><br>
+            <input type="number" name="phone" id="phone" placeholder="e.g 12345678">
+        </div>
+        <div class="four5">
+            <label>Pick the date</label><br><br>
+            <input type="text" name="date" id="date" placeholder="e.g 10/7/25">
+        </div>
+        <div class="four6">
+            <label>Choose Your Time</label><br><br>
+            <input type="text" name="time" id="time" placeholder="e.g 10.00AM">
+        </div>
+        
+    </section>
+
+    <section class="six">
+        <div class="box"></div>
+        <p>I have read and accepted terms and Privacy</p>
+    </section>
+
+    <section class="seven">
+        <button class="submit">
+            <img src="./images/material-symbols_drag-click-rounded.png" alt="click">
+            <p>Submit</p>
+        </button>
+    </section>
+
+    <footer>
+        <div class="f1">
+            <div class="f01">
+                <figure>
+                    <img src="./images/Screenshot 2025-06-12 135749.png" alt="logo">
+                    <h2>ZAHRIX</h2>
+                </figure>
+                <p>"At ZAHRIX Delivering Electrical Solutions With Precision and care"</p>
+            </div>
+            <div class="f02">
+                <h2>Subscribe</h2>
+                <div class="form">
+                    <input type="text" name="mail" placeholder="Enter your email" class="mail">
+                    <input type="text" name="signup" placeholder="SIGN UP" class="signup">
+                </div>
+            </div>
+        </div>
+        <div class="f2">
+            <div class="f21">
+            <figure>
+                <img src="./images/Group 230.png" alt="mail">
+                <figcaption>Zahrix@gmail.com</figcaption>
+            </figure>
+            <figure>
+                <img src="./images/Group 228.png" alt="phone">
+                <figcaption>23/9, Main Road, Chennai.</figcaption>
+            </figure>
+            <figure>
+                <img src="./images/Group 231.png" alt="location">
+                <figcaption>+91 9874563210</figcaption>
+            </figure>
+            </div>
+            <div class="f22">
+                <div class="r1">
+                    <h2>Quick Links</h2><br>
+                    <ul>
+                        <li>About Us</li>
+                        <li>Our Services</li>
+                        <li>Testimonals</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+                <div class="r2">
+                    <h2>Useful Links</h2><br>
+                    <ul>
+                        <li>Team of Use</li>
+                        <li>Privacy Policy</li>
+                        <li>Contact Support</li>
+                        <li>Careers</li>
+                    </ul>
+                </div>
+                <div class="r3">
+                    <img src="./images/entypo-social_linkedin-with-circle.png" alt="linkedin">
+                    <img src="./images/ph_instagram-logo-fill.png" alt="insta">
+                    <img src="./images/ic_outline-facebook.png" alt="facebook">
+                    <img src="./images/formkit_twitter.png" alt="twitter">
+                </div>
+            </div>
+        </div>
+        <div class="f3">
+            <p>@ 2025 Developed & Maintained by ZAHRIX - All rights reserved.</p>
+        </div>
+    </footer>
+
+     <div id="modalOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(48, 46, 46, 0.5); z-index: 999;"></div>
+    <div id="submitModal" style="display:none; position:absolute; top:120px; left:50%; width:700px; height:300px; background-color:white; border-radius: 15px; transform: translateX(-50%); z-index: 1000; overflow: hidden;">
+    <div style="width:100%; height: 100%; position:relative;">
+        <span onclick="closeModal()" style="position:absolute; top:10px; right:20px; font-size:30px; cursor:pointer; z-index: 10;">&times;</span>
+        <iframe src="submit.html" style="width:100%; height:100%; border:none; overflow: hidden;"></iframe>
+    </div>
+
+    <script>
+        const overlay = document.getElementById('modalOverlay');
+        const submitModal = document.getElementById('submitModal');
+
+        document.querySelector('.submit').addEventListener('click', function(event) {
+        event.preventDefault();
+        submitModal.style.display = 'block';
+        overlay.style.display = 'block';
+    });
+
+    function closeModal() {
+        submitModal.style.display = 'none';
+        overlay.style.display = 'none';
+    }
+    </script>
+</div>
+</body>
+</html>

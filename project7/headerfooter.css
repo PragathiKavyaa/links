@@ -1,0 +1,59 @@
+        header{background-color:  #4B69A9; display: flex; justify-content: space-evenly; height: 100px;}
+        header .h1{display: flex; column-gap: 10px; padding: 20px 30px; align-items: center; justify-content: center;}
+        header .h1 > img{width: 70px; height: 70px;}
+        header .h1 h2{font-size: 30px; color: white;}
+        header .h2{display: flex; column-gap: 30px; padding: 20px 30px; align-items: center; justify-content: center;}
+        .h2 a{text-decoration: none; color: white; font-size: 20px;}
+        .link3 span img{width: 20px; height: 20px;} 
+        .dropdown {position: relative; display: inline-block;}
+        .dropdown-content {display: none; position: absolute; background-color: white; min-width: 120px; box-shadow: 0px 8px 16px rgba(0,0,0,0.2); z-index: 1; border-radius: 10px;}
+        .dropdown-content a {color: #4B69A9; padding: 12px 16px; text-decoration: none; display: block;}
+        .dropdown:hover .dropdown-content {display: block;}
+        .dropdown-content a:hover {background-color: #f1f1f1;}
+        header .h3{padding: 20px 30px;}
+        header .h3 > a{text-decoration: none;} 
+        .h3 a > button{width: 150px; height: 50px; border-radius: 5px; border: none; color: #4B69A9; background-color: white; text-align: center;}
+
+        footer{background-color: #4B69A9; height: 450px; align-items: center; justify-content: center;}
+        footer .f1{display: flex; justify-content: space-evenly; padding: 20px 30px; color: white;}
+        .f01 figure{display: flex; column-gap: 10px; padding: 10px 20px; align-items: center; }
+        .f01 figure > img{width: 70px; height: 70px;}
+        .f01 figure > figcaption{text-align: center;}
+        .f01 p{padding: 10px 20px; width: 450px;}
+        .f1 .f02{padding: 10px 20px;}
+        .f02 .form > .mail{width: 150px; height: 30px;}
+        .f02 .form > .signup{width: 80px; height: 30px; background-color: black; color: white; font-weight: 500;}
+        footer .f2{display: flex; justify-content: space-evenly; padding: 10px 20px; color: white;}
+        .f21 figure{display: flex; column-gap: 10px; padding: 10px 20px; align-items: center;}
+        .f21 figure > img{width: 35px; height: 35px;}
+        .f22{display: flex; column-gap: 20px; padding: 10px 20px; justify-content: space-evenly;} 
+        .f22 .r1, .f23 .r2{color: white;}
+        .r1 ul > li, .r2 ul > li{list-style-type: none; line-height: 1.6;}
+        .f22 .r3{display: flex; flex-direction: column; row-gap: 5px;}
+        .f22 .r3 > img{width: 35px; height: 35px;}
+        footer .f3{text-align: center; color: white;}
+
+        @media(max-width:600px){
+            header{width: 100%; display: flex; flex-direction: column; padding: 10px 20px; row-gap: 5px; height: 350px; align-items: center; justify-content: center;}
+            header .h1{width: 100%;}
+            header .h2{width: 100%; display: flex; flex-direction: column; row-gap: 5px;}
+            header .h3{width: 100%; padding: 10px 20px; margin-left: 100px;}
+            footer{width: 100%; height: auto;}
+            footer .f1{display: flex; flex-direction: column; row-gap: 10px;}
+            .f01 p{width: 100%;}
+            footer .f2{display: flex; flex-direction: column; row-gap: 10px;}
+            .f22{display: flex; flex-direction: column; row-gap: 10px;} 
+        }
+
+        @media(min-width:601px) and (max-width:1023px){
+            header{width: 100%;}
+            header .h1, header .h2, header .h3{padding: 10px 20px;}
+            header .h1 > img{width: 50px; height: 50px;}
+            header .h1 h2{font-size: 25px; color: white;}
+            .h2 a{font-size: 18px;}
+            header .h3 > button{width: 100px; height: 50px;}
+            footer{width: 100%;}
+            footer .f1{padding: 10px 20px;}
+        }
+
+        

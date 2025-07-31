@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCTV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./headerfooter.css">
+    <style>
+        *{margin: 0; padding: 0; font-family: "Montserrat", sans-serif; box-sizing: border-box;}
+        .one{background-image: url(./images/Screenshot\ 2025-06-12\ 151428.png); background-repeat: no-repeat; background-size: cover; background-position: center center; height: 500px;}
+        .one .one1{padding: 50px 100px; }
+        .one1 h5{color: white; font-size: 20px; margin-top: 100px;}
+        .one1 p{color: white;}
+        
+        .two{text-align: center; line-height: 1.6; width: 900px; border-radius: 2px solid black; display: block; margin: auto; margin-bottom: 10px;}
+        .two .h1{display: flex; column-gap: 5px; align-items: center; justify-content: center;}
+        .two .h1 > h1{color: black;}
+        .two h1{color: #4B69A9;}
+        .two p{color: black;}
+        .two .two1{background-image: url(./images/Screenshot\ 2025-06-12\ 125941.png); width:500px; height: 300px; object-fit: cover; background-repeat: no-repeat; background-size: cover; border-radius: 25px; align-items: center; justify-content: center; display: block; margin: auto;}
+        .two .two1 h1, .two .two1 p{color: white;}
+        .two .two1 > img{margin-top: 25px;}
+
+        .three{height:700px;}
+        .three h2{text-align: center; padding: 10px 20px;}
+        .three1{display: grid; grid-template-columns: 350px 550px; column-gap: 10px; align-items: center; justify-content: center;}
+        .three1 .g1{background-image: url(./images/Rectangle\ 47.png); background-size: cover; background-repeat: no-repeat; filter: brightness(0.5); text-align: center; color: white; border-radius: 15px; height: 250px;}
+        .three1 .g1 > h3{margin-top: 150px; filter: brightness(1); color: white;}
+        .three1 .g2{background-color: #b3c2e2; border: 1px solid #4B69A9; border-radius: 15px; height: 250px; }
+        .g2 .f1{display: flex; align-items: center; justify-content: center; width: 350px;}
+        .g2 .f1 > img{padding: 10px 20px;}
+        .g2 .f1 > h3{font-size: 20px; font-weight: 600; color: #4B69A9;}
+        .g2 > p{font-size: 16px; color: rgb(80, 78, 78); padding: 10px 20px;}
+        .three2{display: grid; grid-template-columns: 550px 350px; column-gap: 10px; align-items: center; justify-content: center;}
+        .three2 .g3, .three2 .g4{background-color: #b3c2e2; border: 1px solid #4B69A9; border-radius: 15px; height: 250px; }
+        .g3 .f1{display: flex; align-items: center; justify-content: center; width: 400px;}
+        .g4 .f1{display: flex; align-items: center; justify-content: center; width: 300px;}
+        .g3 .f1 > img, .g4 .f1 > img{ padding: 10px 20px;}
+        .g3 .f1 > h3, .g4 .f1 > h3{font-size: 20px; font-weight: 600; color: #4B69A9;}
+        .g3 > p, .g4 > p{font-size: 16px; color: rgb(80, 78, 78); padding: 10px 20px;}
+        .three .book{width: 150px; height: 50px; margin: auto; align-items: center; justify-content: center; background-color: #4B69A9; color: white; display: flex; column-gap: 10px; border-radius: 5px;}
+        .book img{width: 25px; height: 25px;}
+
+        .four{display: flex; column-gap: 20px; margin-bottom: 20px;  height: 300px; background-color: #e8eaee; align-items: center; justify-content: center;}
+        .four1{border-radius: 2px solid black; padding: 10px 20px; width: 500px;}
+        .four1 h2{color: #4B69A9; font-size: 30px;}
+        .four1 h1{color: #4B69A9; font-size: 35px;}
+        .four1 .contact{width: 150px; height: 50px; align-items: center; justify-content: center; background-color: #4B69A9; color: white; display: flex; column-gap: 10px; border-radius: 5px;}
+        .contact img{width: 25px; height: 25px;}
+        .four2 img{width: 400px; height: 300px;}
+
+        @media(max-width:600px){
+            .one{width: 100%;  }
+            .one .one1{padding:10px 20px; margin-left: 0; text-align: center; width: 100%;}
+            .two{width: 100%;}
+            .two .two1{width: 300px;}
+            .three{width: 100%; height: 1500px;}
+            .three1, .three2{display: grid; grid-template-columns: 300px; row-gap: 5px; margin-left: 0; padding: 10px 20px;}
+            .three1 .g2, .three2 .g3, .three2 .g4{height: 300px;}
+            .g2 .f1, .g3 .f1, .g4 .f1{width: 300px;}
+            .g2 .f1 > img, .g3 .f1 > img, .g4 .f1 > img{padding: 0; }
+            .four{display: flex; flex-direction: column; row-gap: 10px; width: 100%; height: 600px;} 
+            .four1{width: 100%; padding: 0; text-align: center;}
+            .four1 h2{font-size: 18px;}
+            .four1 h1{font-size: 20px;}
+            .four2 img{width: 100%; height: 300px;}
+            .four .contact{margin: auto;}
+        }
+
+        @media(min-width:601px) and (max-width:1023px){
+            .one{width: 100%;}
+            .two{width: 100%;}
+            .three{width: 100%; height:800px;}
+            .three1{display: grid; grid-template-columns: 250px 450px; column-gap: 5px;}
+            .three2{display: grid; grid-template-columns: 450px 250px; column-gap: 5px;}
+            .three1 .g1, .three1 .g2, .three2 .g3, .three2 .g4{height: 300px;}
+            .g2 .f1, .g3 .f1, .g4 .f1{width: 250px;}
+            .four{width: 100%;}
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="h1">
+            <img src="./images/Screenshot 2025-06-12 135749.png" alt="logo">
+            <h2>ZAHRIX</h2>
+        </div>
+        <div class="h2">
+            <a href="./home.html" class="link1">Home</a>
+            <a href="./aboutus.html" class="link2">About Us</a>
+            <div class="dropdown">
+                <a href="" class="link3">Services 
+                    <span><img src="./images/icon-park-outline_down.png" alt="down"></span>
+                </a>
+            <div class="dropdown-content">
+                <a href="./electrical.html">Electrical</a>
+                <a href="">CCTV</a>
+                <a href="./bms.html">BMS</a>
+            </div>
+            </div>
+            <a href="./projects.html" class="link4">Projects</a>
+        </div>
+        <div class="h3">
+            <a href="./quote.html"><button> <strong>Get a Quote</strong> </button></a>
+        </div>
+    </header>
+
+    <section class="one">
+        <div class="one1">
+            <h5><strong>Home <span>&#11122;</span>About Us</strong></h5><br><br>
+            <p><strong>Sparking Innovation, Illuminating Lives</strong></p>
+        </div>
+    </section>
+
+    <section class="two">
+        <figure class="h1">
+            <h1>OUR SERVICES</h1>
+            <img src="./images/material-symbols_electric-bolt-outline.png" alt="bolt">
+        </figure><br>
+        <h1>Expert Services for a Safer, Smarter World</h1>
+        <p>
+            At ZAHRIX, we offer a comprehensive range of electrical services designed to meet the needs of homes and 
+            businessess. Our team of experts is dedicated to providing safe, efficient, and reliable electrical
+            solutions.
+        </p><br>
+        <div class="two1">
+            <img src="./images/Group 537.png" alt="cctv"><br>
+            <h1><strong>CCTV</strong></h1><br>
+            <p>
+                Advanced CCTV systems for enhanced security and surveillance, providing peace of mind and protection. 
+            </p>
+        </div>
+    </section>
+
+    <section class="three">
+        <h2>Services We Offer<span><img src="./images/material-symbols_electric-bolt-outline.png" alt="bolt"></span></h2><br>
+        
+        <div class="three1">
+            <div class="g1">
+                <h3>"Experience the best in electrical, CCTV, BMS Solutions"</h3>
+            </div>
+            <div class="g2">
+                <figure class="f1">
+                    <img src="./images/Group 537.png" alt="install">
+                    <h3>CCTV Installation</h3>
+                </figure>
+                <p>
+                    Expert CCTV installation services to enhance security and surveillance. Our team designs and installs 
+                    customized CCTV systems for homes and businesses. Secure your property with our reliable solutions.
+                </p>
+            </div>
+        </div><br>
+        <div class="three2">
+            <div class="g3">
+                <figure class="f1">
+                    <img src="./images/Group 538j.png" alt="monitor">
+                    <h3>CCTV Monitoring</h3>
+                </figure>
+                <p>
+                    Remote CCTV monitoring services to detect and respond to security threats. Our team monitors your CCTV 
+                    system 24/7, alerting authorities in case of suspicious activity. Get peace of mind with our expert 
+                    monitoring services.
+                </p>
+        
+            </div>
+            <div class="g4">
+                <figure class="f1">
+                    <img src="./images/Group 608.png" alt="electrical">
+                    <h3>CCTV Maintenance</h3>
+                </figure>
+                <p>
+                    Regular CCTV maintenance to ensure system uptime and optimal performance. Our technicians perform routine 
+                    checks, repairs, and upgrades to keep your CCTV system running smoothly.
+                </p>
+            </div>
+        </div><br><br>
+        <div class="book">
+            <img src="./images/material-symbols_drag-click-rounded.png" alt="click">
+            <p>Book Now</p>
+        </div>
+    </section>
+
+    <section class="four">
+        <div class="four1">
+            <h2>Let's Connect</h2><br>
+            <h1>We're here to answer your questions and help</h1><br>
+            <div class="contact">
+            <img src="./images/material-symbols_drag-click-rounded.png" alt="click">
+            <p>Contact Us</p>
+        </div>
+        </div>
+        <div class="four2">
+            <img src="./images/Screenshot 2025-06-12 165006.png" alt="boy">
+        </div>
+    </section>
+
+    <footer>
+        <div class="f1">
+            <div class="f01">
+                <figure>
+                    <img src="./images/Screenshot 2025-06-12 135749.png" alt="logo">
+                    <h2>ZAHRIX</h2>
+                </figure>
+                <p>"At ZAHRIX Delivering Electrical Solutions With Precision and care"</p>
+            </div>
+            <div class="f02">
+                <h2>Subscribe</h2>
+                <div class="form">
+                    <input type="text" name="mail" placeholder="Enter your email" class="mail">
+                    <input type="text" name="signup" placeholder="SIGN UP" class="signup">
+                </div>
+            </div>
+        </div>
+        <div class="f2">
+            <div class="f21">
+            <figure>
+                <img src="./images/Group 230.png" alt="mail">
+                <figcaption>Zahrix@gmail.com</figcaption>
+            </figure>
+            <figure>
+                <img src="./images/Group 228.png" alt="phone">
+                <figcaption>23/9, Main Road, Chennai.</figcaption>
+            </figure>
+            <figure>
+                <img src="./images/Group 231.png" alt="location">
+                <figcaption>+91 9874563210</figcaption>
+            </figure>
+            </div>
+            <div class="f22">
+                <div class="r1">
+                    <h2>Quick Links</h2><br>
+                    <ul>
+                        <li>About Us</li>
+                        <li>Our Services</li>
+                        <li>Testimonals</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+                <div class="r2">
+                    <h2>Useful Links</h2><br>
+                    <ul>
+                        <li>Team of Use</li>
+                        <li>Privacy Policy</li>
+                        <li>Contact Support</li>
+                        <li>Careers</li>
+                    </ul>
+                </div>
+                <div class="r3">
+                    <img src="./images/entypo-social_linkedin-with-circle.png" alt="linkedin">
+                    <img src="./images/ph_instagram-logo-fill.png" alt="insta">
+                    <img src="./images/ic_outline-facebook.png" alt="facebook">
+                    <img src="./images/formkit_twitter.png" alt="twitter">
+                </div>
+            </div>
+        </div>
+        <div class="f3">
+            <p>@ 2025 Developed & Maintained by ZAHRIX - All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

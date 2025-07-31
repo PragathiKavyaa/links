@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./headerfooter.css">
+    <style>
+        *{margin: 0; padding: 0; font-family: "Montserrat", sans-serif; box-sizing: border-box;}
+        .one{display: flex; column-gap: 10px; padding: 10px 20px; height: 500px; margin-bottom: 20px;}
+        .one1{padding: 20px 30px; line-height: 1.6; width: 500px;}
+        .one1 h3{color: black;}
+        .one1 h4{color: #4B69A9;}
+        .one1 p{color: black;}
+        .one1 button{width: 250px; height: 50px; background-color: #4B69A9; color: white; border-radius: 5px; border: none;}
+        .one1 .grid{display: grid; grid-template-columns: repeat(3, 150px); column-gap: 50px; text-align: center;}
+        .grid .g1{background-color: white; border: 1px solid #4B69A9; color: #4B69A9; height: 100px; border-radius: 15px;}
+        .one21{position: relative;}
+        .one21 .image{width: 320px; height: 320px; border-radius: 50%; background-color: #4B69A9; position: absolute; top: 90px; left: 200px; z-index: 0;}
+        .one21 img{width: 700px; height: 500px; position: relative; z-index: 1;}
+        .thumbs{position: absolute; width: 20px; height: 20px; z-index: 2;}
+        .thumb1{position: absolute; top: -400px; left: 170px; width: 40px;}
+        .thumb2{position: absolute; top: -330px; left: 150px; width: 40px;}
+        .one2 .thunder{position: absolute; bottom: 200px; right: 620px;}
+        .box{display: flex; align-items: center; width: 250px; height: 70px; background-color: white; border: 1px solid #4B69A9; border-radius: 10px; padding: 10px 15px; gap: 10px; position: absolute; top: 170px; right: 120px; z-index: 3;}
+        .box img{width: 25px; height: 25px;}
+        .box p{font-size: 14px; font-weight: 500; color: black;}
+
+        .two{display: flex; column-gap: 50px; padding: 20px; background-color: #dadde4; margin-top: 10px; height: 700px;}
+        .two1{display: flex; column-gap: 10px; padding: 5px 10px; position: relative;}
+        .box1{position: absolute; top: 50px; left: 40px; width: 200px; display: flex; flex-direction: row; align-items: center; gap: 10px;}
+        .two1 .box1 > h3{color: #4B69A9; font-size: 40px;}
+        .box1 p{font-size: 14px; color: black; transform: rotate(-270deg); transform-origin: left top; top: 50px; left: -20px; position: relative;}
+        .box2 .image1{width: 300px; height: 300px; border-radius: 25px; position: relative; top: 300px; z-index: 1;}
+        .box2 .image2{width: 400px; height: 500px; position: relative; left: 100px; top: -250px; z-index: 2; border-radius: 0 0 100px 0;}
+        .box2 .image3{width: 50px; height: 50px; border-radius: 25px; background-color: #4B69A9; position: relative; top: -700px; left: 480px; z-index: 4;}
+        .box2 .image4{width: 50px; height: 50px; position: relative; top: -280px; left: 280px; z-index: 3;}
+        .two2{display: flex; flex-direction: column; row-gap: 5px; margin-top: 10px; padding: 10px 20px; margin-left: 100px;}
+        .two2 h1{color: #4B69A9; }
+        .two2 span > img{background-color: #4B69A9; }
+        .two2-1{display: flex; justify-content: space-between;}
+        .two2-1 .learn{width: 150px; height: 50px; align-items: center; justify-content: center; background-color: #4B69A9; color: white; display: flex; column-gap: 10px; border-radius: 5px;}
+        .learn img{width: 25px; height: 25px;}
+        .two2-1 .team{display: flex; flex-direction: column; row-gap: 10px;}
+
+        .three{background-image: url(./images/image\ 1.png); background-size: cover; background-repeat: no-repeat; height:700px;}
+        .three h2{text-align: center; padding: 10px 20px;}
+        .three h1{color: #4B69A9; text-align: center; padding: 10px 20px;}
+        .three1{display: grid; grid-template-columns: 350px 550px; column-gap: 10px; align-items: center; justify-content: center;}
+        .three1 .g1{background-image: url(./images/Rectangle\ 47.png); background-size: cover; background-repeat: no-repeat; filter: brightness(0.5); text-align: center; color: white; border-radius: 15px; height: 250px;}
+        .three1 .g1 > h3{margin-top: 150px; filter: brightness(1); color: white;}
+        .three1 .g2{background-color: #b3c2e2; border: 1px solid #4B69A9; border-radius: 15px; height: 250px; }
+        .g2 .f1{display: flex; align-items: center; justify-content: center; width: 150px;}
+        .g2 .f1 > img{padding: 10px 20px;}
+        .g2 .f1 > h3{font-size: 30px; font-weight: 600; color: #4B69A9;}
+        .g2 > p{font-size: 20px; color: rgb(80, 78, 78); padding: 10px 20px;}
+        .g2 .f2{display: flex; align-items: center; justify-content: center; width: 150px; margin-left: 400px;}
+        .g2 .f2 > h4{color: #214185;}
+        .three2{display: grid; grid-template-columns: 550px 350px; column-gap: 10px; align-items: center; justify-content: center;}
+        .three2 .g3, .three2 .g4{background-color: #b3c2e2; border: 1px solid #4B69A9; border-radius: 15px; height: 250px; }
+        .g3 .f1{display: flex; align-items: center; justify-content: center; width: 150px;}
+        .g4 .f1{display: flex; align-items: center; }
+        .g3 .f1 > img, .g4 .f1 > img{padding: 10px 20px;}
+        .g3 .f1 > h3, .g4 .f1 > h3{font-size: 30px; font-weight: 600; color: #4B69A9;}
+        .g3 > p, .g4 > p{font-size: 18px; color: rgb(80, 78, 78); padding: 10px 20px;}
+        .g3 .f2{display: flex; align-items: center; justify-content: center; width: 150px; margin-left: 400px;}
+        .g4 .f2{display: flex; align-items: center; justify-content: center; width: 150px; margin-left: 180px;}
+        .g3 .f2 > h4, .g4 .f2 > h4{color: #214185;}
+
+        .four{margin-top: 20px;}
+        .four .h1{display: flex; column-gap: 10px; align-items: center; justify-content: center; color: black;}
+        .four .h1 > h1{color: black;}
+        .four h1{text-align: center; color: #4B69A9;}
+        .four .image{display:flex; column-gap: 10px; align-items: center; justify-content: center;}
+        .four .image > img{width:400px; height:500px; border-radius: 25px;}
+        .four .image > .i2{background-image: url(./images/renovation-profile-concentrated-man-touching-screwdriver-lamp-kitchen-range-hood.png); background-size:cover; background-repeat: no-repeat; background-position: center; width:400px; height:500px; border-radius: 25px;}
+        .image .i2{color: white; text-align: center; margin-top: 250px;} 
+        .image .i2 > h2{margin-top: 350px;}
+        .image .i2 > img{background-color: #214185; width: 50px; height: 50px; border-radius: 25px;}
+        .four .view{width: 150px; height: 50px; margin-left: 580px; align-items: center; justify-content: center; background-color: #4B69A9; color: white; display: flex; column-gap: 10px; border-radius: 5px;}
+        .view img{width: 25px; height: 25px;}
+
+        .five{margin-top: 20px; background-color: #eaecf1; height: 500px;}
+        .five .h1{display: flex; column-gap: 10px; align-items: center; justify-content: center; color: black;}
+        .five .h1 > h1{color: black;}
+        .five h1{text-align: center; color: #4B69A9;}
+        .five .grid{display: flex; column-gap: 30px; align-items: center; justify-content: center; padding: 10px 20px;}
+        .grid .grid1, .grid .grid2{width: 500px; height: 250px; border-radius: 100px 100px 0 0; background-color: white; padding: 10px 20px; box-shadow: 10px 10px #4B69A9;}
+        .grid1 .row1, .grid2 .row1{display: flex; column-gap: 5px; align-items: center; justify-content: center;}
+        .row1 .col1{display: flex;}
+        .row1 .col1 > img{width: 50px; height: 50px; border-radius: 25px;}
+        .row1 .col1 > p{width: 150px; height: 50px; border-radius: 20px; text-align: center; background-color: #4B69A9; color: white; font-size: 15px;}
+        .grid1 p, .grid2 p{font-size: 18px; color:#4B69A9; line-height: 1.6;}
+        .grid1 .quote, .grid2 .quote{margin-left: 430px;}
+        .five .arrows{display: flex; align-items: center; justify-content: center; column-gap: 50px;}
+        .arrows .a1{width: 50px; height: 25px; background-color: #b3c2e2; border-radius: 10px; text-align: center; padding: 3px 5px;}
+        .arrows .a2{width: 50px; height: 25px; background-color: #4B69A9; border-radius: 10px; text-align: center; padding: 3px 5px;}
+
+        .six{background-image: url(./images/light-bulb-electricity.png); background-size: cover; background-repeat: no-repeat; display: flex; column-gap: 10px; padding: 10px 20px; height: 500px;}
+        .six .six1{padding: 20px 30px;}
+        .six1 .h1{display: flex; column-gap: 10px; color: white;}
+        .six1 .h1 > h1{font-size: 25px;}
+        .six1 h1{color: white; font-size: 50px;}
+        .six1 p{color: white; font-size: 20px;}
+        .six1 .contact{width: 150px; height: 50px; align-items: center; justify-content: center; background-color: #4B69A9; color: white; display: flex; column-gap: 10px; border-radius: 5px;}
+        .contact img{width: 25px; height: 25px;}
+        
+
+       @media(max-width:600px){
+            
+            .one{display: flex; flex-direction: column; row-gap: 20px; width: 100%; height: 2000px; overflow-x: hidden;}
+            .one .one1{width:100%; height: 800px;}
+            .one1 .grid{display: grid; grid-template-columns: repeat(1, 150px); row-gap: 5px;}
+            .one .one2{width: 100%; height: 500px; margin-left: 10px;}
+
+            .two{margin-top: 20px; display:flex; flex-direction: column; row-gap: 5px; height: auto; margin-top: 10px; overflow-x: hidden;}
+            .two .two2{width: 100%; margin-left: 0;}
+            .two .two2-1{display: flex; flex-direction: column; row-gap: 5px; text-align: center;}
+            
+            .three{width: 100%; height: auto; margin-left: 0; overflow-x: hidden;}
+            .three h2, .three h1{width: 100%;}
+            .three1, .three2{display: grid; grid-template-columns: 300px; row-gap: 5px; margin-left: 50px; padding: 10px 20px;}
+            .three1 .g1, .three1 .g2, .three2 .g3, .three2 .g4{height: 350px;}
+            .g2 .f2, .g3 .f2, .g4 .f2{margin-left: 150px;}
+            
+            .four{width: 100%; border: 2px solid black; margin-left: 0;}
+            .four h1{width: 100%;}
+            .four .h1{width: 100%; align-items: center; justify-content: center;}
+            .four .image{display: flex; flex-direction: column; row-gap: 30px; width: 100%;}
+            .four .image > img{width:250px; height:400px; border-radius: 20px; margin-left: 0;}
+            .four .image > .i2{margin-top: 0; width:250px; height:400px; border-radius: 20px; margin-left: 0;} 
+            .four .view{width: 100%; margin-left: 100px; justify-items: left; align-items: flex-start;}
+            .image .i2 > h2{margin-top: 230px;}
+            
+            .five{width: 100%; height: 800px; margin-left: 0;}
+            .five .h1, .five h1{width: 100%;}
+            .five .grid{display: flex; flex-direction: column; row-gap: 30px; width: 100%;}
+            .grid .grid1, .grid .grid2{width: 200px; height: 700px; border-radius: 25px 25px 0 0;}
+            .grid1 .quote, .grid2 .quote{margin-left: 100px;}
+            .grid1 .row1, .grid2 .row1{display: flex; flex-direction: column; row-gap: 30px; align-items: center; justify-content: center;}
+            .five .arrows{width: 100%;}
+            
+            .six{width: 100%; height: auto; display: flex; flex-direction: column; row-gap: 10px; overflow-x: hidden;}
+            .six .six1{width: 100%; padding: 10px 20px;}
+            .six1 p{width: 100%;}
+            .six .six2, .six2 img{width: 100%;}
+            
+        }
+
+        @media(min-width:601px) and (max-width:1023px){
+            
+            .one{width: 100%;}
+            .one .one1{width: 400px; height: 700px; border: 2px solid black;}
+            .one2{width: 400px; height: 500px; margin-left: 0; border: 2px solid black;}
+            .thumb1{ top: -400px; left:180px; }
+            .thumb2{top: -330px; left: 160px; }
+            .one2 .thunder{top: 850px; left: 130px;}
+            .box{top: 700px; left: 500px;}
+            .two{width: 100%; display: flex; flex-direction: column; row-gap: 10px; height: auto;}
+            .box2 .image1{top: 50px;}
+            .box2 .image2{left: -200px; top: 10px;}
+            .box2 .image3{top: -380px; left: 480px;}
+            .box2 .image4{top: -20px; left: 300px;}
+            .two .two2{align-items: center; justify-content: center; margin-left: 0;}
+            .two2-1{justify-content: space-between; column-gap: 150px;}
+            .three{width: 100%; height: auto;}
+            .three1{display: grid; grid-template-columns: 250px 450px; column-gap: 5px;}
+            .three2{display: grid; grid-template-columns: 450px 250px; column-gap: 5px;}
+            .three1 .g1, .three1 .g2, .three2 .g3, .three2 .g4{height: 320px;}
+            .g2 .f2{margin-left: 250px;}
+            .g4 .f2{margin-left: 100px;}
+            .g3 .f2{margin-left: 300px;}
+            .g2 .f1 > h3, .g3 .f1 > h3, .g4 .f1 > h3{font-size: 25px;}
+            .four{width: 100%;}
+            .four .image{margin-left: 50px;}
+            .four .image > img{width:200px; height:400px;}
+            .four .image > .i2{width:200px; height:400px;}
+            .image .i2 > h2{margin-top: 160px;}
+            .four .view{margin-left: 350px;}
+            .five{width: 100%; height: auto;}
+            .five .grid{display: flex; flex-direction: column; row-gap: 50px;}
+            .five .arrows{width: 100%;}
+            .six{width: 100%; height: auto; display: flex; flex-direction: column; row-gap: 10px;}
+            .six .six1, .six .six2{width: 100%;}
+        }
+
+        @media(max-width:1024px){
+            .one{width: 100%; column-gap: 5px; height: 750px;}
+            .one .one1{width: 350px;}
+            .one2 .thunder{bottom: 300px; right: 500px;}
+            .box{ top: 190px; right: 0;}
+            .four .image > img{width:300px; height:400px; }
+            .four .image > .i2{ width:300px; height:400px;}
+            .image .i2 > h2{margin-top: 230px;}
+            .four .view{margin-left: 450px;}
+            .grid .grid1, .grid .grid2{width: 450px; height: 300px;}
+            .grid1 .quote, .grid2 .quote{margin-left: 350px;}
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="h1">
+            <img src="./images/Screenshot 2025-06-12 135749.png" alt="logo">
+            <h2>ZAHRIX</h2>
+        </div>
+        <div class="h2">
+            <a href="" class="link1">Home</a>
+            <a href="./aboutus.html" class="link2">About Us</a>
+            <div class="dropdown">
+                <a href="" class="link3">Services 
+                    <span><img src="./images/icon-park-outline_down.png" alt="down"></span>
+                </a>
+            <div class="dropdown-content">
+                <a href="./electrical.html">Electrical</a>
+                <a href="./cctv.html">CCTV</a>
+                <a href="./bms.html">BMS</a>
+            </div>
+            </div>
+            <a href="./projects.html" class="link4">Projects</a>
+        </div>
+        <div class="h3">
+            <a href="./quote.html"><button> <strong>Get a Quote</strong> </button></a>
+        </div>
+    </header>
+
+    <section class="one">
+        <div class="one1">
+            <h3>Transforming Safety and Security With Cutting-Edge Technology</h3><br>
+            <h4>Empowering Your Space with Innovative Solutions</h4><br>
+            <p>Zahrix provides cutting-edge electrical, CCTV, and BMS services to enhance your building's efficiency,
+                safety, and security. Trust us to illuminate your world. Our expertise ensures a safer, more secure,
+                and efficient environment. We design, install, and maintain systems that protect people, property, and
+                assets. </p><br>
+            <button>Discover Our Services</button><br><br>
+            <div class="grid">
+                <div class="g1">
+                    <h1>500+</h1>
+                    <h4>Locations In the Country</h4>
+                </div>
+                <div class="g1">
+                    <h1>25+</h1>
+                    <h4>Years Of Experience</h4>
+                </div>
+                <div class="g1">
+                    <h1>200+</h1>
+                    <h4>Specialized Workers</h4>
+                </div>
+            </div>
+        </div>
+        <div class="one2">
+            <div class="one21">
+                <img src="./images/horizontal-shot-attractive-young-unshaven-male-builder-wearing-safety-helmet 1.png" alt="image">
+                <div class="image"></div>
+            </div>
+            <div class="thumbs">
+                <img src="./images/icon-park-solid_good-one.png" class="thumb1" alt="thumsup">
+                <img src="./images/icon-park-solid_good-one.png" class="thumb2" alt="thumsup">
+            </div>
+            <img src="./images/Group 24.png" alt="thunder" class="thunder">
+            <div class="box">
+                <img src="./images/material-symbols_electric-bolt-outline.png" alt="electirc">
+                <p>Unlock a safer tomorrow with Zahrix!</p>
+                <img src="./images/ic_round-gpp-good.png" alt="tick">
+            </div>
+        </div>
+    </section>
+
+    <section class="two">
+        <div class="two1">
+            <div class="box1">
+                <h3>25</h3>
+                <p> <strong>Years Experiences Electro Mechanical</strong></p>
+            </div>
+            <div class="box2">
+                <img src="./images/Rectangle 375.png" alt="image1" class="image1">
+                <img src="./images/standard-quality-control-collage-concept.png" alt="image2" class="image2">
+                <img src="./images/material-symbols_supervisor-account-rounded.png" alt="image3" class="image3">
+                <img src="./images/Group 568.png" alt="image4" class="image4">
+            </div>
+        </div>
+        <div class="two2">
+            <h2>ABOUT US <span><img src="./images/ic_baseline-electric-bolt.png" alt="bolt"></span></h2><br>
+            <h3>Welcome to ZAHRIX</h3><br>
+            <h1>Empowering Your Space, Enhancing Your Life</h1><br>
+            <p>
+                At AH RIX, we're dedicated to delivering innovative electical, CCTV and Building Management System(BMS)
+                solutions. Our expertise ensures a safer, more secure, and efficient environment for homes, businesses,
+                and communities. With cutting-edge technology and exceptional service, we empower your space to reach 
+                its full potential. Our team of expert is committed to providing tailored solutions that meet Your
+                unique needs. Trust us to illuminate your world with innovative solutions.
+            </p><br>
+            <div class="two2-1">
+                <div class="learn">
+                    <img src="./images/material-symbols_drag-click-rounded.png" alt="click">
+                    <p>Learn More</p>
+                </div>
+                <div class="team">
+                    <h3>Meet Our Expert Team!</h3>
+                    <img src="./images/Frame 506.png" alt="team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="three">
+        <h2>OUR SERVICES <span><img src="./images/material-symbols_electric-bolt-outline.png" alt="bolt"></span></h2><br>
+        <h1>Expert Services for a Safer, Smarter World</h1>
+        <div class="three1">
+            <div class="g1">
+                <h3>"Experience the best in electrical, CCTV, BMS Solutions"</h3>
+            </div>
+            <div class="g2">
+                <figure class="f1">
+                    <img src="./images/Group 552.png" alt="cctv">
+                    <h3>CCTV</h3>
+                </figure>
+                
+                <p>
+                    Advanced CCTV systems for enhanced security and surveillance, providing peace of mind and protection.
+                    <span><img src="./images/material-symbols_electric-bolt-outline.png" alt="bolt"></span>
+                </p>
+                <figure class="f2">
+                    <h4>Read More </h4>
+                    <img src="./images/tabler_arrow-up.png" alt="arrowup">
+                </figure>
+            </div>
+        </div><br>
+        <div class="three2">
+            <div class="g3">
+                <figure class="f1">
+                    <img src="./images/Group 538.png" alt="bms">
+                    <h3>BMS</h3>
+                </figure>
+                <p>
+                    Intelligent Building Management systems for optimized energy efficiency, security, and comfort.
+                    <span><img src="./images/material-symbols_electric-bolt-outline.png" alt="bolt"></span>
+                </p>
+                <figure class="f2">
+                    <h4>Read More </h4>
+                    <img src="./images/tabler_arrow-up.png" alt="arrowup">
+                </figure>
+            </div>
+            <div class="g4">
+                <figure class="f1">
+                    <img src="./images/Group 534.png" alt="cctv">
+                    <h3>Electrical</h3>
+                </figure>
+                <p>
+                    Expert electrical solutions for homes and businesses, ensuring safety, efficiency, and reliability.
+                    <span><img src="./images/material-symbols_electric-bolt-outline.png" alt="bolt"></span>
+                </p>
+                <figure class="f2">
+                    <h4>Read More </h4>
+                    <img src="./images/tabler_arrow-up.png" alt="arrowup">
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <section class="four">
+        <figure class="h1">
+            <h1>OUR PROJECTS</h1>
+            <img src="./images/material-symbols_electric-bolt-outline.png" alt="bolt">
+        </figure>
+        <h1>Electric Solutions for a Brighter Tomorrow</h1>
+        <div class="image">
+            <img src="./images/Screenshot 2025-06-12 102855.png" alt="i1">
+            <div class="i2">
+                <h2>LED Lighting Retrofit</h2><br>
+                <p>Illumiating spaces with energy-efficient LED lighting solutions, reducing energy consumption
+                    and maintenance costs.
+                </p><br>
+                <img src="./images/mingcute_arrow-up-fill.png" alt="arrowup">
+            </div>
+            <img src="./images/electrician-overalls-focused-work-switchboard-with-fuses-using-tablet.png" alt="">
+        </div><br><br>
+        <div class="view">
+            <img src="./images/material-symbols_drag-click-rounded.png" alt="click">
+            <p>View More</p>
+        </div>
+    </section>
+
+    <section class="five">
+        <figure class="h1">
+            <h1>OUR TESTIMONALS</h1>
+            <img src="./images/material-symbols_electric-bolt-outline.png" alt="bolt">
+        </figure><br>
+        <h1>Real People, Real Results</h1><br>
+        <div class="grid">
+            <div class="grid1">
+                <div class="row1">
+                    <div class="col1">
+                        <img src="./images/Ellipse 69.png" alt="girl">
+                        <p>Priya Patel HomeOwner</p>
+                    </div>
+                    <img src="./images/Group 483.png" alt="star">
+                </div><br><br>
+                <p>
+                    "The electrical panel upgrade done by ZAHRIX was seamless. Their electricians were courteous, 
+                    knowledgeable, and provide excellent customer service. I'm thrilled with the results!"
+                </p>
+                <img src="./images/Symbol.png" alt="quote" class="quote">
+            </div>
+            <div class="grid2">
+                <div class="row1">
+                    <div class="col1">
+                        <img src="./images/hjj.png" alt="boy">
+                        <p>Rahul Sharma Facility Manager</p>
+                    </div>
+                    <img src="./images/Group 483.png" alt="star">
+                </div><br><br>
+                <p>
+                    "ZAHRIX Electrical Services delivered exceptional work on our office electrical upgrade. Their teams
+                    was professional, efficient, and completed the project on time. Highly recommended!"
+                </p>
+                <img src="./images/Symbol.png" alt="quote" class="quote">
+            </div>
+        </div><br><br>
+        <div class="arrows">
+            <p class="a1">&#11207;</p>
+            <p class="a2">&#11208;</p>
+        </div>
+    </section>
+
+    <section class="six">
+        <div class="six1">
+        <figure class="h1">
+            <h1>Let's Connect</h1>
+            <img src="./images/material-symbols_electric-bolt-outline.png" alt="bolt">
+        </figure><br>
+        <h1>We're here to answer your</h1><br>
+        <h1 style="color: #4B69A9; font-size: 50px;">questions and help</h1><br>
+        <p>Whether you're planning a new project or need emergency support, we're available to provide fast and
+            reliable assistance.
+        </p><br>
+        <div class="contact">
+            <img src="./images/material-symbols_drag-click-rounded.png" alt="click">
+            <p>Contact Us</p>
+        </div>
+        </div>
+        <div class="six2">
+            <img src="./images/Screenshot 2025-06-12 110247.png" alt="girl">
+        </div>
+    </section>
+
+    <footer>
+        <div class="f1">
+            <div class="f01">
+                <figure>
+                    <img src="./images/Screenshot 2025-06-12 135749.png" alt="logo">
+                    <h2>ZAHRIX</h2>
+                </figure>
+                <p>"At ZAHRIX Delivering Electrical Solutions With Precision and care"</p>
+            </div>
+            <div class="f02">
+                <h2>Subscribe</h2>
+                <div class="form">
+                    <input type="text" name="mail" placeholder="Enter your email" class="mail">
+                    <input type="text" name="signup" placeholder="SIGN UP" class="signup">
+                </div>
+            </div>
+        </div>
+        <div class="f2">
+            <div class="f21">
+            <figure>
+                <img src="./images/Group 230.png" alt="mail">
+                <figcaption>Zahrix@gmail.com</figcaption>
+            </figure>
+            <figure>
+                <img src="./images/Group 228.png" alt="phone">
+                <figcaption>23/9, Main Road, Chennai.</figcaption>
+            </figure>
+            <figure>
+                <img src="./images/Group 231.png" alt="location">
+                <figcaption>+91 9874563210</figcaption>
+            </figure>
+            </div>
+            <div class="f22">
+                <div class="r1">
+                    <h2>Quick Links</h2><br>
+                    <ul>
+                        <li>About Us</li>
+                        <li>Our Services</li>
+                        <li>Testimonals</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+                <div class="r2">
+                    <h2>Useful Links</h2><br>
+                    <ul>
+                        <li>Team of Use</li>
+                        <li>Privacy Policy</li>
+                        <li>Contact Support</li>
+                        <li>Careers</li>
+                    </ul>
+                </div>
+                <div class="r3">
+                    <img src="./images/entypo-social_linkedin-with-circle.png" alt="linkedin">
+                    <img src="./images/ph_instagram-logo-fill.png" alt="insta">
+                    <img src="./images/ic_outline-facebook.png" alt="facebook">
+                    <img src="./images/formkit_twitter.png" alt="twitter">
+                </div>
+            </div>
+        </div>
+        <div class="f3">
+            <p>@ 2025 Developed & Maintained by ZAHRIX - All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
