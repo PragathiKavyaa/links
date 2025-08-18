@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Portal - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo">JobPortal</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="jobs.html">Jobs</a></li>
+      <li><a href="apply.html">Apply</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="signup.html">SignUp</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Find Your Dream Job</h1>
+  <p>Search among thousands of opportunities</p>
+  <div class="search-box">
+    <input type="text" id="keyword" placeholder="Job title or keyword">
+    <input type="text" id="location" placeholder="Location">
+    <button onclick="searchJobs()">Search</button>
+  </div>
+</section>
+
+<section id="categories">
+    <h2>Browse by Categories</h2>
+    <div class="category-list">
+        <button class="category-btn" data-category="IT">IT Jobs</button>
+        <button class="category-btn" data-category="Finance">Finance Jobs</button>
+        <button class="category-btn" data-category="HR">HR Jobs</button>
+        <button class="category-btn" data-category="Marketing">Marketing Jobs</button>
+    </div>
+
+    <div id="job-results">
+        <div class="job-card" data-category="IT">Software Engineer</div>
+        <div class="job-card" data-category="Finance">Accountant</div>
+        <div class="job-card" data-category="HR">HR Manager</div>
+        <div class="job-card" data-category="Marketing">Digital Marketer</div>
+        <div class="job-card" data-category="IT">Frontend Developer</div>
+    </div>
+</section>
+
+<section class="featured-jobs">
+    <h2>Featured Jobs</h2>
+    <div class="carousel-container">
+        <button class="carousel-btn prev">&#10094;</button>
+        <div class="carousel-track">
+            <div class="job-cards">
+                <h3>Software Developer</h3>
+                <p>Company: Tech Solutions</p>
+                <p>Location: Bangalore</p>
+                <button onclick="applyJob()">Apply Now</button>
+            </div>
+            <div class="job-cards">
+                <h3>Digital Marketing Executive</h3>
+                <p>Company: MarketPro</p>
+                <p>Location: Mumbai</p>
+                <button onclick="applyJob()">Apply Now</button>
+            </div>
+            <div class="job-cards">
+                <h3>Financial Analyst</h3>
+                <p>Company: FinCorp</p>
+                <p>Location: Delhi</p>
+                <button onclick="applyJob()">Apply Now</button>
+            </div>
+            <div class="job-cards">
+                <h3>UI/UX Designer</h3>
+                <p>Company: Creative Hub</p>
+                <p>Location: Pune</p>
+                <button onclick="applyJob()">Apply Now</button>
+            </div>
+            <div class="job-cards">
+                <h3>HR Manager</h3>
+                <p>Company: PeopleFirst</p>
+                <p>Location: Hyderabad</p>
+                <button onclick="applyJob()">Apply Now</button>
+            </div>
+            <div class="job-cards">
+                <h3>Data Scientist</h3>
+                <p>Company: AI Labs</p>
+                <p>Location: Chennai</p>
+                <button onclick="applyJob()">Apply Now</button>
+            </div>
+        </div>
+        <button class="carousel-btn next">&#10095;</button>
+    </div>
+</section>
+
+<footer>
+  <p>© 2025 JobPortal. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

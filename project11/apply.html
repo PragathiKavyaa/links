@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply for Job</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo">JobPortal</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="jobs.html">Jobs</a></li>
+      <li><a href="apply.html">Apply</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="apply-form">
+  <h1>Apply for Job</h1>
+  <form onsubmit="submitApplication(event)">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" required>
+
+    <label for="resume">Upload Resume</label>
+    <input type="file" id="resume" required>
+
+    <label for="message">Cover Letter</label>
+    <textarea id="message" rows="5" required></textarea>
+
+    <button type="submit">Submit Application</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 JobPortal. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employer Dashboard - JobPortal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo">JobPortal</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="jobs.html">Jobs</a></li>
+      <li><a href="apply.html">Apply</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="dashboard">
+  <h1>Employer Dashboard</h1>
+
+  <!-- Post New Job -->
+  <div class="post-job">
+    <h2>Post a New Job</h2>
+    <form onsubmit="postJob(event)">
+      <label for="jobTitle">Job Title</label>
+      <input type="text" id="jobTitle" required>
+
+      <label for="companyName">Company Name</label>
+      <input type="text" id="companyName" required>
+
+      <label for="jobLocation">Location</label>
+      <input type="text" id="jobLocation" required>
+
+      <label for="jobDescription">Job Description</label>
+      <textarea id="jobDescription" rows="4" required></textarea>
+
+      <button type="submit">Post Job</button>
+    </form>
+  </div>
+
+  <!-- Posted Jobs List -->
+  <div class="job-list">
+    <h2>My Job Posts</h2>
+    <ul id="postedJobs">
+      <li>No jobs posted yet</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 JobPortal. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

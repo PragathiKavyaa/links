@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile - JobPortal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo">JobPortal</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="jobs.html">Jobs</a></li>
+      <li><a href="apply.html">Apply</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="profile-page">
+  <h1>My Profile</h1>
+  <form onsubmit="updateProfile(event)">
+    <label for="profileName">Full Name</label>
+    <input type="text" id="profileName" value="John Doe" required>
+
+    <label for="profileEmail">Email</label>
+    <input type="email" id="profileEmail" value="john@example.com" required>
+
+    <label for="profileResume">Upload Resume</label>
+    <input type="file" id="profileResume">
+
+    <label for="profileSkills">Skills</label>
+    <input type="text" id="profileSkills" value="HTML, CSS, JavaScript">
+
+    <button type="submit">Update Profile</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 JobPortal. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

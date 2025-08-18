@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - JobPortal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo">JobPortal</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="jobs.html">Jobs</a></li>
+      <li><a href="apply.html">Apply</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="auth-form">
+  <h1>Login</h1>
+  <form onsubmit="loginUser(event)">
+    <label for="email">Email</label>
+    <input type="email" id="loginEmail" required>
+
+    <label for="password">Password</label>
+    <input type="password" id="loginPassword" required>
+
+    <button type="submit">Login</button>
+    <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 JobPortal. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jobs - Job Portal</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    .container {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .categories {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .category-card {
+        background: white;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .category-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .category-card h3 {
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .category-card button {
+        padding: 8px 16px;
+        border: none;
+        background: #007bff;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .category-card button:hover {
+        background: #0056b3;
+    }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">JobPortal</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="jobs.html">Jobs</a></li>
+      <li><a href="apply.html">Apply</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="container">
+    <div class="categories">
+        <div class="category-card">
+            <h3>IT & Software</h3>
+            <p>Developer, Tester, Support Roles</p>
+            <button onclick="viewJobs('IT')">View Jobs</button>
+        </div>
+        <div class="category-card">
+            <h3>Marketing</h3>
+            <p>SEO, Digital Marketing, Branding</p>
+            <button onclick="viewJobs('Marketing')">View Jobs</button>
+        </div>
+        <div class="category-card">
+            <h3>Finance</h3>
+            <p>Accountant, Analyst, Banking</p>
+            <button onclick="viewJobs('Finance')">View Jobs</button>
+        </div>
+        <div class="category-card">
+            <h3>Healthcare</h3>
+            <p>Doctors, Nurses, Technicians</p>
+            <button onclick="viewJobs('Healthcare')">View Jobs</button>
+        </div>
+        <div class="category-card">
+            <h3>Education</h3>
+            <p>Teachers, Professors, Trainers</p>
+            <button onclick="viewJobs('Education')">View Jobs</button>
+        </div>
+        <div class="category-card">
+            <h3>Human Resources</h3>
+            <p>HR Manager, Recruiter, Coordinator</p>
+            <button onclick="viewJobs('HR')">View Jobs</button>
+        </div>
+        <div class="category-card">
+            <h3>Engineering</h3>
+            <p>Mechanical, Civil, Electrical Jobs</p>
+            <button onclick="viewJobs('Engineering')">View Jobs</button>
+        </div>
+        <div class="category-card">
+            <h3>Sales</h3>
+            <p>Sales Executive, Business Development</p>
+            <button onclick="viewJobs('Sales')">View Jobs</button>
+        </div>
+        <div class="category-card">
+            <h3>Design</h3>
+            <p>UI/UX, Graphic Designer, Product Design</p>
+            <button onclick="viewJobs('Design')">View Jobs</button>
+        </div>
+        <div class="category-card">
+            <h3>Customer Support</h3>
+            <p>Call Center, Technical Support</p>
+            <button onclick="viewJobs('Support')">View Jobs</button>
+        </div>
+    </div>
+</div>
+
+<footer>
+  <p>© 2025 JobPortal. All rights reserved.</p>
+</footer>
+
+<script>
+function viewJobs(category) {
+    alert("Showing jobs in category: " + category);
+    // You can redirect to jobdetails.html and pass category
+    window.location.href = "jobdetails.html?category=" + category;
+}
+</script>
+
+</body>
+</html>
