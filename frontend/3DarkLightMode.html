@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dark / Light Mode Toggle</title>
+<style>
+  :root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --card-bg: #f1f1f1;
+    --transition: 0.4s ease;
+  }
+
+  body.dark {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --card-bg: #1f1f1f;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: background var(--transition), color var(--transition);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    width: 350px;
+    text-align: center;
+    transition: background var(--transition);
+  }
+
+  .toggle-btn {
+    margin-top: 20px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    background: #4a90e2;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background var(--transition);
+  }
+
+  .toggle-btn:hover {
+    background: #3578c6;
+  }
+
+  .icon {
+    font-size: 20px;
+    transition: transform var(--transition);
+  }
+</style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Dark / Light Mode Toggle</h2>
+    <p>Click the button below to switch themes.</p>
+
+    <button class="toggle-btn" id="themeToggle">
+      <span class="icon" id="modeIcon">🌞</span>
+      Toggle Mode
+    </button>
+  </div>
+
+<script>
+  const body = document.body;
+  const toggleBtn = document.getElementById("themeToggle");
+  const modeIcon = document.getElementById("modeIcon");
+
+  // Load saved mode
+  const savedMode = localStorage.getItem("themeMode");
+  if (savedMode === "dark") {
+    body.classList.add("dark");
+    modeIcon.textContent = "🌙";
+  }
+
+  toggleBtn.addEventListener("click", () => {
+    body.classList.toggle("dark");
+
+    if (body.classList.contains("dark")) {
+      modeIcon.textContent = "🌙";
+      localStorage.setItem("themeMode", "dark");
+    } else {
+      modeIcon.textContent = "🌞";
+      localStorage.setItem("themeMode", "light");
+    }
+  });
+</script>
+
+</body>
+</html>

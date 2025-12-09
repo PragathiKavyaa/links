@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Online Learning — Frontend Prototype</title>
+<style>
+  /* ----------------- Basic layout & variables ----------------- */
+  :root{
+    --bg:#f5f7fb; --card:#fff; --muted:#6b7280; --accent:#2563eb; --success:#10b981;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,Arial;color:#0f172a;background:var(--bg)}
+  .app{min-height:100vh;display:flex;flex-direction:column}
+  header{background:linear-gradient(90deg,#fff 60%, rgba(37,99,235,0.05));padding:14px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e6eef8}
+  .brand{display:flex;gap:12px;align-items:center}
+  .logo{width:44px;height:44px;border-radius:8px;background:var(--accent);display:inline-grid;place-items:center;color:#fff;font-weight:700}
+  nav{display:flex;gap:10px;align-items:center}
+  button, .link{background:none;border:0;padding:8px 12px;border-radius:8px;cursor:pointer}
+  .btn-primary{background:var(--accent);color:#fff}
+
+  /* ----------------- layout ----------------- */
+  .layout{display:flex;gap:18px;padding:20px;align-items:flex-start}
+  .sidebar{width:260px;background:var(--card);border-radius:12px;padding:16px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+  .main{flex:1}
+
+  /* ----------------- dashboard cards ----------------- */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:18px}
+  .card{background:var(--card);padding:14px;border-radius:12px}
+  .small{font-size:12px;color:var(--muted)}
+  .big{font-size:20px;font-weight:700}
+
+  /* ----------------- course grid ----------------- */
+  .controls{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+  .search{flex:1;padding:10px;border-radius:10px;border:1px solid #e6eef8}
+  .filters{display:flex;gap:8px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+  .product{background:var(--card);padding:12px;border-radius:10px;display:flex;flex-direction:column;gap:8px}
+  .thumb{width:100%;height:120px;background:#e8eefc;border-radius:8px;display:grid;place-items:center;color:var(--muted)}
+  .meta{display:flex;justify-content:space-between;align-items:center}
+  .muted{color:var(--muted);font-size:13px}
+
+  /* ----------------- course detail / player area ----------------- */
+  .detail{display:flex;gap:18px}
+  .player{flex:1;background:var(--card);padding:12px;border-radius:10px}
+  .sidebar-lesson{width:320px;background:var(--card);padding:10px;border-radius:10px;height:520px;overflow:auto}
+  .lesson-group{margin-bottom:8px}
+  .lesson{padding:8px;border-radius:8px;margin-bottom:6px;display:flex;justify-content:space-between;align-items:center;cursor:pointer}
+  .lesson.active{background:#eef6ff}
+
+  /* ----------------- modals / forms ----------------- */
+  .modal{position:fixed;inset:0;display:grid;place-items:center;background:rgba(2,6,23,0.45)}
+  .panel{width:420px;background:var(--card);padding:18px;border-radius:12px}
+  .field{display:flex;flex-direction:column;margin-bottom:10px}
+  input,select,textarea{padding:10px;border-radius:8px;border:1px solid #e6eef8}
+
+  /* ----------------- responsive ----------------- */
+  @media (max-width:900px){.layout{flex-direction:column;padding:12px}.sidebar{width:100%}.sidebar-lesson{width:100%;height:320px}.detail{flex-direction:column}} 
+</style>
+</head>
+<body>
+<div class="app" id="app">
+  <header>
+    <div class="brand"><div class="logo">OL</div><div>
+      <div style="font-weight:700">Online Learning</div>
+      <div style="font-size:12px;color:var(--muted)">Prototype UI — Frontend only</div>
+    </div></div>
+
+    <nav id="topnav">
+      <span id="welcome" class="muted">Not signed in</span>
+      <button class="link" onclick="openAuth('student')">Sign Up (Student)</button>
+      <button class="link" onclick="openAuth('instructor')">Sign Up (Instructor)</button>
+      <button id="dashboardBtn" class="btn-primary" onclick="toggleDashboard()">Go to Dashboard</button>
+    </nav>
+  </header>
+
+  <section class="layout">
+    <!-- left sidebar (filters & nav) -->
+    <aside class="sidebar">
+      <div style="font-weight:700;margin-bottom:8px">Browse Courses</div>
+      <div class="small">Categories</div>
+      <div style="display:flex;flex-direction:column;gap:6px;margin-top:8px">
+        <button class="link" onclick="filterBy('all')">All</button>
+        <button class="link" onclick="filterBy('development')">Development</button>
+        <button class="link" onclick="filterBy('design')">Design</button>
+        <button class="link" onclick="filterBy('marketing')">Marketing</button>
+      </div>
+
+      <hr style="margin:12px 0;border:none;border-top:1px solid #eef2ff">
+      <div class="small">My Shortcuts</div>
+      <div style="display:flex;flex-direction:column;gap:6px;margin-top:8px">
+        <button class="link" onclick="openEnrollments()">Enrolled Courses</button>
+        <button class="link" onclick="openCreated()">My Created Courses</button>
+      </div>
+    </aside>
+
+    <!-- main content -->
+    <main class="main">
+
+      <!-- Dashboard / Course list header -->
+      <div class="cards" id="summaryCards">
+        <!-- populated dynamically -->
+      </div>
+
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <div style="font-weight:700">All Courses</div>
+            <div class="small">Search and filter available courses</div>
+          </div>
+          <div style="display:flex;gap:8px">
+            <input id="search" class="search" placeholder="Search by title or instructor" oninput="renderCourses()">
+            <select id="sort" onchange="renderCourses()"><option value="">Sort</option><option value="price-asc">Price ↑</option><option value="price-desc">Price ↓</option></select>
+          </div>
+        </div>
+
+        <div style="margin-top:14px" id="coursesGrid" class="grid"></div>
+      </div>
+
+      <!-- Course detail / player preview (hidden initially) -->
+      <div id="courseDetail" style="margin-top:18px;display:none" class="detail">
+        <div class="player">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+            <div>
+              <div id="detailTitle" style="font-weight:700;font-size:18px"></div>
+              <div id="detailInstructor" class="muted"></div>
+            </div>
+            <div>
+              <button id="enrollBtn" class="btn-primary">Enroll Now</button>
+            </div>
+          </div>
+
+          <video id="videoPlayer" controls style="width:100%;border-radius:8px;background:#000">
+            <source src="sample-video.mp4" type="video/mp4">Your browser doesn't support HTML video.
+          </video>
+
+          <div style="margin-top:10px" id="detailDesc"></div>
+        </div>
+
+        <aside class="sidebar-lesson">
+          <div style="font-weight:700;margin-bottom:6px">Course Syllabus</div>
+          <div id="lessonList"></div>
+        </aside>
+      </div>
+
+    </main>
+  </section>
+
+  <footer style="padding:14px 20px;background:transparent;border-top:1px solid #eef2ff;text-align:center;color:var(--muted)">
+    Prototype — No backend. Data stored in localStorage. Responsive layout and print-friendly.
+  </footer>
+</div>
+
+<!-- Auth Modal -->
+<div id="authModal" style="display:none" class="modal">
+  <div class="panel">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+      <div id="authTitle">Sign Up</div>
+      <button onclick="closeAuth()">✕</button>
+    </div>
+    <div class="field"><label>Name</label><input id="authName"></div>
+    <div class="field"><label>Email</label><input id="authEmail"></div>
+    <div class="field"><label>Role</label>
+      <select id="authRole"><option value="student">Student</option><option value="instructor">Instructor</option></select>
+    </div>
+    <div style="display:flex;gap:8px;justify-content:flex-end"><button onclick="closeAuth()">Cancel</button><button class="btn-primary" onclick="signup()">Save</button></div>
+  </div>
+</div>
+
+<script>
+// ------------------ Mock data ------------------
+const mockCourses = [
+  {id:1,title:'Fullstack JavaScript',category:'development',price:9990,instructor:'Priya R',short:'Build apps with Node & React',desc:'Comprehensive fullstack course',thumbnail:'',lessons:[{t:'Intro',src:'sample-video.mp4'},{t:'Node Basics',src:'sample-video.mp4'},{t:'React Intro',src:'sample-video.mp4'}]},
+  {id:2,title:'UI/UX Design',category:'design',price:4990,instructor:'Arjun S',short:'Design beautiful interfaces',desc:'Design principles, Figma, prototyping',thumbnail:'',lessons:[{t:'Design Thinking',src:'sample-video.mp4'},{t:'Figma Basics',src:'sample-video.mp4'}]},
+  {id:3,title:'Digital Marketing',category:'marketing',price:0,instructor:'Leena K',short:'Grow businesses online',desc:'SEO, Ads, Content strategy',thumbnail:'',lessons:[{t:'SEO',src:'sample-video.mp4'},{t:'Ads 101',src:'sample-video.mp4'}]}
+];
+
+// persist courses & users in localStorage
+if(!localStorage.getItem('courses')) localStorage.setItem('courses', JSON.stringify(mockCourses));
+let courses = JSON.parse(localStorage.getItem('courses'));
+let users = JSON.parse(localStorage.getItem('users')||'[]');
+let auth = JSON.parse(localStorage.getItem('auth')||'null');
+let enrollments = JSON.parse(localStorage.getItem('enrollments')||'{}');
+
+// ------------------ UI helpers ------------------
+function renderSummary(){
+  const el = document.getElementById('summaryCards');
+  const total = courses.length;
+  const free = courses.filter(c=>c.price===0).length;
+  const paid = total - free;
+  el.innerHTML = `
+    <div class="card"><div class="small">Total Courses</div><div class="big">${total}</div></div>
+    <div class="card"><div class="small">Free Courses</div><div class="big">${free}</div></div>
+    <div class="card"><div class="small">Paid Courses</div><div class="big">${paid}</div></div>
+  `;
+}
+
+function renderCourses(){
+  const q = document.getElementById('search').value.toLowerCase();
+  const sort = document.getElementById('sort').value;
+  let list = courses.filter(c=> c.title.toLowerCase().includes(q) || c.instructor.toLowerCase().includes(q));
+  if(window._filterBy && window._filterBy!=='all') list = list.filter(c=>c.category===window._filterBy);
+  if(sort==='price-asc') list.sort((a,b)=>a.price-b.price);
+  if(sort==='price-desc') list.sort((a,b)=>b.price-a.price);
+
+  const grid = document.getElementById('coursesGrid');
+  grid.innerHTML='';
+  list.forEach(c=>{
+    const card = document.createElement('div'); card.className='product';
+    card.innerHTML = `
+      <div class="thumb">${c.thumbnail?'<img src="'+c.thumbnail+'" style="width:100%;height:100%;object-fit:cover;border-radius:8px">':'<div style="font-weight:700">'+c.title.split(' ')[0]+'</div>'}</div>
+      <div style="flex:1"><div style="font-weight:700">${c.title}</div><div class="muted">${c.instructor}</div></div>
+      <div class="meta"><div style="font-weight:700">${c.price===0?'Free':'₹'+c.price}</div><div><button onclick="openCourse(${c.id})">View</button></div></div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+function filterBy(cat){ window._filterBy = cat; renderCourses(); }
+
+// ------------------ Auth & Enrollment ------------------
+function openAuth(role='student'){document.getElementById('authModal').style.display='grid';document.getElementById('authRole').value=role;document.getElementById('authTitle').innerText='Sign Up / Login'}
+function closeAuth(){document.getElementById('authModal').style.display='none'}
+function signup(){
+  const name = document.getElementById('authName').value.trim();
+  const email = document.getElementById('authEmail').value.trim();
+  const role = document.getElementById('authRole').value;
+  if(!name||!email){alert('enter name and email');return}
+  // simple upsert user
+  let user = users.find(u=>u.email===email);
+  if(!user){ user = {id:Date.now(),name,email,role,created:Date.now()}; users.push(user); }
+  auth = user; localStorage.setItem('users',JSON.stringify(users)); localStorage.setItem('auth',JSON.stringify(auth));
+  document.getElementById('welcome').innerText = 'Hello, '+auth.name; closeAuth();
+}
+
+function toggleDashboard(){
+  if(!auth){ openAuth('student'); return; }
+  alert('Dashboard placeholder — Students see enrollments; Instructors see created courses.\n(Prototype)')
+}
+
+function openEnrollments(){ if(!auth){openAuth('student'); return;} const list = enrollments[auth.email]||[]; alert('Enrolled courses:\n'+(list.map(id=>courses.find(c=>c.id===id).title).join('\n')||'None')) }
+function openCreated(){ if(!auth){openAuth('instructor'); return;} const mine = courses.filter(c=>c.instructor===auth.name); alert('Your created:\n'+(mine.map(m=>m.title).join('\n')||'None')) }
+
+// ------------------ Course Detail & Video Player ------------------
+let currentCourse = null; let currentLessonIndex=0;
+function openCourse(id){ currentCourse = courses.find(c=>c.id===id); document.getElementById('courseDetail').style.display='flex'; document.getElementById('detailTitle').innerText=currentCourse.title; document.getElementById('detailInstructor').innerText='by '+currentCourse.instructor; document.getElementById('detailDesc').innerText=currentCourse.desc; renderLessons(); }
+
+function renderLessons(){ const list = document.getElementById('lessonList'); list.innerHTML=''; currentCourse.lessons.forEach((ls,i)=>{ const div = document.createElement('div'); div.className='lesson'+(i===currentLessonIndex?' active':''); div.innerHTML = `<div>${i+1}. ${ls.t}</div><div><button onclick="playLesson(${i})">Play</button></div>`; list.appendChild(div); }); playLesson(0); }
+
+function playLesson(i){ currentLessonIndex=i; const lesson = currentCourse.lessons[i]; const video = document.getElementById('videoPlayer'); // replace source
+  // NOTE: sample videos are placeholders — replace with real secure video URLs or streaming sources
+  const src = lesson.src || 'sample-video.mp4';
+  if(video.querySelector('source')){ video.querySelector('source').src = src; video.load(); video.play().catch(()=>{}); }
+  // highlight active
+  [...document.getElementById('lessonList').children].forEach((el,idx)=>{el.classList.toggle('active', idx===i)});
+}
+
+// enroll
+function enrollNow(){ if(!auth){openAuth('student'); return;} enrollments[auth.email]=enrollments[auth.email]||[]; if(!enrollments[auth.email].includes(currentCourse.id)) enrollments[auth.email].push(currentCourse.id); localStorage.setItem('enrollments', JSON.stringify(enrollments)); alert('Enrolled successfully!'); }
+
+// wire enroll button
+document.getElementById('enrollBtn').addEventListener('click', enrollNow);
+
+// ------------------ Init ------------------
+renderSummary(); renderCourses(); if(auth){document.getElementById('welcome').innerText='Hello, '+auth.name}
+
+</script>
+</body>
+</html>

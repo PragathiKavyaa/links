@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Digital Clock</title>
+  <style>
+    :root{
+      --bg1: #0f172a;
+      --bg2: #001529;
+      --card: rgba(255,255,255,0.06);
+      --accent: #00e5ff;
+      --muted: rgba(255,255,255,0.7);
+      --glass: rgba(255,255,255,0.03);
+      --radius: 18px;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    html,body{height:100%;margin:0}
+    body{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: linear-gradient(135deg,var(--bg1) 0%, var(--bg2) 100%);
+      color: white;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:24px;
+    }
+
+    .clock-wrap{
+      width:clamp(280px, 40vw, 560px);
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius: var(--radius);
+      box-shadow: 0 8px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+      padding: 28px;
+      text-align:center;
+      border: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .clock {
+      display:flex;
+      align-items:baseline;
+      justify-content:center;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .time {
+      font-weight:700;
+      letter-spacing:2px;
+      font-size: clamp(28px, 6vw, 72px);
+      background: linear-gradient(90deg, #ffffff, var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 6px 30px rgba(0,0,0,0.6);
+      display:flex;
+      align-items:baseline;
+      gap:8px;
+    }
+
+    .ampm{
+      font-size: clamp(10px, 1.8vw, 16px);
+      background: none;
+      color: var(--muted);
+      font-weight:600;
+      padding:6px 10px;
+      border-radius:10px;
+      transform:translateY(-6px);
+      background: var(--glass);
+      border: 1px solid rgba(255,255,255,0.02);
+    }
+
+    .seconds{
+      font-weight:600;
+      font-size: clamp(12px, 2.2vw, 20px);
+      color: var(--muted);
+      opacity:0.95;
+      transform: translateY(6px);
+    }
+
+    .date{
+      margin-top:12px;
+      font-size: clamp(12px, 1.8vw, 16px);
+      color: rgba(255,255,255,0.75);
+      font-weight:600;
+      letter-spacing:0.6px;
+    }
+
+    .controls{
+      margin-top:18px;
+      display:flex;
+      gap:8px;
+      justify-content:center;
+    }
+
+    .btn{
+      appearance:none;
+      border:0;
+      padding:8px 12px;
+      font-weight:600;
+      border-radius:10px;
+      cursor:pointer;
+      background:rgba(255,255,255,0.03);
+      color:var(--muted);
+      transition:all .18s ease;
+      border:1px solid rgba(255,255,255,0.03);
+    }
+
+    .btn:active{transform:scale(.99)}
+
+    @media (max-width:420px){
+      .ampm{transform:none}
+      .seconds{display:none}
+    }
+  </style>
+</head>
+<body>
+  <main class="clock-wrap" role="application" aria-label="Digital clock">
+    <div class="clock" aria-live="polite">
+      <div class="time" id="time" aria-hidden="true">00:00</div>
+      <div class="ampm" id="ampm">AM</div>
+      <div class="seconds" id="seconds">00</div>
+    </div>
+
+    <div class="date" id="date" aria-hidden="true">Loading date...</div>
+
+    <div class="controls">
+      <button class="btn" id="toggleDate">Toggle Date</button>
+      <button class="btn" id="toggle24">Switch to 24h</button>
+    </div>
+  </main>
+
+  <script>
+    (function(){
+      const timeEl = document.getElementById('time');
+      const secondsEl = document.getElementById('seconds');
+      const ampmEl = document.getElementById('ampm');
+      const dateEl = document.getElementById('date');
+      const toggleDateBtn = document.getElementById('toggleDate');
+      const toggle24Btn = document.getElementById('toggle24');
+
+      let showDate = true;
+      let use24Hour = false; // change to true to default to 24-hour display
+
+      function two(num){ return String(num).padStart(2,'0'); }
+
+      function updateClock(){
+        const now = new Date();
+        const hours = now.getHours();
+        const minutes = now.getMinutes();
+        const seconds = now.getSeconds();
+
+        let displayHour = hours;
+        let ampm = '';
+
+        if(!use24Hour){
+          ampm = hours >= 12 ? 'PM' : 'AM';
+          displayHour = hours % 12 || 12; // convert 0 -> 12
+        }
+
+        timeEl.textContent = `${two(displayHour)}:${two(minutes)}`;
+        secondsEl.textContent = two(seconds);
+        ampmEl.textContent = use24Hour ? '' : ampm;
+
+        // Date (optional)
+        const opts = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+        dateEl.textContent = now.toLocaleDateString(undefined, opts);
+
+        // Accessibility: live region content
+        timeEl.setAttribute('aria-label', `${displayHour}:${two(minutes)}${use24Hour ? '' : ' ' + ampm}`);
+      }
+
+      // start immediately and then every second
+      updateClock();
+      setInterval(updateClock, 1000);
+
+      toggleDateBtn.addEventListener('click', ()=>{
+        showDate = !showDate;
+        dateEl.style.display = showDate ? 'block' : 'none';
+        toggleDateBtn.textContent = showDate ? 'Hide Date' : 'Show Date';
+      });
+
+      toggle24Btn.addEventListener('click', ()=>{
+        use24Hour = !use24Hour;
+        toggle24Btn.textContent = use24Hour ? 'Switch to 12h' : 'Switch to 24h';
+        ampmEl.style.display = use24Hour ? 'none' : 'inline-block';
+        updateClock();
+      });
+
+    })();
+  </script>
+</body>
+</html>

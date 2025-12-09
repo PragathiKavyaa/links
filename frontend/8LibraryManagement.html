@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 8px 0;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .list {
+            margin-top: 20px;
+        }
+
+        .book-item {
+            background: #e8f0fe;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+        .borrowed {
+            background: #ffe5e5;
+        }
+
+        .actions button {
+            width: auto;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Library Management System</h1>
+
+<div class="container">
+
+    <h2>Add Book</h2>
+    <input type="text" id="title" placeholder="Book Title">
+    <input type="text" id="author" placeholder="Author Name">
+    <button onclick="addBook()">Add Book</button>
+
+    <hr>
+
+    <h2>Available Books</h2>
+    <div id="availableList" class="list"></div>
+
+    <h2>Borrowed Books</h2>
+    <div id="borrowedList" class="list"></div>
+
+    <hr>
+    <h2>Backup / Restore</h2>
+    <button onclick="exportToFile()">Export Books to Text File</button>
+    <input type="file" id="fileInput" onchange="importFile()">
+</div>
+
+<script>
+    let books = JSON.parse(localStorage.getItem("books")) || [];
+
+    // Save to localStorage
+    function saveBooks() {
+        localStorage.setItem("books", JSON.stringify(books));
+    }
+
+    // Add Book
+    function addBook() {
+        const title = document.getElementById("title").value.trim();
+        const author = document.getElementById("author").value.trim();
+
+        if (!title || !author) {
+            alert("All fields are required!");
+            return;
+        }
+
+        // Prevent Duplicate Title
+        if (books.some(b => b.title.toLowerCase() === title.toLowerCase())) {
+            alert("Book with this title already exists!");
+            return;
+        }
+
+        books.push({
+            title,
+            author,
+            available: true
+        });
+
+        saveBooks();
+        displayBooks();
+
+        document.getElementById("title").value = "";
+        document.getElementById("author").value = "";
+    }
+
+    // Borrow Book
+    function borrowBook(index) {
+        books[index].available = false;
+        saveBooks();
+        displayBooks();
+    }
+
+    // Return Book
+    function returnBook(index) {
+        books[index].available = true;
+        saveBooks();
+        displayBooks();
+    }
+
+    // Display Books
+    function displayBooks() {
+        const availableList = document.getElementById("availableList");
+        const borrowedList = document.getElementById("borrowedList");
+
+        availableList.innerHTML = "";
+        borrowedList.innerHTML = "";
+
+        books.forEach((book, index) => {
+            let item = `
+                <div class="book-item ${book.available ? '' : 'borrowed'}">
+                    <strong>${book.title}</strong> <br>
+                    Author: ${book.author}
+                    <div class="actions">
+                        ${book.available 
+                            ? `<button onclick="borrowBook(${index})">Borrow</button>`
+                            : `<button onclick="returnBook(${index})">Return</button>`
+                        }
+                    </div>
+                </div>
+            `;
+
+            if (book.available) {
+                availableList.innerHTML += item;
+            } else {
+                borrowedList.innerHTML += item;
+            }
+        });
+    }
+
+    // Export to Text File
+    function exportToFile() {
+        let content = JSON.stringify(books, null, 2);
+        let blob = new Blob([content], { type: "text/plain" });
+        let link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = "library_books.txt";
+        link.click();
+    }
+
+    // Import from Text File
+    function importFile() {
+        const file = document.getElementById("fileInput").files[0];
+        if (!file) return;
+
+        let reader = new FileReader();
+        reader.onload = function(e) {
+            books = JSON.parse(e.target.result);
+            saveBooks();
+            displayBooks();
+        };
+        reader.readAsText(file);
+    }
+
+    // Initial Load
+    displayBooks();
+</script>
+
+</body>
+</html>
